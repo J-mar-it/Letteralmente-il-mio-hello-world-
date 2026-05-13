@@ -10,6 +10,8 @@
     .dead-screen .dead-options{bottom:34px;height:74px;}
     .dead-screen .easy-way-btn{left:auto;right:6%;top:0;}
     #flow-dead:checked~.app .dead-screen .easy-way-btn{animation-delay:8s;}
+    .easy-screen .center-btn{bottom:24px!important;}
+    .easy-screen .easy-text,.blackout-screen .blackout-text{position:absolute;left:50%;top:auto;bottom:145px;width:min(760px,88%);margin:0;transform:translateX(-50%);text-align:center;z-index:6;}
   </style>
 </head>
 <body>
@@ -201,7 +203,7 @@
     <section class="screen stage-screen trap-6-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="trap-figure" style="--scale:1.3;--op:.88;--brightness:.5"></div><div class="trap-text"><span class="heartbeat" style="--beat:.68s">THUMP. THUMP.</span><p>Come se fossi tu, a deciderlo.</p></div><label for="flow-dead" class="action-btn">dead end</label></div></section>
 
     <section class="screen stage-screen dead-screen"><div class="stage"><div class="room-bg"></div><div class="dead-face"></div><div class="veil"></div><div class="dead-text"><span class="heartbeat" style="--beat:.42s">THUMP. THUMP. THUMP.</span><p>Rilassati... Lascia fare a me ♡</p></div><div class="dead-options"><span class="fake-dead-btn">dead end</span><label for="flow-easy" class="action-btn easy-way-btn"><span>easy way out</span><img class="easy-way-icon" src="https://i.imgur.com/7S3M10c.png" alt="" aria-hidden="true"></label></div></div></section>
-    <section class="screen stage-screen easy-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="easy-potion"></div><div class="easy-text"><p>Tornerai.. Non riesci a farne a meno ♡</p></div><label for="flow-blackout" class="action-btn center-btn">bevi</label></div></section>
+    <section class="screen stage-screen easy-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="easy-potion"></div><div class="easy-text"><p>Tornerai.. Non puoi farne a meno ♡</p></div><label for="flow-blackout" class="action-btn center-btn">bevi</label></div></section>
     <section class="screen stage-screen blackout-screen"><div class="stage blackout-stage"><div class="blackout-face"></div><div class="blackout-layer"></div><div class="blackout-text"><p>Mi appartieni. Vivo o morto. Non mi importa.</p></div><label for="flow-intro" class="action-btn center-btn">risvegliati</label></div></section>
   </div>
 </div>
