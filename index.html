@@ -68,7 +68,7 @@
 
         <div class="ost-player">
           <p class="ost-line">What do you feel, when my rhythm touches you?</p>
-          <audio controls loop preload="none">
+          <audio id="intro-ost" controls loop preload="none">
             <source src="https://audio.jukehost.co.uk/019e21e9-afc7-70f4-9625-9c5eb39aeed0" type="audio/mpeg">
           </audio>
         </div>
@@ -113,7 +113,7 @@
           <strong class="heart-glow">♡</strong> basto <span class="glow">io</span> <strong class="heart-glow">♡</strong>
         </p>
 
-        <label for="flow-main" class="medicine-btn">
+        <label for="flow-main" class="medicine-btn" onclick="var a=document.getElementById('intro-ost'); if(a){a.pause(); a.currentTime=0;}">
           <span>Vuoi prendere la tua <span class="glow">“Medicina”</span> ?</span>
           <img class="medicine-icon" src="https://i.imgur.com/gg7fCwo.png" alt="" aria-hidden="true">
         </label>
