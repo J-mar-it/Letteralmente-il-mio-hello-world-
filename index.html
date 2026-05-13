@@ -14,10 +14,12 @@
     .trap-6-screen .trap-text,
     .dead-screen .dead-text{left:7%;top:42px;bottom:auto;width:360px;max-width:32%;transform:none;text-align:left;}
     .dead-screen .dead-text p{font-size:clamp(30px,4.6vw,58px);white-space:normal;}
+    .trap-6-screen .no-break{white-space:nowrap;}
     .dead-screen .dead-options{bottom:34px;height:74px;}
     .dead-screen .easy-way-btn{left:auto;right:6%;top:0;}
     #flow-dead:checked~.app .dead-screen .easy-way-btn{animation-delay:8s;}
-    .easy-screen .center-btn{bottom:24px!important;}
+    .easy-screen .center-btn{position:absolute!important;left:50%!important;right:auto!important;top:auto!important;bottom:24px!important;transform:translateX(-50%)!important;margin:0!important;}
+    .easy-screen .center-btn:hover{transform:translateX(-50%) translateY(-2px)!important;}
     .easy-screen .easy-text,.blackout-screen .blackout-text{position:absolute;left:50%;top:auto;bottom:145px;width:min(760px,88%);margin:0;transform:translateX(-50%);text-align:center;z-index:6;}
   </style>
 </head>
@@ -207,7 +209,7 @@
     <section class="screen stage-screen trap-3-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="trap-figure" style="--scale:1.04;--op:.58;--brightness:.32"></div><div class="trap-text"><span class="heartbeat" style="--beat:1.05s">THUMP... THUMP... THUMP...</span><p>Perché vuoi andartene?</p></div><label for="flow-trap-4" class="action-btn">Fuggi</label></div></section>
     <section class="screen stage-screen trap-4-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="trap-figure" style="--scale:1.12;--op:.66;--brightness:.36"></div><div class="trap-text"><span class="heartbeat" style="--beat:1.05s">THUMP... THUMP...</span><p>Tutto ciò di cui necessiti è proprio qui.</p></div><label for="flow-trap-5" class="action-btn">Scappa via</label></div></section>
     <section class="screen stage-screen trap-5-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="trap-figure" style="--scale:1.2;--op:.76;--brightness:.42"></div><div class="trap-text"><span class="heartbeat" style="--beat:.68s">THUMP... THUMP... THUMP...</span><p>Non ti... basto più?</p></div><label for="flow-trap-6" class="action-btn">corri</label></div></section>
-    <section class="screen stage-screen trap-6-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="trap-figure" style="--scale:1.3;--op:.88;--brightness:.5"></div><div class="trap-text"><span class="heartbeat" style="--beat:.68s">THUMP. THUMP.</span><p>Come se fossi tu, a deciderlo.</p></div><label for="flow-dead" class="action-btn">dead end</label></div></section>
+    <section class="screen stage-screen trap-6-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="trap-figure" style="--scale:1.3;--op:.88;--brightness:.5"></div><div class="trap-text"><span class="heartbeat" style="--beat:.68s">THUMP. THUMP.</span><p>Come se fossi tu, <span class="no-break">a&nbsp;deciderlo.</span></p></div><label for="flow-dead" class="action-btn">dead end</label></div></section>
 
     <section class="screen stage-screen dead-screen"><div class="stage"><div class="room-bg"></div><div class="dead-face"></div><div class="veil"></div><div class="dead-text"><span class="heartbeat" style="--beat:.42s">THUMP. THUMP. THUMP.</span><p>Rilassati... Lascia fare a me ♡</p></div><div class="dead-options"><span class="fake-dead-btn">dead end</span><label for="flow-easy" class="action-btn easy-way-btn"><span>easy way out</span><img class="easy-way-icon" src="https://i.imgur.com/7S3M10c.png" alt="" aria-hidden="true"></label></div></div></section>
     <section class="screen stage-screen easy-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="easy-potion"></div><div class="easy-text"><p>Tornerai.. Non puoi farne a meno ♡</p></div><label for="flow-blackout" class="action-btn center-btn">bevi</label></div></section>
