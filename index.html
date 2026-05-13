@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheda PBC - Shion Iburi</title>
+  <link rel="stylesheet" href="shion.css">
+</head>
+<body>
+
+  <div class="pbc-root">
+    <input class="pbc-state" type="radio" name="pbc-tab" id="tab-intro" checked>
+    <input class="pbc-state" type="radio" name="pbc-tab" id="tab-identita">
+    <input class="pbc-state" type="radio" name="pbc-tab" id="tab-aspetto">
+    <input class="pbc-state" type="radio" name="pbc-tab" id="tab-carattere">
+
+    <section class="pbc-shell">
+      <aside class="pbc-sidebar">
+        <div class="pbc-portrait">
+          <span>Shion</span>
+        </div>
+
+        <h1>Shion Iburi</h1>
+        <p class="pbc-subtitle">Kiwami</p>
+
+        <nav class="pbc-menu">
+          <label for="tab-intro">Intro</label>
+          <label for="tab-identita">Identità</label>
+          <label for="tab-aspetto">Aspetto</label>
+          <label for="tab-carattere">Carattere</label>
+        </nav>
+      </aside>
+
+      <main class="pbc-content">
+        <article class="pbc-panel pbc-intro">
+          <h2>Mmh? Sei arrivato fin qui...</h2>
+          <p>Chissà di cosa hai bisogno.</p>
+          <label class="pbc-button" for="tab-identita">Somministra la tossina</label>
+        </article>
+
+        <article class="pbc-panel pbc-identita">
+          <h2>Identità</h2>
+          <div class="pbc-grid">
+            <div><b>Nome</b><span>Shion Iburi</span></div>
+            <div><b>Alias</b><span>Kiwami</span></div>
+            <div><b>Villaggio</b><span>Suna</span></div>
+            <div><b>Linea</b><span>Iburi</span></div>
+          </div>
+        </article>
+
+        <article class="pbc-panel pbc-aspetto">
+          <h2>Aspetto</h2>
+          <p>Qui inseriremo descrizione fisica, postura, abiti, occhi, dettagli scenici e immagine principale.</p>
+        </article>
+
+        <article class="pbc-panel pbc-carattere">
+          <h2>Carattere</h2>
+          <p>Qui costruiremo il lato elegante, tossico, controllato e possessivo del personaggio.</p>
+        </article>
+      </main>
+    </section>
+  </div>
+
+</body>
+</html>
