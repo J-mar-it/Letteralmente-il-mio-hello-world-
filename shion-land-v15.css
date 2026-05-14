@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.6
+   SHION LAND V15.7
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -14,6 +14,7 @@
 .shion-root{
   /* Spostamenti sicuri */
   --intro-top-block-offset:26px;
+  --intro-title-v15-offset:-70px;
   --intro-divider-diamond-offset:6px;
   --intro-lower-text-block-offset:-130px;
 
@@ -35,8 +36,8 @@
   --intro-player-line-glow:0 0 10px rgba(169,192,200,.42),0 0 22px rgba(59,85,94,.36),0 0 38px rgba(59,85,94,.22);
   --intro-player-note-glow:0 0 10px rgba(214,142,255,.42),0 0 22px rgba(188,90,255,.34),0 0 38px rgba(188,90,255,.18);
 
-  /* Box informativo di SHION: più basso, sotto il titolo */
-  --intro-overlay-top:860px;
+  /* Box informativo di SHION: sotto il titolo, ma più vicino al player */
+  --intro-overlay-top:760px;
 }
 
 /* ==========================================================
@@ -75,6 +76,15 @@
   margin-top:var(--intro-player-note-v15-gap)!important;
   color:rgba(214,142,255,.82)!important;
   text-shadow:var(--intro-player-note-glow)!important;
+}
+
+/* ==========================================================
+   TITOLO GRANDE
+   Lo sposta solo visivamente: il resto della colonna non si incastra.
+   ========================================================== */
+
+.shion-root .title{
+  transform:translateY(var(--intro-title-v15-offset))!important;
 }
 
 /* ==========================================================
