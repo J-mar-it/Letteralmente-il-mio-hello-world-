@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.19
+   SHION LAND V15.20
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -47,7 +47,7 @@
 
   /* Warning generato sotto il bottone Medicina */
   --intro-warning-fallback-gap:10px;
-  --intro-warning-fallback-size:13px;
+  --intro-warning-fallback-size:20px;
   --intro-warning-fallback-width:980px;
 
   /* Box informativo di SHION: sotto il titolo, ma più vicino al player */
