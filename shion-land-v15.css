@@ -1,0 +1,27 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
+
+/* ==========================================================
+   SHION LAND V15
+   Micro-posizioni sicure: abbassa solo simbolo, player e rombo.
+   Non tocca SHION IBURI, sottotitolo, quote, bottone o overlay.
+   ========================================================== */
+
+.shion-root{
+  --intro-top-block-offset:10px;
+  --intro-divider-diamond-offset:6px;
+}
+
+/* Abbassa solo il simbolo 毒 */
+.shion-root .symbol{
+  transform:translateY(var(--intro-top-block-offset))!important;
+}
+
+/* Abbassa solo il player audio */
+.shion-root .ost-player{
+  transform:translateY(var(--intro-top-block-offset))!important;
+}
+
+/* Abbassa solo il piccolo rombo della linea divisoria */
+.shion-root .divider:after{
+  transform:translate(-50%,-50%) translateY(var(--intro-divider-diamond-offset))!important;
+}
