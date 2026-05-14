@@ -1,0 +1,20 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v26-gate-box-buttons.css?v=1");
+
+/* ==========================================================
+   SHION LAND V27 GATE BOX SMALLER
+   Riduce solo il box del player 2.
+   Mantiene invariati i bottoni della V26.
+   ========================================================== */
+
+.shion-root{
+  --gate-box-v26-width:420px;
+  --gate-box-v26-padding-y:10px;
+  --gate-box-v26-padding-x:14px;
+  --gate-box-v26-radius:15px;
+}
+
+.shion-root .gate-player{
+  width:min(var(--gate-box-v26-width),72%)!important;
+  max-width:min(var(--gate-box-v26-width),72%)!important;
+  min-width:0!important;
+}
