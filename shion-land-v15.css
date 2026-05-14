@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.10
+   SHION LAND V15.11
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -39,6 +39,11 @@
   /* Velocità animazioni glow */
   --intro-player-line-sweep-speed:3.4s;
   --intro-player-note-pulse-speed:1.85s;
+
+  /* Warning sotto il bottone Medicina */
+  --intro-warning-v15-offset:-78px;
+  --intro-warning-v15-size:22px;
+  --intro-warning-v15-glow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24);
 
   /* Box informativo di SHION: sotto il titolo, ma più vicino al player */
   --intro-overlay-top:760px;
@@ -154,9 +159,28 @@
 .shion-root .subtitle,
 .shion-root .divider,
 .shion-root .quote,
-.shion-root .medicine-btn,
-.shion-root .warning{
+.shion-root .medicine-btn{
   transform:translateY(var(--intro-lower-text-block-offset))!important;
+}
+
+/* Warning separato: resta sotto il bottone Medicina */
+.shion-root .warning{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:relative!important;
+  z-index:80!important;
+  margin-top:24px!important;
+  font-size:var(--intro-warning-v15-size)!important;
+  line-height:1.18!important;
+  color:rgba(169,192,200,.76)!important;
+  text-shadow:var(--intro-warning-v15-glow)!important;
+  transform:translateY(var(--intro-warning-v15-offset))!important;
+}
+
+.shion-root .warning .pulse{
+  color:rgba(226,242,246,.92)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.54),0 0 18px rgba(59,85,94,.38)!important;
 }
 
 /* ==========================================================
