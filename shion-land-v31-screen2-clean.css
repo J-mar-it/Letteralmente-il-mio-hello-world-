@@ -1,0 +1,93 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v27-gate-box-smaller.css?v=1");
+
+/* ==========================================================
+   SHION LAND V31 SCREEN 2 CLEAN
+   Test leggero solo per schermata 2 / main-screen.
+   Non tocca intro-screen, warning, player intro, SHION IBURI o Medicina.
+   ========================================================== */
+
+/* ==========================================================
+   PANNELLO VARIABILI SCREEN 2
+   Modifica solo questi valori per testare box, frase, bottoni e frame.
+   ========================================================== */
+
+.shion-root{
+  --screen2-gate-box-width:420px;
+  --screen2-gate-box-padding-y:10px;
+  --screen2-gate-box-padding-x:14px;
+  --screen2-gate-phrase-size:26px;
+  --screen2-gate-phrase-y:8px;
+  --screen2-choice-size:12px;
+  --screen2-choice-padding-y:11px;
+  --screen2-choice-padding-x:18px;
+  --screen2-portrait-frame-width:290px;
+}
+
+/* ==========================================================
+   GATE PLAYER
+   Selettori limitati a .main-screen per non ereditare sulla schermata 1.
+   ========================================================== */
+
+.shion-root .main-screen .gate-player{
+  width:var(--screen2-gate-box-width)!important;
+  max-width:72%!important;
+  min-width:0!important;
+  padding:var(--screen2-gate-box-padding-y) var(--screen2-gate-box-padding-x)!important;
+  box-sizing:border-box!important;
+}
+
+.shion-root .main-screen .gate-ost-line{
+  position:relative!important;
+  top:var(--screen2-gate-phrase-y)!important;
+  display:block!important;
+  margin:0 0 calc(var(--screen2-gate-phrase-y) + 10px)!important;
+  font-size:var(--screen2-gate-phrase-size)!important;
+  line-height:1.16!important;
+}
+
+.shion-root .main-screen .gate-choices{
+  display:flex!important;
+  justify-content:center!important;
+  align-items:center!important;
+  flex-wrap:wrap!important;
+  gap:10px!important;
+  margin-top:12px!important;
+}
+
+.shion-root .main-screen .gate-choice{
+  display:inline-block!important;
+  padding:var(--screen2-choice-padding-y) var(--screen2-choice-padding-x)!important;
+  font-size:var(--screen2-choice-size)!important;
+  letter-spacing:2.2px!important;
+  line-height:1!important;
+  box-sizing:border-box!important;
+}
+
+/* ==========================================================
+   IMMAGINE CENTRALE
+   Il frame usa una variabile unica per allargarsi davvero.
+   ========================================================== */
+
+.shion-root .main-screen .portrait-stack{
+  width:min(calc(var(--screen2-portrait-frame-width) + 210px),90%)!important;
+  max-width:none!important;
+}
+
+.shion-root .main-screen .frame{
+  width:var(--screen2-portrait-frame-width)!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+}
+
+.shion-root .main-screen .portrait-img{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  height:auto!important;
+}
+
+.shion-root .main-screen .portrait-frame-img{
+  width:116%!important;
+  max-width:none!important;
+  height:auto!important;
+}
