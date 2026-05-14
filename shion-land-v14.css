@@ -1,17 +1,6 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v11.css?v=2");
 
-/* ==========================================================
-   SHION LAND V14.4
-   Base: V11
-   Fix: intro stabile, pulsante dentro la card,
-   linee/sbordature esterne coperte dal contenitore.
-   ========================================================== */
-
-/* ==========================================================
-   CONTENITORE GENERALE
-   La land mostra uno spazio più alto di 640px: se lasciamo
-   root/app/screen a 640px, sotto ricompare il background grigio.
-   ========================================================== */
+/* SHION LAND V14.5 - base V11 + intro stabile */
 
 .shion-root{
   width:100%!important;
@@ -40,10 +29,6 @@
   background:#030607!important;
 }
 
-/* ==========================================================
-   STRUTTURA INTRO
-   ========================================================== */
-
 .shion-root .intro-screen{
   display:block!important;
   padding:0!important;
@@ -57,12 +42,10 @@
     #030607!important;
 }
 
-/* Rettangolo decorativo esterno spento */
 .shion-root .intro-screen:before{
   display:none!important;
 }
 
-/* Cornice visiva interna */
 .shion-root .intro-screen:after{
   content:""!important;
   position:absolute!important;
@@ -73,7 +56,6 @@
   z-index:50!important;
 }
 
-/* Card tecnica: posiziona il contenuto, ma non disegna più linee proprie */
 .shion-root .intro-card{
   position:absolute!important;
   top:4px!important;
@@ -111,44 +93,42 @@
   display:none!important;
 }
 
-/* ==========================================================
-   DIMENSIONI E DISTANZE INTRO
-   ========================================================== */
-
+/* Simbolo e player ingranditi */
 .shion-root .symbol{
-  width:64px!important;
-  height:64px!important;
+  width:76px!important;
+  height:76px!important;
   flex:0 0 auto!important;
-  font-size:34px!important;
-  margin:0 auto 10px!important;
+  font-size:42px!important;
+  margin:0 auto 12px!important;
 }
 
 .shion-root .ost-player{
-  width:560px!important;
+  width:640px!important;
   flex:0 0 auto!important;
-  margin:0 auto 10px!important;
-  padding:10px 16px!important;
+  margin:0 auto 12px!important;
+  padding:14px 20px!important;
   background:#080e10!important;
 }
 
 .shion-root .ost-player audio{
-  height:30px!important;
+  height:34px!important;
 }
 
 .shion-root .ost-line{
-  font-size:26px!important;
-  line-height:1.12!important;
+  font-size:30px!important;
+  line-height:1.14!important;
   letter-spacing:.03em!important;
-  margin:0 0 4px!important;
+  margin:0 0 6px!important;
 }
 
 .shion-root .dose-note{
-  font-size:12px!important;
+  font-size:13px!important;
   line-height:1!important;
   letter-spacing:.16em!important;
-  margin-top:3px!important;
+  margin-top:4px!important;
 }
 
+/* SHION IBURI resta invariato */
 .shion-root .title{
   position:relative!important;
   z-index:20!important;
@@ -164,15 +144,16 @@
   pointer-events:auto!important;
 }
 
+/* Testi secondari ingranditi */
 .shion-root .subtitle{
   display:block!important;
   white-space:nowrap!important;
   text-align:center!important;
   margin:2px 0 0!important;
   padding:0!important;
-  font-size:24px!important;
+  font-size:29px!important;
   line-height:1!important;
-  letter-spacing:.11em!important;
+  letter-spacing:.115em!important;
 }
 
 .shion-root .subtitle br{
@@ -180,13 +161,13 @@
 }
 
 .shion-root .divider{
-  width:350px!important;
-  margin:8px auto 10px!important;
+  width:390px!important;
+  margin:9px auto 12px!important;
 }
 
 .shion-root .quote{
-  font-size:42px!important;
-  line-height:1.06!important;
+  font-size:50px!important;
+  line-height:1.08!important;
   margin:0!important;
 }
 
@@ -195,13 +176,13 @@
 }
 
 .shion-root .medicine-btn{
-  width:650px!important;
+  width:720px!important;
   min-width:0!important;
-  margin-top:14px!important;
+  margin-top:16px!important;
   margin-bottom:0!important;
-  padding:7px 16px!important;
-  gap:10px!important;
-  font-size:26px!important;
+  padding:9px 18px!important;
+  gap:12px!important;
+  font-size:30px!important;
   line-height:1!important;
   letter-spacing:.06em!important;
   white-space:nowrap!important;
@@ -212,22 +193,19 @@
 }
 
 .shion-root .medicine-icon{
-  width:50px!important;
-  height:50px!important;
+  width:56px!important;
+  height:56px!important;
   flex:0 0 auto!important;
 }
 
 .shion-root .warning{
-  margin-top:10px!important;
-  font-size:15px!important;
-  line-height:1.08!important;
+  margin-top:12px!important;
+  font-size:17px!important;
+  line-height:1.12!important;
   letter-spacing:.07em!important;
 }
 
-/* ==========================================================
-   TITOLO: SHION IBURI CLICCABILE MA STABILE
-   ========================================================== */
-
+/* Titolo cliccabile stabile */
 .shion-root .title .intro-toggle,
 .shion-root .title .intro-link,
 .shion-root .title label{
@@ -256,10 +234,7 @@
   display:block!important;
 }
 
-/* ==========================================================
-   SOTTOTITOLO: NIENTE DUPLICATI
-   ========================================================== */
-
+/* Sottotitolo senza duplicati */
 .shion-root .subtitle .intro-toggle{
   display:inline!important;
   white-space:nowrap!important;
@@ -298,10 +273,7 @@
   display:inline!important;
 }
 
-/* ==========================================================
-   OVERLAY SHION IBURI
-   ========================================================== */
-
+/* Overlay SHION IBURI */
 .shion-root .intro-info{
   position:absolute!important;
   left:50%!important;
@@ -323,13 +295,13 @@
 }
 
 #intro-shion:checked~.app .intro-info{
-  max-height:220px!important;
-  min-height:130px!important;
+  max-height:240px!important;
+  min-height:140px!important;
   opacity:1!important;
   visibility:visible!important;
   pointer-events:auto!important;
   margin:0!important;
-  padding:22px 30px!important;
+  padding:24px 34px!important;
   border:1px solid rgba(169,192,200,.36)!important;
   border-radius:18px!important;
   background:linear-gradient(180deg,rgba(8,14,16,.96),rgba(3,6,7,.98))!important;
@@ -350,20 +322,20 @@
 }
 
 .shion-root .intro-info h3{
-  font-size:34px!important;
+  font-size:40px!important;
   line-height:1!important;
-  margin:0 0 10px!important;
+  margin:0 0 12px!important;
 }
 
 .shion-root .intro-info p{
-  font-size:24px!important;
-  line-height:1.2!important;
+  font-size:27px!important;
+  line-height:1.22!important;
   margin:0!important;
 }
 
 .shion-root .intro-close{
   top:12px!important;
   right:18px!important;
-  font-size:38px!important;
+  font-size:40px!important;
   line-height:1!important;
 }
