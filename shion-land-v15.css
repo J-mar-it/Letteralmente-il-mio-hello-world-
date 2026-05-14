@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.15
+   SHION LAND V15.16
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -18,6 +18,7 @@
   --intro-divider-diamond-offset:6px;
   --intro-lower-text-block-offset:-130px;
   --intro-quote-v15-extra-offset:-45px;
+  --intro-medicine-v15-extra-offset:-70px;
 
   /* Simbolo 毒 */
   --intro-symbol-v15-size:220px;
@@ -45,7 +46,7 @@
   --intro-player-note-pulse-speed:1.85s;
 
   /* Warning sotto il bottone Medicina */
-  --intro-warning-v15-offset:-42px;
+  --intro-warning-v15-offset:-112px;
   --intro-warning-v15-size:15px;
   --intro-warning-v15-glow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24);
 
@@ -157,20 +158,23 @@
 
 /* ==========================================================
    BLOCCO TESTI INFERIORI
-   Alza solo: sottotitolo, rombo, quote, cuori, bottone e warning.
+   Alza solo: sottotitolo e rombo.
    Non tocca SHION IBURI, simbolo, player o overlay.
    ========================================================== */
 
 .shion-root .subtitle,
-.shion-root .divider,
-.shion-root .quote,
-.shion-root .medicine-btn{
+.shion-root .divider{
   transform:translateY(var(--intro-lower-text-block-offset))!important;
 }
 
 /* Frase poetica alzata separatamente */
 .shion-root .quote{
   transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-quote-v15-extra-offset)))!important;
+}
+
+/* Bottone Medicina separato: viene alzato per non essere tagliato */
+.shion-root .medicine-btn{
+  transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-medicine-v15-extra-offset)))!important;
 }
 
 /* Warning separato: resta sotto il bottone Medicina */
