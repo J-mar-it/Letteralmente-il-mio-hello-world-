@@ -27,8 +27,8 @@
   --screen2-portrait-stack-top:24px;
   --screen2-portrait-stack-width:455px;
   --screen2-portrait-frame-width:255px;
-  --screen2-portrait-frame-title-y:0px;
-  --screen2-core-line-y:0px;
+  --screen2-portrait-frame-title-y:-34px;
+  --screen2-core-line-y:-34px;
 }
 
 /* ==========================================================
