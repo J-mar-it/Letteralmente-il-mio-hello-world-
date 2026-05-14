@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Land Direct Preview - Shion Iburi</title>
+  <link rel="stylesheet" href="shion-land-v9.css?v=direct-preview">
+  <style>
+    html,body{
+      margin:0;
+      min-height:100%;
+      background:#202832;
+      color:#e8eef2;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+    body{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:24px;
+      gap:14px;
+    }
+    .note{
+      width:730px;
+      max-width:100%;
+      box-sizing:border-box;
+      font-size:14px;
+      line-height:1.45;
+      color:#cbd6dc;
+      background:rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.12);
+      padding:12px 14px;
+    }
+    .land-frame{
+      width:730px;
+      height:640px;
+      max-width:100%;
+      overflow:hidden;
+      position:relative;
+      background:#030607;
+      border:1px solid rgba(255,230,0,.35);
+      box-shadow:0 0 0 12px rgba(0,0,0,.16),0 0 30px rgba(0,0,0,.55);
+    }
+    .land-frame .shion-root{
+      width:730px!important;
+      height:640px!important;
+      max-width:730px!important;
+      min-height:640px!important;
+    }
+    code{color:#d8adff;}
+  </style>
+</head>
+<body>
+  <div class="note">
+    <strong>Preview diretta land 730×640.</strong><br>
+    Questa versione non usa iframe: prende solo <code>.shion-root</code> da <code>index.html</code> e lo inserisce nel riquadro fisso, come nella land.
+  </div>
+
+  <div class="land-frame" id="landFrame"></div>
+
+  <script>
+    fetch('index.html?v=' + Date.now())
+      .then(response => response.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const root = doc.querySelector('.shion-root');
+        const frame = document.getElementById('landFrame');
+
+        if (!root) {
+          frame.innerHTML = '<div style="padding:20px;color:white">Errore: .shion-root non trovato in index.html</div>';
+          return;
+        }
+
+        frame.appendChild(root.cloneNode(true));
+      })
+      .catch(err => {
+        document.getElementById('landFrame').innerHTML = '<div style="padding:20px;color:white">Errore caricamento preview.</div>';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
