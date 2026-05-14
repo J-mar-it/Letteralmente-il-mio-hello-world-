@@ -290,3 +290,23 @@
     letter-spacing:1px!important;
   }
 }
+
+/* LAND ALIGN FIX - evita che la schermata 1 venga spinta tutta in basso */
+.shion-root,
+.shion-root .app,
+.shion-root .screen{
+  min-height:640px!important;
+  height:640px!important;
+}
+
+.intro-screen{
+  display:block!important;
+  place-items:initial!important;
+  padding:14px 12px 16px!important;
+  overflow:auto!important;
+}
+
+.intro-card{
+  margin:0 auto!important;
+  max-height:none!important;
+}
