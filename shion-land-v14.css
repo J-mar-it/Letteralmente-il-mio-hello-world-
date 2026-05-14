@@ -1,0 +1,154 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v11.css?v=2");
+
+/* SHION LAND V14 - base V13 + overlay info stabile */
+
+.shion-root .intro-card{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  padding:14px 42px 16px!important;
+}
+
+.shion-root .symbol{
+  margin:0 auto 0!important;
+}
+
+.shion-root .ost-player{
+  margin:0 auto 0!important;
+}
+
+.shion-root .ost-line{
+  font-size:26px!important;
+  line-height:1.12!important;
+  letter-spacing:.03em!important;
+  margin:0 0 4px!important;
+}
+
+.shion-root .dose-note{
+  font-size:12px!important;
+  line-height:1!important;
+  letter-spacing:.16em!important;
+  margin-top:3px!important;
+}
+
+.shion-root .title{
+  font-size:118px!important;
+  line-height:.78!important;
+  letter-spacing:.13em!important;
+  margin:-26px 0 0!important;
+}
+
+.shion-root .subtitle{
+  font-size:28px!important;
+  line-height:.95!important;
+  letter-spacing:.14em!important;
+  margin:-4px 0 0!important;
+}
+
+.shion-root .divider{
+  width:350px!important;
+  margin:3px auto 2px!important;
+}
+
+.shion-root .quote{
+  font-size:48px!important;
+  line-height:.98!important;
+  margin:0!important;
+}
+
+.shion-root .medicine-btn{
+  width:760px!important;
+  margin-top:4px!important;
+  padding:7px 18px!important;
+  gap:10px!important;
+  font-size:32px!important;
+  line-height:1!important;
+  letter-spacing:.06em!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .medicine-btn span{
+  white-space:nowrap!important;
+}
+
+.shion-root .medicine-icon{
+  width:58px!important;
+  height:58px!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .warning{
+  margin-top:5px!important;
+  font-size:16px!important;
+  line-height:1.08!important;
+  letter-spacing:.07em!important;
+}
+
+/* Mantiene nascosti i duplicati */
+.shion-root .title .intro-link-close,
+.shion-root .subtitle .intro-link-close,
+.shion-root .intro-link-close{
+  display:none!important;
+}
+
+#intro-shion:checked~.app .title .intro-close-shion,
+#intro-rank:checked~.app .subtitle .intro-close-rank,
+#intro-venenista:checked~.app .subtitle .intro-close-venenista,
+#intro-clan:checked~.app .subtitle .intro-close-clan{
+  display:inline!important;
+  white-space:nowrap!important;
+}
+
+/* Overlay info: il box non altera più la spaziatura della schermata. */
+.shion-root .intro-info{
+  position:absolute!important;
+  left:50%!important;
+  top:128px!important;
+  transform:translateX(-50%) scale(.92)!important;
+  transform-origin:top center!important;
+  width:880px!important;
+  max-width:none!important;
+  max-height:0!important;
+  min-height:0!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  margin:0!important;
+  padding:0!important;
+  z-index:999999!important;
+  overflow:hidden!important;
+}
+
+#intro-shion:checked~.app .intro-info,
+#intro-rank:checked~.app .intro-info,
+#intro-venenista:checked~.app .intro-info,
+#intro-clan:checked~.app .intro-info{
+  max-height:170px!important;
+  min-height:116px!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  margin:0!important;
+  padding:18px 26px!important;
+  border:1px solid rgba(169,192,200,.36)!important;
+  border-radius:18px!important;
+  background:linear-gradient(180deg,rgba(8,14,16,.96),rgba(3,6,7,.98))!important;
+  box-shadow:0 0 34px rgba(59,85,94,.28),inset 0 0 26px rgba(169,192,200,.07)!important;
+}
+
+.shion-root .intro-info h3{
+  font-size:22px!important;
+  margin-bottom:6px!important;
+}
+
+.shion-root .intro-info p{
+  font-size:17px!important;
+  line-height:1.24!important;
+}
+
+.shion-root .intro-close{
+  top:8px!important;
+  right:14px!important;
+  font-size:24px!important;
+}
