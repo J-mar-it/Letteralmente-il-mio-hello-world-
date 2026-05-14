@@ -1,0 +1,14 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v21-strong-glow.css?v=1");
+
+/* ==========================================================
+   SHION LAND V22 WARNING UP
+   Avvicina solo la frase ATTENZIONE al bottone Medicina.
+   Non muove player, titolo, quote o bottone.
+   ========================================================== */
+
+.shion-root{
+  /* Valore precedente V20: 1530px.
+     Più basso = frase più in alto.
+     Dentro la card scalata a .50, 40px qui valgono circa 20px a schermo. */
+  --intro-warning-v20-top:1485px;
+}
