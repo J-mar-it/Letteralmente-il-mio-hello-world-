@@ -1,0 +1,62 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v44-intro-english-sweep.css?v=1");
+
+/* ==========================================================
+   SHION LAND V45 INTRO ENGLISH VISIBLE SWEEP
+   Fix sicuro solo per la frase inglese della schermata 1.
+   Non muove player, titolo, warning, Medicina o layout.
+   ========================================================== */
+
+.shion-root{
+  --intro-english-v45-sweep-speed:2.7s;
+  --intro-english-v45-glow:0 0 8px rgba(226,242,246,.78),0 0 20px rgba(169,192,200,.62),0 0 42px rgba(59,85,94,.44),0 0 70px rgba(59,85,94,.26);
+}
+
+/* V44 usava un ::after con mix-blend-mode:screen.
+   Non era sovrascritto, ma su testo gia' chiaro e con isolate/screen
+   il fascio puo' fondersi con il glow e risultare quasi invisibile.
+   Qui lo sweep entra direttamente nel riempimento delle lettere:
+   niente z-index fragile, niente overflow da inseguire, niente spostamenti. */
+.shion-root .intro-screen .ost-line{
+  position:relative!important;
+  display:block!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+  color:rgba(238,246,248,.96)!important;
+  background:linear-gradient(90deg,
+    rgba(226,242,246,.88) 0%,
+    rgba(226,242,246,.90) 28%,
+    rgba(255,255,255,1) 42%,
+    rgba(214,246,252,1) 50%,
+    rgba(255,255,255,1) 58%,
+    rgba(169,192,200,.92) 72%,
+    rgba(226,242,246,.88) 100%)!important;
+  background-size:260% 100%!important;
+  background-position:0% 50%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:var(--intro-english-v45-glow)!important;
+  animation:shionIntroEnglishVisibleSweepV45 var(--intro-english-v45-sweep-speed) ease-in-out infinite!important;
+}
+
+/* Spegne la lama esterna V44: il nuovo sweep e' sul testo, quindi
+   non dipende da mix-blend-mode, z-index o ritagli del contenitore. */
+.shion-root .intro-screen .ost-line:after{
+  content:""!important;
+  display:none!important;
+}
+
+@keyframes shionIntroEnglishVisibleSweepV45{
+  0%{
+    background-position:0% 50%;
+    text-shadow:0 0 7px rgba(226,242,246,.56),0 0 18px rgba(169,192,200,.42),0 0 34px rgba(59,85,94,.26);
+  }
+  45%{
+    background-position:100% 50%;
+    text-shadow:0 0 11px rgba(255,255,255,.94),0 0 28px rgba(190,226,232,.76),0 0 54px rgba(59,85,94,.50),0 0 86px rgba(59,85,94,.30);
+  }
+  100%{
+    background-position:0% 50%;
+    text-shadow:0 0 7px rgba(226,242,246,.56),0 0 18px rgba(169,192,200,.42),0 0 34px rgba(59,85,94,.26);
+  }
+}
