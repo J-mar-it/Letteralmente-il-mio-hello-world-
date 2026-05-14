@@ -1,6 +1,22 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v11.css?v=2");
 
-/* SHION LAND V13 - compromesso: più grande della V11, molto più contenuta della V12 */
+/* SHION LAND V13 - file stabile land. Grandezza buona + spaziatura corretta. */
+
+.shion-root .intro-card{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  padding:14px 42px 16px!important;
+}
+
+.shion-root .symbol{
+  margin:0 auto 0!important;
+}
+
+.shion-root .ost-player{
+  margin:0 auto 0!important;
+}
 
 .shion-root .ost-line{
   font-size:26px!important;
@@ -18,49 +34,59 @@
 
 .shion-root .title{
   font-size:118px!important;
-  line-height:.88!important;
+  line-height:.78!important;
   letter-spacing:.13em!important;
-  margin:0!important;
+  margin:-26px 0 0!important;
 }
 
 .shion-root .subtitle{
   font-size:28px!important;
-  line-height:1!important;
+  line-height:.95!important;
   letter-spacing:.14em!important;
-  margin:4px 0 0!important;
+  margin:-4px 0 0!important;
 }
 
 .shion-root .divider{
   width:350px!important;
-  margin:6px auto 5px!important;
+  margin:3px auto 2px!important;
 }
 
 .shion-root .quote{
   font-size:48px!important;
-  line-height:1.08!important;
+  line-height:.98!important;
   margin:0!important;
 }
 
 .shion-root .medicine-btn{
-  width:600px!important;
-  margin-top:6px!important;
-  padding:7px 16px!important;
+  width:760px!important;
+  margin-top:4px!important;
+  padding:7px 18px!important;
   gap:10px!important;
   font-size:32px!important;
   line-height:1!important;
   letter-spacing:.06em!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .medicine-btn span{
+  white-space:nowrap!important;
 }
 
 .shion-root .medicine-icon{
   width:58px!important;
   height:58px!important;
+  flex:0 0 auto!important;
 }
 
 .shion-root .warning{
-  margin-top:4px!important;
+  margin-top:5px!important;
   font-size:16px!important;
   line-height:1.08!important;
   letter-spacing:.07em!important;
+}
+
+.shion-root .intro-info{
+  top:180px!important;
 }
 
 /* Mantiene nascosti i duplicati */
