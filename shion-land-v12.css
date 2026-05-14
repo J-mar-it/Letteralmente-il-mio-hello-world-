@@ -1,0 +1,80 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v11.css?v=2");
+
+/* SHION LAND V12 - dimensioni visive riportate verso l'originale di shion.css.
+   Nota: la card è scalata a .50, quindi i valori qui sono compensati. */
+
+.shion-root .ost-line{
+  font-size:44px!important; /* originale 22px, compensato per scale(.50) */
+  line-height:1.2!important;
+  letter-spacing:.03em!important;
+  margin:0 0 6px!important;
+}
+
+.shion-root .dose-note{
+  font-size:22px!important; /* originale inline 11px, compensato */
+  line-height:1.05!important;
+  letter-spacing:.18em!important;
+  margin-top:4px!important;
+}
+
+.shion-root .title{
+  font-size:164px!important; /* originale max 82px, compensato */
+  line-height:.9!important;
+  letter-spacing:.14em!important;
+  margin:0!important;
+}
+
+.shion-root .subtitle{
+  font-size:36px!important; /* originale max 18px, compensato */
+  line-height:1!important;
+  letter-spacing:.24em!important; /* più vicino all'originale, ma leggermente ridotto per entrare */
+  margin:4px 0 0!important;
+}
+
+.shion-root .divider{
+  width:420px!important;
+  margin:7px auto 5px!important;
+}
+
+.shion-root .quote{
+  font-size:70px!important; /* originale max 35px, compensato */
+  line-height:1.18!important;
+  margin:0!important;
+}
+
+.shion-root .medicine-btn{
+  width:640px!important;
+  margin-top:7px!important;
+  padding:8px 20px!important;
+  gap:18px!important;
+  font-size:50px!important; /* originale max 25px, compensato */
+  line-height:1!important;
+  letter-spacing:.07em!important;
+}
+
+.shion-root .medicine-icon{
+  width:78px!important;
+  height:78px!important;
+}
+
+.shion-root .warning{
+  margin-top:5px!important;
+  font-size:24px!important; /* originale 12px, compensato */
+  line-height:1.1!important;
+  letter-spacing:.12em!important;
+}
+
+/* Mantiene nascosti i label duplicati anche con la tipografia più grande */
+.shion-root .title .intro-link-close,
+.shion-root .subtitle .intro-link-close,
+.shion-root .intro-link-close{
+  display:none!important;
+}
+
+#intro-shion:checked~.app .title .intro-close-shion,
+#intro-rank:checked~.app .subtitle .intro-close-rank,
+#intro-venenista:checked~.app .subtitle .intro-close-venenista,
+#intro-clan:checked~.app .subtitle .intro-close-clan{
+  display:inline!important;
+  white-space:nowrap!important;
+}
