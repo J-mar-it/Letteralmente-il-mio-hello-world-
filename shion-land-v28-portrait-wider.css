@@ -1,0 +1,24 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v27-gate-box-smaller.css?v=1");
+
+/* ==========================================================
+   SHION LAND V28 PORTRAIT WIDER
+   Allarga leggermente il box centrale della schermata 2
+   e lascia crescere insieme l'immagine.
+   Schermata 1 non toccata.
+   ========================================================== */
+
+.shion-root .portrait-stack{
+  width:min(500px,88%)!important;
+}
+
+.shion-root .frame{
+  width:290px!important;
+}
+
+.shion-root .portrait-img{
+  width:100%!important;
+}
+
+.shion-root .portrait-frame-img{
+  width:116%!important;
+}
