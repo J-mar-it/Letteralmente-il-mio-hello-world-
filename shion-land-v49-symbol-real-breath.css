@@ -1,0 +1,42 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v48-intro-fix.css?v=1");
+
+/* ==========================================================
+   SHION LAND V49 SYMBOL REAL BREATH
+   Fa respirare davvero il simbolo della schermata 1.
+   Usa una variabile animata dentro transform per superare i transform
+   rigidi dei layer precedenti.
+   ========================================================== */
+
+@property --intro-symbol-real-scale{
+  syntax:"<number>";
+  inherits:false;
+  initial-value:1;
+}
+
+.shion-root{
+  --intro-symbol-real-breath-speed:2.8s;
+  --intro-symbol-real-scale:1;
+}
+
+.shion-root .intro-screen .symbol{
+  --intro-symbol-real-scale:1;
+  transform:scale(var(--intro-symbol-real-scale))!important;
+  transform-origin:center center!important;
+  animation:shionIntroSymbolRealBreathV49 var(--intro-symbol-real-breath-speed) ease-in-out infinite!important;
+  will-change:transform, filter, box-shadow, opacity!important;
+}
+
+@keyframes shionIntroSymbolRealBreathV49{
+  0%,100%{
+    --intro-symbol-real-scale:1;
+    opacity:.90;
+    filter:drop-shadow(0 0 6px rgba(226,242,246,.34)) drop-shadow(0 0 14px rgba(59,85,94,.22));
+    box-shadow:0 0 24px rgba(59,85,94,.28),0 0 42px rgba(59,85,94,.20),inset 0 0 24px rgba(59,85,94,.16);
+  }
+  50%{
+    --intro-symbol-real-scale:1.14;
+    opacity:1;
+    filter:drop-shadow(0 0 12px rgba(226,242,246,.70)) drop-shadow(0 0 28px rgba(59,85,94,.42)) drop-shadow(0 0 48px rgba(59,85,94,.24));
+    box-shadow:0 0 38px rgba(169,192,200,.38),0 0 76px rgba(59,85,94,.48),inset 0 0 34px rgba(169,192,200,.18);
+  }
+}
