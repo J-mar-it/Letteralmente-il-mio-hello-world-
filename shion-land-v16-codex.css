@@ -1,0 +1,278 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
+
+/* ==========================================================
+   SHION LAND V16 CODEX TEST
+   Copia separata del refactor Codex da shion-land-v15.css.
+   File creato per testare senza toccare la V15 stabile.
+   Solo CSS: nessun JavaScript e nessuna modifica HTML.
+   ========================================================== */
+
+/* ==========================================================
+   PANNELLO MODIFICHE V16 CODEX
+   Ogni blocco principale ha variabili proprie.
+   Le posizioni sono visive: non cambiano la struttura HTML.
+   ========================================================== */
+
+.shion-root{
+  /* Simbolo */
+  --intro-symbol-v15-y:26px;
+  --intro-symbol-v15-size:220px;
+  --intro-symbol-v15-font:124px;
+  --intro-symbol-v15-bottom:34px;
+
+  /* Player */
+  --intro-player-v15-y:26px;
+  --intro-player-v15-width:1000px;
+  --intro-player-v15-padding-y:18px;
+  --intro-player-v15-padding-x:26px;
+  --intro-player-audio-v15-height:42px;
+  --intro-player-line-v15-y:-6px;
+  --intro-player-line-v15-size:52px;
+  --intro-player-line-v15-line-height:1.2;
+  --intro-player-line-v15-bottom-gap:16px;
+  --intro-player-note-v15-size:24px;
+  --intro-player-note-v15-gap:18px;
+
+  /* Titolo SHION IBURI */
+  --intro-title-v15-y:-125px;
+
+  /* Sottotitolo e divider */
+  --intro-subtitle-v15-y:-220px;
+  --intro-divider-v15-y:-220px;
+  --intro-divider-diamond-v15-y:6px;
+
+  /* Quote */
+  --intro-quote-v15-y:-265px;
+
+  /* Bottone Medicina */
+  --intro-medicine-v15-y:-182px;
+
+  /* Warning reale sotto il bottone */
+  --intro-warning-v15-y:-182px;
+  --intro-warning-v15-gap:12px;
+  --intro-warning-v15-size:20px;
+  --intro-warning-v15-width:980px;
+
+  /* Glow player */
+  --intro-player-line-glow:0 0 8px rgba(226,242,246,.72),0 0 18px rgba(169,192,200,.62),0 0 34px rgba(59,85,94,.50),0 0 58px rgba(59,85,94,.26);
+  --intro-player-note-glow:0 0 8px rgba(236,190,255,.72),0 0 18px rgba(214,142,255,.62),0 0 34px rgba(188,90,255,.44),0 0 58px rgba(188,90,255,.24);
+
+  /* Velocita animazioni glow */
+  --intro-player-line-sweep-speed:3.4s;
+  --intro-player-note-pulse-speed:1.85s;
+
+  /* Compatibilita con la V14: l'overlay resta spento piu sotto. */
+  --intro-overlay-top:760px;
+}
+
+/* ==========================================================
+   POSIZIONAMENTO INDIPENDENTE
+   Usiamo top su elementi relative per evitare catene di transform.
+   ========================================================== */
+
+.shion-root .symbol,
+.shion-root .ost-player,
+.shion-root .title,
+.shion-root .subtitle,
+.shion-root .divider,
+.shion-root .quote,
+.shion-root .medicine-btn,
+.shion-root .warning{
+  position:relative!important;
+  transform:none!important;
+}
+
+/* ==========================================================
+   SIMBOLO
+   ========================================================== */
+
+.shion-root .symbol{
+  top:var(--intro-symbol-v15-y)!important;
+  width:var(--intro-symbol-v15-size)!important;
+  height:var(--intro-symbol-v15-size)!important;
+  font-size:var(--intro-symbol-v15-font)!important;
+  margin-bottom:var(--intro-symbol-v15-bottom)!important;
+}
+
+/* ==========================================================
+   PLAYER
+   ========================================================== */
+
+.shion-root .ost-player{
+  top:var(--intro-player-v15-y)!important;
+  width:var(--intro-player-v15-width)!important;
+  padding:var(--intro-player-v15-padding-y) var(--intro-player-v15-padding-x)!important;
+}
+
+.shion-root .ost-player audio{
+  height:var(--intro-player-audio-v15-height)!important;
+}
+
+/* Frase inglese: testo stabile con lama di luce decorativa. */
+.shion-root .ost-line{
+  position:relative!important;
+  top:var(--intro-player-line-v15-y)!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+  display:block!important;
+  font-size:var(--intro-player-line-v15-size)!important;
+  line-height:var(--intro-player-line-v15-line-height)!important;
+  margin:0 0 var(--intro-player-line-v15-bottom-gap)!important;
+  color:rgba(238,246,248,.94)!important;
+  -webkit-text-fill-color:rgba(238,246,248,.94)!important;
+  background:none!important;
+  text-shadow:var(--intro-player-line-glow)!important;
+  transform:none!important;
+}
+
+.shion-root .ost-line:after{
+  content:""!important;
+  position:absolute!important;
+  top:-28%!important;
+  bottom:-28%!important;
+  left:-48%!important;
+  width:36%!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(226,242,246,.05) 18%,
+    rgba(255,255,255,.70) 48%,
+    rgba(169,192,200,.30) 66%,
+    transparent 100%)!important;
+  filter:blur(5px)!important;
+  transform:skewX(-18deg) translateX(-120%)!important;
+  mix-blend-mode:screen!important;
+  animation:shionLineSweepBeam var(--intro-player-line-sweep-speed) ease-in-out infinite!important;
+}
+
+/* Scritta viola: glow intermittente. */
+.shion-root .dose-note{
+  font-size:var(--intro-player-note-v15-size)!important;
+  line-height:1!important;
+  margin-top:var(--intro-player-note-v15-gap)!important;
+  color:rgba(230,170,255,.94)!important;
+  text-shadow:var(--intro-player-note-glow)!important;
+  animation:shionDosePulse var(--intro-player-note-pulse-speed) ease-in-out infinite!important;
+}
+
+@keyframes shionDosePulse{
+  0%,100%{
+    opacity:.72;
+    text-shadow:0 0 5px rgba(214,142,255,.36),0 0 12px rgba(188,90,255,.24);
+  }
+  42%{
+    opacity:1;
+    text-shadow:0 0 9px rgba(236,190,255,.86),0 0 20px rgba(214,142,255,.72),0 0 40px rgba(188,90,255,.48),0 0 70px rgba(188,90,255,.26);
+  }
+  58%{
+    opacity:.88;
+    text-shadow:0 0 6px rgba(214,142,255,.44),0 0 16px rgba(188,90,255,.32);
+  }
+}
+
+@keyframes shionLineSweepBeam{
+  0%{transform:skewX(-18deg) translateX(-120%);opacity:0;}
+  18%{opacity:.95;}
+  48%{opacity:1;}
+  82%{opacity:.85;}
+  100%{transform:skewX(-18deg) translateX(510%);opacity:0;}
+}
+
+/* ==========================================================
+   TITOLO SHION IBURI
+   Il click puo selezionare il radio, ma non mostra piu overlay.
+   ========================================================== */
+
+.shion-root .title{
+  top:var(--intro-title-v15-y)!important;
+}
+
+/* ==========================================================
+   OVERLAY TITOLO SPENTO
+   L'HTML resta intatto, ma il box informativo non puo apparire.
+   ========================================================== */
+
+.shion-root .intro-info,
+.shion-root .intro-info *,
+#intro-shion:checked~.app .intro-info,
+#intro-rank:checked~.app .intro-info,
+#intro-venenista:checked~.app .intro-info,
+#intro-clan:checked~.app .intro-info{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  max-height:0!important;
+  min-height:0!important;
+  height:0!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+
+/* ==========================================================
+   SOTTOTITOLO E DIVIDER
+   Separati dal titolo e dagli altri testi.
+   ========================================================== */
+
+.shion-root .subtitle{
+  top:var(--intro-subtitle-v15-y)!important;
+}
+
+.shion-root .divider{
+  top:var(--intro-divider-v15-y)!important;
+}
+
+.shion-root .divider:after{
+  transform:translate(-50%,-50%) translateY(var(--intro-divider-diamond-v15-y))!important;
+}
+
+/* ==========================================================
+   QUOTE
+   Blocco autonomo sotto il sottotitolo.
+   ========================================================== */
+
+.shion-root .quote{
+  top:var(--intro-quote-v15-y)!important;
+}
+
+/* ==========================================================
+   BOTTONE MEDICINA
+   Solo il bottone: nessun warning generato qui.
+   ========================================================== */
+
+.shion-root .medicine-btn{
+  top:var(--intro-medicine-v15-y)!important;
+  overflow:visible!important;
+  z-index:130!important;
+}
+
+.shion-root .medicine-btn:before,
+.shion-root .medicine-btn:after{
+  content:""!important;
+  display:none!important;
+}
+
+/* ==========================================================
+   WARNING
+   Usa il paragrafo HTML reale, tenuto sotto Medicina.
+   ========================================================== */
+
+.shion-root .warning{
+  top:var(--intro-warning-v15-y)!important;
+  display:block!important;
+  width:var(--intro-warning-v15-width)!important;
+  max-width:none!important;
+  margin:var(--intro-warning-v15-gap) auto 0!important;
+  font-size:var(--intro-warning-v15-size)!important;
+  line-height:1.18!important;
+  letter-spacing:.07em!important;
+  text-align:center!important;
+  text-transform:uppercase!important;
+  color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
+  pointer-events:none!important;
+}
