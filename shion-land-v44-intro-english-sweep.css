@@ -1,0 +1,65 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v43-diagnosis-teal.css?v=1");
+
+/* ==========================================================
+   SHION LAND V44 INTRO ENGLISH SWEEP
+   Ultimo ritocco leggero: glow a scorrimento sulla frase inglese
+   della schermata 1. Non muove layout, player, warning o bottoni.
+   ========================================================== */
+
+.shion-root{
+  --intro-english-v44-glow:0 0 10px rgba(226,242,246,.92),0 0 24px rgba(169,192,200,.78),0 0 48px rgba(59,85,94,.58),0 0 82px rgba(59,85,94,.34);
+  --intro-english-v44-pulse-speed:2.65s;
+  --intro-english-v44-sweep-speed:3.15s;
+}
+
+/* Frase inglese della schermata 1 */
+.shion-root .intro-screen .ost-line{
+  position:relative!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+  color:rgba(238,246,248,.96)!important;
+  -webkit-text-fill-color:rgba(238,246,248,.96)!important;
+  text-shadow:var(--intro-english-v44-glow)!important;
+  animation:shionIntroEnglishBreathV44 var(--intro-english-v44-pulse-speed) ease-in-out infinite!important;
+}
+
+/* Lama di luce che attraversa la frase */
+.shion-root .intro-screen .ost-line:after{
+  content:""!important;
+  position:absolute!important;
+  top:-34%!important;
+  bottom:-34%!important;
+  left:-52%!important;
+  width:36%!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(226,242,246,.05) 16%,
+    rgba(255,255,255,.82) 48%,
+    rgba(169,192,200,.38) 68%,
+    transparent 100%)!important;
+  filter:blur(5px)!important;
+  transform:skewX(-18deg) translateX(-120%)!important;
+  mix-blend-mode:screen!important;
+  animation:shionIntroEnglishSweepV44 var(--intro-english-v44-sweep-speed) ease-in-out infinite!important;
+}
+
+@keyframes shionIntroEnglishBreathV44{
+  0%,100%{
+    opacity:.90;
+    text-shadow:0 0 8px rgba(226,242,246,.60),0 0 18px rgba(169,192,200,.44),0 0 36px rgba(59,85,94,.28);
+  }
+  50%{
+    opacity:1;
+    text-shadow:0 0 12px rgba(246,255,255,.96),0 0 30px rgba(190,226,232,.78),0 0 58px rgba(59,85,94,.56),0 0 92px rgba(59,85,94,.32);
+  }
+}
+
+@keyframes shionIntroEnglishSweepV44{
+  0%{transform:skewX(-18deg) translateX(-120%);opacity:0;}
+  18%{opacity:.95;}
+  48%{opacity:1;}
+  82%{opacity:.82;}
+  100%{transform:skewX(-18deg) translateX(540%);opacity:0;}
+}
