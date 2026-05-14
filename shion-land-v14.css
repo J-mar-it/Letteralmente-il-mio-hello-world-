@@ -362,14 +362,13 @@
 
 /* ==========================================================
    CORNICI INTRO - V14 SCALATA
-   modifica qui i 3 rettangoli della prima schermata
+   modifica qui i rettangoli della prima schermata
    Nota: la intro-card è scalata a .50, quindi width/height sono doppi visivamente.
    ========================================================== */
 
-/* Cornice 1: rettangolo decorativo più esterno */
+/* Cornice 1: rettangolo decorativo più esterno - spento */
 .shion-root .intro-screen:before{
-  inset:18px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
-  border:1px solid rgba(59,85,94,.54)!important;
+  display:none!important;
 }
 
 /* Cornice 2: rettangolo decorativo più interno */
