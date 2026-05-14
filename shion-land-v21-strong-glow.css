@@ -1,0 +1,67 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v20-html-warning-fixed.css?v=1");
+
+/* ==========================================================
+   SHION LAND V21 STRONG GLOW
+   Rinforza glow warning + frase inglese sopra la V20.
+   ========================================================== */
+
+.shion-root{
+  --intro-english-v20-glow:0 0 10px rgba(226,242,246,.92),0 0 24px rgba(169,192,200,.78),0 0 48px rgba(59,85,94,.58),0 0 82px rgba(59,85,94,.34);
+
+  --warning-purple-glow:0 0 10px rgba(236,190,255,.96),0 0 24px rgba(214,142,255,.82),0 0 52px rgba(188,90,255,.58),0 0 86px rgba(188,90,255,.34);
+  --warning-teal-glow:0 0 10px rgba(210,244,248,.94),0 0 24px rgba(169,192,200,.78),0 0 52px rgba(59,85,94,.62),0 0 86px rgba(59,85,94,.38);
+}
+
+/* Frase inglese più luminosa */
+.shion-root .ost-line{
+  text-shadow:var(--intro-english-v20-glow)!important;
+}
+
+/* ATTENZIONE + ASSUEFAZIONE: viola forte intermittente */
+.shion-root .warning span:first-child,
+.shion-root .warning span:nth-of-type(2){
+  color:rgba(244,210,255,.98)!important;
+  text-shadow:var(--warning-purple-glow)!important;
+  animation:shionWarningPurpleStrongV21 1.55s ease-in-out infinite!important;
+}
+
+/* CORPO + MENTE: teal forte intermittente */
+.shion-root .warning span:nth-of-type(3),
+.shion-root .warning span:nth-of-type(4){
+  color:rgba(215,248,250,.98)!important;
+  text-shadow:var(--warning-teal-glow)!important;
+  animation:shionWarningTealStrongV21 1.9s ease-in-out infinite!important;
+}
+
+@keyframes shionWarningPurpleStrongV21{
+  0%,100%{
+    opacity:.82;
+    text-shadow:0 0 7px rgba(236,190,255,.58),0 0 18px rgba(214,142,255,.42),0 0 34px rgba(188,90,255,.28);
+  }
+  45%{
+    opacity:1;
+    text-shadow:0 0 12px rgba(255,230,255,1),0 0 30px rgba(236,190,255,.92),0 0 62px rgba(188,90,255,.66),0 0 100px rgba(188,90,255,.38);
+  }
+}
+
+@keyframes shionWarningTealStrongV21{
+  0%,100%{
+    opacity:.84;
+    text-shadow:0 0 7px rgba(210,244,248,.56),0 0 18px rgba(169,192,200,.42),0 0 34px rgba(59,85,94,.30);
+  }
+  50%{
+    opacity:1;
+    text-shadow:0 0 12px rgba(230,255,255,.96),0 0 30px rgba(190,226,232,.86),0 0 62px rgba(59,85,94,.70),0 0 100px rgba(59,85,94,.42);
+  }
+}
+
+@keyframes shionEnglishBreathV20{
+  0%,100%{
+    opacity:.90;
+    text-shadow:0 0 8px rgba(226,242,246,.62),0 0 18px rgba(169,192,200,.46),0 0 36px rgba(59,85,94,.30);
+  }
+  50%{
+    opacity:1;
+    text-shadow:0 0 12px rgba(246,255,255,.95),0 0 30px rgba(190,226,232,.78),0 0 58px rgba(59,85,94,.56),0 0 92px rgba(59,85,94,.32);
+  }
+}
