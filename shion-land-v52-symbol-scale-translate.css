@@ -1,0 +1,31 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v51-symbol-original-pulse.css?v=1");
+
+/* ==========================================================
+   SHION LAND V52 SYMBOL SCALE + TRANSLATE
+   Il transform del simbolo e' bloccato dai layer precedenti.
+   Questa versione usa scale/translate separati, quindi il respiro
+   resta visibile senza toccare layout, player o schermata 2.
+   ========================================================== */
+
+.shion-root .intro-screen .symbol{
+  transform:none!important;
+  transform-origin:center center!important;
+  scale:1!important;
+  translate:0 0!important;
+  filter:none!important;
+  animation:shionSymbolScaleTranslateV52 3.2s ease-in-out infinite!important;
+  will-change:scale, translate, box-shadow!important;
+}
+
+@keyframes shionSymbolScaleTranslateV52{
+  0%,100%{
+    scale:1;
+    translate:0 0;
+    box-shadow:0 0 24px rgba(59,85,94,.28),0 0 42px rgba(59,85,94,.20),inset 0 0 24px rgba(59,85,94,.16);
+  }
+  50%{
+    scale:1.06;
+    translate:0 -3px;
+    box-shadow:0 0 30px rgba(169,192,200,.24),0 0 56px rgba(59,85,94,.34),inset 0 0 28px rgba(169,192,200,.14);
+  }
+}
