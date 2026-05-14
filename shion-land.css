@@ -325,3 +325,18 @@
   max-height:616px!important;
   margin:0!important;
 }
+
+/* LAND DEBUG V5 - se non compare, la land sta usando cache */
+.shion-root:before{
+  content:"LAND V5";
+  position:absolute;
+  top:2px;
+  left:2px;
+  z-index:999999;
+  background:#b30007;
+  color:#fff;
+  font:700 10px Arial,sans-serif;
+  letter-spacing:1px;
+  padding:3px 5px;
+  border:1px solid #fff;
+}
