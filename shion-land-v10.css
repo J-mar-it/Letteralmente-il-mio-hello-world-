@@ -1,0 +1,147 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v9.css?v=14");
+
+/* SHION LAND V10 - tipografia più leggibile e spazi compressi */
+
+/* La land può inserire/rispettare br tra i blocchi: questi creano vuoti verticali inutili. */
+.shion-root > br,
+.shion-root .app > br,
+.shion-root .screen > br,
+.shion-root .intro-screen > br,
+.shion-root .intro-card > br{
+  display:none!important;
+}
+
+/* Card leggermente più grande a schermo, ma con spazi interni più stretti. */
+.shion-root .intro-card{
+  width:1460px!important;
+  padding:18px 42px 16px!important;
+  transform:translateX(-50%) scale(.50)!important;
+}
+
+.shion-root .symbol{
+  width:56px!important;
+  height:56px!important;
+  font-size:30px!important;
+  margin:0 auto 2px!important;
+}
+
+.shion-root .ost-player{
+  width:520px!important;
+  margin:0 auto 5px!important;
+  padding:8px 14px!important;
+}
+
+.shion-root .ost-line{
+  font-size:20px!important;
+  line-height:1.05!important;
+  margin:0 0 4px!important;
+}
+
+.shion-root .ost-player audio{
+  height:28px!important;
+}
+
+.shion-root .dose-note{
+  margin-top:2px!important;
+  font-size:9px!important;
+  line-height:1!important;
+  letter-spacing:.12em!important;
+}
+
+.shion-root .title{
+  font-size:76px!important;
+  line-height:.92!important;
+  margin:0!important;
+}
+
+.shion-root .title .intro-toggle,
+.shion-root .title .intro-link,
+.shion-root .title label{
+  display:inline!important;
+  white-space:nowrap!important;
+}
+
+/* Forza Special Jounin · Velenista · Clan Iburi sulla stessa riga. */
+.shion-root .subtitle{
+  display:block!important;
+  white-space:nowrap!important;
+  text-align:center!important;
+  margin:4px 0 0!important;
+  padding:0!important;
+  font-size:20px!important;
+  line-height:1!important;
+  letter-spacing:.12em!important;
+}
+
+.shion-root .subtitle .intro-toggle,
+.shion-root .subtitle .intro-link,
+.shion-root .subtitle label{
+  display:inline!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .subtitle br{
+  display:none!important;
+}
+
+.shion-root .divider{
+  width:310px!important;
+  margin:6px auto 5px!important;
+}
+
+.shion-root .quote{
+  font-size:32px!important;
+  line-height:1.06!important;
+  margin:0!important;
+}
+
+.shion-root .quote br{
+  display:block!important;
+}
+
+.shion-root .medicine-btn{
+  margin-top:6px!important;
+  width:520px!important;
+  min-width:0!important;
+  padding:6px 12px!important;
+  gap:8px!important;
+  font-size:20px!important;
+  line-height:1!important;
+}
+
+.shion-root .medicine-icon{
+  width:50px!important;
+  height:50px!important;
+}
+
+.shion-root .warning{
+  margin-top:4px!important;
+  font-size:12px!important;
+  line-height:1.08!important;
+  letter-spacing:.07em!important;
+}
+
+/* Box info più vicino e leggibile. */
+.shion-root .intro-info{
+  top:190px!important;
+  width:760px!important;
+}
+
+#intro-shion:checked~.app .intro-info,
+#intro-rank:checked~.app .intro-info,
+#intro-venenista:checked~.app .intro-info,
+#intro-clan:checked~.app .intro-info{
+  max-height:135px!important;
+  min-height:95px!important;
+  padding:14px 22px!important;
+}
+
+.shion-root .intro-info h3{
+  font-size:19px!important;
+  margin-bottom:5px!important;
+}
+
+.shion-root .intro-info p{
+  font-size:15px!important;
+  line-height:1.18!important;
+}
