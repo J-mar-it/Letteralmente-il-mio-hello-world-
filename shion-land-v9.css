@@ -28,7 +28,7 @@
   min-height:640px!important;
 }
 
-/* INTRO: invece di scrollare, scala tutta la card per farla entrare nel box land */
+/* INTRO: scala tutta la card per farla entrare nel box land */
 .shion-root .intro-screen{
   display:block!important;
   padding:0!important;
@@ -38,18 +38,18 @@
 
 .shion-root .intro-card{
   position:absolute!important;
-  top:8px!important;
+  top:6px!important;
   left:50%!important;
   right:auto!important;
   bottom:auto!important;
-  width:900px!important;
+  width:1120px!important;
   max-width:none!important;
   max-height:none!important;
   height:auto!important;
   overflow:visible!important;
   margin:0!important;
-  padding:42px 64px 36px!important;
-  transform:translateX(-50%) scale(.68)!important;
+  padding:34px 56px 30px!important;
+  transform:translateX(-50%) scale(.60)!important;
   transform-origin:top center!important;
   outline:none!important;
 }
@@ -59,8 +59,50 @@
   display:none!important;
 }
 
+.shion-root .symbol{
+  width:78px!important;
+  height:78px!important;
+  font-size:40px!important;
+  margin-bottom:8px!important;
+}
+
 .shion-root .ost-player{
   background:#080e10!important;
+  margin-bottom:14px!important;
+}
+
+.shion-root .title{
+  font-size:70px!important;
+  line-height:1!important;
+  margin:0!important;
+}
+
+.shion-root .subtitle{
+  margin-top:8px!important;
+  line-height:1.35!important;
+}
+
+.shion-root .divider{
+  margin:18px auto 14px!important;
+}
+
+.shion-root .quote{
+  font-size:30px!important;
+  line-height:1.18!important;
+}
+
+.shion-root .medicine-btn{
+  margin-top:18px!important;
+}
+
+.shion-root .medicine-icon{
+  width:82px!important;
+  height:82px!important;
+}
+
+.shion-root .warning{
+  margin-top:12px!important;
+  line-height:1.35!important;
 }
 
 .shion-root .gate-player{
