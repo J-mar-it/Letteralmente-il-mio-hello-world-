@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.8
+   SHION LAND V15.9
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -33,8 +33,12 @@
   --intro-player-audio-v15-height:42px;
 
   /* Glow player */
-  --intro-player-line-glow:0 0 10px rgba(169,192,200,.42),0 0 22px rgba(59,85,94,.36),0 0 38px rgba(59,85,94,.22);
-  --intro-player-note-glow:0 0 10px rgba(214,142,255,.42),0 0 22px rgba(188,90,255,.34),0 0 38px rgba(188,90,255,.18);
+  --intro-player-line-glow:0 0 8px rgba(226,242,246,.72),0 0 18px rgba(169,192,200,.62),0 0 34px rgba(59,85,94,.50),0 0 58px rgba(59,85,94,.26);
+  --intro-player-note-glow:0 0 8px rgba(236,190,255,.72),0 0 18px rgba(214,142,255,.62),0 0 34px rgba(188,90,255,.44),0 0 58px rgba(188,90,255,.24);
+
+  /* Velocità animazioni glow */
+  --intro-player-line-sweep-speed:3.8s;
+  --intro-player-note-pulse-speed:1.85s;
 
   /* Box informativo di SHION: sotto il titolo, ma più vicino al player */
   --intro-overlay-top:760px;
@@ -63,19 +67,64 @@
   height:var(--intro-player-audio-v15-height)!important;
 }
 
+/* Frase inglese: glow che scorre lungo la frase */
 .shion-root .ost-line{
   font-size:var(--intro-player-line-v15-size)!important;
   line-height:1.08!important;
   margin:0 0 8px!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  background:linear-gradient(90deg,
+    rgba(226,242,246,.68) 0%,
+    rgba(226,242,246,.90) 28%,
+    rgba(255,255,255,1) 45%,
+    rgba(169,192,200,.92) 58%,
+    rgba(226,242,246,.72) 100%)!important;
+  background-size:260% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
   text-shadow:var(--intro-player-line-glow)!important;
+  animation:shionLineSweep var(--intro-player-line-sweep-speed) ease-in-out infinite!important;
 }
 
+/* Scritta viola: glow intermittente */
 .shion-root .dose-note{
   font-size:var(--intro-player-note-v15-size)!important;
   line-height:1!important;
   margin-top:var(--intro-player-note-v15-gap)!important;
-  color:rgba(214,142,255,.82)!important;
+  color:rgba(230,170,255,.94)!important;
   text-shadow:var(--intro-player-note-glow)!important;
+  animation:shionDosePulse var(--intro-player-note-pulse-speed) ease-in-out infinite!important;
+}
+
+@keyframes shionDosePulse{
+  0%,100%{
+    opacity:.72;
+    text-shadow:0 0 5px rgba(214,142,255,.36),0 0 12px rgba(188,90,255,.24);
+  }
+  42%{
+    opacity:1;
+    text-shadow:0 0 9px rgba(236,190,255,.86),0 0 20px rgba(214,142,255,.72),0 0 40px rgba(188,90,255,.48),0 0 70px rgba(188,90,255,.26);
+  }
+  58%{
+    opacity:.88;
+    text-shadow:0 0 6px rgba(214,142,255,.44),0 0 16px rgba(188,90,255,.32);
+  }
+}
+
+@keyframes shionLineSweep{
+  0%{
+    background-position:130% 50%;
+    text-shadow:0 0 7px rgba(169,192,200,.32),0 0 18px rgba(59,85,94,.22);
+  }
+  45%{
+    background-position:50% 50%;
+    text-shadow:0 0 10px rgba(226,242,246,.62),0 0 24px rgba(169,192,200,.42),0 0 48px rgba(59,85,94,.28);
+  }
+  100%{
+    background-position:-35% 50%;
+    text-shadow:0 0 7px rgba(169,192,200,.32),0 0 18px rgba(59,85,94,.22);
+  }
 }
 
 /* ==========================================================
