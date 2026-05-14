@@ -279,6 +279,37 @@
 }
 
 /* ==========================================================
+   CORNICI INTRO NATIVE - modifica qui i 3 rettangoli
+   ========================================================== */
+
+/* Cornice 1: rettangolo esterno della schermata */
+.shion-root .intro-screen:before{
+  inset:18px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
+  border:1px solid rgba(59,85,94,.54)!important;
+}
+
+/* Cornice 2: rettangolo interno della schermata */
+.shion-root .intro-screen:after{
+  inset:34px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
+  border:1px solid rgba(169,192,200,.16)!important;
+}
+
+/* Cornice 3: rettangolo della card centrale */
+.shion-root .intro-card{
+  left:10px!important;   /* sposta cornice card a destra/sinistra */
+  top:10px!important;    /* sposta cornice card su/giù */
+  width:710px!important; /* larghezza cornice card */
+  height:620px!important;/* altezza cornice card */
+  border:1px solid rgba(59,85,94,.54)!important;
+}
+
+/* Angoli decorativi della card: per ora spenti */
+.shion-root .intro-card:before,
+.shion-root .intro-card:after{
+  display:none!important;
+}
+
+/* ==========================================================
    DIMENSIONI INTRO NATIVE - modifica qui grandezze e larghezze
    ========================================================== */
 
@@ -369,8 +400,6 @@
    ========================================================== */
 
 .shion-root .intro-card{
-  left:10px!important;
-  top:10px!important;
   padding-top:14px!important;
   padding-left:20px!important;
   padding-right:20px!important;
