@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.5
+   SHION LAND V15.6
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -15,6 +15,7 @@
   /* Spostamenti sicuri */
   --intro-top-block-offset:26px;
   --intro-divider-diamond-offset:6px;
+  --intro-lower-text-block-offset:-130px;
 
   /* Simbolo 毒 */
   --intro-symbol-v15-size:220px;
@@ -74,6 +75,20 @@
   margin-top:var(--intro-player-note-v15-gap)!important;
   color:rgba(214,142,255,.82)!important;
   text-shadow:var(--intro-player-note-glow)!important;
+}
+
+/* ==========================================================
+   BLOCCO TESTI INFERIORI
+   Alza solo: sottotitolo, rombo, quote, cuori, bottone e warning.
+   Non tocca SHION IBURI, simbolo, player o overlay.
+   ========================================================== */
+
+.shion-root .subtitle,
+.shion-root .divider,
+.shion-root .quote,
+.shion-root .medicine-btn,
+.shion-root .warning{
+  transform:translateY(var(--intro-lower-text-block-offset))!important;
 }
 
 /* ==========================================================
