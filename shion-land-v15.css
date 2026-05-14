@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.11
+   SHION LAND V15.12
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -28,6 +28,7 @@
   --intro-player-v15-padding-y:18px;
   --intro-player-v15-padding-x:26px;
   --intro-player-line-v15-size:52px;
+  --intro-player-line-v15-offset:-6px;
   --intro-player-note-v15-size:24px;
   --intro-player-note-v15-gap:18px;
   --intro-player-audio-v15-height:42px;
@@ -85,6 +86,7 @@
   -webkit-text-fill-color:rgba(238,246,248,.94)!important;
   background:none!important;
   text-shadow:var(--intro-player-line-glow)!important;
+  transform:translateY(var(--intro-player-line-v15-offset))!important;
 }
 
 .shion-root .ost-line:after{
