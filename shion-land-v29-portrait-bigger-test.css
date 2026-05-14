@@ -1,0 +1,26 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v28-portrait-wider.css?v=1");
+
+/* ==========================================================
+   SHION LAND V29 PORTRAIT BIGGER TEST
+   Test più evidente: allarga il box centrale e l'immagine.
+   Se invade troppo, torniamo alla V28/V27.
+   ========================================================== */
+
+.shion-root .portrait-stack{
+  width:min(560px,90%)!important;
+}
+
+.shion-root .frame{
+  width:330px!important;
+  max-width:330px!important;
+}
+
+.shion-root .portrait-img{
+  width:100%!important;
+  max-width:none!important;
+}
+
+.shion-root .portrait-frame-img{
+  width:116%!important;
+  max-width:none!important;
+}
