@@ -1,0 +1,36 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v25-gate-phrase-smaller.css?v=2");
+
+/* ==========================================================
+   SHION LAND V26 GATE BOX + BUTTONS
+   Schermata 2: gate-player più compatto, bottoni più leggibili.
+   Non tocca schermata 1.
+   ========================================================== */
+
+.shion-root{
+  --gate-box-v26-width:500px;
+  --gate-box-v26-padding-y:14px;
+  --gate-box-v26-padding-x:18px;
+  --gate-box-v26-radius:16px;
+
+  --gate-choice-v26-size:12px;
+  --gate-choice-v26-padding-y:11px;
+  --gate-choice-v26-padding-x:18px;
+  --gate-choice-v26-gap:10px;
+}
+
+.shion-root .gate-player{
+  width:min(var(--gate-box-v26-width),82%)!important;
+  padding:var(--gate-box-v26-padding-y) var(--gate-box-v26-padding-x)!important;
+  border-radius:var(--gate-box-v26-radius)!important;
+}
+
+.shion-root .gate-choices{
+  gap:var(--gate-choice-v26-gap)!important;
+  margin-top:12px!important;
+}
+
+.shion-root .gate-choice{
+  padding:var(--gate-choice-v26-padding-y) var(--gate-choice-v26-padding-x)!important;
+  font-size:var(--gate-choice-v26-size)!important;
+  letter-spacing:2.2px!important;
+}
