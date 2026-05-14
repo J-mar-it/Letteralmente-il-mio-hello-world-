@@ -319,7 +319,7 @@
 }
 
 .shion-root .symbol{
-  margin-bottom:6px!important;  /* simbolo -> player */
+  margin-bottom:-100px!important;  /* simbolo -> player */
 }
 
 .shion-root .ost-player{
