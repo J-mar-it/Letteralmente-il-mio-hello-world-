@@ -1,0 +1,10 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v24-gate-phrase.css?v=1");
+
+/* ==========================================================
+   SHION LAND V25 GATE PHRASE SMALLER
+   Riduce solo la frase inglese della schermata 2.
+   ========================================================== */
+
+.shion-root{
+  --gate-phrase-v24-size:28px;
+}
