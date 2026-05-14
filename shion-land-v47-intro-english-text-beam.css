@@ -1,0 +1,72 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v46-intro-english-strong-sweep.css?v=1");
+
+/* ==========================================================
+   SHION LAND V47 INTRO ENGLISH TEXT BEAM
+   Sweep visibile: testo stabile + copia sovrapposta con banda luminosa.
+   Non muove layout, player, warning, Medicina o schermata 2.
+   ========================================================== */
+
+.shion-root{
+  --intro-english-v47-speed:3.2s;
+  --intro-english-v47-base-glow:0 0 7px rgba(226,242,246,.58),0 0 16px rgba(169,192,200,.42),0 0 30px rgba(59,85,94,.28);
+  --intro-english-v47-beam-glow:0 0 10px rgba(255,255,255,.95),0 0 24px rgba(214,246,252,.78),0 0 46px rgba(59,85,94,.50);
+}
+
+/* Testo base: torna leggibile e meno impastato. */
+.shion-root .intro-screen .ost-line{
+  position:relative!important;
+  display:block!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+  color:rgba(226,242,246,.92)!important;
+  -webkit-text-fill-color:rgba(226,242,246,.92)!important;
+  background:none!important;
+  text-shadow:var(--intro-english-v47-base-glow)!important;
+  animation:none!important;
+}
+
+/* Spegne eventuali fasci precedenti. */
+.shion-root .intro-screen .ost-line:after{
+  content:""!important;
+  display:none!important;
+}
+
+/* Copia luminosa della frase: qui si vede davvero lo scorrimento. */
+.shion-root .intro-screen .ost-line:before{
+  content:"What do you feel, when my rhythm touches you?"!important;
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  z-index:3!important;
+  pointer-events:none!important;
+  font:inherit!important;
+  font-style:inherit!important;
+  font-weight:inherit!important;
+  line-height:inherit!important;
+  letter-spacing:inherit!important;
+  text-align:inherit!important;
+  white-space:nowrap!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    transparent 34%,
+    rgba(255,255,255,.96) 44%,
+    rgba(214,246,252,1) 50%,
+    rgba(255,255,255,.96) 56%,
+    transparent 66%,
+    transparent 100%)!important;
+  background-size:240% 100%!important;
+  background-position:-140% 50%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  text-shadow:var(--intro-english-v47-beam-glow)!important;
+  animation:shionIntroTextBeamV47 var(--intro-english-v47-speed) linear infinite!important;
+}
+
+@keyframes shionIntroTextBeamV47{
+  0%{background-position:-140% 50%;opacity:0;}
+  12%{opacity:1;}
+  82%{opacity:1;}
+  100%{background-position:140% 50%;opacity:0;}
+}
