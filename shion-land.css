@@ -311,9 +311,16 @@
   display:block!important;
   align-items:flex-start!important;
   justify-content:flex-start!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
 }
 
-.shion-root .intro-screen>.intro-card{
+.shion-root .intro-screen>.intro-card,
+.shion-root .intro-card{
+  display:block!important;
+  opacity:1!important;
+  visibility:visible!important;
   position:absolute!important;
   top:8px!important;
   left:8px!important;
@@ -324,11 +331,13 @@
   max-width:none!important;
   max-height:616px!important;
   margin:0!important;
+  z-index:99999!important;
+  outline:2px solid #b30007!important;
 }
 
-/* LAND DEBUG V5 - se non compare, la land sta usando cache */
+/* LAND DEBUG V6 - se compare, la card deve avere un bordo rosso */
 .shion-root:before{
-  content:"LAND V5";
+  content:"LAND V6";
   position:absolute;
   top:2px;
   left:2px;
