@@ -1,0 +1,73 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v23-player-fix.css?v=1");
+
+/* ==========================================================
+   SHION LAND V24 GATE PHRASE
+   Ritocco leggero schermata 2.
+   Ingrandisce e illumina solo la frase inglese del gate-player.
+   Schermata 1 stabile non toccata.
+   ========================================================== */
+
+.shion-root{
+  --gate-phrase-v24-size:34px;
+  --gate-phrase-v24-line-height:1.16;
+  --gate-phrase-v24-bottom-gap:10px;
+  --gate-phrase-v24-glow:0 0 8px rgba(236,190,255,.76),0 0 18px rgba(214,142,255,.58),0 0 34px rgba(188,90,255,.42),0 0 58px rgba(59,85,94,.26);
+  --gate-phrase-v24-sweep-speed:3.4s;
+  --gate-phrase-v24-pulse-speed:2.8s;
+}
+
+.shion-root .gate-ost-line{
+  position:relative!important;
+  display:block!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+  margin:0 0 var(--gate-phrase-v24-bottom-gap)!important;
+  font-size:var(--gate-phrase-v24-size)!important;
+  line-height:var(--gate-phrase-v24-line-height)!important;
+  letter-spacing:.035em!important;
+  color:rgba(246,232,255,.96)!important;
+  -webkit-text-fill-color:rgba(246,232,255,.96)!important;
+  text-align:center!important;
+  text-shadow:var(--gate-phrase-v24-glow)!important;
+  animation:shionGatePhraseBreath var(--gate-phrase-v24-pulse-speed) ease-in-out infinite!important;
+}
+
+.shion-root .gate-ost-line:after{
+  content:""!important;
+  position:absolute!important;
+  top:-35%!important;
+  bottom:-35%!important;
+  left:-52%!important;
+  width:34%!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(236,190,255,.05) 18%,
+    rgba(255,245,255,.78) 48%,
+    rgba(214,142,255,.34) 68%,
+    transparent 100%)!important;
+  filter:blur(5px)!important;
+  transform:skewX(-18deg) translateX(-120%)!important;
+  mix-blend-mode:screen!important;
+  animation:shionGatePhraseSweep var(--gate-phrase-v24-sweep-speed) ease-in-out infinite!important;
+}
+
+@keyframes shionGatePhraseBreath{
+  0%,100%{
+    opacity:.88;
+    text-shadow:0 0 7px rgba(236,190,255,.48),0 0 16px rgba(214,142,255,.34),0 0 30px rgba(188,90,255,.22);
+  }
+  50%{
+    opacity:1;
+    text-shadow:0 0 11px rgba(255,245,255,.92),0 0 28px rgba(236,190,255,.74),0 0 54px rgba(188,90,255,.50),0 0 86px rgba(188,90,255,.26);
+  }
+}
+
+@keyframes shionGatePhraseSweep{
+  0%{transform:skewX(-18deg) translateX(-120%);opacity:0;}
+  18%{opacity:.95;}
+  48%{opacity:1;}
+  82%{opacity:.82;}
+  100%{transform:skewX(-18deg) translateX(540%);opacity:0;}
+}
