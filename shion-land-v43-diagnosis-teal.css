@@ -1,0 +1,36 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v42-portrait-text-bigger.css?v=1");
+
+/* ==========================================================
+   SHION LAND V43 DIAGNOSIS TEAL
+   Schermata 2: Diagnosis in teal con glow intermittente.
+   Riduce di 1px la frase sotto.
+   ========================================================== */
+
+.shion-root{
+  --screen2-frame-title-size:12px;
+  --screen2-core-line-size:18px;
+
+  --screen2-diagnosis-teal:rgba(190,226,232,.94);
+  --screen2-diagnosis-glow:0 0 8px rgba(169,192,200,.70),0 0 18px rgba(59,85,94,.56),0 0 34px rgba(59,85,94,.34),0 0 58px rgba(59,85,94,.20);
+}
+
+.shion-root .main-screen .frame-title small{
+  color:var(--screen2-diagnosis-teal)!important;
+  text-shadow:var(--screen2-diagnosis-glow)!important;
+  animation:shionDiagnosisTealPulse 2.15s ease-in-out infinite!important;
+}
+
+.shion-root .main-screen .core-line{
+  font-size:var(--screen2-core-line-size)!important;
+}
+
+@keyframes shionDiagnosisTealPulse{
+  0%,100%{
+    opacity:.76;
+    text-shadow:0 0 5px rgba(169,192,200,.34),0 0 12px rgba(59,85,94,.24),0 0 24px rgba(59,85,94,.16);
+  }
+  50%{
+    opacity:1;
+    text-shadow:0 0 9px rgba(210,244,248,.84),0 0 22px rgba(169,192,200,.68),0 0 44px rgba(59,85,94,.42),0 0 72px rgba(59,85,94,.26);
+  }
+}
