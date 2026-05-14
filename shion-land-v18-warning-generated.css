@@ -1,0 +1,113 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v16-codex.css?v=1");
+
+/* ==========================================================
+   SHION LAND V18 WARNING GENERATED
+   Layer di test sopra la V16 Codex.
+   Genera il warning sotto Medicina senza dipendere dal paragrafo HTML.
+   ========================================================== */
+
+.shion-root{
+  --intro-warning-v18-gap:14px;
+  --intro-warning-v18-size:20px;
+  --intro-warning-v18-line-height:1.18;
+  --intro-warning-v18-width:980px;
+  --intro-warning-v18-line2-gap:24px;
+
+  --warning-purple-glow:0 0 8px rgba(214,142,255,.72),0 0 18px rgba(188,90,255,.52),0 0 34px rgba(188,90,255,.28);
+  --warning-teal-glow:0 0 8px rgba(169,192,200,.74),0 0 18px rgba(59,85,94,.58),0 0 34px rgba(59,85,94,.34);
+}
+
+/* Spengo il warning HTML reale: nella land non resta affidabile. */
+.shion-root .warning{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+}
+
+/* Il bottone diventa l'ancora stabile del warning generato. */
+.shion-root .medicine-btn{
+  position:relative!important;
+  overflow:visible!important;
+  z-index:150!important;
+}
+
+/* Riga 1 completa. ATTENZIONE viene resa viola con il colore dell'intera riga. */
+.shion-root .medicine-btn:after{
+  content:"ATTENZIONE: LA SOMMINISTRAZIONE POTREBBE PORTARE AD UNA FORTE ASSUEFAZIONE,"!important;
+  position:absolute!important;
+  top:calc(100% + var(--intro-warning-v18-gap))!important;
+  left:50%!important;
+  width:var(--intro-warning-v18-width)!important;
+  transform:translateX(-50%)!important;
+  display:block!important;
+  pointer-events:none!important;
+  font-size:var(--intro-warning-v18-size)!important;
+  line-height:var(--intro-warning-v18-line-height)!important;
+  letter-spacing:.07em!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+  color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
+}
+
+/* Riga 2 completa con glow teal, per far risaltare CORPO e MENTE nel senso richiesto. */
+.shion-root .medicine-btn:before{
+  content:"NEL CORPO E NELLA MENTE."!important;
+  position:absolute!important;
+  top:calc(100% + var(--intro-warning-v18-gap) + (var(--intro-warning-v18-size) * var(--intro-warning-v18-line-height)) + var(--intro-warning-v18-line2-gap))!important;
+  left:50%!important;
+  width:var(--intro-warning-v18-width)!important;
+  transform:translateX(-50%)!important;
+  display:block!important;
+  pointer-events:none!important;
+  font-size:var(--intro-warning-v18-size)!important;
+  line-height:var(--intro-warning-v18-line-height)!important;
+  letter-spacing:.07em!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+  color:rgba(190,226,232,.96)!important;
+  text-shadow:var(--warning-teal-glow)!important;
+  animation:shionWarningTealPulse 2.1s ease-in-out infinite!important;
+}
+
+/* Overlay viola sulla parola ATTENZIONE. */
+.shion-root .medicine-btn span:first-child:after{
+  content:"ATTENZIONE"!important;
+  position:absolute!important;
+  top:calc(100% + var(--intro-warning-v18-gap))!important;
+  left:50%!important;
+  transform:translateX(-430px)!important;
+  display:block!important;
+  pointer-events:none!important;
+  font-size:var(--intro-warning-v18-size)!important;
+  line-height:var(--intro-warning-v18-line-height)!important;
+  letter-spacing:.07em!important;
+  text-align:left!important;
+  white-space:nowrap!important;
+  color:rgba(230,170,255,.96)!important;
+  text-shadow:var(--warning-purple-glow)!important;
+  animation:shionWarningPurplePulse 1.75s ease-in-out infinite!important;
+  z-index:2!important;
+}
+
+@keyframes shionWarningPurplePulse{
+  0%,100%{
+    opacity:.72;
+    text-shadow:0 0 5px rgba(214,142,255,.34),0 0 12px rgba(188,90,255,.24);
+  }
+  45%{
+    opacity:1;
+    text-shadow:0 0 9px rgba(236,190,255,.88),0 0 22px rgba(214,142,255,.70),0 0 44px rgba(188,90,255,.42);
+  }
+}
+
+@keyframes shionWarningTealPulse{
+  0%,100%{
+    opacity:.76;
+    text-shadow:0 0 5px rgba(169,192,200,.34),0 0 12px rgba(59,85,94,.24);
+  }
+  50%{
+    opacity:1;
+    text-shadow:0 0 9px rgba(190,226,232,.82),0 0 22px rgba(59,85,94,.68),0 0 44px rgba(59,85,94,.38);
+  }
+}
