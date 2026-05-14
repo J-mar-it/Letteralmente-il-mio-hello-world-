@@ -1,0 +1,38 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v22-warning-up.css?v=1");
+
+/* ==========================================================
+   SHION LAND V23 PLAYER FIX
+   Rende il player audio cliccabile sopra i layer grafici.
+   Non cambia layout, warning, titolo o quote.
+   ========================================================== */
+
+.shion-root .ost-player{
+  position:relative!important;
+  z-index:500!important;
+  pointer-events:auto!important;
+  isolation:isolate!important;
+}
+
+.shion-root .ost-player audio{
+  position:relative!important;
+  z-index:510!important;
+  display:block!important;
+  width:100%!important;
+  pointer-events:auto!important;
+  opacity:.96!important;
+}
+
+/* Decorazioni: visibili ma non devono bloccare il click sul player. */
+.shion-root .ost-player:before,
+.shion-root .ost-player:after,
+.shion-root .ost-line:before,
+.shion-root .ost-line:after,
+.shion-root .symbol:before,
+.shion-root .symbol:after,
+.shion-root .petals,
+.shion-root .petal,
+.shion-root .mist,
+.shion-root .intro-screen:before,
+.shion-root .intro-screen:after{
+  pointer-events:none!important;
+}
