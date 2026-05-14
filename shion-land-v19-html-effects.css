@@ -1,0 +1,157 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v16-codex.css?v=1");
+
+/* ==========================================================
+   SHION LAND V19 HTML EFFECTS TEST
+   Layer sopra la V16 Codex.
+   Usa il warning HTML reale e aggiunge effetto alla frase inglese.
+   ========================================================== */
+
+.shion-root{
+  /* Warning HTML sotto Medicina */
+  --intro-warning-v19-y:-182px;
+  --intro-warning-v19-gap:12px;
+  --intro-warning-v19-size:20px;
+  --intro-warning-v19-width:980px;
+
+  /* Frase inglese */
+  --intro-english-v19-glow:0 0 8px rgba(226,242,246,.76),0 0 18px rgba(169,192,200,.62),0 0 34px rgba(59,85,94,.46),0 0 58px rgba(59,85,94,.24);
+  --intro-english-v19-speed:3.2s;
+  --intro-english-v19-pulse:2.6s;
+
+  /* Warning glow */
+  --warning-purple-glow:0 0 8px rgba(214,142,255,.72),0 0 18px rgba(188,90,255,.52),0 0 34px rgba(188,90,255,.28);
+  --warning-teal-glow:0 0 8px rgba(169,192,200,.74),0 0 18px rgba(59,85,94,.58),0 0 34px rgba(59,85,94,.34);
+}
+
+/* ==========================================================
+   FRASE INGLESE DEL PLAYER
+   Glow morbido + lama di luce che attraversa la frase.
+   ========================================================== */
+
+.shion-root .ost-line{
+  position:relative!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+  color:rgba(238,246,248,.96)!important;
+  -webkit-text-fill-color:rgba(238,246,248,.96)!important;
+  text-shadow:var(--intro-english-v19-glow)!important;
+  animation:shionEnglishBreath var(--intro-english-v19-pulse) ease-in-out infinite!important;
+}
+
+.shion-root .ost-line:after{
+  content:""!important;
+  position:absolute!important;
+  top:-32%!important;
+  bottom:-32%!important;
+  left:-48%!important;
+  width:34%!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(226,242,246,.05) 18%,
+    rgba(255,255,255,.74) 48%,
+    rgba(169,192,200,.32) 68%,
+    transparent 100%)!important;
+  filter:blur(5px)!important;
+  transform:skewX(-18deg) translateX(-120%)!important;
+  mix-blend-mode:screen!important;
+  animation:shionEnglishSweep var(--intro-english-v19-speed) ease-in-out infinite!important;
+}
+
+@keyframes shionEnglishBreath{
+  0%,100%{
+    opacity:.88;
+    text-shadow:0 0 6px rgba(226,242,246,.46),0 0 14px rgba(169,192,200,.34),0 0 28px rgba(59,85,94,.22);
+  }
+  50%{
+    opacity:1;
+    text-shadow:0 0 9px rgba(226,242,246,.82),0 0 22px rgba(169,192,200,.66),0 0 42px rgba(59,85,94,.44),0 0 70px rgba(59,85,94,.24);
+  }
+}
+
+@keyframes shionEnglishSweep{
+  0%{transform:skewX(-18deg) translateX(-120%);opacity:0;}
+  18%{opacity:.95;}
+  48%{opacity:1;}
+  82%{opacity:.82;}
+  100%{transform:skewX(-18deg) translateX(520%);opacity:0;}
+}
+
+/* ==========================================================
+   WARNING HTML REALE
+   Supporta sia le classi nuove warn-purple/warn-teal,
+   sia l'HTML vecchio con span/pulse tramite nth-of-type.
+   ========================================================== */
+
+.shion-root .warning{
+  position:relative!important;
+  top:var(--intro-warning-v19-y)!important;
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  width:var(--intro-warning-v19-width)!important;
+  max-width:var(--intro-warning-v19-width)!important;
+  margin:var(--intro-warning-v19-gap) auto 0!important;
+  padding:0!important;
+  font-size:var(--intro-warning-v19-size)!important;
+  line-height:1.18!important;
+  letter-spacing:.07em!important;
+  text-align:center!important;
+  text-transform:uppercase!important;
+  white-space:normal!important;
+  color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
+  pointer-events:none!important;
+  z-index:140!important;
+}
+
+.shion-root .warning br{
+  display:block!important;
+}
+
+/* ATTENZIONE: viola intermittente */
+.shion-root .warning .warn-purple,
+.shion-root .warning span:first-child{
+  color:rgba(230,170,255,.96)!important;
+  text-shadow:var(--warning-purple-glow)!important;
+  animation:shionWarningPurplePulse 1.75s ease-in-out infinite!important;
+}
+
+/* ASSUEFAZIONE: neutra se resta con classe pulse nel vecchio HTML */
+.shion-root .warning span:nth-of-type(2){
+  color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.30),0 0 16px rgba(59,85,94,.20)!important;
+  animation:none!important;
+}
+
+/* CORPO + MENTE: teal intermittente */
+.shion-root .warning .warn-teal,
+.shion-root .warning span:nth-of-type(3),
+.shion-root .warning span:nth-of-type(4){
+  color:rgba(190,226,232,.96)!important;
+  text-shadow:var(--warning-teal-glow)!important;
+  animation:shionWarningTealPulse 2.1s ease-in-out infinite!important;
+}
+
+@keyframes shionWarningPurplePulse{
+  0%,100%{
+    opacity:.72;
+    text-shadow:0 0 5px rgba(214,142,255,.34),0 0 12px rgba(188,90,255,.24);
+  }
+  45%{
+    opacity:1;
+    text-shadow:0 0 9px rgba(236,190,255,.88),0 0 22px rgba(214,142,255,.70),0 0 44px rgba(188,90,255,.42);
+  }
+}
+
+@keyframes shionWarningTealPulse{
+  0%,100%{
+    opacity:.76;
+    text-shadow:0 0 5px rgba(169,192,200,.34),0 0 12px rgba(59,85,94,.24);
+  }
+  50%{
+    opacity:1;
+    text-shadow:0 0 9px rgba(190,226,232,.82),0 0 22px rgba(59,85,94,.68),0 0 44px rgba(59,85,94,.38);
+  }
+}
