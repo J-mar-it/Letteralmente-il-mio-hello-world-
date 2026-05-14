@@ -4,19 +4,14 @@
 .shion-root{
   width:100%!important;
   max-width:730px!important;
-  min-height:640px!important;
-  height:640px!important;
   margin:0 auto!important;
   overflow:hidden!important;
   position:relative!important;
 }
 
 .shion-root .app{
-  position:absolute!important;
-  inset:0!important;
+  position:relative!important;
   width:100%!important;
-  height:640px!important;
-  min-height:640px!important;
   overflow:hidden!important;
 }
 
@@ -24,8 +19,7 @@
   position:absolute!important;
   inset:0!important;
   width:100%!important;
-  height:640px!important;
-  min-height:640px!important;
+  overflow:hidden!important;
 }
 
 /* INTRO: scala tutta la card per farla entrare nel box land */
