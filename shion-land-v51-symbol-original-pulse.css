@@ -1,0 +1,26 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v48-intro-fix.css?v=1");
+
+/* ==========================================================
+   SHION LAND V51 SYMBOL ORIGINAL PULSE
+   Ripristina il respiro originale del simbolo:
+   translateY(-3px) + scale(1.06), come nel codice base.
+   Rimuove i drop-shadow/glow aggiunti nelle prove successive.
+   ========================================================== */
+
+.shion-root .intro-screen .symbol{
+  transform-origin:center center!important;
+  animation:shionSymbolPulseOriginalV51 3.2s ease-in-out infinite!important;
+  filter:none!important;
+  will-change:transform, box-shadow!important;
+}
+
+@keyframes shionSymbolPulseOriginalV51{
+  0%,100%{
+    transform:translateY(0) scale(1)!important;
+    box-shadow:0 0 24px rgba(59,85,94,.28),0 0 42px rgba(59,85,94,.20),inset 0 0 24px rgba(59,85,94,.16)!important;
+  }
+  50%{
+    transform:translateY(-3px) scale(1.06)!important;
+    box-shadow:0 0 30px rgba(169,192,200,.24),0 0 56px rgba(59,85,94,.34),inset 0 0 28px rgba(169,192,200,.14)!important;
+  }
+}
