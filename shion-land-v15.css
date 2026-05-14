@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.12
+   SHION LAND V15.13
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -17,6 +17,7 @@
   --intro-title-v15-offset:-125px;
   --intro-divider-diamond-offset:6px;
   --intro-lower-text-block-offset:-130px;
+  --intro-quote-v15-extra-offset:-45px;
 
   /* Simbolo 毒 */
   --intro-symbol-v15-size:220px;
@@ -163,6 +164,11 @@
 .shion-root .quote,
 .shion-root .medicine-btn{
   transform:translateY(var(--intro-lower-text-block-offset))!important;
+}
+
+/* Frase poetica alzata separatamente */
+.shion-root .quote{
+  transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-quote-v15-extra-offset)))!important;
 }
 
 /* Warning separato: resta sotto il bottone Medicina */
