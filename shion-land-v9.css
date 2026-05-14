@@ -1,0 +1,274 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion.css");
+
+/* SHION LAND V9 - versione pulita, senza debug, tarata per box reale circa 730x640 */
+.shion-root{
+  width:100%!important;
+  max-width:730px!important;
+  min-height:640px!important;
+  height:640px!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+  position:relative!important;
+}
+
+.shion-root .app{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:640px!important;
+  min-height:640px!important;
+  overflow:hidden!important;
+}
+
+.shion-root .screen{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:640px!important;
+  min-height:640px!important;
+}
+
+/* INTRO: invece di scrollare, scala tutta la card per farla entrare nel box land */
+.shion-root .intro-screen{
+  display:block!important;
+  padding:0!important;
+  overflow:hidden!important;
+  place-items:initial!important;
+}
+
+.shion-root .intro-card{
+  position:absolute!important;
+  top:8px!important;
+  left:50%!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:900px!important;
+  max-width:none!important;
+  max-height:none!important;
+  height:auto!important;
+  overflow:visible!important;
+  margin:0!important;
+  padding:42px 64px 36px!important;
+  transform:translateX(-50%) scale(.68)!important;
+  transform-origin:top center!important;
+  outline:none!important;
+}
+
+.shion-root .intro-card:before,
+.shion-root .intro-card:after{
+  display:none!important;
+}
+
+.shion-root .ost-player{
+  background:#080e10!important;
+}
+
+.shion-root .gate-player{
+  background:#100618!important;
+}
+
+/* SCHERMATE STAGE */
+.shion-root .stage-screen{
+  padding:10px!important;
+}
+
+.shion-root .stage{
+  width:100%!important;
+  max-width:710px!important;
+  height:620px!important;
+}
+
+/* Mantiene visibili i box laterali nella schermata 2 anche nel riquadro stretto */
+@media(max-width:820px){
+  .shion-root .tab-area{
+    display:grid!important;
+    width:138px!important;
+    height:430px!important;
+    top:50%!important;
+    gap:8px!important;
+  }
+
+  .shion-root .tab-area.left{
+    left:8px!important;
+  }
+
+  .shion-root .tab-area.right{
+    right:8px!important;
+  }
+
+  .shion-root .tab-buttons{
+    gap:6px!important;
+  }
+
+  .shion-root .tab-btn{
+    padding:8px 7px!important;
+    font-size:8px!important;
+    letter-spacing:1.5px!important;
+  }
+
+  .shion-root .tab-panel{
+    top:94px!important;
+    padding:13px 9px!important;
+    border-radius:14px!important;
+  }
+
+  .shion-root .tab-panel h3{
+    font-size:13px!important;
+    letter-spacing:.11em!important;
+    margin-bottom:8px!important;
+  }
+
+  .shion-root .tab-panel p{
+    font-size:11px!important;
+    line-height:1.42!important;
+  }
+
+  .shion-root .main-screen .portrait-stack{
+    width:250px!important;
+    top:78px!important;
+  }
+
+  .shion-root .main-screen .frame{
+    width:150px!important;
+    padding:8px!important;
+  }
+
+  .shion-root .main-screen .frame-title{
+    margin-top:38px!important;
+  }
+
+  .shion-root .main-screen .frame-title small{
+    font-size:8px!important;
+    letter-spacing:2px!important;
+  }
+
+  .shion-root .main-screen .core-line{
+    width:230px!important;
+    font-size:12px!important;
+    line-height:1.35!important;
+    margin-top:8px!important;
+  }
+
+  .shion-root .main-enter-btn{
+    bottom:76px!important;
+  }
+
+  .shion-root .main-return-btn{
+    bottom:22px!important;
+  }
+
+  .shion-root .gate-player{
+    width:min(420px,76%)!important;
+    bottom:128px!important;
+    padding:12px 14px!important;
+  }
+
+  .shion-root .gate-ost-line,
+  .shion-root .gate-line{
+    font-size:16px!important;
+  }
+
+  .shion-root .gate-choice{
+    padding:8px 10px!important;
+    font-size:8px!important;
+    letter-spacing:1px!important;
+  }
+}
+
+/* TRAP / DEAD: testo in colonna in alto a sinistra */
+.shion-root .trap-1-screen .trap-text,
+.shion-root .trap-2-screen .trap-text,
+.shion-root .trap-3-screen .trap-text,
+.shion-root .trap-4-screen .trap-text,
+.shion-root .trap-5-screen .trap-text,
+.shion-root .trap-6-screen .trap-text,
+.shion-root .dead-screen .dead-text{
+  left:7%!important;
+  top:42px!important;
+  bottom:auto!important;
+  width:360px!important;
+  max-width:32%!important;
+  transform:none!important;
+  text-align:left!important;
+}
+
+.shion-root .dead-screen .dead-text p{
+  font-size:clamp(30px,4.6vw,58px)!important;
+  white-space:normal!important;
+}
+
+.shion-root .trap-6-screen .no-break{
+  white-space:nowrap!important;
+}
+
+.shion-root .dead-screen .dead-options{
+  bottom:34px!important;
+  height:74px!important;
+}
+
+.shion-root .dead-screen .easy-way-btn{
+  left:auto!important;
+  right:6%!important;
+  top:0!important;
+}
+
+#flow-dead:checked~.app .dead-screen .easy-way-btn{
+  animation-delay:8s!important;
+}
+
+/* EASY / BLACKOUT */
+.shion-root .easy-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:24px!important;
+  transform:translateX(-50%)!important;
+  margin:0!important;
+}
+
+.shion-root .easy-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+.shion-root .easy-screen .easy-text,
+.shion-root .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:145px!important;
+  width:min(760px,88%)!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root .blackout-vision{
+  position:absolute!important;
+  inset:0!important;
+  z-index:2!important;
+  background:url("https://i.imgur.com/FenZ0Ar.png") center/contain no-repeat!important;
+  opacity:.16!important;
+  filter:grayscale(.15) brightness(.9) contrast(1.08) blur(.35px)!important;
+  mix-blend-mode:screen!important;
+  pointer-events:none!important;
+  transform:scale(.92)!important;
+}
+
+.shion-root .easy-screen .easy-text p{
+  background:linear-gradient(90deg,#b30007,#ff4f8b,#9b3cff,#d8adff,#ff4f8b,#b30007)!important;
+  background-size:320% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:easyPhraseGradient 4.8s ease-in-out infinite!important;
+  text-shadow:0 0 12px rgba(179,0,7,.28),0 0 24px rgba(155,60,255,.24),0 0 38px rgba(216,173,255,.16)!important;
+}
+
+@keyframes easyPhraseGradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
