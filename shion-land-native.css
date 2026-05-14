@@ -284,13 +284,13 @@
 
 /* Cornice 1: rettangolo esterno della schermata */
 .shion-root .intro-screen:before{
-  inset:48px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
+  inset:64px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
   border:1px solid rgba(59,85,94,.54)!important;
 }
 
 /* Cornice 2: rettangolo interno della schermata */
 .shion-root .intro-screen:after{
-  inset:300px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
+  inset:24px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
   border:1px solid rgba(169,192,200,.16)!important;
 }
 
