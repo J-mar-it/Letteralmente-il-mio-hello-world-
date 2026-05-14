@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.16
+   SHION LAND V15.17
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -45,10 +45,10 @@
   --intro-player-line-sweep-speed:3.4s;
   --intro-player-note-pulse-speed:1.85s;
 
-  /* Warning sotto il bottone Medicina */
-  --intro-warning-v15-offset:-112px;
-  --intro-warning-v15-size:15px;
-  --intro-warning-v15-glow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24);
+  /* Warning generato sotto il bottone Medicina */
+  --intro-warning-fallback-gap:18px;
+  --intro-warning-fallback-size:15px;
+  --intro-warning-fallback-width:980px;
 
   /* Box informativo di SHION: sotto il titolo, ma più vicino al player */
   --intro-overlay-top:760px;
@@ -172,38 +172,40 @@
   transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-quote-v15-extra-offset)))!important;
 }
 
-/* Bottone Medicina separato: viene alzato per non essere tagliato */
+/* Bottone Medicina separato */
 .shion-root .medicine-btn{
+  position:relative!important;
+  overflow:visible!important;
+  z-index:130!important;
   transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-medicine-v15-extra-offset)))!important;
 }
 
-/* Warning separato: resta sotto il bottone Medicina */
-.shion-root .warning{
+/* Warning generato direttamente sotto il bottone: più stabile della vecchia .warning */
+.shion-root .medicine-btn:after{
+  content:"ATTENZIONE: LA SOMMINISTRAZIONE POTREBBE PORTARE AD UNA FORTE ASSUEFAZIONE, NEL CORPO E NELLA MENTE."!important;
+  position:absolute!important;
+  top:calc(100% + var(--intro-warning-fallback-gap))!important;
+  left:50%!important;
+  width:var(--intro-warning-fallback-width)!important;
+  transform:translateX(-50%)!important;
   display:block!important;
-  visibility:visible!important;
-  opacity:1!important;
-  position:relative!important;
-  z-index:120!important;
-  width:980px!important;
-  max-width:980px!important;
-  margin:14px auto 0!important;
-  padding:0!important;
-  font-size:var(--intro-warning-v15-size)!important;
+  pointer-events:none!important;
+  font-size:var(--intro-warning-fallback-size)!important;
   line-height:1.12!important;
   letter-spacing:.07em!important;
-  color:rgba(169,192,200,.82)!important;
   text-align:center!important;
   white-space:nowrap!important;
-  overflow:visible!important;
-  text-shadow:var(--intro-warning-v15-glow)!important;
-  transform:translateY(var(--intro-warning-v15-offset))!important;
+  color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
 }
 
-.shion-root .warning .pulse,
-.shion-root .warning b,
-.shion-root .warning strong{
-  color:rgba(230,170,255,.92)!important;
-  text-shadow:0 0 8px rgba(214,142,255,.56),0 0 18px rgba(188,90,255,.36)!important;
+.shion-root .medicine-btn:before{
+  content:""!important;
+}
+
+/* Vecchio warning spento per evitare doppioni o posizionamenti instabili */
+.shion-root .warning{
+  display:none!important;
 }
 
 /* ==========================================================
