@@ -1,11 +1,44 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v11.css?v=2");
 
 /* ==========================================================
-   SHION LAND V14.1
+   SHION LAND V14.3
    Base: V11
-   Scopo: intro stabile, cornici pulite, distanze ordinate,
-   titolo SHION IBURI cliccabile e overlay controllato.
+   Fix: intro stabile, pulsante dentro la card,
+   linee/sbordature esterne coperte dal contenitore.
    ========================================================== */
+
+/* ==========================================================
+   CONTENITORE GENERALE
+   La land mostra uno spazio più alto di 640px: se lasciamo
+   root/app/screen a 640px, sotto ricompare il background grigio.
+   ========================================================== */
+
+.shion-root{
+  width:100%!important;
+  max-width:730px!important;
+  height:744px!important;
+  min-height:744px!important;
+  max-height:744px!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+  position:relative!important;
+  background:#030607!important;
+}
+
+.shion-root .app,
+.shion-root .screen{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  bottom:auto!important;
+  width:100%!important;
+  height:744px!important;
+  min-height:744px!important;
+  max-height:744px!important;
+  overflow:hidden!important;
+  background:#030607!important;
+}
 
 /* ==========================================================
    STRUTTURA INTRO
@@ -16,6 +49,12 @@
   padding:0!important;
   overflow:hidden!important;
   place-items:initial!important;
+  isolation:isolate!important;
+  background:
+    radial-gradient(circle at center,rgba(59,85,94,.22),transparent 36%),
+    linear-gradient(rgba(5,2,8,.28),rgba(5,2,8,.76)),
+    url("sfondo-shion-veleno.png") center/cover no-repeat,
+    #030607!important;
 }
 
 /* Rettangolo decorativo esterno spento */
@@ -23,15 +62,18 @@
   display:none!important;
 }
 
-/* Cornice interna sottile */
+/* Cornice visiva interna */
 .shion-root .intro-screen:after{
-  inset:22px!important;
+  content:""!important;
+  position:absolute!important;
+  inset:24px!important;
   border:1px solid rgba(169,192,200,.13)!important;
   box-shadow:inset 0 0 34px rgba(59,85,94,.08)!important;
   pointer-events:none!important;
+  z-index:50!important;
 }
 
-/* Card interna scalata: 1460x1274 diventa circa 730x637 */
+/* Card tecnica: posiziona il contenuto, ma non disegna più linee proprie */
 .shion-root .intro-card{
   position:absolute!important;
   top:4px!important;
@@ -48,14 +90,14 @@
   min-height:1274px!important;
   max-height:none!important;
   margin:0!important;
-  padding:46px 42px 16px!important;
+  padding:28px 42px 16px!important;
   transform:translateX(-50%) scale(.50)!important;
   transform-origin:top center!important;
   background:transparent!important;
-  border:1px solid rgba(59,85,94,.24)!important;
+  border:0!important;
   box-shadow:none!important;
   outline:none!important;
-  overflow:visible!important;
+  overflow:hidden!important;
 }
 
 .shion-root .intro-card:before,
@@ -70,7 +112,7 @@
 }
 
 /* ==========================================================
-   DIMENSIONI INTRO
+   DIMENSIONI E DISTANZE INTRO
    ========================================================== */
 
 .shion-root .symbol{
@@ -78,13 +120,13 @@
   height:64px!important;
   flex:0 0 auto!important;
   font-size:34px!important;
-  margin:0 auto 22px!important;
+  margin:0 auto 10px!important;
 }
 
 .shion-root .ost-player{
   width:560px!important;
   flex:0 0 auto!important;
-  margin:0 auto 18px!important;
+  margin:0 auto 10px!important;
   padding:10px 16px!important;
   background:#080e10!important;
 }
@@ -114,7 +156,7 @@
   width:100%!important;
   min-height:106px!important;
   flex:0 0 auto!important;
-  margin:-10px 0 0!important;
+  margin:-2px 0 0!important;
   text-align:center!important;
   font-size:118px!important;
   line-height:.78!important;
@@ -126,11 +168,11 @@
   display:block!important;
   white-space:nowrap!important;
   text-align:center!important;
-  margin:-6px 0 0!important;
+  margin:2px 0 0!important;
   padding:0!important;
-  font-size:28px!important;
-  line-height:.95!important;
-  letter-spacing:.14em!important;
+  font-size:24px!important;
+  line-height:1!important;
+  letter-spacing:.11em!important;
 }
 
 .shion-root .subtitle br{
@@ -139,12 +181,12 @@
 
 .shion-root .divider{
   width:350px!important;
-  margin:8px auto 8px!important;
+  margin:8px auto 10px!important;
 }
 
 .shion-root .quote{
-  font-size:48px!important;
-  line-height:1.04!important;
+  font-size:42px!important;
+  line-height:1.06!important;
   margin:0!important;
 }
 
@@ -153,13 +195,13 @@
 }
 
 .shion-root .medicine-btn{
-  width:760px!important;
+  width:650px!important;
   min-width:0!important;
-  margin-top:28px!important;
+  margin-top:14px!important;
   margin-bottom:0!important;
-  padding:8px 18px!important;
+  padding:7px 16px!important;
   gap:10px!important;
-  font-size:32px!important;
+  font-size:26px!important;
   line-height:1!important;
   letter-spacing:.06em!important;
   white-space:nowrap!important;
@@ -170,20 +212,20 @@
 }
 
 .shion-root .medicine-icon{
-  width:58px!important;
-  height:58px!important;
+  width:50px!important;
+  height:50px!important;
   flex:0 0 auto!important;
 }
 
 .shion-root .warning{
-  margin-top:18px!important;
-  font-size:17px!important;
-  line-height:1.12!important;
+  margin-top:10px!important;
+  font-size:15px!important;
+  line-height:1.08!important;
   letter-spacing:.07em!important;
 }
 
 /* ==========================================================
-   CLICK TITOLO / SOTTOTITOLO
+   TITOLO: SHION IBURI CLICCABILE MA STABILE
    ========================================================== */
 
 .shion-root .title .intro-toggle,
@@ -199,42 +241,61 @@
 }
 
 .shion-root .title .intro-link:hover,
-.shion-root .title .intro-toggle:hover,
-.shion-root .subtitle .intro-link:hover,
-.shion-root .subtitle .intro-toggle:hover{
+.shion-root .title .intro-toggle:hover{
   transform:none!important;
 }
 
-/* Mantiene nascosti i duplicati */
 .shion-root .title .intro-link-close,
-.shion-root .subtitle .intro-link-close,
-.shion-root .intro-link-close{
-  display:none!important;
-}
-
-/* SHION IBURI resta graficamente identico anche quando è cliccato */
-#intro-shion:checked~.app .title .intro-open-shion{
-  display:block!important;
-}
-
+.shion-root .title .intro-close-shion,
 #intro-shion:checked~.app .title .intro-close-shion{
   display:none!important;
 }
 
-/* Il sottotitolo non apre overlay per sbaglio */
-.shion-root .subtitle .intro-toggle,
+.shion-root .title .intro-open-shion,
+#intro-shion:checked~.app .title .intro-open-shion{
+  display:block!important;
+}
+
+/* ==========================================================
+   SOTTOTITOLO: NIENTE DUPLICATI
+   ========================================================== */
+
+.shion-root .subtitle .intro-toggle{
+  display:inline!important;
+  white-space:nowrap!important;
+}
+
 .shion-root .subtitle .intro-link,
 .shion-root .subtitle label{
   display:inline!important;
   white-space:nowrap!important;
+  transform:none!important;
   pointer-events:none!important;
   cursor:default!important;
 }
 
+.shion-root .subtitle .intro-link:hover{
+  transform:none!important;
+}
+
+.shion-root .subtitle .intro-link.intro-link-close,
+.shion-root .subtitle label.intro-link-close,
+.shion-root .subtitle .intro-close-rank,
+.shion-root .subtitle .intro-close-venenista,
+.shion-root .subtitle .intro-close-clan,
 #intro-rank:checked~.app .subtitle .intro-close-rank,
 #intro-venenista:checked~.app .subtitle .intro-close-venenista,
 #intro-clan:checked~.app .subtitle .intro-close-clan{
   display:none!important;
+}
+
+.shion-root .subtitle .intro-open-rank,
+.shion-root .subtitle .intro-open-venenista,
+.shion-root .subtitle .intro-open-clan,
+#intro-rank:checked~.app .subtitle .intro-open-rank,
+#intro-venenista:checked~.app .subtitle .intro-open-venenista,
+#intro-clan:checked~.app .subtitle .intro-open-clan{
+  display:inline!important;
 }
 
 /* ==========================================================
@@ -244,10 +305,10 @@
 .shion-root .intro-info{
   position:absolute!important;
   left:50%!important;
-  top:690px!important;
+  top:610px!important;
   transform:translateX(-50%)!important;
   transform-origin:top center!important;
-  width:1120px!important;
+  width:980px!important;
   max-width:none!important;
   max-height:0!important;
   min-height:0!important;
@@ -262,13 +323,13 @@
 }
 
 #intro-shion:checked~.app .intro-info{
-  max-height:260px!important;
-  min-height:150px!important;
+  max-height:220px!important;
+  min-height:130px!important;
   opacity:1!important;
   visibility:visible!important;
   pointer-events:auto!important;
   margin:0!important;
-  padding:28px 38px!important;
+  padding:22px 30px!important;
   border:1px solid rgba(169,192,200,.36)!important;
   border-radius:18px!important;
   background:linear-gradient(180deg,rgba(8,14,16,.96),rgba(3,6,7,.98))!important;
@@ -289,14 +350,14 @@
 }
 
 .shion-root .intro-info h3{
-  font-size:42px!important;
+  font-size:34px!important;
   line-height:1!important;
-  margin:0 0 12px!important;
+  margin:0 0 10px!important;
 }
 
 .shion-root .intro-info p{
-  font-size:30px!important;
-  line-height:1.22!important;
+  font-size:24px!important;
+  line-height:1.2!important;
   margin:0!important;
 }
 
@@ -305,150 +366,4 @@
   right:18px!important;
   font-size:38px!important;
   line-height:1!important;
-}
-/* ==========================================================
-   HOTFIX INTRO - rientro bottone + fix duplicazioni subtitle
-   ========================================================== */
-
-/* Card un po' più compatta */
-.shion-root .intro-card{
-  padding:28px 42px 16px!important;
-}
-
-/* Spaziature più strette */
-.shion-root .symbol{
-  margin:0 auto 10px!important;
-}
-
-.shion-root .ost-player{
-  margin:0 auto 10px!important;
-}
-
-.shion-root .title{
-  margin:-2px 0 0!important;
-}
-
-.shion-root .subtitle{
-  margin:2px 0 0!important;
-  font-size:24px!important;
-  line-height:1!important;
-  letter-spacing:.11em!important;
-}
-
-.shion-root .divider{
-  margin:8px auto 10px!important;
-}
-
-.shion-root .quote{
-  font-size:42px!important;
-  line-height:1.06!important;
-  margin:0!important;
-}
-
-.shion-root .medicine-btn{
-  width:650px!important;
-  margin-top:14px!important;
-  padding:7px 16px!important;
-  font-size:26px!important;
-}
-
-.shion-root .medicine-icon{
-  width:50px!important;
-  height:50px!important;
-}
-
-.shion-root .warning{
-  margin-top:10px!important;
-  font-size:15px!important;
-  line-height:1.08!important;
-}
-
-/* Fix duplicazioni nei link del titolo/sottotitolo */
-.shion-root .title .intro-open-shion{
-  display:inline!important;
-}
-
-.shion-root .title .intro-close-shion{
-  display:none!important;
-}
-
-#intro-shion:checked~.app .title .intro-open-shion{
-  display:inline!important;
-}
-
-#intro-shion:checked~.app .title .intro-close-shion{
-  display:none!important;
-}
-
-/* Sottotitolo: mostra solo la versione "open" */
-.shion-root .subtitle .intro-link-close,
-.shion-root .subtitle .intro-close-rank,
-.shion-root .subtitle .intro-close-venenista,
-.shion-root .subtitle .intro-close-clan{
-  display:none!important;
-}
-
-.shion-root .subtitle .intro-open-rank,
-.shion-root .subtitle .intro-open-venenista,
-.shion-root .subtitle .intro-open-clan{
-  display:inline!important;
-}
-
-/* Se ci sono più label/link nel subtitle, niente a capo strano */
-.shion-root .subtitle .intro-toggle,
-.shion-root .subtitle .intro-link,
-.shion-root .subtitle label{
-  display:inline!important;
-  white-space:nowrap!important;
-}
-
-/* Overlay più in basso ma non invasivo */
-.shion-root .intro-info{
-  top:610px!important;
-  width:980px!important;
-}
-
-#intro-shion:checked~.app .intro-info{
-  max-height:220px!important;
-  min-height:130px!important;
-  padding:22px 30px!important;
-}
-
-.shion-root .intro-info h3{
-  font-size:34px!important;
-  margin:0 0 10px!important;
-}
-
-.shion-root .intro-info p{
-  font-size:24px!important;
-  line-height:1.2!important;
-}
-/* ==========================================================
-   FIX FINALE - elimina le linee / sbordature fuori dalla box
-   ========================================================== */
-
-/* La schermata intro deve tagliare tutto ciò che esce */
-.shion-root .intro-screen{
-  overflow:hidden!important;
-}
-
-/* La cornice visiva resta questa */
-.shion-root .intro-screen:after{
-  inset:24px!important;
-  pointer-events:none!important;
-}
-
-/* La card interna non deve più disegnare linee sue */
-.shion-root .intro-card{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  outline:none!important;
-  overflow:hidden!important;
-}
-
-/* Se il tema base mette pseudo-elementi strani, spegnili */
-.shion-root .intro-card:before,
-.shion-root .intro-card:after{
-  display:none!important;
 }
