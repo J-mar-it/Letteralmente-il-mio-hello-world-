@@ -115,6 +115,8 @@
   white-space:nowrap!important;
 }
 
+.shion-root .title .intro-link-close,
+.shion-root .subtitle .intro-link-close,
 .shion-root .intro-link-close{
   display:none!important;
 }
@@ -126,10 +128,10 @@
   display:none!important;
 }
 
-#intro-shion:checked~.app .intro-close-shion,
-#intro-rank:checked~.app .intro-close-rank,
-#intro-venenista:checked~.app .intro-close-venenista,
-#intro-clan:checked~.app .intro-close-clan{
+#intro-shion:checked~.app .title .intro-close-shion,
+#intro-rank:checked~.app .subtitle .intro-close-rank,
+#intro-venenista:checked~.app .subtitle .intro-close-venenista,
+#intro-clan:checked~.app .subtitle .intro-close-clan{
   display:inline!important;
   white-space:nowrap!important;
 }
@@ -150,6 +152,10 @@
 .shion-root .subtitle label{
   display:inline!important;
   white-space:nowrap!important;
+}
+
+.shion-root .subtitle .intro-link-close{
+  display:none!important;
 }
 
 .shion-root .subtitle br{
