@@ -1,0 +1,79 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v11.css?v=2");
+
+/* SHION LAND V13 - compromesso: più grande della V11, molto più contenuta della V12 */
+
+.shion-root .ost-line{
+  font-size:26px!important;
+  line-height:1.12!important;
+  letter-spacing:.03em!important;
+  margin:0 0 4px!important;
+}
+
+.shion-root .dose-note{
+  font-size:12px!important;
+  line-height:1!important;
+  letter-spacing:.16em!important;
+  margin-top:3px!important;
+}
+
+.shion-root .title{
+  font-size:118px!important;
+  line-height:.88!important;
+  letter-spacing:.13em!important;
+  margin:0!important;
+}
+
+.shion-root .subtitle{
+  font-size:28px!important;
+  line-height:1!important;
+  letter-spacing:.14em!important;
+  margin:4px 0 0!important;
+}
+
+.shion-root .divider{
+  width:350px!important;
+  margin:6px auto 5px!important;
+}
+
+.shion-root .quote{
+  font-size:48px!important;
+  line-height:1.08!important;
+  margin:0!important;
+}
+
+.shion-root .medicine-btn{
+  width:600px!important;
+  margin-top:6px!important;
+  padding:7px 16px!important;
+  gap:10px!important;
+  font-size:32px!important;
+  line-height:1!important;
+  letter-spacing:.06em!important;
+}
+
+.shion-root .medicine-icon{
+  width:58px!important;
+  height:58px!important;
+}
+
+.shion-root .warning{
+  margin-top:4px!important;
+  font-size:16px!important;
+  line-height:1.08!important;
+  letter-spacing:.07em!important;
+}
+
+/* Mantiene nascosti i duplicati */
+.shion-root .title .intro-link-close,
+.shion-root .subtitle .intro-link-close,
+.shion-root .intro-link-close{
+  display:none!important;
+}
+
+#intro-shion:checked~.app .title .intro-close-shion,
+#intro-rank:checked~.app .subtitle .intro-close-rank,
+#intro-venenista:checked~.app .subtitle .intro-close-venenista,
+#intro-clan:checked~.app .subtitle .intro-close-clan{
+  display:inline!important;
+  white-space:nowrap!important;
+}
