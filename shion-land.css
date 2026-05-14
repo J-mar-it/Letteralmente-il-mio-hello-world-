@@ -108,7 +108,7 @@
 /* LAND COMPACT PATCH - adatta la scheda al riquadro stretto della land */
 .shion-root{
   width:100%!important;
-  max-width:760px!important;
+  max-width:730px!important;
   min-height:640px!important;
   height:640px!important;
   margin:0 auto!important;
@@ -204,7 +204,7 @@
 
 .stage{
   width:100%!important;
-  max-width:736px!important;
+  max-width:706px!important;
   height:620px!important;
 }
 
@@ -302,4 +302,26 @@
     font-size:8px!important;
     letter-spacing:1px!important;
   }
+}
+
+/* LAND HARD FIX - taratura diretta su box reale 730x640 */
+.shion-root .intro-screen{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+}
+
+.shion-root .intro-screen>.intro-card{
+  position:absolute!important;
+  top:8px!important;
+  left:8px!important;
+  right:8px!important;
+  bottom:auto!important;
+  transform:none!important;
+  width:auto!important;
+  max-width:none!important;
+  max-height:616px!important;
+  margin:0!important;
 }
