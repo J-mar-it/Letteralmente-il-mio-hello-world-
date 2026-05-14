@@ -1,9 +1,9 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.24
+   SHION LAND V15.21
    File di override leggero sopra la V14 stabile.
-   Overlay titolo disattivato. Quote riportata a spaziatura normale.
+   Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
 
 /* ==========================================================
@@ -17,9 +17,7 @@
   --intro-title-v15-offset:-125px;
   --intro-divider-diamond-offset:6px;
   --intro-lower-text-block-offset:-130px;
-  --intro-subtitle-v15-extra-offset:-85px;
-  --intro-quote-v15-extra-offset:0px;
-  --intro-quote-v15-line-height:1.08;
+  --intro-quote-v15-extra-offset:-45px;
   --intro-medicine-v15-extra-offset:-52px;
 
   /* Simbolo 毒 */
@@ -52,7 +50,7 @@
   --intro-warning-fallback-size:20px;
   --intro-warning-fallback-width:980px;
 
-  /* Overlay disattivato: valore mantenuto solo per compatibilità */
+  /* Box informativo di SHION: sotto il titolo, ma più vicino al player */
   --intro-overlay-top:760px;
 }
 
@@ -151,7 +149,7 @@
 
 /* ==========================================================
    TITOLO GRANDE
-   Lo sposta solo visivamente.
+   Lo sposta solo visivamente: il resto della colonna non si incastra.
    ========================================================== */
 
 .shion-root .title{
@@ -159,53 +157,19 @@
 }
 
 /* ==========================================================
-   OVERLAY TITOLO DISATTIVATO DEFINITIVAMENTE
-   Cliccare SHION IBURI non fa più comparire il box informativo.
-   ========================================================== */
-
-.shion-root .intro-info,
-#intro-shion:checked~.app .intro-info,
-#intro-rank:checked~.app .intro-info,
-#intro-venenista:checked~.app .intro-info,
-#intro-clan:checked~.app .intro-info{
-  display:none!important;
-  visibility:hidden!important;
-  opacity:0!important;
-  pointer-events:none!important;
-  max-height:0!important;
-  min-height:0!important;
-  height:0!important;
-  padding:0!important;
-  margin:0!important;
-  border:0!important;
-  box-shadow:none!important;
-  overflow:hidden!important;
-}
-
-/* ==========================================================
-   RIGO SPECIAL JOUNIN + ROMBO
-   Resta separato dalla quote.
+   BLOCCO TESTI INFERIORI
+   Alza solo: sottotitolo e rombo.
+   Non tocca SHION IBURI, simbolo, player o overlay.
    ========================================================== */
 
 .shion-root .subtitle,
 .shion-root .divider{
-  transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-subtitle-v15-extra-offset)))!important;
+  transform:translateY(var(--intro-lower-text-block-offset))!important;
 }
 
-/* ==========================================================
-   QUOTE RIPORTATA A SPAZIATURA NORMALE
-   ========================================================== */
-
+/* Frase poetica alzata separatamente */
 .shion-root .quote{
-  line-height:var(--intro-quote-v15-line-height)!important;
-  margin:0!important;
-  padding:0!important;
   transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-quote-v15-extra-offset)))!important;
-}
-
-.shion-root .quote br{
-  display:block!important;
-  line-height:normal!important;
 }
 
 /* Bottone Medicina separato */
@@ -216,7 +180,7 @@
   transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-medicine-v15-extra-offset)))!important;
 }
 
-/* Warning generato direttamente sotto il bottone */
+/* Warning generato direttamente sotto il bottone: più stabile della vecchia .warning */
 .shion-root .medicine-btn:after{
   content:"ATTENZIONE: LA SOMMINISTRAZIONE POTREBBE PORTARE AD UNA FORTE ASSUEFAZIONE,\A NEL CORPO E NELLA MENTE."!important;
   position:absolute!important;
@@ -246,6 +210,7 @@
 
 /* ==========================================================
    ROMBO DECORATIVO
+   Tocca solo il piccolo rombo della divider.
    ========================================================== */
 
 .shion-root .divider:after{
