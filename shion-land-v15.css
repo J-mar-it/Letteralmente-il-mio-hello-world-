@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.4
+   SHION LAND V15.5
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -27,7 +27,12 @@
   --intro-player-v15-padding-x:26px;
   --intro-player-line-v15-size:52px;
   --intro-player-note-v15-size:24px;
+  --intro-player-note-v15-gap:18px;
   --intro-player-audio-v15-height:42px;
+
+  /* Glow player */
+  --intro-player-line-glow:0 0 10px rgba(169,192,200,.42),0 0 22px rgba(59,85,94,.36),0 0 38px rgba(59,85,94,.22);
+  --intro-player-note-glow:0 0 10px rgba(214,142,255,.42),0 0 22px rgba(188,90,255,.34),0 0 38px rgba(188,90,255,.18);
 
   /* Box informativo di SHION: più basso, sotto il titolo */
   --intro-overlay-top:860px;
@@ -60,12 +65,15 @@
   font-size:var(--intro-player-line-v15-size)!important;
   line-height:1.08!important;
   margin:0 0 8px!important;
+  text-shadow:var(--intro-player-line-glow)!important;
 }
 
 .shion-root .dose-note{
   font-size:var(--intro-player-note-v15-size)!important;
   line-height:1!important;
-  margin-top:6px!important;
+  margin-top:var(--intro-player-note-v15-gap)!important;
+  color:rgba(214,142,255,.82)!important;
+  text-shadow:var(--intro-player-note-glow)!important;
 }
 
 /* ==========================================================
