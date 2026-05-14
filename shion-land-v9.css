@@ -55,7 +55,7 @@
   height:auto!important;
   overflow:visible!important;
   margin:0!important;
-  padding:28px 52px 26px!important;
+  padding:22px 46px 20px!important;
   transform:translateX(-50%) scale(.46)!important;
   transform-origin:top center!important;
   outline:none!important;
@@ -67,60 +67,88 @@
 }
 
 .shion-root .symbol{
-  width:72px!important;
-  height:72px!important;
-  font-size:38px!important;
-  margin-bottom:6px!important;
+  width:58px!important;
+  height:58px!important;
+  font-size:31px!important;
+  margin-bottom:4px!important;
 }
 
 .shion-root .ost-player{
   background:#080e10!important;
-  margin-bottom:12px!important;
+  width:560px!important;
+  margin:0 auto 8px!important;
+  padding:10px 18px!important;
+}
+
+.shion-root .ost-line{
+  font-size:20px!important;
+  line-height:1.08!important;
+  margin-bottom:6px!important;
+}
+
+.shion-root .ost-player audio{
+  height:30px!important;
+}
+
+.shion-root .dose-note{
+  margin-top:4px!important;
+  font-size:9px!important;
+  line-height:1.1!important;
+  letter-spacing:.14em!important;
 }
 
 .shion-root .title{
-  font-size:76px!important;
-  line-height:1!important;
+  font-size:62px!important;
+  line-height:.95!important;
   margin:0!important;
 }
 
 .shion-root .subtitle{
-  margin-top:7px!important;
-  line-height:1.28!important;
-  font-size:18px!important;
+  margin-top:5px!important;
+  line-height:1.12!important;
+  font-size:15px!important;
+  letter-spacing:.14em!important;
 }
 
 .shion-root .divider{
-  margin:14px auto 10px!important;
+  width:330px!important;
+  margin:8px auto 7px!important;
 }
 
 .shion-root .quote{
-  font-size:32px!important;
-  line-height:1.14!important;
+  font-size:25px!important;
+  line-height:1.08!important;
+  margin:0!important;
 }
 
 .shion-root .medicine-btn{
-  margin-top:14px!important;
+  margin-top:8px!important;
+  width:520px!important;
+  min-width:0!important;
+  padding:7px 14px!important;
+  gap:8px!important;
+  font-size:17px!important;
 }
 
 .shion-root .medicine-icon{
-  width:76px!important;
-  height:76px!important;
+  width:54px!important;
+  height:54px!important;
 }
 
 .shion-root .warning{
-  margin-top:9px!important;
-  line-height:1.28!important;
-  font-size:14px!important;
+  margin-top:5px!important;
+  line-height:1.18!important;
+  font-size:11px!important;
+  letter-spacing:.08em!important;
 }
 
 /* Box info intro: nella land appaiono come overlay, non allungano la scheda */
 .shion-root .intro-info{
   position:absolute!important;
   left:50%!important;
-  top:260px!important;
+  top:220px!important;
   transform:translateX(-50%)!important;
-  width:820px!important;
+  width:760px!important;
   max-width:none!important;
   max-height:0!important;
   opacity:0!important;
@@ -133,27 +161,28 @@
 #intro-rank:checked~.app .intro-info,
 #intro-venenista:checked~.app .intro-info,
 #intro-clan:checked~.app .intro-info{
-  max-height:190px!important;
-  min-height:140px!important;
+  max-height:145px!important;
+  min-height:105px!important;
   opacity:1!important;
   visibility:visible!important;
-  padding:22px 30px!important;
+  padding:16px 24px!important;
   border-color:rgba(169,192,200,.36)!important;
   background:linear-gradient(180deg,rgba(8,14,16,.94),rgba(3,6,7,.96))!important;
   box-shadow:0 0 34px rgba(59,85,94,.26),inset 0 0 26px rgba(169,192,200,.07)!important;
 }
 
 .shion-root .intro-info h3{
-  font-size:24px!important;
+  font-size:19px!important;
+  margin-bottom:6px!important;
 }
 
 .shion-root .intro-info p{
-  font-size:19px!important;
-  line-height:1.35!important;
+  font-size:15px!important;
+  line-height:1.24!important;
 }
 
 .shion-root .intro-close{
-  font-size:28px!important;
+  font-size:22px!important;
 }
 
 .shion-root .gate-player{
