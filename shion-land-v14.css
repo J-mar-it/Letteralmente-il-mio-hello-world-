@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v11.css?v=2");
 
 /* ==========================================================
-   SHION LAND V14.3
+   SHION LAND V14.4
    Base: V11
    Fix: intro stabile, pulsante dentro la card,
    linee/sbordature esterne coperte dal contenitore.
@@ -16,9 +16,9 @@
 .shion-root{
   width:100%!important;
   max-width:730px!important;
-  height:744px!important;
-  min-height:744px!important;
-  max-height:744px!important;
+  height:820px!important;
+  min-height:820px!important;
+  max-height:820px!important;
   margin:0 auto!important;
   overflow:hidden!important;
   position:relative!important;
@@ -33,9 +33,9 @@
   right:0!important;
   bottom:auto!important;
   width:100%!important;
-  height:744px!important;
-  min-height:744px!important;
-  max-height:744px!important;
+  height:820px!important;
+  min-height:820px!important;
+  max-height:820px!important;
   overflow:hidden!important;
   background:#030607!important;
 }
