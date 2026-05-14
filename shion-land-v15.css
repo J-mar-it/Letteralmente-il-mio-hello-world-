@@ -1,25 +1,43 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.2
-   Micro-posizioni sicure.
-   Tocca solo: simbolo, player, testi del player e rombo.
-   Non tocca SHION IBURI, sottotitolo, quote, bottone o overlay.
+   SHION LAND V15.3
+   File di override leggero sopra la V14 stabile.
+   Qui teniamo le modifiche finali ordinate, senza toccare la base.
+   ========================================================== */
+
+/* ==========================================================
+   PANNELLO MODIFICHE V15
+   Modifica solo questi valori.
    ========================================================== */
 
 .shion-root{
-  --intro-top-block-offset:18px;
+  /* Spostamenti sicuri */
+  --intro-top-block-offset:26px;
   --intro-divider-diamond-offset:6px;
 
-  --intro-symbol-v15-size:152px;
-  --intro-symbol-v15-font:84px;
-  --intro-symbol-v15-bottom:24px;
+  /* Simbolo 毒 */
+  --intro-symbol-v15-size:220px;
+  --intro-symbol-v15-font:124px;
+  --intro-symbol-v15-bottom:34px;
 
-  --intro-player-line-v15-size:36px;
-  --intro-player-note-v15-size:15px;
+  /* Player audio */
+  --intro-player-v15-width:1000px;
+  --intro-player-v15-padding-y:18px;
+  --intro-player-v15-padding-x:26px;
+  --intro-player-line-v15-size:42px;
+  --intro-player-note-v15-size:18px;
+  --intro-player-audio-v15-height:42px;
+
+  /* Box informativo di SHION: più basso, sotto il titolo */
+  --intro-overlay-top:720px;
 }
 
-/* Simbolo 毒: più in basso e grande il doppio */
+/* ==========================================================
+   SIMBOLO + PLAYER
+   Tocca solo questi due elementi.
+   ========================================================== */
+
 .shion-root .symbol{
   width:var(--intro-symbol-v15-size)!important;
   height:var(--intro-symbol-v15-size)!important;
@@ -28,26 +46,33 @@
   transform:translateY(var(--intro-top-block-offset))!important;
 }
 
-/* Player: più in basso, ma stessa larghezza ereditata dalla v14 */
 .shion-root .ost-player{
+  width:var(--intro-player-v15-width)!important;
+  padding:var(--intro-player-v15-padding-y) var(--intro-player-v15-padding-x)!important;
   transform:translateY(var(--intro-top-block-offset))!important;
 }
 
-/* Testo principale del player più grande, senza allargare il player */
-.shion-root .ost-line{
-  font-size:var(--intro-player-line-v15-size)!important;
-  line-height:1.14!important;
-  margin:0 0 6px!important;
+.shion-root .ost-player audio{
+  height:var(--intro-player-audio-v15-height)!important;
 }
 
-/* Testo piccolo sotto il player più leggibile */
+.shion-root .ost-line{
+  font-size:var(--intro-player-line-v15-size)!important;
+  line-height:1.12!important;
+  margin:0 0 8px!important;
+}
+
 .shion-root .dose-note{
   font-size:var(--intro-player-note-v15-size)!important;
   line-height:1!important;
-  margin-top:4px!important;
+  margin-top:6px!important;
 }
 
-/* Abbassa solo il piccolo rombo della linea divisoria */
+/* ==========================================================
+   ROMBO DECORATIVO
+   Tocca solo il piccolo rombo della divider.
+   ========================================================== */
+
 .shion-root .divider:after{
   transform:translate(-50%,-50%) translateY(var(--intro-divider-diamond-offset))!important;
 }
