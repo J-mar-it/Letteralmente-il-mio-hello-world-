@@ -24,6 +24,7 @@
   --screen2-choice-padding-y:11px;
   --screen2-choice-padding-x:18px;
 
+  --screen2-portrait-stack-top:24px;
   --screen2-portrait-stack-width:455px;
   --screen2-portrait-frame-width:255px;
   --screen2-portrait-frame-title-y:0px;
@@ -81,6 +82,7 @@
    ========================================================== */
 
 .shion-root .main-screen .portrait-stack{
+  top:var(--screen2-portrait-stack-top)!important;
   width:min(var(--screen2-portrait-stack-width),90%)!important;
   min-width:0!important;
   max-width:min(var(--screen2-portrait-stack-width),90%)!important;
