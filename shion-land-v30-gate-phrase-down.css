@@ -1,0 +1,18 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v27-gate-box-smaller.css?v=1");
+
+/* ==========================================================
+   SHION LAND V30 GATE PHRASE DOWN
+   Abbassa solo la frase inglese dentro al box del player 2.
+   Non tocca schermata 1, bottoni, box o immagine centrale.
+   ========================================================== */
+
+.shion-root{
+  --gate-phrase-v30-y:8px;
+  --gate-phrase-v30-bottom-gap:18px;
+}
+
+.shion-root .gate-ost-line{
+  position:relative!important;
+  top:var(--gate-phrase-v30-y)!important;
+  margin-bottom:var(--gate-phrase-v30-bottom-gap)!important;
+}
