@@ -1,0 +1,27 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v41-bottom-buttons.css?v=1");
+
+/* ==========================================================
+   SHION LAND V42 PORTRAIT TEXT BIGGER
+   Schermata 2: ingrandisce solo le due frasi sotto il box immagine.
+   Non tocca schermata 1, player 2, bottoni o tab laterali.
+   ========================================================== */
+
+.shion-root{
+  --screen2-frame-title-size:12px;
+  --screen2-frame-title-letter:4.4px;
+  --screen2-core-line-size:19px;
+  --screen2-core-line-height:1.38;
+}
+
+/* Prima riga: Diagnosis: Reserved Treatment */
+.shion-root .main-screen .frame-title small{
+  font-size:var(--screen2-frame-title-size)!important;
+  letter-spacing:var(--screen2-frame-title-letter)!important;
+  line-height:1.35!important;
+}
+
+/* Seconda riga: Mmh?... */
+.shion-root .main-screen .core-line{
+  font-size:var(--screen2-core-line-size)!important;
+  line-height:var(--screen2-core-line-height)!important;
+}
