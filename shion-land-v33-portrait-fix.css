@@ -1,0 +1,78 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v31-screen2-clean.css?v=2");
+
+/* ==========================================================
+   SHION LAND V33 PORTRAIT FIX
+   Test isolato per il blocco centrale della schermata 2.
+   Non tocca intro-screen, warning, player intro, SHION IBURI,
+   Medicina o tab laterali.
+   ========================================================== */
+
+.shion-root{
+  /* Target: originale circa 250px, V31 290px, test V33 270px. */
+  --screen2-portrait-frame-width:270px;
+}
+
+/* ==========================================================
+   BLOCCO CENTRALE
+   In V31 il frame cambiava, ma lo stack restava molto largo
+   per via di calc(frame + 210px). Se frame-title/core-line
+   occupano ancora quello spazio, il box centrale sembra non ridursi.
+   Qui tutto l'ingombro orizzontale segue la stessa variabile.
+   ========================================================== */
+
+.shion-root .main-screen .portrait-stack{
+  width:min(calc(var(--screen2-portrait-frame-width) + 120px),90%)!important;
+  min-width:0!important;
+  max-width:min(calc(var(--screen2-portrait-frame-width) + 120px),90%)!important;
+  flex:0 0 auto!important;
+  transform:translateX(-50%) scale(1)!important;
+  box-sizing:border-box!important;
+}
+
+.shion-root .main-screen .frame{
+  width:var(--screen2-portrait-frame-width)!important;
+  min-width:var(--screen2-portrait-frame-width)!important;
+  max-width:var(--screen2-portrait-frame-width)!important;
+  flex:0 0 auto!important;
+  box-sizing:border-box!important;
+  transform:none!important;
+  scale:1!important;
+  aspect-ratio:auto!important;
+}
+
+.shion-root .main-screen .portrait-img{
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+  transform:none!important;
+  scale:1!important;
+}
+
+/* La cornice PNG e' assoluta e al 116%: era il secondo motivo
+   per cui il frame sembrava ancora grande. Ora segue il frame
+   gia' fissato dalla variabile, con min/max identici. */
+.shion-root .main-screen .portrait-frame-img{
+  width:116%!important;
+  min-width:116%!important;
+  max-width:116%!important;
+  height:auto!important;
+  object-fit:contain!important;
+  transform:translate(-50%,-50%) scale(1)!important;
+}
+
+.shion-root .main-screen .frame-title{
+  width:min(calc(var(--screen2-portrait-frame-width) + 90px),100%)!important;
+  max-width:min(calc(var(--screen2-portrait-frame-width) + 90px),100%)!important;
+  box-sizing:border-box!important;
+  transform:none!important;
+}
+
+.shion-root .main-screen .core-line{
+  width:min(calc(var(--screen2-portrait-frame-width) + 90px),100%)!important;
+  max-width:min(calc(var(--screen2-portrait-frame-width) + 90px),100%)!important;
+  box-sizing:border-box!important;
+  transform:none!important;
+}
