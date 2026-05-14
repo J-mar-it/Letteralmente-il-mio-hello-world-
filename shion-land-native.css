@@ -290,7 +290,7 @@
 
 /* Cornice 2: rettangolo interno della schermata */
 .shion-root .intro-screen:after{
-  inset:68px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
+  inset:300px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
   border:1px solid rgba(169,192,200,.16)!important;
 }
 
