@@ -319,8 +319,8 @@
 }
 
 .shion-root .symbol{
-  margin-top:100px!important;  /* simbolo -> player */
-  margin-bottom:100px!important;
+  margin-top:100px!important;  /* distanza dal bordo alto al simbolo */
+  margin-bottom:100px!important; /* simbolo -> player */
 }
 
 .shion-root .ost-player{
@@ -358,6 +358,36 @@
 
 .shion-root .intro-info{
   top:430px!important;          /* posizione overlay info */
+}
+
+/* ==========================================================
+   CORNICI INTRO - V14 SCALATA
+   modifica qui i 3 rettangoli della prima schermata
+   Nota: la intro-card è scalata a .50, quindi width/height sono doppi visivamente.
+   ========================================================== */
+
+/* Cornice 1: rettangolo decorativo più esterno */
+.shion-root .intro-screen:before{
+  inset:18px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
+  border:1px solid rgba(59,85,94,.54)!important;
+}
+
+/* Cornice 2: rettangolo decorativo più interno */
+.shion-root .intro-screen:after{
+  inset:34px!important; /* aumenta = cornice più interna; diminuisci = più esterna */
+  border:1px solid rgba(169,192,200,.16)!important;
+}
+
+/* Cornice 3: card grigiastra che contiene scritte/player/bottone */
+.shion-root .intro-card{
+  top:4px!important;                         /* posizione verticale card */
+  left:50%!important;                        /* centratura orizzontale */
+  width:1460px!important;                    /* visivo circa 730px perché scale(.50) */
+  height:1274px!important;                   /* visivo circa 637px perché scale(.50) */
+  min-height:1274px!important;
+  transform:translateX(-50%) scale(.50)!important;
+  transform-origin:top center!important;
+  border:1px solid rgba(59,85,94,.54)!important;
 }
 
 /* Blocca lo switch del titolo: SHION IBURI resta fermo anche al click. */
