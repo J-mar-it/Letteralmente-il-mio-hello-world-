@@ -423,3 +423,32 @@
   font-size:24px!important;
   line-height:1.2!important;
 }
+/* ==========================================================
+   FIX FINALE - elimina le linee / sbordature fuori dalla box
+   ========================================================== */
+
+/* La schermata intro deve tagliare tutto ciò che esce */
+.shion-root .intro-screen{
+  overflow:hidden!important;
+}
+
+/* La cornice visiva resta questa */
+.shion-root .intro-screen:after{
+  inset:24px!important;
+  pointer-events:none!important;
+}
+
+/* La card interna non deve più disegnare linee sue */
+.shion-root .intro-card{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  outline:none!important;
+  overflow:hidden!important;
+}
+
+/* Se il tema base mette pseudo-elementi strani, spegnili */
+.shion-root .intro-card:before,
+.shion-root .intro-card:after{
+  display:none!important;
+}
