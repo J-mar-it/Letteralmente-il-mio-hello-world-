@@ -1,24 +1,50 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15
-   Micro-posizioni sicure: abbassa solo simbolo, player e rombo.
+   SHION LAND V15.2
+   Micro-posizioni sicure.
+   Tocca solo: simbolo, player, testi del player e rombo.
    Non tocca SHION IBURI, sottotitolo, quote, bottone o overlay.
    ========================================================== */
 
 .shion-root{
-  --intro-top-block-offset:10px;
+  --intro-top-block-offset:18px;
   --intro-divider-diamond-offset:6px;
+
+  --intro-symbol-v15-size:152px;
+  --intro-symbol-v15-font:84px;
+  --intro-symbol-v15-bottom:24px;
+
+  --intro-player-line-v15-size:36px;
+  --intro-player-note-v15-size:15px;
 }
 
-/* Abbassa solo il simbolo 毒 */
+/* Simbolo 毒: più in basso e grande il doppio */
 .shion-root .symbol{
+  width:var(--intro-symbol-v15-size)!important;
+  height:var(--intro-symbol-v15-size)!important;
+  font-size:var(--intro-symbol-v15-font)!important;
+  margin-bottom:var(--intro-symbol-v15-bottom)!important;
   transform:translateY(var(--intro-top-block-offset))!important;
 }
 
-/* Abbassa solo il player audio */
+/* Player: più in basso, ma stessa larghezza ereditata dalla v14 */
 .shion-root .ost-player{
   transform:translateY(var(--intro-top-block-offset))!important;
+}
+
+/* Testo principale del player più grande, senza allargare il player */
+.shion-root .ost-line{
+  font-size:var(--intro-player-line-v15-size)!important;
+  line-height:1.14!important;
+  margin:0 0 6px!important;
+}
+
+/* Testo piccolo sotto il player più leggibile */
+.shion-root .dose-note{
+  font-size:var(--intro-player-note-v15-size)!important;
+  line-height:1!important;
+  margin-top:4px!important;
 }
 
 /* Abbassa solo il piccolo rombo della linea divisoria */
