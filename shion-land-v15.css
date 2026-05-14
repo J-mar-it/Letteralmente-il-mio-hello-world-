@@ -1,86 +1,116 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.26
-   File di override leggero sopra la V14 stabile.
-   Overlay titolo disattivato. Testi inferiori alzati sotto SHION IBURI.
+   SHION LAND V15.27
+   Override leggero sopra la V14 stabile.
+   Solo CSS: nessun JavaScript e nessuna modifica HTML.
    ========================================================== */
 
 /* ==========================================================
    PANNELLO MODIFICHE V15
-   Modifica solo questi valori.
+   Ogni blocco principale ha variabili proprie.
+   Le posizioni sono visive: non cambiano la struttura HTML.
    ========================================================== */
 
 .shion-root{
-  /* Spostamenti sicuri */
-  --intro-top-block-offset:26px;
-  --intro-title-v15-offset:-125px;
-  --intro-divider-diamond-offset:6px;
-  --intro-lower-text-block-offset:-130px;
-  --intro-subtitle-v15-extra-offset:-90px;
-  --intro-quote-v15-extra-offset:-135px;
-  --intro-medicine-v15-extra-offset:-52px;
-
-  /* Simbolo 毒 */
+  /* Simbolo */
+  --intro-symbol-v15-y:26px;
   --intro-symbol-v15-size:220px;
   --intro-symbol-v15-font:124px;
   --intro-symbol-v15-bottom:34px;
 
-  /* Player audio */
+  /* Player */
+  --intro-player-v15-y:26px;
   --intro-player-v15-width:1000px;
   --intro-player-v15-padding-y:18px;
   --intro-player-v15-padding-x:26px;
+  --intro-player-audio-v15-height:42px;
+  --intro-player-line-v15-y:-6px;
   --intro-player-line-v15-size:52px;
-  --intro-player-line-v15-offset:-6px;
   --intro-player-line-v15-line-height:1.2;
   --intro-player-line-v15-bottom-gap:16px;
   --intro-player-note-v15-size:24px;
   --intro-player-note-v15-gap:18px;
-  --intro-player-audio-v15-height:42px;
+
+  /* Titolo SHION IBURI */
+  --intro-title-v15-y:-125px;
+
+  /* Sottotitolo e divider */
+  --intro-subtitle-v15-y:-220px;
+  --intro-divider-v15-y:-220px;
+  --intro-divider-diamond-v15-y:6px;
+
+  /* Quote */
+  --intro-quote-v15-y:-265px;
+
+  /* Bottone Medicina */
+  --intro-medicine-v15-y:-182px;
+
+  /* Warning reale sotto il bottone */
+  --intro-warning-v15-y:-182px;
+  --intro-warning-v15-gap:12px;
+  --intro-warning-v15-size:20px;
+  --intro-warning-v15-width:980px;
 
   /* Glow player */
   --intro-player-line-glow:0 0 8px rgba(226,242,246,.72),0 0 18px rgba(169,192,200,.62),0 0 34px rgba(59,85,94,.50),0 0 58px rgba(59,85,94,.26);
   --intro-player-note-glow:0 0 8px rgba(236,190,255,.72),0 0 18px rgba(214,142,255,.62),0 0 34px rgba(188,90,255,.44),0 0 58px rgba(188,90,255,.24);
 
-  /* Velocità animazioni glow */
+  /* Velocita animazioni glow */
   --intro-player-line-sweep-speed:3.4s;
   --intro-player-note-pulse-speed:1.85s;
 
-  /* Warning generato sotto il bottone Medicina */
-  --intro-warning-fallback-gap:10px;
-  --intro-warning-fallback-size:20px;
-  --intro-warning-fallback-width:980px;
-
-  /* Overlay disattivato: valore mantenuto solo per compatibilità */
+  /* Compatibilita con la V14: l'overlay resta spento piu sotto. */
   --intro-overlay-top:760px;
 }
 
 /* ==========================================================
-   SIMBOLO + PLAYER
-   Tocca solo questi due elementi.
+   POSIZIONAMENTO INDIPENDENTE
+   Usiamo top su elementi relative per evitare catene di transform.
+   ========================================================== */
+
+.shion-root .symbol,
+.shion-root .ost-player,
+.shion-root .title,
+.shion-root .subtitle,
+.shion-root .divider,
+.shion-root .quote,
+.shion-root .medicine-btn,
+.shion-root .warning{
+  position:relative!important;
+  transform:none!important;
+}
+
+/* ==========================================================
+   SIMBOLO
    ========================================================== */
 
 .shion-root .symbol{
+  top:var(--intro-symbol-v15-y)!important;
   width:var(--intro-symbol-v15-size)!important;
   height:var(--intro-symbol-v15-size)!important;
   font-size:var(--intro-symbol-v15-font)!important;
   margin-bottom:var(--intro-symbol-v15-bottom)!important;
-  transform:translateY(var(--intro-top-block-offset))!important;
 }
 
+/* ==========================================================
+   PLAYER
+   ========================================================== */
+
 .shion-root .ost-player{
+  top:var(--intro-player-v15-y)!important;
   width:var(--intro-player-v15-width)!important;
   padding:var(--intro-player-v15-padding-y) var(--intro-player-v15-padding-x)!important;
-  transform:translateY(var(--intro-top-block-offset))!important;
 }
 
 .shion-root .ost-player audio{
   height:var(--intro-player-audio-v15-height)!important;
 }
 
-/* Frase inglese: testo stabile + lama di luce che passa sopra */
+/* Frase inglese: testo stabile con lama di luce decorativa. */
 .shion-root .ost-line{
   position:relative!important;
+  top:var(--intro-player-line-v15-y)!important;
   overflow:visible!important;
   isolation:isolate!important;
   display:block!important;
@@ -91,7 +121,7 @@
   -webkit-text-fill-color:rgba(238,246,248,.94)!important;
   background:none!important;
   text-shadow:var(--intro-player-line-glow)!important;
-  transform:translateY(var(--intro-player-line-v15-offset))!important;
+  transform:none!important;
 }
 
 .shion-root .ost-line:after{
@@ -115,7 +145,7 @@
   animation:shionLineSweepBeam var(--intro-player-line-sweep-speed) ease-in-out infinite!important;
 }
 
-/* Scritta viola: glow intermittente */
+/* Scritta viola: glow intermittente. */
 .shion-root .dose-note{
   font-size:var(--intro-player-note-v15-size)!important;
   line-height:1!important;
@@ -149,20 +179,21 @@
 }
 
 /* ==========================================================
-   TITOLO GRANDE
-   Lo sposta solo visivamente: il resto della colonna non si incastra.
+   TITOLO SHION IBURI
+   Il click puo selezionare il radio, ma non mostra piu overlay.
    ========================================================== */
 
 .shion-root .title{
-  transform:translateY(var(--intro-title-v15-offset))!important;
+  top:var(--intro-title-v15-y)!important;
 }
 
 /* ==========================================================
-   OVERLAY TITOLO DISATTIVATO DEFINITIVAMENTE
-   Cliccare SHION IBURI non fa più comparire il box informativo.
+   OVERLAY TITOLO SPENTO
+   L'HTML resta intatto, ma il box informativo non puo apparire.
    ========================================================== */
 
 .shion-root .intro-info,
+.shion-root .intro-info *,
 #intro-shion:checked~.app .intro-info,
 #intro-rank:checked~.app .intro-info,
 #intro-venenista:checked~.app .intro-info,
@@ -182,61 +213,65 @@
 }
 
 /* ==========================================================
-   RIGO SPECIAL JOUNIN + ROMBO
-   Alzati separatamente sotto SHION IBURI.
+   SOTTOTITOLO E DIVIDER
+   Separati dal titolo e dagli altri testi.
    ========================================================== */
 
-.shion-root .subtitle,
+.shion-root .subtitle{
+  top:var(--intro-subtitle-v15-y)!important;
+}
+
 .shion-root .divider{
-  transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-subtitle-v15-extra-offset)))!important;
+  top:var(--intro-divider-v15-y)!important;
 }
 
-/* Frase poetica a tre righe alzata sotto SHION IBURI */
+.shion-root .divider:after{
+  transform:translate(-50%,-50%) translateY(var(--intro-divider-diamond-v15-y))!important;
+}
+
+/* ==========================================================
+   QUOTE
+   Blocco autonomo sotto il sottotitolo.
+   ========================================================== */
+
 .shion-root .quote{
-  transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-quote-v15-extra-offset)))!important;
+  top:var(--intro-quote-v15-y)!important;
 }
 
-/* Bottone Medicina separato */
+/* ==========================================================
+   BOTTONE MEDICINA
+   Solo il bottone: nessun warning generato qui.
+   ========================================================== */
+
 .shion-root .medicine-btn{
-  position:relative!important;
+  top:var(--intro-medicine-v15-y)!important;
   overflow:visible!important;
   z-index:130!important;
-  transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-medicine-v15-extra-offset)))!important;
 }
 
-/* Warning generato direttamente sotto il bottone: più stabile della vecchia .warning */
+.shion-root .medicine-btn:before,
 .shion-root .medicine-btn:after{
-  content:"ATTENZIONE: LA SOMMINISTRAZIONE POTREBBE PORTARE AD UNA FORTE ASSUEFAZIONE,\A NEL CORPO E NELLA MENTE."!important;
-  position:absolute!important;
-  top:calc(100% + var(--intro-warning-fallback-gap))!important;
-  left:50%!important;
-  width:var(--intro-warning-fallback-width)!important;
-  transform:translateX(-50%)!important;
-  display:block!important;
-  pointer-events:none!important;
-  font-size:var(--intro-warning-fallback-size)!important;
-  line-height:1.18!important;
-  letter-spacing:.07em!important;
-  text-align:center!important;
-  white-space:pre-line!important;
-  color:rgba(169,192,200,.82)!important;
-  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
-}
-
-.shion-root .medicine-btn:before{
   content:""!important;
-}
-
-/* Vecchio warning spento per evitare doppioni o posizionamenti instabili */
-.shion-root .warning{
   display:none!important;
 }
 
 /* ==========================================================
-   ROMBO DECORATIVO
-   Tocca solo il piccolo rombo della divider.
+   WARNING
+   Usa il paragrafo HTML reale, tenuto sotto Medicina.
    ========================================================== */
 
-.shion-root .divider:after{
-  transform:translate(-50%,-50%) translateY(var(--intro-divider-diamond-offset))!important;
+.shion-root .warning{
+  top:var(--intro-warning-v15-y)!important;
+  display:block!important;
+  width:var(--intro-warning-v15-width)!important;
+  max-width:none!important;
+  margin:var(--intro-warning-v15-gap) auto 0!important;
+  font-size:var(--intro-warning-v15-size)!important;
+  line-height:1.18!important;
+  letter-spacing:.07em!important;
+  text-align:center!important;
+  text-transform:uppercase!important;
+  color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
+  pointer-events:none!important;
 }
