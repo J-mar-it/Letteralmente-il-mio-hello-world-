@@ -1,0 +1,122 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land.css?v=7");
+
+/* LAND V8 - compatta la schermata 1 nel box reale 730x640 */
+.shion-root:before{
+  content:""!important;
+  display:none!important;
+}
+
+.shion-root .intro-card{
+  outline:none!important;
+  height:616px!important;
+  max-height:616px!important;
+  overflow:hidden!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:0!important;
+  padding:12px 18px 12px!important;
+}
+
+.shion-root .symbol{
+  width:52px!important;
+  height:52px!important;
+  min-height:52px!important;
+  font-size:28px!important;
+  margin:0 auto 6px!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .ost-player{
+  width:min(365px,100%)!important;
+  margin:0 auto 8px!important;
+  padding:8px 12px!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .ost-line{
+  font-size:16px!important;
+  line-height:1.12!important;
+  margin-bottom:6px!important;
+}
+
+.shion-root .ost-player audio{
+  height:30px!important;
+}
+
+.shion-root .dose-note{
+  margin-top:5px!important;
+  font-size:8px!important;
+  letter-spacing:.14em!important;
+}
+
+.shion-root .title{
+  font-size:clamp(30px,6.4vw,46px)!important;
+  line-height:1!important;
+  letter-spacing:.08em!important;
+  margin:2px 0 0!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .subtitle{
+  font-size:clamp(10px,1.8vw,13px)!important;
+  line-height:1.25!important;
+  letter-spacing:.13em!important;
+  margin-top:6px!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .intro-info{
+  flex:0 0 auto!important;
+}
+
+#intro-shion:checked~.app .intro-info,
+#intro-rank:checked~.app .intro-info,
+#intro-venenista:checked~.app .intro-info,
+#intro-clan:checked~.app .intro-info{
+  max-height:110px!important;
+  margin:8px auto 0!important;
+  padding:12px 16px!important;
+}
+
+.shion-root .divider{
+  width:min(330px,64%)!important;
+  margin:10px auto 8px!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .quote{
+  font-size:clamp(18px,3.2vw,24px)!important;
+  line-height:1.14!important;
+  margin:0!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .medicine-btn{
+  margin-top:10px!important;
+  width:min(460px,94%)!important;
+  padding:6px 12px!important;
+  gap:8px!important;
+  font-size:clamp(14px,2.5vw,18px)!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .medicine-icon{
+  width:52px!important;
+  height:52px!important;
+  transform:translateX(2px)!important;
+}
+
+.shion-root .warning{
+  margin-top:8px!important;
+  font-size:8px!important;
+  line-height:1.35!important;
+  letter-spacing:.08em!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .intro-card:before,
+.shion-root .intro-card:after{
+  display:none!important;
+}
