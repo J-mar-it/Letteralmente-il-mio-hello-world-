@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.20
+   SHION LAND V15.21
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -182,7 +182,7 @@
 
 /* Warning generato direttamente sotto il bottone: più stabile della vecchia .warning */
 .shion-root .medicine-btn:after{
-  content:"ATTENZIONE: LA SOMMINISTRAZIONE POTREBBE PORTARE AD UNA FORTE ASSUEFAZIONE, NEL CORPO E NELLA MENTE."!important;
+  content:"ATTENZIONE: LA SOMMINISTRAZIONE POTREBBE PORTARE AD UNA FORTE ASSUEFAZIONE,\A NEL CORPO E NELLA MENTE."!important;
   position:absolute!important;
   top:calc(100% + var(--intro-warning-fallback-gap))!important;
   left:50%!important;
@@ -191,10 +191,10 @@
   display:block!important;
   pointer-events:none!important;
   font-size:var(--intro-warning-fallback-size)!important;
-  line-height:1.12!important;
+  line-height:1.18!important;
   letter-spacing:.07em!important;
   text-align:center!important;
-  white-space:nowrap!important;
+  white-space:pre-line!important;
   color:rgba(169,192,200,.82)!important;
   text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
 }
