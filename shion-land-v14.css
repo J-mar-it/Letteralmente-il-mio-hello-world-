@@ -306,3 +306,120 @@
   font-size:38px!important;
   line-height:1!important;
 }
+/* ==========================================================
+   HOTFIX INTRO - rientro bottone + fix duplicazioni subtitle
+   ========================================================== */
+
+/* Card un po' più compatta */
+.shion-root .intro-card{
+  padding:28px 42px 16px!important;
+}
+
+/* Spaziature più strette */
+.shion-root .symbol{
+  margin:0 auto 10px!important;
+}
+
+.shion-root .ost-player{
+  margin:0 auto 10px!important;
+}
+
+.shion-root .title{
+  margin:-2px 0 0!important;
+}
+
+.shion-root .subtitle{
+  margin:2px 0 0!important;
+  font-size:24px!important;
+  line-height:1!important;
+  letter-spacing:.11em!important;
+}
+
+.shion-root .divider{
+  margin:8px auto 10px!important;
+}
+
+.shion-root .quote{
+  font-size:42px!important;
+  line-height:1.06!important;
+  margin:0!important;
+}
+
+.shion-root .medicine-btn{
+  width:650px!important;
+  margin-top:14px!important;
+  padding:7px 16px!important;
+  font-size:26px!important;
+}
+
+.shion-root .medicine-icon{
+  width:50px!important;
+  height:50px!important;
+}
+
+.shion-root .warning{
+  margin-top:10px!important;
+  font-size:15px!important;
+  line-height:1.08!important;
+}
+
+/* Fix duplicazioni nei link del titolo/sottotitolo */
+.shion-root .title .intro-open-shion{
+  display:inline!important;
+}
+
+.shion-root .title .intro-close-shion{
+  display:none!important;
+}
+
+#intro-shion:checked~.app .title .intro-open-shion{
+  display:inline!important;
+}
+
+#intro-shion:checked~.app .title .intro-close-shion{
+  display:none!important;
+}
+
+/* Sottotitolo: mostra solo la versione "open" */
+.shion-root .subtitle .intro-link-close,
+.shion-root .subtitle .intro-close-rank,
+.shion-root .subtitle .intro-close-venenista,
+.shion-root .subtitle .intro-close-clan{
+  display:none!important;
+}
+
+.shion-root .subtitle .intro-open-rank,
+.shion-root .subtitle .intro-open-venenista,
+.shion-root .subtitle .intro-open-clan{
+  display:inline!important;
+}
+
+/* Se ci sono più label/link nel subtitle, niente a capo strano */
+.shion-root .subtitle .intro-toggle,
+.shion-root .subtitle .intro-link,
+.shion-root .subtitle label{
+  display:inline!important;
+  white-space:nowrap!important;
+}
+
+/* Overlay più in basso ma non invasivo */
+.shion-root .intro-info{
+  top:610px!important;
+  width:980px!important;
+}
+
+#intro-shion:checked~.app .intro-info{
+  max-height:220px!important;
+  min-height:130px!important;
+  padding:22px 30px!important;
+}
+
+.shion-root .intro-info h3{
+  font-size:34px!important;
+  margin:0 0 10px!important;
+}
+
+.shion-root .intro-info p{
+  font-size:24px!important;
+  line-height:1.2!important;
+}
