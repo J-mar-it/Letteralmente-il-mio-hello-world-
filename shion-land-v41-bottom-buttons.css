@@ -1,0 +1,39 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v40-clean.css?v=6");
+
+/* ==========================================================
+   SHION LAND V41 BOTTOM BUTTONS
+   Schermata 2: uniforma i due pulsanti inferiori e li avvicina al bordo.
+   Non tocca schermata 1, player 2, portrait o tab laterali.
+   ========================================================== */
+
+.shion-root{
+  --screen2-bottom-button-width:180px;
+  --screen2-bottom-button-height:42px;
+  --screen2-bottom-button-size:11px;
+  --screen2-enter-bottom:58px;
+  --screen2-return-bottom:10px;
+}
+
+.shion-root .main-screen .main-enter-btn,
+.shion-root .main-screen .main-return-btn{
+  width:var(--screen2-bottom-button-width)!important;
+  min-width:var(--screen2-bottom-button-width)!important;
+  max-width:var(--screen2-bottom-button-width)!important;
+  height:var(--screen2-bottom-button-height)!important;
+  min-height:var(--screen2-bottom-button-height)!important;
+  padding:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  box-sizing:border-box!important;
+  font-size:var(--screen2-bottom-button-size)!important;
+  line-height:1!important;
+}
+
+.shion-root .main-screen .main-enter-btn{
+  bottom:var(--screen2-enter-bottom)!important;
+}
+
+.shion-root .main-screen .main-return-btn{
+  bottom:var(--screen2-return-bottom)!important;
+}
