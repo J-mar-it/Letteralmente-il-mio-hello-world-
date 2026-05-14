@@ -1,0 +1,106 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion.css");
+
+/* LAND PATCH - regole finali per versione PBC */
+.trap-1-screen .trap-text,
+.trap-2-screen .trap-text,
+.trap-3-screen .trap-text,
+.trap-4-screen .trap-text,
+.trap-5-screen .trap-text,
+.trap-6-screen .trap-text,
+.dead-screen .dead-text{
+  left:7%;
+  top:42px;
+  bottom:auto;
+  width:360px;
+  max-width:32%;
+  transform:none;
+  text-align:left;
+}
+
+.dead-screen .dead-text p{
+  font-size:clamp(30px,4.6vw,58px);
+  white-space:normal;
+}
+
+.trap-6-screen .no-break{
+  white-space:nowrap;
+}
+
+.dead-screen .dead-options{
+  bottom:34px;
+  height:74px;
+}
+
+.dead-screen .easy-way-btn{
+  left:auto;
+  right:6%;
+  top:0;
+}
+
+#flow-dead:checked~.app .dead-screen .easy-way-btn{
+  animation-delay:8s;
+}
+
+.easy-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:24px!important;
+  transform:translateX(-50%)!important;
+  margin:0!important;
+}
+
+.easy-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+.easy-screen .easy-text,
+.blackout-screen .blackout-text{
+  position:absolute;
+  left:50%;
+  top:auto;
+  bottom:145px;
+  width:min(760px,88%);
+  margin:0;
+  transform:translateX(-50%);
+  text-align:center;
+  z-index:6;
+}
+
+.blackout-vision{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  background:url("https://i.imgur.com/FenZ0Ar.png") center/contain no-repeat;
+  opacity:.16;
+  filter:grayscale(.15) brightness(.9) contrast(1.08) blur(.35px);
+  mix-blend-mode:screen;
+  pointer-events:none;
+  transform:scale(.92);
+}
+
+.shion-root .ost-player{
+  background:#080e10!important;
+}
+
+.shion-root .gate-player{
+  background:#100618!important;
+}
+
+.easy-screen .easy-text p{
+  background:linear-gradient(90deg,#b30007,#ff4f8b,#9b3cff,#d8adff,#ff4f8b,#b30007);
+  background-size:320% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent;
+  animation:easyPhraseGradient 4.8s ease-in-out infinite;
+  text-shadow:0 0 12px rgba(179,0,7,.28),0 0 24px rgba(155,60,255,.24),0 0 38px rgba(216,173,255,.16);
+}
+
+@keyframes easyPhraseGradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
