@@ -315,11 +315,12 @@
    ========================================================== */
 
 .shion-root .intro-card{
-  padding-top:100px!important;   /* bordo alto -> simbolo */
+  padding-top:24px!important;   /* bordo alto -> simbolo */
 }
 
 .shion-root .symbol{
-  margin-bottom:100px!important;  /* simbolo -> player */
+  margin-top:100px!important;  /* simbolo -> player */
+  margin-bottom:100px!important;
 }
 
 .shion-root .ost-player{
