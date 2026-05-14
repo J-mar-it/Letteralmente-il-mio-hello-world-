@@ -1,0 +1,135 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v23-player-fix.css?v=1");
+
+/* ==========================================================
+   SHION LAND V40 CLEAN
+   Base: V23 stabile per preservare la schermata 1.
+   Questo file non importa i layer V24-V33: ricostruisce solo
+   i controlli della schermata 2 / main-screen.
+   ========================================================== */
+
+/* ==========================================================
+   PANNELLO VARIABILI SCREEN 2
+   Modifica questi valori per testare box, frase, bottoni e portrait.
+   ========================================================== */
+
+.shion-root{
+  --screen2-gate-box-width:420px;
+  --screen2-gate-box-padding-y:10px;
+  --screen2-gate-box-padding-x:14px;
+
+  --screen2-gate-phrase-size:26px;
+  --screen2-gate-phrase-y:8px;
+
+  --screen2-choice-size:12px;
+  --screen2-choice-padding-y:11px;
+  --screen2-choice-padding-x:18px;
+
+  --screen2-portrait-stack-width:480px;
+  --screen2-portrait-frame-width:270px;
+  --screen2-portrait-frame-title-y:0px;
+  --screen2-core-line-y:0px;
+}
+
+/* ==========================================================
+   PLAYER 2
+   Scope intenzionale su .main-screen: non tocca il player intro.
+   ========================================================== */
+
+.shion-root .main-screen .gate-player{
+  width:min(var(--screen2-gate-box-width),72%)!important;
+  max-width:min(var(--screen2-gate-box-width),72%)!important;
+  min-width:0!important;
+  padding:var(--screen2-gate-box-padding-y) var(--screen2-gate-box-padding-x)!important;
+  box-sizing:border-box!important;
+}
+
+.shion-root .main-screen .gate-ost-line{
+  position:relative!important;
+  top:var(--screen2-gate-phrase-y)!important;
+  display:block!important;
+  margin:0 0 calc(var(--screen2-gate-phrase-y) + 10px)!important;
+  font-size:var(--screen2-gate-phrase-size)!important;
+  line-height:1.16!important;
+}
+
+.shion-root .main-screen .gate-choices{
+  display:flex!important;
+  justify-content:center!important;
+  align-items:center!important;
+  flex-wrap:wrap!important;
+  gap:10px!important;
+  margin-top:12px!important;
+}
+
+.shion-root .main-screen .gate-choice{
+  display:inline-block!important;
+  padding:var(--screen2-choice-padding-y) var(--screen2-choice-padding-x)!important;
+  font-size:var(--screen2-choice-size)!important;
+  line-height:1!important;
+  letter-spacing:2.2px!important;
+  box-sizing:border-box!important;
+}
+
+/* ==========================================================
+   PORTRAIT CENTRALE
+   Perche' width:270px su .frame sembrava non cambiare:
+   - V31 manteneva .portrait-stack molto largo con calc(frame + 210px);
+   - .frame-title e .core-line occupavano ancora lo stack largo;
+   - .portrait-frame-img e' assoluta e al 116%, quindi allarga
+     la percezione della cornice oltre il frame reale.
+   Qui frame, immagine, cornice e testi seguono variabili esplicite.
+   ========================================================== */
+
+.shion-root .main-screen .portrait-stack{
+  width:min(var(--screen2-portrait-stack-width),90%)!important;
+  min-width:0!important;
+  max-width:min(var(--screen2-portrait-stack-width),90%)!important;
+  flex:0 0 auto!important;
+  transform:translateX(-50%) scale(1)!important;
+  box-sizing:border-box!important;
+}
+
+.shion-root .main-screen .frame{
+  width:var(--screen2-portrait-frame-width)!important;
+  min-width:var(--screen2-portrait-frame-width)!important;
+  max-width:var(--screen2-portrait-frame-width)!important;
+  flex:0 0 auto!important;
+  box-sizing:border-box!important;
+  transform:none!important;
+  scale:1!important;
+  aspect-ratio:auto!important;
+}
+
+.shion-root .main-screen .portrait-img{
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+  transform:none!important;
+  scale:1!important;
+}
+
+.shion-root .main-screen .portrait-frame-img{
+  width:116%!important;
+  min-width:116%!important;
+  max-width:116%!important;
+  height:auto!important;
+  object-fit:contain!important;
+  transform:translate(-50%,-50%) scale(1)!important;
+}
+
+.shion-root .main-screen .frame-title{
+  width:min(calc(var(--screen2-portrait-frame-width) + 90px),100%)!important;
+  max-width:min(calc(var(--screen2-portrait-frame-width) + 90px),100%)!important;
+  box-sizing:border-box!important;
+  transform:translateY(var(--screen2-portrait-frame-title-y))!important;
+}
+
+.shion-root .main-screen .core-line{
+  width:min(calc(var(--screen2-portrait-frame-width) + 90px),100%)!important;
+  max-width:min(calc(var(--screen2-portrait-frame-width) + 90px),100%)!important;
+  box-sizing:border-box!important;
+  transform:translateY(var(--screen2-core-line-y))!important;
+}
