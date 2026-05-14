@@ -222,3 +222,148 @@
 .shion-root .intro-info{
   top:430px!important;
 }
+
+/* ==========================================================
+   DIMENSIONI INTRO - modifica qui grandezze e larghezze
+   ========================================================== */
+
+.shion-root .intro-card{
+  height:1274px!important;      /* altezza riquadro interno */
+  min-height:1274px!important;
+}
+
+.shion-root .symbol{
+  width:64px!important;         /* grandezza cerchio simbolo */
+  height:64px!important;
+  font-size:34px!important;     /* grandezza kanji */
+}
+
+.shion-root .ost-player{
+  width:560px!important;        /* larghezza box player */
+  padding:10px 16px!important;  /* spessore interno box player */
+}
+
+.shion-root .ost-line{
+  font-size:26px!important;     /* frase sopra player */
+  line-height:1.12!important;
+  letter-spacing:.03em!important;
+}
+
+.shion-root .dose-note{
+  font-size:12px!important;     /* 'Interrompi prima di proseguire' */
+  line-height:1!important;
+  letter-spacing:.16em!important;
+}
+
+.shion-root .title{
+  font-size:118px!important;    /* SHION IBURI */
+  line-height:.78!important;
+  letter-spacing:.13em!important;
+  min-height:106px!important;
+}
+
+.shion-root .subtitle{
+  font-size:28px!important;     /* Special Jounin · Velenista · Clan Iburi */
+  line-height:.95!important;
+  letter-spacing:.14em!important;
+}
+
+.shion-root .divider{
+  width:350px!important;        /* lunghezza linea decorativa */
+}
+
+.shion-root .quote{
+  font-size:48px!important;     /* frase centrale */
+  line-height:1.04!important;
+}
+
+.shion-root .medicine-btn{
+  width:760px!important;        /* larghezza bottone */
+  padding:8px 18px!important;   /* altezza/spessore bottone */
+  gap:10px!important;
+  font-size:32px!important;     /* testo bottone */
+  line-height:1!important;
+  letter-spacing:.06em!important;
+}
+
+.shion-root .medicine-icon{
+  width:58px!important;         /* icona pozione */
+  height:58px!important;
+}
+
+.shion-root .warning{
+  font-size:17px!important;     /* warning finale */
+  line-height:1.12!important;
+  letter-spacing:.07em!important;
+}
+
+.shion-root .intro-info{
+  width:880px!important;        /* larghezza overlay */
+}
+
+.shion-root .intro-info h3{
+  font-size:22px!important;     /* titolo overlay */
+}
+
+.shion-root .intro-info p{
+  font-size:17px!important;     /* testo overlay */
+  line-height:1.24!important;
+}
+
+/* ==========================================================
+   DISTANZE INTRO - modifica qui gli spazi tra gli elementi
+   ========================================================== */
+
+.shion-root .intro-card{
+  padding-top:28px!important;   /* bordo alto -> simbolo */
+}
+
+.shion-root .symbol{
+  margin-bottom:6px!important;  /* simbolo -> player */
+}
+
+.shion-root .ost-player{
+  margin-bottom:0px!important;  /* player -> titolo */
+}
+
+.shion-root .title{
+  margin-top:-12px!important;   /* player -> SHION IBURI; più negativo = titolo più su */
+  margin-bottom:0px!important;
+}
+
+.shion-root .subtitle{
+  margin-top:-4px!important;    /* SHION IBURI -> sottotitolo; più negativo = più vicino */
+  margin-bottom:0px!important;
+}
+
+.shion-root .divider{
+  margin-top:4px!important;     /* sottotitolo -> linea */
+  margin-bottom:3px!important;  /* linea -> quote */
+}
+
+.shion-root .quote{
+  margin-top:0px!important;
+  margin-bottom:0px!important;
+}
+
+.shion-root .medicine-btn{
+  margin-top:13px!important;    /* quote -> bottone */
+  margin-bottom:0px!important;
+}
+
+.shion-root .warning{
+  margin-top:14px!important;    /* bottone -> warning */
+}
+
+.shion-root .intro-info{
+  top:430px!important;          /* posizione overlay info */
+}
+
+/* Blocca lo switch del titolo: SHION IBURI resta fermo anche al click. */
+#intro-shion:checked~.app .title .intro-open-shion{
+  display:inline-block!important;
+}
+
+#intro-shion:checked~.app .title .intro-close-shion{
+  display:none!important;
+}
