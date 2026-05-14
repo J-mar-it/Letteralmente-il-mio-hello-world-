@@ -1,6 +1,6 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v11.css?v=2");
 
-/* SHION LAND V14.5 - base V11 + intro stabile */
+/* SHION LAND V14.6 - base V11 + intro stabile */
 
 .shion-root{
   width:100%!important;
@@ -68,8 +68,8 @@
   justify-content:flex-start!important;
   width:1460px!important;
   max-width:none!important;
-  height:1274px!important;
-  min-height:1274px!important;
+  height:1500px!important;
+  min-height:1500px!important;
   max-height:none!important;
   margin:0!important;
   padding:28px 42px 16px!important;
@@ -93,36 +93,76 @@
   display:none!important;
 }
 
-/* Simbolo e player ingranditi */
+/* ==========================================================
+   PANNELLO MODIFICHE INTRO
+   Modifica solo questi valori.
+   SHION IBURI resta escluso e intoccato.
+   ========================================================== */
+
+.shion-root{
+  --intro-symbol-size:76px;
+  --intro-symbol-font:42px;
+  --intro-symbol-bottom:12px;
+
+  --intro-player-width:640px;
+  --intro-player-padding-y:14px;
+  --intro-player-padding-x:20px;
+  --intro-player-bottom:12px;
+  --intro-player-text:30px;
+  --intro-player-audio-height:34px;
+  --intro-dose-note-size:13px;
+
+  --intro-subtitle-size:29px;
+  --intro-subtitle-letter:.115em;
+  --intro-divider-width:390px;
+
+  --intro-quote-size:50px;
+  --intro-quote-line:1.08;
+
+  --intro-button-width:720px;
+  --intro-button-text:30px;
+  --intro-button-icon:56px;
+  --intro-button-padding-y:9px;
+  --intro-button-padding-x:18px;
+
+  --intro-warning-size:17px;
+
+  --intro-overlay-top:610px;
+  --intro-overlay-width:980px;
+  --intro-overlay-title:40px;
+  --intro-overlay-text:27px;
+}
+
+/* Simbolo e player */
 .shion-root .symbol{
-  width:76px!important;
-  height:76px!important;
+  width:var(--intro-symbol-size)!important;
+  height:var(--intro-symbol-size)!important;
   flex:0 0 auto!important;
-  font-size:42px!important;
-  margin:0 auto 12px!important;
+  font-size:var(--intro-symbol-font)!important;
+  margin:0 auto var(--intro-symbol-bottom)!important;
 }
 
 .shion-root .ost-player{
-  width:640px!important;
+  width:var(--intro-player-width)!important;
   flex:0 0 auto!important;
-  margin:0 auto 12px!important;
-  padding:14px 20px!important;
+  margin:0 auto var(--intro-player-bottom)!important;
+  padding:var(--intro-player-padding-y) var(--intro-player-padding-x)!important;
   background:#080e10!important;
 }
 
 .shion-root .ost-player audio{
-  height:34px!important;
+  height:var(--intro-player-audio-height)!important;
 }
 
 .shion-root .ost-line{
-  font-size:30px!important;
+  font-size:var(--intro-player-text)!important;
   line-height:1.14!important;
   letter-spacing:.03em!important;
   margin:0 0 6px!important;
 }
 
 .shion-root .dose-note{
-  font-size:13px!important;
+  font-size:var(--intro-dose-note-size)!important;
   line-height:1!important;
   letter-spacing:.16em!important;
   margin-top:4px!important;
@@ -144,16 +184,16 @@
   pointer-events:auto!important;
 }
 
-/* Testi secondari ingranditi */
+/* Testi secondari */
 .shion-root .subtitle{
   display:block!important;
   white-space:nowrap!important;
   text-align:center!important;
   margin:2px 0 0!important;
   padding:0!important;
-  font-size:29px!important;
+  font-size:var(--intro-subtitle-size)!important;
   line-height:1!important;
-  letter-spacing:.115em!important;
+  letter-spacing:var(--intro-subtitle-letter)!important;
 }
 
 .shion-root .subtitle br{
@@ -161,13 +201,13 @@
 }
 
 .shion-root .divider{
-  width:390px!important;
+  width:var(--intro-divider-width)!important;
   margin:9px auto 12px!important;
 }
 
 .shion-root .quote{
-  font-size:50px!important;
-  line-height:1.08!important;
+  font-size:var(--intro-quote-size)!important;
+  line-height:var(--intro-quote-line)!important;
   margin:0!important;
 }
 
@@ -176,13 +216,13 @@
 }
 
 .shion-root .medicine-btn{
-  width:720px!important;
+  width:var(--intro-button-width)!important;
   min-width:0!important;
   margin-top:16px!important;
   margin-bottom:0!important;
-  padding:9px 18px!important;
+  padding:var(--intro-button-padding-y) var(--intro-button-padding-x)!important;
   gap:12px!important;
-  font-size:30px!important;
+  font-size:var(--intro-button-text)!important;
   line-height:1!important;
   letter-spacing:.06em!important;
   white-space:nowrap!important;
@@ -193,14 +233,14 @@
 }
 
 .shion-root .medicine-icon{
-  width:56px!important;
-  height:56px!important;
+  width:var(--intro-button-icon)!important;
+  height:var(--intro-button-icon)!important;
   flex:0 0 auto!important;
 }
 
 .shion-root .warning{
   margin-top:12px!important;
-  font-size:17px!important;
+  font-size:var(--intro-warning-size)!important;
   line-height:1.12!important;
   letter-spacing:.07em!important;
 }
@@ -277,10 +317,10 @@
 .shion-root .intro-info{
   position:absolute!important;
   left:50%!important;
-  top:610px!important;
+  top:var(--intro-overlay-top)!important;
   transform:translateX(-50%)!important;
   transform-origin:top center!important;
-  width:980px!important;
+  width:var(--intro-overlay-width)!important;
   max-width:none!important;
   max-height:0!important;
   min-height:0!important;
@@ -322,13 +362,13 @@
 }
 
 .shion-root .intro-info h3{
-  font-size:40px!important;
+  font-size:var(--intro-overlay-title)!important;
   line-height:1!important;
   margin:0 0 12px!important;
 }
 
 .shion-root .intro-info p{
-  font-size:27px!important;
+  font-size:var(--intro-overlay-text)!important;
   line-height:1.22!important;
   margin:0!important;
 }
