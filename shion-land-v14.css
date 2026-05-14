@@ -315,7 +315,7 @@
    ========================================================== */
 
 .shion-root .intro-card{
-  padding-top:28px!important;   /* bordo alto -> simbolo */
+  padding-top:100px!important;   /* bordo alto -> simbolo */
 }
 
 .shion-root .symbol{
@@ -327,7 +327,7 @@
 }
 
 .shion-root .title{
-  margin-top:-12px!important;   /* player -> SHION IBURI; più negativo = titolo più su */
+  margin-top:-100px!important;   /* player -> SHION IBURI; più negativo = titolo più su */
   margin-bottom:0px!important;
 }
 
