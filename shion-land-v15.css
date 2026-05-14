@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.7
+   SHION LAND V15.8
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -14,7 +14,7 @@
 .shion-root{
   /* Spostamenti sicuri */
   --intro-top-block-offset:26px;
-  --intro-title-v15-offset:-70px;
+  --intro-title-v15-offset:-125px;
   --intro-divider-diamond-offset:6px;
   --intro-lower-text-block-offset:-130px;
 
