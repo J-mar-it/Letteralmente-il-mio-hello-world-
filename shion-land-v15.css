@@ -1,7 +1,7 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.22
+   SHION LAND V15.23
    File di override leggero sopra la V14 stabile.
    Qui teniamo le modifiche finali ordinate, senza toccare la base.
    ========================================================== */
@@ -17,6 +17,7 @@
   --intro-title-v15-offset:-125px;
   --intro-divider-diamond-offset:6px;
   --intro-lower-text-block-offset:-130px;
+  --intro-subtitle-v15-extra-offset:-85px;
   --intro-quote-v15-extra-offset:-45px;
   --intro-quote-v15-line-height:.82;
   --intro-medicine-v15-extra-offset:-52px;
@@ -158,14 +159,13 @@
 }
 
 /* ==========================================================
-   BLOCCO TESTI INFERIORI
-   Alza solo: sottotitolo e rombo.
-   Non tocca SHION IBURI, simbolo, player o overlay.
+   RIGO SPECIAL JOUNIN + ROMBO
+   Alzati separatamente per non sovrapporsi alla quote.
    ========================================================== */
 
 .shion-root .subtitle,
 .shion-root .divider{
-  transform:translateY(var(--intro-lower-text-block-offset))!important;
+  transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-subtitle-v15-extra-offset)))!important;
 }
 
 /* Frase poetica alzata separatamente e con interlinea compatta */
