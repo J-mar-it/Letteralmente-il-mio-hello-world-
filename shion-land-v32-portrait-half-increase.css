@@ -1,0 +1,13 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v31-screen2-clean.css?v=2");
+
+/* ==========================================================
+   SHION LAND V32 PORTRAIT HALF INCREASE
+   Riduce l'aumento del frame centrale della schermata 2.
+   Originale: 250px.
+   V31: 290px (+40px).
+   V32: 270px (+20px).
+   ========================================================== */
+
+.shion-root{
+  --screen2-portrait-frame-width:270px;
+}
