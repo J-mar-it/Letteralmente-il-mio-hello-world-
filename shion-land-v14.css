@@ -94,10 +94,7 @@
   display:none!important;
 }
 
-#intro-shion:checked~.app .title .intro-close-shion,
-#intro-rank:checked~.app .subtitle .intro-close-rank,
-#intro-venenista:checked~.app .subtitle .intro-close-venenista,
-#intro-clan:checked~.app .subtitle .intro-close-clan{
+#intro-shion:checked~.app .title .intro-close-shion{
   display:inline!important;
   white-space:nowrap!important;
 }
@@ -122,10 +119,7 @@
   overflow:hidden!important;
 }
 
-#intro-shion:checked~.app .intro-info,
-#intro-rank:checked~.app .intro-info,
-#intro-venenista:checked~.app .intro-info,
-#intro-clan:checked~.app .intro-info{
+#intro-shion:checked~.app .intro-info{
   max-height:170px!important;
   min-height:116px!important;
   opacity:1!important;
@@ -137,6 +131,19 @@
   border-radius:18px!important;
   background:linear-gradient(180deg,rgba(8,14,16,.96),rgba(3,6,7,.98))!important;
   box-shadow:0 0 34px rgba(59,85,94,.28),inset 0 0 26px rgba(169,192,200,.07)!important;
+}
+
+#intro-rank:checked~.app .intro-info,
+#intro-venenista:checked~.app .intro-info,
+#intro-clan:checked~.app .intro-info{
+  max-height:0!important;
+  min-height:0!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
 }
 
 .shion-root .intro-info h3{
@@ -153,4 +160,65 @@
   top:8px!important;
   right:14px!important;
   font-size:24px!important;
+}
+
+/* Stabilizzazione finale intro */
+.shion-root .intro-card{
+  padding-top:28px!important;
+}
+
+.shion-root .symbol{
+  width:64px!important;
+  height:64px!important;
+  font-size:34px!important;
+  margin-bottom:6px!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .ost-player{
+  width:560px!important;
+  padding:10px 16px!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .ost-player audio{
+  height:30px!important;
+}
+
+.shion-root .title{
+  display:block!important;
+  width:100%!important;
+  min-height:106px!important;
+  margin:-12px 0 0!important;
+  text-align:center!important;
+  flex:0 0 auto!important;
+}
+
+.shion-root .title .intro-toggle{
+  display:block!important;
+  width:100%!important;
+  min-height:106px!important;
+}
+
+.shion-root .title .intro-link,
+.shion-root .subtitle .intro-link{
+  transform:none!important;
+}
+
+.shion-root .title .intro-link:hover,
+.shion-root .subtitle .intro-link:hover{
+  transform:none!important;
+}
+
+.shion-root .subtitle .intro-link{
+  pointer-events:none!important;
+  cursor:default!important;
+}
+
+.shion-root .subtitle .intro-link-close{
+  display:none!important;
+}
+
+.shion-root .intro-info{
+  top:430px!important;
 }
