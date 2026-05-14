@@ -1,9 +1,9 @@
 @import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v14.css?v=15");
 
 /* ==========================================================
-   SHION LAND V15.21
+   SHION LAND V15.26
    File di override leggero sopra la V14 stabile.
-   Qui teniamo le modifiche finali ordinate, senza toccare la base.
+   Overlay titolo disattivato. Testi inferiori alzati sotto SHION IBURI.
    ========================================================== */
 
 /* ==========================================================
@@ -17,7 +17,8 @@
   --intro-title-v15-offset:-125px;
   --intro-divider-diamond-offset:6px;
   --intro-lower-text-block-offset:-130px;
-  --intro-quote-v15-extra-offset:-45px;
+  --intro-subtitle-v15-extra-offset:-90px;
+  --intro-quote-v15-extra-offset:-135px;
   --intro-medicine-v15-extra-offset:-52px;
 
   /* Simbolo 毒 */
@@ -50,7 +51,7 @@
   --intro-warning-fallback-size:20px;
   --intro-warning-fallback-width:980px;
 
-  /* Box informativo di SHION: sotto il titolo, ma più vicino al player */
+  /* Overlay disattivato: valore mantenuto solo per compatibilità */
   --intro-overlay-top:760px;
 }
 
@@ -157,17 +158,40 @@
 }
 
 /* ==========================================================
-   BLOCCO TESTI INFERIORI
-   Alza solo: sottotitolo e rombo.
-   Non tocca SHION IBURI, simbolo, player o overlay.
+   OVERLAY TITOLO DISATTIVATO DEFINITIVAMENTE
+   Cliccare SHION IBURI non fa più comparire il box informativo.
+   ========================================================== */
+
+.shion-root .intro-info,
+#intro-shion:checked~.app .intro-info,
+#intro-rank:checked~.app .intro-info,
+#intro-venenista:checked~.app .intro-info,
+#intro-clan:checked~.app .intro-info{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  max-height:0!important;
+  min-height:0!important;
+  height:0!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+
+/* ==========================================================
+   RIGO SPECIAL JOUNIN + ROMBO
+   Alzati separatamente sotto SHION IBURI.
    ========================================================== */
 
 .shion-root .subtitle,
 .shion-root .divider{
-  transform:translateY(var(--intro-lower-text-block-offset))!important;
+  transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-subtitle-v15-extra-offset)))!important;
 }
 
-/* Frase poetica alzata separatamente */
+/* Frase poetica a tre righe alzata sotto SHION IBURI */
 .shion-root .quote{
   transform:translateY(calc(var(--intro-lower-text-block-offset) + var(--intro-quote-v15-extra-offset)))!important;
 }
