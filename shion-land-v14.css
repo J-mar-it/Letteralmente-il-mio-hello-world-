@@ -315,7 +315,7 @@
    ========================================================== */
 
 .shion-root .intro-card{
-  padding-top:24px!important;   /* bordo alto -> simbolo */
+  padding-top:-24px!important;   /* bordo alto -> simbolo */
 }
 
 .shion-root .symbol{
