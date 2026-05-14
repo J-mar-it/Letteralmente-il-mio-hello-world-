@@ -298,8 +298,8 @@
 .shion-root .intro-card{
   left:10px!important;   /* sposta cornice card a destra/sinistra */
   top:10px!important;    /* sposta cornice card su/giù */
-  width:730px!important; /* larghezza cornice card */
-  height:640px!important;/* altezza cornice card */
+  width:930px!important; /* larghezza cornice card */
+  height:840px!important;/* altezza cornice card */
   border:1px solid rgba(59,85,94,.54)!important;
 }
 
