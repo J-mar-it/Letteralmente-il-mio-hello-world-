@@ -17,6 +17,14 @@
 .shion-root{
   --land-width:730px;
   --land-height:820px;
+  --land-safe-top:10px;
+  --land-safe-bottom:10px;
+  --intro-card-land-scale:.49;
+  --intro-card-land-height:1630px;
+  --intro-symbol-land-size:214px;
+  --intro-symbol-land-font:120px;
+  --intro-symbol-land-y:18px;
+  --intro-symbol-land-bottom:28px;
   width:100%!important;
   max-width:var(--land-width)!important;
   height:var(--land-height)!important;
@@ -96,6 +104,46 @@
 }
 
 /* ==========================================================
+   SCHERMATA 1 / SAFE AREA VERTICALE
+   La card e' un grande layout scalato al 50% dalla base V60.
+   In land il bordo alto risultava troppo vicino e il clip della
+   card poteva tagliare il warning. Qui aggiungiamo una piccola
+   safe area, aumentiamo il box interno scalato e compattiamo
+   solo spazi verticali minimi della intro.
+   ========================================================== */
+
+.shion-root .intro-card{
+  top:var(--land-safe-top)!important;
+  height:var(--intro-card-land-height)!important;
+  min-height:var(--intro-card-land-height)!important;
+  padding-top:24px!important;
+  padding-bottom:12px!important;
+  transform:translateX(-50%) scale(var(--intro-card-land-scale))!important;
+  transform-origin:top center!important;
+}
+
+.shion-root .symbol{
+  top:var(--intro-symbol-land-y)!important;
+  width:var(--intro-symbol-land-size)!important;
+  height:var(--intro-symbol-land-size)!important;
+  margin-bottom:var(--intro-symbol-land-bottom)!important;
+  font-size:var(--intro-symbol-land-font)!important;
+}
+
+.shion-root .ost-player{
+  margin-bottom:16px!important;
+}
+
+.shion-root .divider{
+  margin-top:7px!important;
+  margin-bottom:9px!important;
+}
+
+.shion-root .medicine-btn{
+  margin-top:12px!important;
+}
+
+/* ==========================================================
    SCHERMATA 1 / WARNING SOTTO MEDICINA
    Warning nel flusso della intro-card: niente assoluti legati
    alla schermata, niente bottom forzati. Il margine e' un filo
@@ -111,15 +159,15 @@
   right:auto!important;
   bottom:auto!important;
   left:auto!important;
-  margin:16px auto 0!important;
+  margin:10px auto 0!important;
   padding:0!important;
   width:min(700px,90%)!important;
   max-width:min(700px,90%)!important;
   text-align:center!important;
   font-family:"Spectral",Georgia,serif!important;
-  font-size:12px!important;
-  line-height:1.25!important;
-  letter-spacing:.13em!important;
+  font-size:11.5px!important;
+  line-height:1.22!important;
+  letter-spacing:.12em!important;
   text-transform:uppercase!important;
   white-space:normal!important;
   color:rgba(169,192,200,.58)!important;
