@@ -1,0 +1,84 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v68-easy-visible-glow-debug.css?v=1");
+
+/* ==========================================================
+   SHION LAND V69 EASY ANIMATION FINAL FIX
+   Layer finale per la frase easy. Il padre <p> torna un
+   contenitore neutro: niente gradient, clip, pseudo-elementi,
+   filter o text-shadow ereditati dai tentativi precedenti.
+   L'effetto resta solo sullo span .easy-gradient-text.
+   ========================================================== */
+
+.shion-root .easy-screen .easy-text p{
+  background:none!important;
+  background-image:none!important;
+  background-size:auto!important;
+  background-position:0 0!important;
+  background-repeat:repeat!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  opacity:1!important;
+  box-shadow:none!important;
+}
+
+.shion-root .easy-screen .easy-text p::before,
+.shion-root .easy-screen .easy-text p::after,
+.shion-root .easy-screen .easy-gradient-text::before,
+.shion-root .easy-screen .easy-gradient-text::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  background-image:none!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline-block!important;
+  position:relative!important;
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  color:#ff4f8b!important;
+  -webkit-text-fill-color:#ff4f8b!important;
+  opacity:1!important;
+  filter:none!important;
+  box-shadow:none!important;
+  text-shadow:
+    0 0 8px rgba(255,79,139,.72),
+    0 0 18px rgba(155,60,255,.48)!important;
+  transform:translateZ(0) scale(1)!important;
+  animation:shionEasyCleanPulseV69 1.55s ease-in-out infinite!important;
+  will-change:color,text-shadow,opacity,transform!important;
+}
+
+@keyframes shionEasyCleanPulseV69{
+  0%,100%{
+    opacity:.72;
+    color:#b30007;
+    -webkit-text-fill-color:#b30007;
+    text-shadow:
+      0 0 6px rgba(179,0,7,.45),
+      0 0 14px rgba(255,79,139,.30),
+      0 0 24px rgba(155,60,255,.20);
+    transform:translateZ(0) scale(.992);
+  }
+  50%{
+    opacity:1;
+    color:#fff4ff;
+    -webkit-text-fill-color:#fff4ff;
+    text-shadow:
+      0 0 10px rgba(255,255,255,.96),
+      0 0 22px rgba(255,79,139,.86),
+      0 0 42px rgba(155,60,255,.64),
+      0 0 64px rgba(216,173,255,.40);
+    transform:translateZ(0) scale(1.018);
+  }
+}
