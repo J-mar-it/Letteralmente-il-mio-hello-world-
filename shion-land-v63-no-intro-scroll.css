@@ -1,0 +1,36 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v62-land-height-fix.css?v=1");
+
+/* ==========================================================
+   SHION LAND V63 NO INTRO SCROLL
+   Micro-layer sopra la V62 height fix.
+   Blocca lo scroll interno della schermata 1, specialmente
+   su .intro-card, che nella base aveva overflow-y:auto.
+   Non modifica testi, bottoni, immagini, background o layout.
+   ========================================================== */
+
+.shion-root,
+.shion-root .app,
+.shion-root .intro-screen,
+.shion-root .intro-card{
+  overflow:hidden!important;
+  overscroll-behavior:none!important;
+}
+
+.shion-root .intro-card{
+  overflow-x:hidden!important;
+  overflow-y:hidden!important;
+  scrollbar-width:none!important;
+  -ms-overflow-style:none!important;
+}
+
+.shion-root .intro-card::-webkit-scrollbar{
+  width:0!important;
+  height:0!important;
+  display:none!important;
+}
+
+/* Evita che la rotella del mouse faccia percepire uno scorrimento interno
+   quando il cursore e' sopra la card intro. */
+.shion-root .intro-screen{
+  touch-action:none!important;
+}
