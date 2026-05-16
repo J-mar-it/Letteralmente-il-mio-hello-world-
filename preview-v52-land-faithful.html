@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Preview V52 Land Faithful - Shion Iburi</title>
+  <link rel="stylesheet" href="shion-land-v52-symbol-scale-translate.css?v=1">
+  <style>
+    html,
+    body{
+      margin:0;
+      min-height:100%;
+      background:#202832;
+    }
+
+    body{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+      padding:18px;
+      color:#111;
+      font-family:MuseoSans,Arial,sans-serif;
+      font-size:12px;
+      text-align:center;
+    }
+
+    .preview-toolbar{
+      width:728px;
+      max-width:100%;
+      display:flex;
+      justify-content:center;
+      gap:8px;
+      color:#e8eef2;
+      font-family:MuseoSans,Arial,sans-serif;
+      font-size:12px;
+    }
+
+    body > input[name="preview-overflow"]{
+      position:absolute;
+      opacity:0;
+      pointer-events:none;
+    }
+
+    .preview-toolbar label{
+      display:inline-block;
+      padding:6px 10px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.35);
+      color:#dfe8ee;
+      cursor:pointer;
+      user-select:none;
+    }
+
+    .preview-stage{
+      display:block;
+      width:728px;
+      max-width:100%;
+    }
+
+    .land-container{
+      display:block;
+      width:728px;
+      height:823px;
+      padding:0;
+      border:1px solid rgb(0,0,0);
+      margin:0 auto;
+      background:#030607;
+      color:#111;
+      text-align:center;
+      font-family:MuseoSans,Arial,sans-serif;
+      font-size:12px;
+      overflow:hidden;
+    }
+
+    #preview-overflow-auto:checked ~ .preview-stage .land-container{
+      overflow:auto;
+    }
+
+    #preview-overflow-hidden:checked ~ .preview-toolbar label[for="preview-overflow-hidden"],
+    #preview-overflow-auto:checked ~ .preview-toolbar label[for="preview-overflow-auto"]{
+      border-color:rgba(255,255,255,.44);
+      background:rgba(0,0,0,.62);
+      color:#fff;
+    }
+
+    .preview-error{
+      padding:18px;
+      color:#e8eef2;
+      line-height:1.5;
+      text-align:left;
+    }
+  </style>
+</head>
+<body>
+  <input type="radio" name="preview-overflow" id="preview-overflow-hidden" checked>
+  <input type="radio" name="preview-overflow" id="preview-overflow-auto">
+
+  <div class="preview-toolbar" aria-label="Overflow preview mode">
+    <label for="preview-overflow-hidden">overflow hidden</label>
+    <label for="preview-overflow-auto">overflow auto</label>
+  </div>
+
+  <div class="preview-stage">
+    <div class="land-container" id="landContainer"></div>
+  </div>
+
+  <script>
+    (function(){
+      var container = document.getElementById('landContainer');
+
+      fetch('./index.html', { cache: 'no-store' })
+        .then(function(response){ return response.text(); })
+        .then(function(html){
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var styles = doc.head.querySelectorAll('style');
+          var root = doc.querySelector('.shion-root');
+
+          styles.forEach(function(style){
+            document.head.appendChild(style.cloneNode(true));
+          });
+
+          if (!root) {
+            container.innerHTML = '<div class="preview-error">Errore: .shion-root non trovato in index.html.</div>';
+            return;
+          }
+
+          container.appendChild(document.importNode(root, true));
+        })
+        .catch(function(error){
+          container.innerHTML = '<div class="preview-error">Errore nel caricamento di index.html per la preview V52.</div>';
+          console.error(error);
+        });
+    }());
+  </script>
+</body>
+</html>
