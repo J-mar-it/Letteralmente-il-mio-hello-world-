@@ -1,0 +1,61 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v64-title-hover-safe-fix.css?v=1");
+
+/* ==========================================================
+   SHION LAND V65 NO TITLE OVERLAY
+   Rimuove l'overlay del titolo SHION IBURI.
+   Il titolo resta visivo, ma non apre piu' box informativi.
+   ========================================================== */
+
+/* Spegne completamente il box informativo della schermata 1. */
+.shion-root .intro-screen .intro-info,
+.shion-root .intro-screen .intro-info *,
+.shion-root #intro-shion:checked ~ .app .intro-screen .intro-info,
+.shion-root #intro-rank:checked ~ .app .intro-screen .intro-info,
+.shion-root #intro-venenista:checked ~ .app .intro-screen .intro-info,
+.shion-root #intro-clan:checked ~ .app .intro-screen .intro-info{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  height:0!important;
+  min-height:0!important;
+  max-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  overflow:hidden!important;
+  box-shadow:none!important;
+}
+
+/* SHION IBURI non deve piu' comportarsi come pulsante. */
+.shion-root .intro-screen .title .intro-link,
+.shion-root .intro-screen .title label,
+.shion-root .intro-screen .title .intro-toggle{
+  pointer-events:none!important;
+  cursor:default!important;
+}
+
+/* Niente cambio fisico su hover/check del titolo. */
+.shion-root .intro-screen .title .intro-link:hover,
+.shion-root .intro-screen .title label:hover,
+.shion-root .intro-screen .title .intro-toggle:hover,
+.shion-root #intro-shion:checked ~ .app .intro-screen .title .intro-link,
+.shion-root #intro-shion:checked ~ .app .intro-screen .title label{
+  transform:none!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+}
+
+/* Mantiene sempre visibile solo la versione normale del titolo. */
+.shion-root .intro-screen .title .intro-link-close,
+.shion-root .intro-screen .title .intro-close-shion,
+.shion-root #intro-shion:checked ~ .app .intro-screen .title .intro-close-shion{
+  display:none!important;
+}
+
+.shion-root .intro-screen .title .intro-open-shion,
+.shion-root #intro-shion:checked ~ .app .intro-screen .title .intro-open-shion{
+  display:block!important;
+}
