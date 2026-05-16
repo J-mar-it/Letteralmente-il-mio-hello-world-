@@ -1,0 +1,58 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v70-easy-span-pulse.css?v=1");
+
+.shion-root .easy-screen .easy-gradient-text{
+  overflow:hidden!important;
+  isolation:isolate!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  top:-30%!important;
+  bottom:-30%!important;
+  left:-55%!important;
+  width:42%!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,transparent 0%,rgba(179,0,7,.10) 12%,rgba(255,79,139,.52) 32%,rgba(255,255,255,.92) 50%,rgba(216,173,255,.58) 68%,rgba(155,60,255,.12) 86%,transparent 100%)!important;
+  filter:blur(5px)!important;
+  opacity:0!important;
+  transform:skewX(-18deg) translateX(-160%)!important;
+  mix-blend-mode:screen!important;
+  animation:shionEasyTextSweepV71 2.75s ease-in-out infinite!important;
+  z-index:2!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  top:0!important;
+  bottom:0!important;
+  left:-40%!important;
+  width:22%!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.0) 10%,rgba(255,255,255,.62) 48%,rgba(255,255,255,0) 90%,transparent 100%)!important;
+  filter:blur(1.8px)!important;
+  opacity:0!important;
+  transform:skewX(-18deg) translateX(-180%)!important;
+  mix-blend-mode:screen!important;
+  animation:shionEasyTextSweepCoreV71 2.75s ease-in-out infinite!important;
+  z-index:3!important;
+}
+
+@keyframes shionEasyTextSweepV71{
+  0%{opacity:0;transform:skewX(-18deg) translateX(-160%);}
+  15%{opacity:.85;}
+  50%{opacity:1;}
+  82%{opacity:.65;}
+  100%{opacity:0;transform:skewX(-18deg) translateX(520%);}
+}
+
+@keyframes shionEasyTextSweepCoreV71{
+  0%{opacity:0;transform:skewX(-18deg) translateX(-180%);}
+  18%{opacity:.75;}
+  52%{opacity:1;}
+  82%{opacity:.55;}
+  100%{opacity:0;transform:skewX(-18deg) translateX(760%);}
+}
