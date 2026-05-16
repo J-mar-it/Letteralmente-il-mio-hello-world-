@@ -17,6 +17,14 @@
 .shion-root{
   --land-width:730px;
   --land-height:820px;
+  --land-safe-top:10px;
+  --land-safe-bottom:10px;
+  --intro-card-land-scale:.49;
+  --intro-card-land-height:1630px;
+  --intro-symbol-land-size:214px;
+  --intro-symbol-land-font:120px;
+  --intro-symbol-land-y:30px;
+  --intro-symbol-land-bottom:28px;
   width:100%!important;
   max-width:var(--land-width)!important;
   height:var(--land-height)!important;
@@ -66,6 +74,11 @@
   display:block!important;
 }
 
+.body_box > style + br,
+.body_box > style + br + br{
+  display:none!important;
+}
+
 /* ==========================================================
    SCHERMATA 1 / NO INTERNAL SCROLL
    Il problema dopo V80/V82 non era il warning in se', ma la
@@ -96,63 +109,133 @@
 }
 
 /* ==========================================================
-   SCHERMATA 1 / WARNING SOTTO MEDICINA
-   Warning nel flusso della intro-card: niente assoluti legati
-   alla schermata, niente bottom forzati. Il margine e' un filo
-   piu' compatto della V80 per restare dentro la land reale.
+   SCHERMATA 1 / SAFE AREA VERTICALE
+   La card e' un grande layout scalato al 50% dalla base V60.
+   In land il bordo alto risultava troppo vicino e il clip della
+   card poteva tagliare il warning. Qui aggiungiamo una piccola
+   safe area, aumentiamo il box interno scalato e compattiamo
+   solo spazi verticali minimi della intro.
    ========================================================== */
 
-.shion-root .intro-card .warning{
-  display:block!important;
-  visibility:visible!important;
-  opacity:1!important;
+.shion-root .intro-card{
+  top:var(--land-safe-top)!important;
+  height:var(--intro-card-land-height)!important;
+  min-height:var(--intro-card-land-height)!important;
+  padding-top:24px!important;
+  padding-bottom:12px!important;
+  transform:translateX(-50%) scale(var(--intro-card-land-scale))!important;
+  transform-origin:top center!important;
+}
+
+.shion-root .symbol{
+  top:var(--intro-symbol-land-y)!important;
+  width:var(--intro-symbol-land-size)!important;
+  height:var(--intro-symbol-land-size)!important;
+  margin-bottom:var(--intro-symbol-land-bottom)!important;
+  font-size:var(--intro-symbol-land-font)!important;
+}
+
+/* ==========================================================
+   SCHERMATA 1 / SIMBOLO
+   .symbol resta un contenitore statico: il transform sul nodo
+   principale e' bloccato dalla base V60. Pulse e micro-movimento
+   vengono quindi ricreati sui pseudo-elementi.
+   ========================================================== */
+
+.shion-root .symbol{
+  width:172px!important;
+  height:172px!important;
+  margin:0 auto 28px!important;
+  display:grid!important;
+  place-items:center!important;
   position:relative!important;
-  top:auto!important;
-  right:auto!important;
-  bottom:auto!important;
-  left:auto!important;
-  margin:16px auto 0!important;
-  padding:0!important;
-  width:min(700px,90%)!important;
-  max-width:min(700px,90%)!important;
-  text-align:center!important;
-  font-family:"Spectral",Georgia,serif!important;
-  font-size:12px!important;
-  line-height:1.25!important;
-  letter-spacing:.13em!important;
-  text-transform:uppercase!important;
-  white-space:normal!important;
-  color:rgba(169,192,200,.58)!important;
-  -webkit-text-fill-color:rgba(169,192,200,.58)!important;
-  text-shadow:0 0 9px rgba(169,192,200,.25)!important;
-  background:none!important;
-  border:0!important;
-  box-shadow:none!important;
-  filter:none!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+  border:1px solid rgba(169,192,200,.28)!important;
+  border-radius:50%!important;
+  background:
+    radial-gradient(circle,rgba(59,85,94,.28),transparent 58%),
+    rgba(8,14,16,.72)!important;
+  box-shadow:
+    0 0 24px rgba(169,192,200,.20),
+    0 0 46px rgba(59,85,94,.30),
+    inset 0 0 26px rgba(169,192,200,.13);
+  color:rgba(226,242,246,.94)!important;
+  font-size:86px!important;
+  line-height:1!important;
+  text-shadow:
+    0 0 10px rgba(226,242,246,.54),
+    0 0 22px rgba(169,192,200,.40),
+    0 0 46px rgba(59,85,94,.32);
   transform:none!important;
-  z-index:20!important;
+  transform-origin:center center!important;
+  scale:1;
+  translate:0 0;
+  animation:shionSymbolBreathV83 3.2s ease-in-out infinite!important;
+  will-change:scale,translate,box-shadow,text-shadow;
+}
+
+.shion-root .symbol::before,
+.shion-root .symbol::after{
+  content:""!important;
+  position:absolute!important;
+  border-radius:50%!important;
   pointer-events:none!important;
 }
 
-.shion-root .intro-card .warning span:first-child{
-  display:inline!important;
-  color:rgba(230,170,255,.92);
-  -webkit-text-fill-color:rgba(230,170,255,.92);
-  text-shadow:0 0 8px rgba(214,142,255,.62),0 0 18px rgba(188,90,255,.38);
-  animation:shionWarningFirstGlowV83 2.4s ease-in-out infinite;
+.shion-root .symbol::before{
+  inset:-16px!important;
+  background:
+    radial-gradient(circle at 35% 35%,rgba(169,192,200,.18),transparent 28%),
+    radial-gradient(circle at 70% 60%,rgba(59,85,94,.27),transparent 42%)!important;
+  filter:blur(11px)!important;
+  opacity:.70;
+  animation:shionSymbolSmokeV83 5.8s ease-in-out infinite alternate!important;
 }
 
-.shion-root .intro-card .warning .pulse{
-  display:inline!important;
-  color:rgba(210,244,248,.88);
-  -webkit-text-fill-color:rgba(210,244,248,.88);
-  text-shadow:0 0 7px rgba(169,192,200,.48),0 0 16px rgba(59,85,94,.30);
-  animation:shionWarningPulseGlowV83 2.8s ease-in-out infinite;
+.shion-root .symbol::after{
+  inset:-12px!important;
+  border:1px solid rgba(169,192,200,.20)!important;
+  box-shadow:
+    0 0 16px rgba(169,192,200,.20),
+    0 0 36px rgba(59,85,94,.25),
+    inset 0 0 20px rgba(169,192,200,.06)!important;
+  opacity:.48;
+  animation:shionSymbolRingV83 3.8s ease-in-out infinite!important;
 }
 
-.shion-root .intro-card .warning span:nth-of-type(2){animation-delay:.18s;}
-.shion-root .intro-card .warning span:nth-of-type(3){animation-delay:.36s;}
-.shion-root .intro-card .warning span:nth-of-type(4){animation-delay:.54s;}
+.shion-root .ost-player{
+  margin-bottom:16px!important;
+}
+
+.shion-root .divider{
+  margin-top:7px!important;
+  margin-bottom:9px!important;
+}
+
+.shion-root .medicine-btn{
+  margin-top:12px!important;
+}
+
+/* ==========================================================
+   SCHERMATA 1 / OVERLAY SHION IBURI DISATTIVATO
+   Il markup resta intatto, ma il pannello non appare piu' e il
+   titolo resta solo estetico/non cliccabile.
+   ========================================================== */
+
+.shion-root .intro-screen .intro-info{
+  display:none!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+
+.shion-root .title label,
+.shion-root .title .intro-link,
+.shion-root .title .intro-toggle{
+  pointer-events:none!important;
+  cursor:default!important;
+}
 
 /* ==========================================================
    EASY SCREEN / CLEAN WORD GLOW
@@ -207,6 +290,22 @@
   opacity:1!important;
 }
 
+/* Fallback per la land quando il markup non ha ancora gli span
+   .easy-glow-word: in quel caso anima tutta la frase reale. */
+.shion-root .easy-screen .easy-gradient-text{
+  color:#b30007!important;
+  -webkit-text-fill-color:#b30007!important;
+  text-shadow:
+    0 0 4px rgba(179,0,7,.30),
+    0 0 10px rgba(255,79,139,.16)!important;
+  animation:shionEasyWordGlowV80 2.65s ease-in-out infinite!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text:has(.easy-glow-word){
+  text-shadow:none!important;
+  animation:none!important;
+}
+
 .shion-root .easy-screen .easy-glow-word{
   display:inline!important;
   margin:0!important;
@@ -232,6 +331,44 @@
 .shion-root .easy-screen .easy-glow-word:nth-child(5){animation-delay:.48s!important;}
 .shion-root .easy-screen .easy-glow-word:nth-child(6){animation-delay:.60s!important;}
 .shion-root .easy-screen .easy-glow-word:nth-child(7){animation-delay:.72s!important;}
+
+@keyframes shionSymbolBreathV83{
+  0%,100%{
+    scale:1;
+    translate:0 0;
+    box-shadow:
+      0 0 24px rgba(169,192,200,.20),
+      0 0 46px rgba(59,85,94,.30),
+      inset 0 0 26px rgba(169,192,200,.13);
+    text-shadow:
+      0 0 10px rgba(226,242,246,.54),
+      0 0 22px rgba(169,192,200,.40),
+      0 0 46px rgba(59,85,94,.32);
+  }
+  50%{
+    scale:1.06;
+    translate:0 -3px;
+    box-shadow:
+      0 0 29px rgba(226,242,246,.28),
+      0 0 56px rgba(59,85,94,.40),
+      inset 0 0 29px rgba(169,192,200,.18);
+    text-shadow:
+      0 0 14px rgba(238,246,248,.72),
+      0 0 27px rgba(169,192,200,.50),
+      0 0 55px rgba(59,85,94,.38);
+  }
+}
+
+@keyframes shionSymbolSmokeV83{
+  0%{transform:translate(-4px,3px) scale(1);opacity:.50;}
+  48%{transform:translate(7px,-6px) scale(1.08);opacity:.86;}
+  100%{transform:translate(-2px,8px) scale(1.14);opacity:.58;}
+}
+
+@keyframes shionSymbolRingV83{
+  0%,100%{transform:scale(1);opacity:.38;}
+  50%{transform:scale(1.10);opacity:.82;}
+}
 
 @keyframes shionEasyWordGlowV80{
   0%,100%{
@@ -259,28 +396,147 @@
   }
 }
 
-@keyframes shionWarningFirstGlowV83{
-  0%,100%{
-    color:rgba(214,142,255,.74);
-    -webkit-text-fill-color:rgba(214,142,255,.74);
-    text-shadow:0 0 6px rgba(214,142,255,.36),0 0 14px rgba(188,90,255,.22);
-  }
-  50%{
-    color:rgba(246,220,255,.98);
-    -webkit-text-fill-color:rgba(246,220,255,.98);
-    text-shadow:0 0 10px rgba(246,220,255,.82),0 0 24px rgba(214,142,255,.62),0 0 42px rgba(188,90,255,.34);
-  }
+/* ==========================================================
+   WARNING / FORCE GLOW ULTIMO OVERRIDE
+   Versione non vincolata a figli diretti: nella land il DOM puo'
+   essere riscritto, quindi colpiamo anche p.warning span e .pulse.
+   ========================================================== */
+
+.shion-root .intro-card p.warning,
+.shion-root .intro-card .warning{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:86px!important;
+  margin:0!important;
+  padding:0!important;
+  width:940px!important;
+  max-width:940px!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  font-family:"Spectral",Georgia,serif!important;
+  font-size:21px!important;
+  line-height:1.18!important;
+  letter-spacing:.06em!important;
+  text-transform:uppercase!important;
+  white-space:normal!important;
+  color:rgba(169,192,200,.82)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  border:0!important;
+  filter:none!important;
+  box-shadow:none!important;
+  z-index:9999!important;
+  pointer-events:none!important;
 }
+
+.shion-root .intro-card p.warning::before,
+.shion-root .intro-card p.warning::after,
+.shion-root .intro-card .warning::before,
+.shion-root .intro-card .warning::after,
+.shion-root .intro-card p.warning span::before,
+.shion-root .intro-card p.warning span::after,
+.shion-root .intro-card .warning span::before,
+.shion-root .intro-card .warning span::after{
+  content:none!important;
+  display:none!important;
+}
+
+.shion-root .intro-card p.warning span:not(.pulse),
+.shion-root .intro-card p.warning span[style]:not(.pulse),
+.shion-root .intro-card .warning span:not(.pulse),
+.shion-root .intro-card .warning span[style]:not(.pulse){
+  color:rgba(214,142,255,.90)!important;
+  -webkit-text-fill-color:rgba(214,142,255,.90)!important;
+  text-shadow:
+    0 0 7px rgba(214,142,255,.70),
+    0 0 20px rgba(188,90,255,.58),
+    0 0 34px rgba(188,90,255,.30)!important;
+  filter:drop-shadow(0 0 6px rgba(188,90,255,.40))!important;
+  animation:none!important;
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  opacity:1!important;
+}
+
+.shion-root .intro-card p.warning span.pulse,
+.shion-root .intro-card .warning span.pulse,
+.shion-root .intro-card p.warning .pulse,
+.shion-root .intro-card .warning .pulse{
+  display:inline-block!important;
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  animation:shionWarningPulseGlowV83 2.35s ease-in-out infinite!important;
+  will-change:color,-webkit-text-fill-color,text-shadow,filter,opacity,transform;
+}
+
+.shion-root .intro-card p.warning span.pulse:nth-of-type(2){animation-delay:.25s!important;}
+.shion-root .intro-card p.warning span.pulse:nth-of-type(3){animation-delay:.50s!important;}
+.shion-root .intro-card p.warning span.pulse:nth-of-type(4){animation-delay:.75s!important;}
 
 @keyframes shionWarningPulseGlowV83{
   0%,100%{
-    color:rgba(169,192,200,.72);
-    -webkit-text-fill-color:rgba(169,192,200,.72);
-    text-shadow:0 0 5px rgba(169,192,200,.28),0 0 12px rgba(59,85,94,.18);
+    color:rgba(120,160,168,.70);
+    -webkit-text-fill-color:rgba(120,160,168,.70);
+    text-shadow:
+      0 0 3px rgba(169,192,200,.22),
+      0 0 9px rgba(59,85,94,.18);
+    filter:drop-shadow(0 0 3px rgba(59,85,94,.18));
+    opacity:.72;
+    transform:scale(1);
   }
-  50%{
-    color:rgba(220,250,252,.96);
-    -webkit-text-fill-color:rgba(220,250,252,.96);
-    text-shadow:0 0 9px rgba(220,250,252,.78),0 0 22px rgba(169,192,200,.54),0 0 38px rgba(59,85,94,.34);
+  45%,55%{
+    color:rgba(232,255,255,1);
+    -webkit-text-fill-color:rgba(232,255,255,1);
+    text-shadow:
+      0 0 12px rgba(232,255,255,1),
+      0 0 28px rgba(169,192,200,.82),
+      0 0 52px rgba(59,85,94,.62);
+    filter:drop-shadow(0 0 11px rgba(169,192,200,.65));
+    opacity:1;
+    transform:scale(1.06);
   }
+}
+
+/* PLAYER / CLICK FIX */
+.shion-root .title{
+  pointer-events:none!important;
+}
+
+.shion-root .ost-player{
+  position:relative!important;
+  z-index:900!important;
+  pointer-events:auto!important;
+}
+
+.shion-root .ost-player audio{
+  position:relative!important;
+  z-index:910!important;
+  pointer-events:auto!important;
+  display:block!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+
+/* INTRO QUOTE / PURPLE HEARTS */
+.shion-root .intro-card .quote .heart-glow{
+  color:rgba(214,142,255,.92)!important;
+  -webkit-text-fill-color:rgba(214,142,255,.92)!important;
+  text-shadow:
+    0 0 6px rgba(214,142,255,.52),
+    0 0 16px rgba(188,90,255,.34),
+    0 0 30px rgba(188,90,255,.20)!important;
+  animation:none!important;
 }
