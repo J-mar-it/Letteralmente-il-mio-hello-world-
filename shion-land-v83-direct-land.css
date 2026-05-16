@@ -159,6 +159,8 @@
    V61 usa background-clip sul p; nella land quel metodo e i
    fallback successivi potevano creare blocchi/box. Qui il p
    torna contenitore neutro e l'effetto resta sugli span reali.
+   Il nome animazione resta quello V80: e' la linea che in V82
+   risultava corretta.
    ========================================================== */
 
 .shion-root .easy-screen .easy-text p{
@@ -219,7 +221,7 @@
   color:#b30007;
   -webkit-text-fill-color:#b30007;
   text-shadow:0 0 4px rgba(179,0,7,.30),0 0 10px rgba(255,79,139,.16);
-  animation:shionEasyWordGlowV83 2.65s ease-in-out infinite!important;
+  animation:shionEasyWordGlowV80 2.65s ease-in-out infinite!important;
   will-change:color,text-shadow;
 }
 
@@ -231,7 +233,7 @@
 .shion-root .easy-screen .easy-glow-word:nth-child(6){animation-delay:.60s!important;}
 .shion-root .easy-screen .easy-glow-word:nth-child(7){animation-delay:.72s!important;}
 
-@keyframes shionEasyWordGlowV83{
+@keyframes shionEasyWordGlowV80{
   0%,100%{
     color:#b30007;
     -webkit-text-fill-color:#b30007;
