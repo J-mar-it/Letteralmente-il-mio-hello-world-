@@ -1,0 +1,23 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v63-overflow-fix.css?v=1");
+
+/* ==========================================================
+   SHION LAND V64 TITLE HOVER SAFE FIX
+   Micro-layer sopra V63: rimuove solo il movimento fisico
+   dell'hover/check sul titolo grande SHION IBURI.
+   Colore, glow, click e overlay restano gestiti dalla base.
+   ========================================================== */
+
+/* La base ha una regola generica .intro-link:hover con
+   transform:translateY(-1px). Sul titolo scalato della land
+   quel piccolo spostamento puo' allargare il box percepito. */
+.shion-root #flow-intro:checked ~ .app .intro-screen .title .intro-toggle:hover,
+.shion-root #flow-intro:checked ~ .app .intro-screen .title .intro-link:hover,
+.shion-root #flow-intro:checked ~ .app .intro-screen .title .intro-open-shion:hover,
+.shion-root #flow-intro:checked ~ .app .intro-screen .title label[for="intro-shion"]:hover,
+.shion-root #intro-shion:checked ~ .app .intro-screen .title label[for="intro-shion"]{
+  transform:none!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+}
