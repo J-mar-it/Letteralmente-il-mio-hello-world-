@@ -23,7 +23,7 @@
   --intro-card-land-height:1630px;
   --intro-symbol-land-size:214px;
   --intro-symbol-land-font:120px;
-  --intro-symbol-land-y:18px;
+  --intro-symbol-land-y:30px;
   --intro-symbol-land-bottom:28px;
   width:100%!important;
   max-width:var(--land-width)!important;
