@@ -554,6 +554,8 @@
 }
 
 .shion-root .main-screen .gate-player{
+  bottom:190px!important;
+  z-index:30!important;
   width:min(var(--screen2-gate-box-width),72%)!important;
   max-width:min(var(--screen2-gate-box-width),72%)!important;
   height:auto!important;
@@ -575,6 +577,8 @@
 
 #gate-open:checked~.app .main-screen .gate-player,
 #gate-ready:checked~.app .main-screen .gate-player{
+  bottom:190px!important;
+  z-index:30!important;
   display:flex!important;
   flex-direction:column!important;
   align-items:center!important;
