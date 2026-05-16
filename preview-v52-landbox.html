@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Preview V52 Landbox - Shion Iburi</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      background:#050708;
+      color:#eef6f8;
+      font-family:Georgia,"Times New Roman",serif;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      padding:22px;
+    }
+
+    .preview-note{
+      width:min(1120px,100%);
+      border:1px solid rgba(169,192,200,.20);
+      background:linear-gradient(180deg,rgba(8,14,16,.82),rgba(3,6,7,.88));
+      box-shadow:0 0 32px rgba(0,0,0,.45),inset 0 0 24px rgba(59,85,94,.10);
+      padding:14px 18px;
+      border-radius:14px;
+      text-align:center;
+      color:rgba(226,242,246,.82);
+      letter-spacing:.03em;
+      line-height:1.45;
+      font-size:14px;
+    }
+
+    .preview-controls{
+      width:min(1120px,100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .preview-controls input{display:none}
+
+    .preview-controls label{
+      cursor:pointer;
+      user-select:none;
+      border:1px solid rgba(169,192,200,.24);
+      background:rgba(8,14,16,.74);
+      color:rgba(226,242,246,.76);
+      padding:9px 15px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      transition:.18s ease;
+    }
+
+    .preview-controls label:hover{
+      color:#eef6f8;
+      border-color:rgba(169,192,200,.45);
+      box-shadow:0 0 18px rgba(59,85,94,.28);
+    }
+
+    .landbox-shell{
+      position:relative;
+      width:1000px;
+      height:760px;
+      max-width:100%;
+      border:1px solid rgba(169,192,200,.22);
+      background:#030607;
+      box-shadow:0 0 55px rgba(0,0,0,.75),0 0 42px rgba(59,85,94,.18);
+      overflow:hidden;
+      transition:.2s ease;
+    }
+
+    .landbox-shell iframe{
+      display:block;
+      width:100%;
+      height:100%;
+      border:0;
+      background:#030607;
+    }
+
+    #size-900:checked ~ .landbox-shell{width:900px;height:760px}
+    #size-960:checked ~ .landbox-shell{width:960px;height:760px}
+    #size-1000:checked ~ .landbox-shell{width:1000px;height:760px}
+    #size-1080:checked ~ .landbox-shell{width:1080px;height:760px}
+    #size-1120:checked ~ .landbox-shell{width:1120px;height:760px}
+
+    #height-700:checked ~ .landbox-shell{height:700px}
+    #height-760:checked ~ .landbox-shell{height:760px}
+    #height-820:checked ~ .landbox-shell{height:820px}
+
+    .size-group,
+    .height-group{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+    }
+
+    #size-900:checked ~ .preview-controls label[for="size-900"],
+    #size-960:checked ~ .preview-controls label[for="size-960"],
+    #size-1000:checked ~ .preview-controls label[for="size-1000"],
+    #size-1080:checked ~ .preview-controls label[for="size-1080"],
+    #size-1120:checked ~ .preview-controls label[for="size-1120"],
+    #height-700:checked ~ .preview-controls label[for="height-700"],
+    #height-760:checked ~ .preview-controls label[for="height-760"],
+    #height-820:checked ~ .preview-controls label[for="height-820"]{
+      color:#eef6f8;
+      border-color:rgba(169,192,200,.58);
+      background:rgba(20,34,38,.86);
+      box-shadow:0 0 22px rgba(59,85,94,.34),inset 0 0 16px rgba(169,192,200,.06);
+    }
+
+    @media(max-width:760px){
+      body{padding:12px}
+      .landbox-shell{height:760px!important}
+      .preview-note{font-size:13px}
+    }
+  </style>
+</head>
+<body>
+  <input type="radio" name="size" id="size-900">
+  <input type="radio" name="size" id="size-960">
+  <input type="radio" name="size" id="size-1000" checked>
+  <input type="radio" name="size" id="size-1080">
+  <input type="radio" name="size" id="size-1120">
+
+  <input type="radio" name="height" id="height-700">
+  <input type="radio" name="height" id="height-760" checked>
+  <input type="radio" name="height" id="height-820">
+
+  <div class="preview-note">
+    Preview V52 dentro un contenitore simulato. Cambia larghezza/altezza per avvicinarti al box reale della land.
+  </div>
+
+  <div class="preview-controls">
+    <div class="size-group">
+      <label for="size-900">900</label>
+      <label for="size-960">960</label>
+      <label for="size-1000">1000</label>
+      <label for="size-1080">1080</label>
+      <label for="size-1120">1120</label>
+    </div>
+    <div class="height-group">
+      <label for="height-700">H 700</label>
+      <label for="height-760">H 760</label>
+      <label for="height-820">H 820</label>
+    </div>
+  </div>
+
+  <div class="landbox-shell">
+    <iframe src="preview-v52.html?v=1" title="Preview V52"></iframe>
+  </div>
+</body>
+</html>
