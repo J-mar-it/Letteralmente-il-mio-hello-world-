@@ -564,6 +564,24 @@
   overflow:hidden!important;
 }
 
+.shion-root .main-screen .gate-player > br,
+.shion-root .main-screen .gate-player br{
+  display:none!important;
+  height:0!important;
+  margin:0!important;
+  padding:0!important;
+  line-height:0!important;
+}
+
+#gate-open:checked~.app .main-screen .gate-player,
+#gate-ready:checked~.app .main-screen .gate-player{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  row-gap:4px!important;
+}
+
 .shion-root .main-screen .gate-line{
   display:none!important;
   height:0!important;
@@ -577,7 +595,7 @@
 
 .shion-root .main-screen .gate-ost-line{
   top:0!important;
-  margin:0 0 4px!important;
+  margin:0!important;
   padding:0!important;
   font-size:18px!important;
   line-height:1.04!important;
@@ -593,8 +611,7 @@
 }
 
 .shion-root .main-screen .gate-choices{
-  margin-top:5px!important;
-  margin-bottom:0!important;
+  margin:2px 0 0!important;
   padding:0!important;
   gap:5px!important;
 }
@@ -606,9 +623,13 @@
 }
 
 .shion-root .main-screen .gate-nudge{
-  margin-top:3px!important;
-  margin-bottom:0!important;
+  margin:5px auto 0!important;
   padding:0!important;
-  font-size:9px!important;
-  line-height:1!important;
+  font-size:17px!important;
+  line-height:1.05!important;
+}
+
+.shion-root .main-screen .gate-arrow{
+  font-size:24px!important;
+  margin-right:7px!important;
 }
