@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>Preview V52 Land Faithful - Shion Iburi</title>
-  <link rel="stylesheet" href="shion-land-v52-symbol-scale-translate.css?v=1">
   <style>
     html,
     body{
@@ -27,7 +26,7 @@
     }
 
     .preview-toolbar{
-      width:728px;
+      width:730px;
       max-width:100%;
       display:flex;
       justify-content:center;
@@ -55,14 +54,17 @@
 
     .preview-stage{
       display:block;
-      width:728px;
+      width:730px;
       max-width:100%;
     }
 
     .land-container{
       display:block;
-      width:728px;
-      height:823px;
+      position:relative;
+      width:730px;
+      height:820px;
+      min-height:820px;
+      max-height:820px;
       padding:0;
       border:1px solid rgb(0,0,0);
       margin:0 auto;
@@ -72,6 +74,7 @@
       font-family:MuseoSans,Arial,sans-serif;
       font-size:12px;
       overflow:hidden;
+      box-sizing:border-box;
     }
 
     #preview-overflow-auto:checked ~ .preview-stage .land-container{
@@ -120,6 +123,13 @@
           styles.forEach(function(style){
             document.head.appendChild(style.cloneNode(true));
           });
+
+          /* La V52 va caricata dopo gli style inline clonati da index.html:
+             questo rispetta l'ordine reale dei CSS e permette alla V52 di avere precedenza. */
+          var v52 = document.createElement('link');
+          v52.rel = 'stylesheet';
+          v52.href = 'shion-land-v52-symbol-scale-translate.css?v=1';
+          document.head.appendChild(v52);
 
           if (!root) {
             container.innerHTML = '<div class="preview-error">Errore: .shion-root non trovato in index.html.</div>';
