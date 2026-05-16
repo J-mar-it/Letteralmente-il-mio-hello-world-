@@ -1,0 +1,251 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v60-stable-clean.css?v=1");
+
+/* ==========================================================
+   SHION LAND V61 YANDERE FIXES
+   Recupera gli override finali persi nel clean V60:
+   - background yandere a piena larghezza;
+   - glow gradient penultima schermata;
+   - bottone Bevi centrato sotto la frase;
+   - immagine e frase finale centrate.
+   ========================================================== */
+
+/* ==========================================================
+   SCHERMATE YANDERE / STAGE A PIENA AREA
+   Le schermate trap/dead/easy/blackout devono riempire la stessa
+   area visiva della main-screen, senza restringere il background.
+   ========================================================== */
+
+.shion-root .trap-1-screen.stage-screen,
+.shion-root .trap-2-screen.stage-screen,
+.shion-root .trap-3-screen.stage-screen,
+.shion-root .trap-4-screen.stage-screen,
+.shion-root .trap-5-screen.stage-screen,
+.shion-root .trap-6-screen.stage-screen,
+.shion-root .dead-screen.stage-screen,
+.shion-root .easy-screen.stage-screen,
+.shion-root .blackout-screen.stage-screen{
+  display:block!important;
+  place-items:initial!important;
+  padding:0!important;
+  overflow:hidden!important;
+  background:#030607!important;
+}
+
+.shion-root .trap-1-screen .stage,
+.shion-root .trap-2-screen .stage,
+.shion-root .trap-3-screen .stage,
+.shion-root .trap-4-screen .stage,
+.shion-root .trap-5-screen .stage,
+.shion-root .trap-6-screen .stage,
+.shion-root .dead-screen .stage,
+.shion-root .easy-screen .stage,
+.shion-root .blackout-screen .stage{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  border-radius:0!important;
+}
+
+/* Background larghi: niente contain stretto ai lati. */
+.shion-root .trap-1-screen .room-bg,
+.shion-root .trap-2-screen .room-bg,
+.shion-root .trap-3-screen .room-bg,
+.shion-root .trap-4-screen .room-bg,
+.shion-root .trap-5-screen .room-bg,
+.shion-root .trap-6-screen .room-bg,
+.shion-root .dead-screen .room-bg,
+.shion-root .easy-screen .room-bg{
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+}
+
+/* Ripristino immagini yandere coerenti con le versioni precedenti. */
+.shion-root .trap-1-screen .room-bg,
+.shion-root .trap-2-screen .room-bg,
+.shion-root .trap-3-screen .room-bg{
+  background-image:url("https://i.imgur.com/djUGrGg.png")!important;
+  filter:none!important;
+}
+
+.shion-root .trap-4-screen .room-bg,
+.shion-root .trap-5-screen .room-bg,
+.shion-root .trap-6-screen .room-bg{
+  background-image:url("https://i.imgur.com/OHGWLnp.png")!important;
+  filter:none!important;
+}
+
+.shion-root .dead-screen .room-bg,
+.shion-root .easy-screen .room-bg{
+  background-image:url("https://i.imgur.com/j9zxzcd.png")!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+}
+
+/* La easy screen mantiene una lieve sfocatura cinematica come nella versione precedente. */
+.shion-root .easy-screen .room-bg{
+  filter:blur(10px) brightness(.60) saturate(.96)!important;
+  transform:scale(1.08)!important;
+  transform-origin:center!important;
+}
+
+.shion-root .trap-1-screen .veil,
+.shion-root .trap-2-screen .veil,
+.shion-root .trap-3-screen .veil,
+.shion-root .trap-4-screen .veil,
+.shion-root .trap-5-screen .veil,
+.shion-root .trap-6-screen .veil,
+.shion-root .dead-screen .veil{
+  background:none!important;
+}
+
+.shion-root .easy-screen .veil{
+  background:
+    radial-gradient(
+      circle at 50% 44%,
+      rgba(255,255,255,.08) 0%,
+      rgba(255,255,255,.04) 20%,
+      rgba(0,0,0,.10) 38%,
+      rgba(0,0,0,.42) 72%,
+      rgba(0,0,0,.66) 100%
+    )!important;
+}
+
+/* ==========================================================
+   PENULTIMA SCHERMATA / EASY
+   Ripristina frase gradient/glow e bottone Bevi centrato sotto.
+   ========================================================== */
+
+.shion-root .easy-screen .easy-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:145px!important;
+  width:min(760px,88%)!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root .easy-screen .easy-text p{
+  margin:0!important;
+  background:linear-gradient(90deg,#b30007,#ff4f8b,#ffffff,#d8adff,#ff4f8b,#b30007)!important;
+  background-size:320% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:easyPhraseGradientV61 4.8s ease-in-out infinite!important;
+  text-shadow:
+    0 0 12px rgba(179,0,7,.28),
+    0 0 24px rgba(255,79,139,.24),
+    0 0 38px rgba(216,173,255,.18)!important;
+}
+
+.shion-root .easy-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:24px!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  z-index:8!important;
+}
+
+.shion-root .easy-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+@keyframes easyPhraseGradientV61{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* ==========================================================
+   ULTIMA SCHERMATA / BLACKOUT
+   Ripristina immagine centrale trasparente e frase centrata.
+   ========================================================== */
+
+.shion-root .blackout-screen .blackout-stage{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  overflow:hidden!important;
+  background:#000!important;
+}
+
+.shion-root .blackout-screen .blackout-face{
+  position:absolute!important;
+  inset:0!important;
+  background:url("shion-blackout.png") center/cover no-repeat!important;
+  filter:grayscale(1) contrast(1.3) brightness(.24)!important;
+  opacity:.22!important;
+  transform:scale(1.15)!important;
+  z-index:1!important;
+  display:block!important;
+}
+
+.shion-root .blackout-screen .blackout-layer{
+  position:absolute!important;
+  inset:0!important;
+  background:radial-gradient(circle at center,rgba(60,15,90,.05),#000 70%),rgba(0,0,0,.72)!important;
+  z-index:2!important;
+}
+
+.shion-root .blackout-screen .blackout-vision{
+  position:absolute!important;
+  inset:0!important;
+  z-index:3!important;
+  background:url("https://i.imgur.com/FenZ0Ar.png") center/contain no-repeat!important;
+  opacity:.16!important;
+  filter:grayscale(.15) brightness(.9) contrast(1.08) blur(.35px)!important;
+  mix-blend-mode:screen!important;
+  pointer-events:none!important;
+  transform:scale(.92)!important;
+}
+
+.shion-root .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:145px!important;
+  width:min(760px,88%)!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root .blackout-screen .blackout-text p{
+  margin:0!important;
+  text-align:center!important;
+}
+
+.shion-root .blackout-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:24px!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  z-index:8!important;
+}
+
+.shion-root .blackout-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
