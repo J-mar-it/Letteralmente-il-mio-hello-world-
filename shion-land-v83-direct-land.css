@@ -276,19 +276,12 @@
   pointer-events:none!important;
 }
 
-.shion-root .intro-card .warning span:first-child{
+.shion-root .intro-card .warning span:first-child,
+.shion-root .intro-card .warning .pulse{
   display:inline!important;
   color:rgba(214,142,255,.82)!important;
   -webkit-text-fill-color:rgba(214,142,255,.82)!important;
   text-shadow:0 0 18px rgba(188,90,255,.5)!important;
-  animation:none!important;
-}
-
-.shion-root .intro-card .warning .pulse{
-  display:inline!important;
-  color:inherit!important;
-  -webkit-text-fill-color:currentColor!important;
-  text-shadow:none!important;
   animation:none!important;
 }
 
