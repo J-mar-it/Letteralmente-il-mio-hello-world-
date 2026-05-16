@@ -542,3 +542,94 @@
       0 0 38px rgba(59,85,94,.34);
   }
 }
+
+/* ==========================================================
+   WARNING / FORCE GLOW ULTIMO OVERRIDE
+   Versione non vincolata a figli diretti: nella land il DOM puo'
+   essere riscritto, quindi colpiamo anche p.warning span e .pulse.
+   ========================================================== */
+
+.shion-root .intro-card p.warning,
+.shion-root .intro-card .warning{
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  filter:none!important;
+  box-shadow:none!important;
+  opacity:1!important;
+}
+
+.shion-root .intro-card p.warning::before,
+.shion-root .intro-card p.warning::after,
+.shion-root .intro-card .warning::before,
+.shion-root .intro-card .warning::after,
+.shion-root .intro-card p.warning span::before,
+.shion-root .intro-card p.warning span::after,
+.shion-root .intro-card .warning span::before,
+.shion-root .intro-card .warning span::after{
+  content:none!important;
+  display:none!important;
+}
+
+.shion-root .intro-card p.warning span:first-child,
+.shion-root .intro-card p.warning span[style],
+.shion-root .intro-card .warning span:first-child,
+.shion-root .intro-card .warning span[style]{
+  color:rgba(214,142,255,.82)!important;
+  -webkit-text-fill-color:rgba(214,142,255,.82)!important;
+  text-shadow:
+    0 0 6px rgba(214,142,255,.65),
+    0 0 18px rgba(188,90,255,.50),
+    0 0 32px rgba(188,90,255,.25)!important;
+  filter:drop-shadow(0 0 6px rgba(188,90,255,.36))!important;
+  animation:none!important;
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  opacity:1!important;
+}
+
+.shion-root .intro-card p.warning span.pulse,
+.shion-root .intro-card .warning span.pulse,
+.shion-root .intro-card p.warning .pulse,
+.shion-root .intro-card .warning .pulse{
+  color:rgba(169,192,200,.92)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.92)!important;
+  text-shadow:
+    0 0 6px rgba(169,192,200,.52),
+    0 0 16px rgba(59,85,94,.36),
+    0 0 28px rgba(59,85,94,.22)!important;
+  filter:drop-shadow(0 0 5px rgba(59,85,94,.34))!important;
+  animation:shionWarningPulseGlowV83 2.8s ease-in-out infinite!important;
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  opacity:1!important;
+}
+
+.shion-root .intro-card p.warning span.pulse:nth-of-type(2){animation-delay:.18s!important;}
+.shion-root .intro-card p.warning span.pulse:nth-of-type(3){animation-delay:.36s!important;}
+.shion-root .intro-card p.warning span.pulse:nth-of-type(4){animation-delay:.54s!important;}
+
+@keyframes shionWarningPulseGlowV83{
+  0%,100%{
+    color:rgba(169,192,200,.78);
+    -webkit-text-fill-color:rgba(169,192,200,.78);
+    text-shadow:
+      0 0 5px rgba(169,192,200,.32),
+      0 0 13px rgba(59,85,94,.22);
+    filter:drop-shadow(0 0 4px rgba(59,85,94,.24));
+  }
+  50%{
+    color:rgba(220,250,252,1);
+    -webkit-text-fill-color:rgba(220,250,252,1);
+    text-shadow:
+      0 0 9px rgba(220,250,252,.86),
+      0 0 22px rgba(169,192,200,.62),
+      0 0 40px rgba(59,85,94,.40);
+    filter:drop-shadow(0 0 8px rgba(169,192,200,.42));
+  }
+}
