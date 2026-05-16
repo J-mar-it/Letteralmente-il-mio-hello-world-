@@ -686,32 +686,17 @@
   left:0!important;
   right:0!important;
   width:100%!important;
-  display:grid!important;
-  grid-template-rows:repeat(3, auto)!important;
-  grid-template-columns:1fr!important;
-  gap:10px!important;
+  display:block!important;
   align-self:auto!important;
 }
 
-/* Prima coppia open/close nella stessa riga */
-.shion-root .main-screen .tab-buttons .tab-btn:nth-child(1),
-.shion-root .main-screen .tab-buttons .tab-btn:nth-child(2){
-  grid-row:1!important;
-  grid-column:1!important;
-}
-
-/* Seconda coppia open/close nella stessa riga */
-.shion-root .main-screen .tab-buttons .tab-btn:nth-child(3),
-.shion-root .main-screen .tab-buttons .tab-btn:nth-child(4){
-  grid-row:2!important;
-  grid-column:1!important;
-}
-
-/* Terza coppia open/close nella stessa riga */
-.shion-root .main-screen .tab-buttons .tab-btn:nth-child(5),
-.shion-root .main-screen .tab-buttons .tab-btn:nth-child(6){
-  grid-row:3!important;
-  grid-column:1!important;
+.shion-root .main-screen .tab-buttons > br,
+.shion-root .main-screen .tab-buttons br{
+  display:none!important;
+  height:0!important;
+  margin:0!important;
+  padding:0!important;
+  line-height:0!important;
 }
 
 .shion-root .main-screen .tab-btn{
@@ -731,7 +716,38 @@
   white-space:nowrap!important;
 }
 
-/* Le coppie open/close restano nella griglia, ma solo una label e' visibile. */
+/* Posizioni stabili: niente nth-child, perche' la land puo' inserire nodi extra. */
+.shion-root .main-screen .tab-open-left-venom,
+.shion-root .main-screen .tab-close-left-venom,
+.shion-root .main-screen .tab-open-right-vapor,
+.shion-root .main-screen .tab-close-right-vapor{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+}
+
+.shion-root .main-screen .tab-open-left-pulse,
+.shion-root .main-screen .tab-close-left-pulse,
+.shion-root .main-screen .tab-open-right-keepsake,
+.shion-root .main-screen .tab-close-right-keepsake{
+  position:absolute!important;
+  top:58px!important;
+  left:0!important;
+  right:0!important;
+}
+
+.shion-root .main-screen .tab-open-left-mark,
+.shion-root .main-screen .tab-close-left-mark,
+.shion-root .main-screen .tab-open-right-need,
+.shion-root .main-screen .tab-close-right-need{
+  position:absolute!important;
+  top:116px!important;
+  left:0!important;
+  right:0!important;
+}
+
+/* Le coppie open/close restano sovrapposte, ma solo una label e' visibile. */
 .shion-root .main-screen .tab-open-left-venom,
 .shion-root .main-screen .tab-open-left-pulse,
 .shion-root .main-screen .tab-open-left-mark,
