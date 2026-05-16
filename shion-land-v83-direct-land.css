@@ -252,7 +252,7 @@
   left:50%!important;
   right:auto!important;
   top:auto!important;
-  bottom:40px!important;
+  bottom:90px!important;
   margin:0!important;
   padding:0!important;
   width:980px!important;
@@ -272,7 +272,7 @@
   border:0!important;
   box-shadow:none!important;
   filter:none!important;
-  z-index:900!important;
+  z-index:9999!important;
   pointer-events:none!important;
 }
 
