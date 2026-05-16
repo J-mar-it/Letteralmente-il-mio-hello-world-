@@ -1,0 +1,43 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v60-stable-clean.css?v=1");
+
+/* ==========================================================
+   SHION LAND V62 LAND HEIGHT FIX
+   Micro-layer sopra V60: rende esplicita l'altezza reale della
+   land sui contenitori base della schermata 1.
+   Non modifica testi, player, bottoni, immagini o overlay.
+   ========================================================== */
+
+.shion-root{
+  --land-width:730px;
+  --land-height:820px;
+}
+
+.shion-root,
+.shion-root .app{
+  width:100%!important;
+  max-width:var(--land-width)!important;
+  height:var(--land-height)!important;
+  min-height:var(--land-height)!important;
+  max-height:var(--land-height)!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important;
+}
+
+/* Fix prudente: agisce prima sulla schermata intro, dove il bordo
+   della scheda viene visto gia' con V60, senza toccare screen 2. */
+.shion-root .intro-screen{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:var(--land-height)!important;
+  min-height:var(--land-height)!important;
+  max-height:var(--land-height)!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important;
+}
+
+.shion-root .intro-screen:after{
+  box-sizing:border-box!important;
+}
