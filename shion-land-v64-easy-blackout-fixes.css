@@ -1,0 +1,139 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v63-no-intro-scroll.css?v=1");
+
+/* ==========================================================
+   SHION LAND V64 EASY + BLACKOUT FIXES
+   Layer sopra V63 no-intro-scroll.
+   Ripristina animazione penultima schermata e sistema finale.
+   ========================================================== */
+
+/* ==========================================================
+   PENULTIMA SCHERMATA / EASY
+   Testo centrato, animazione vecchia recuperata, bottone Bevi
+   centrato appena sotto.
+   ========================================================== */
+
+.shion-root .easy-screen .easy-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:135px!important;
+  width:min(760px,88%)!important;
+  margin:0!important;
+  padding:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:8!important;
+  pointer-events:none!important;
+}
+
+.shion-root .easy-screen .easy-text p{
+  margin:0!important;
+  padding:0!important;
+  text-align:center!important;
+  background:linear-gradient(90deg,#b30007,#ff4f8b,#9b3cff,#d8adff,#ff4f8b,#b30007)!important;
+  background-size:320% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:easyPhraseGradientRecoveredV64 4.8s ease-in-out infinite!important;
+  text-shadow:
+    0 0 12px rgba(179,0,7,.28),
+    0 0 24px rgba(155,60,255,.24),
+    0 0 38px rgba(216,173,255,.16)!important;
+}
+
+.shion-root .easy-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:72px!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  z-index:9!important;
+}
+
+.shion-root .easy-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+@keyframes easyPhraseGradientRecoveredV64{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* ==========================================================
+   ULTIMA SCHERMATA / BLACKOUT
+   Shion torna visibile in trasparenza; frase appena sopra
+   Risvegliati, entrambi centrati.
+   ========================================================== */
+
+.shion-root .blackout-screen .blackout-face{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:1!important;
+  background:url("shion-blackout.png") center/cover no-repeat!important;
+  opacity:.30!important;
+  filter:grayscale(1) contrast(1.25) brightness(.34)!important;
+  transform:scale(1.08)!important;
+  pointer-events:none!important;
+}
+
+.shion-root .blackout-screen .blackout-layer{
+  position:absolute!important;
+  inset:0!important;
+  z-index:2!important;
+  background:radial-gradient(circle at center,rgba(60,15,90,.04),rgba(0,0,0,.54) 68%,rgba(0,0,0,.74) 100%)!important;
+  pointer-events:none!important;
+}
+
+.shion-root .blackout-screen .blackout-vision{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:3!important;
+  background:url("https://i.imgur.com/FenZ0Ar.png") center/contain no-repeat!important;
+  opacity:.18!important;
+  filter:grayscale(.15) brightness(.95) contrast(1.08) blur(.35px)!important;
+  mix-blend-mode:screen!important;
+  transform:scale(.92)!important;
+  pointer-events:none!important;
+}
+
+.shion-root .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:110px!important;
+  width:min(760px,88%)!important;
+  margin:0!important;
+  padding:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:8!important;
+  pointer-events:none!important;
+}
+
+.shion-root .blackout-screen .blackout-text p{
+  margin:0!important;
+  padding:0!important;
+  text-align:center!important;
+}
+
+.shion-root .blackout-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:48px!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  z-index:9!important;
+}
+
+.shion-root .blackout-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
