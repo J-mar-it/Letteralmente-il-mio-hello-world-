@@ -1,0 +1,95 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v70-easy-span-pulse.css?v=1");
+
+/* V74: wave piu' pulita. Le parole restano inline, senza scale/opacity/box. */
+
+.shion-root .easy-screen .easy-text p{
+  background:none!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  opacity:1!important;
+}
+
+.shion-root .easy-screen .easy-text p::before,
+.shion-root .easy-screen .easy-text p::after,
+.shion-root .easy-screen .easy-gradient-text::before,
+.shion-root .easy-screen .easy-gradient-text::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline!important;
+  position:relative!important;
+  background:none!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  animation:none!important;
+  transform:none!important;
+  opacity:1!important;
+}
+
+.shion-root .easy-screen .easy-glow-word{
+  display:inline!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  outline:0!important;
+  background:none!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  transform:none!important;
+  opacity:1!important;
+  color:#ff4f8b;
+  -webkit-text-fill-color:#ff4f8b;
+  text-shadow:0 0 6px rgba(255,79,139,.44),0 0 14px rgba(155,60,255,.24);
+  animation:shionEasyInlineGlowWaveV74 2.65s ease-in-out infinite!important;
+  will-change:color,text-shadow;
+}
+
+.shion-root .easy-screen .easy-glow-word:nth-child(1){animation-delay:0s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(2){animation-delay:.12s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(3){animation-delay:.24s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(4){animation-delay:.36s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(5){animation-delay:.48s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(6){animation-delay:.60s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(7){animation-delay:.72s!important;}
+
+@keyframes shionEasyInlineGlowWaveV74{
+  0%,100%{
+    color:#b30007;
+    -webkit-text-fill-color:#b30007;
+    text-shadow:0 0 4px rgba(179,0,7,.30),0 0 10px rgba(255,79,139,.16);
+  }
+  30%{
+    color:#fff4ff;
+    -webkit-text-fill-color:#fff4ff;
+    text-shadow:0 0 10px rgba(255,255,255,.95),0 0 22px rgba(255,79,139,.85),0 0 42px rgba(155,60,255,.58),0 0 62px rgba(216,173,255,.36);
+  }
+  55%{
+    color:#ff4f8b;
+    -webkit-text-fill-color:#ff4f8b;
+    text-shadow:0 0 7px rgba(255,79,139,.66),0 0 18px rgba(155,60,255,.38);
+  }
+}
