@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Preview V83 Direct Land - Shion Iburi</title>
+  <style>
+    html,
+    body{
+      margin:0;
+      min-height:100%;
+      background:#202832;
+    }
+
+    body{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+      padding:18px;
+      color:#e8eef2;
+      font-family:MuseoSans,Arial,sans-serif;
+      font-size:12px;
+      text-align:center;
+    }
+
+    .preview-note{
+      width:730px;
+      max-width:100%;
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.35);
+      color:#dfe8ee;
+      box-sizing:border-box;
+    }
+
+    .body_box{
+      display:block;
+      width:730px;
+      height:820px;
+      min-height:820px;
+      max-height:820px;
+      padding:0;
+      border:1px solid rgb(0,0,0);
+      margin:0 auto;
+      background:#030607;
+      color:rgb(255,255,255);
+      text-align:center;
+      font-family:MuseoSans,Arial,sans-serif;
+      font-size:12px;
+      overflow:hidden;
+      box-sizing:border-box;
+    }
+
+    .preview-error{
+      padding:18px;
+      color:#e8eef2;
+      line-height:1.5;
+      text-align:left;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-note">
+    Preview V83 direct land: DOM-like con .body_box 730 x 820 e &lt;br&gt; generati tra le righe.
+  </div>
+
+  <div class="body_box" id="bodyBox">
+    <style>@import url("shion-land-v83-direct-land.css?v=1");</style>
+  </div>
+
+  <script>
+    (function(){
+      var container = document.getElementById('bodyBox');
+
+      function ensureEasyWordSpans(root){
+        var text = root.querySelector('.easy-screen .easy-gradient-text');
+        var paragraph = root.querySelector('.easy-screen .easy-text p');
+
+        if (!text && paragraph) {
+          paragraph.innerHTML = '<span class="easy-gradient-text">Tornerai.. Non puoi farne a meno \u2661</span>';
+          text = paragraph.querySelector('.easy-gradient-text');
+        }
+
+        if (text && !text.querySelector('.easy-glow-word')) {
+          text.innerHTML =
+            '<span class="easy-glow-word">Tornerai..&nbsp;</span>' +
+            '<span class="easy-glow-word">Non&nbsp;</span>' +
+            '<span class="easy-glow-word">puoi&nbsp;</span>' +
+            '<span class="easy-glow-word">farne&nbsp;</span>' +
+            '<span class="easy-glow-word">a&nbsp;</span>' +
+            '<span class="easy-glow-word">meno&nbsp;</span>' +
+            '<span class="easy-glow-word">\u2661</span>';
+        }
+      }
+
+      fetch('./index.html', { cache: 'no-store' })
+        .then(function(response){ return response.text(); })
+        .then(function(html){
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var root = doc.querySelector('.shion-root');
+
+          if (!root) {
+            container.innerHTML += '<div class="preview-error">Errore: .shion-root non trovato in index.html.</div>';
+            return;
+          }
+
+          /* La land reale ora ha gia' gli span parola-per-parola.
+             Questa preview normalizza solo il DOM clonato, se il
+             repo locale non e' ancora allineato a quel markup. */
+          ensureEasyWordSpans(root);
+
+          var landLikeRoot = root.outerHTML.replace(/\n/g, '\n<br>');
+          container.insertAdjacentHTML('beforeend', landLikeRoot);
+        })
+        .catch(function(error){
+          container.innerHTML += '<div class="preview-error">Errore nel caricamento della preview DOM-like.</div>';
+          console.error(error);
+        });
+    }());
+  </script>
+</body>
+</html>
