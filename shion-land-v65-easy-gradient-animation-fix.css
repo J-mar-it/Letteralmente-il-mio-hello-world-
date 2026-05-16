@@ -1,0 +1,31 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v64-easy-blackout-fixes.css?v=1");
+
+/* ==========================================================
+   SHION LAND V65 EASY GRADIENT ANIMATION FIX
+   Ripristina in modo piu' fedele l'animazione originale della
+   frase: Tornerai.. Non puoi farne a meno ♡
+   ========================================================== */
+
+.shion-root .easy-screen .easy-text p{
+  display:inline-block!important;
+  background:linear-gradient(90deg,#b30007,#ff4f8b,#9b3cff,#d8adff,#ff4f8b,#b30007)!important;
+  background-size:320% 100%!important;
+  background-position:0% 50%!important;
+  background-repeat:no-repeat!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:easyPhraseGradient 4.8s ease-in-out infinite!important;
+  will-change:background-position!important;
+  text-shadow:
+    0 0 12px rgba(179,0,7,.28),
+    0 0 24px rgba(155,60,255,.24),
+    0 0 38px rgba(216,173,255,.16)!important;
+}
+
+@keyframes easyPhraseGradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
