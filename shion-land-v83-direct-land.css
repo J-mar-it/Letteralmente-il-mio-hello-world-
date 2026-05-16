@@ -529,3 +529,14 @@
   opacity:1!important;
   visibility:visible!important;
 }
+
+/* INTRO QUOTE / PURPLE HEARTS */
+.shion-root .intro-card .quote .heart-glow{
+  color:rgba(214,142,255,.92)!important;
+  -webkit-text-fill-color:rgba(214,142,255,.92)!important;
+  text-shadow:
+    0 0 6px rgba(214,142,255,.52),
+    0 0 16px rgba(188,90,255,.34),
+    0 0 30px rgba(188,90,255,.20)!important;
+  animation:none!important;
+}
