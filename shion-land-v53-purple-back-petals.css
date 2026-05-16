@@ -1,0 +1,22 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v52-symbol-scale-translate.css?v=1");
+
+/* ==========================================================
+   SHION LAND V53 PURPLE BACK PETALS
+   Schermata 1: solo i petali di background diventano viola.
+   I petali frontali .petal.front restano teal.
+   ========================================================== */
+
+.shion-root .intro-screen .petals.back .petal:not(.front){
+  background:rgba(150,82,210,var(--op))!important;
+  box-shadow:
+    0 0 12px rgba(176,108,236,.28),
+    0 0 26px rgba(106,52,170,.18)!important;
+}
+
+/* Mantiene esplicitamente teal i petali frontali, evitando eredita' accidentali. */
+.shion-root .intro-screen .petals.front .petal.front{
+  background:rgba(207,230,236,.56)!important;
+  box-shadow:
+    0 0 12px rgba(207,230,236,.40),
+    0 0 30px rgba(59,85,94,.34)!important;
+}
