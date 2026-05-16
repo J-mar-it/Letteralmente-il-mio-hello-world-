@@ -167,7 +167,12 @@
     0 0 12px rgba(226,242,246,.58),
     0 0 28px rgba(169,192,200,.44),
     0 0 58px rgba(59,85,94,.38);
-  animation:shionSymbolGlowV83 3.2s ease-in-out infinite!important;
+  transform:none!important;
+  transform-origin:center center!important;
+  scale:1;
+  translate:0 0;
+  animation:shionSymbolBreathV83 3.2s ease-in-out infinite!important;
+  will-change:scale,translate,box-shadow,text-shadow;
 }
 
 .shion-root .symbol::before,
@@ -386,18 +391,22 @@
 .shion-root .easy-screen .easy-glow-word:nth-child(6){animation-delay:.60s!important;}
 .shion-root .easy-screen .easy-glow-word:nth-child(7){animation-delay:.72s!important;}
 
-@keyframes shionSymbolGlowV83{
+@keyframes shionSymbolBreathV83{
   0%,100%{
+    scale:1;
+    translate:0 0;
     box-shadow:
-      0 0 24px rgba(169,192,200,.20),
-      0 0 46px rgba(59,85,94,.30),
-      inset 0 0 24px rgba(169,192,200,.12);
+      0 0 28px rgba(169,192,200,.24),
+      0 0 58px rgba(59,85,94,.38),
+      inset 0 0 30px rgba(169,192,200,.15);
     text-shadow:
-      0 0 10px rgba(226,242,246,.50),
-      0 0 24px rgba(169,192,200,.36),
-      0 0 46px rgba(59,85,94,.30);
+      0 0 12px rgba(226,242,246,.58),
+      0 0 28px rgba(169,192,200,.44),
+      0 0 58px rgba(59,85,94,.38);
   }
   50%{
+    scale:1.06;
+    translate:0 -3px;
     box-shadow:
       0 0 34px rgba(226,242,246,.32),
       0 0 72px rgba(59,85,94,.48),
