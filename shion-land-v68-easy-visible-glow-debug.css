@@ -1,0 +1,37 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v67-easy-animation-html-check.css?v=1");
+
+.shion-root .easy-screen .easy-text p::after,
+.shion-root .easy-screen .easy-gradient-text::before,
+.shion-root .easy-screen .easy-gradient-text::after{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+  background:none!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline-block!important;
+  position:relative!important;
+  background:none!important;
+  background-image:none!important;
+  color:#ff4f8b!important;
+  -webkit-text-fill-color:#ff4f8b!important;
+  opacity:1!important;
+  animation:shionEasyGlowPulseV68 1.8s ease-in-out infinite!important;
+  text-shadow:0 0 10px rgba(255,79,139,.95),0 0 24px rgba(155,60,255,.75),0 0 42px rgba(216,173,255,.55)!important;
+}
+
+@keyframes shionEasyGlowPulseV68{
+  0%,100%{
+    opacity:.76;
+    color:#b30007;
+    -webkit-text-fill-color:#b30007;
+    text-shadow:0 0 8px rgba(179,0,7,.55),0 0 18px rgba(255,79,139,.42),0 0 34px rgba(155,60,255,.28);
+  }
+  50%{
+    opacity:1;
+    color:#fff4ff;
+    -webkit-text-fill-color:#fff4ff;
+    text-shadow:0 0 14px rgba(255,255,255,.95),0 0 30px rgba(255,79,139,.90),0 0 56px rgba(155,60,255,.72),0 0 86px rgba(216,173,255,.50);
+  }
+}
