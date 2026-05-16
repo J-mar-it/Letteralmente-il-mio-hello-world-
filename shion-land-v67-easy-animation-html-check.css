@@ -1,0 +1,72 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v66-easy-text-animation-debug.css?v=1");
+
+/* ==========================================================
+   SHION LAND V67 EASY ANIMATION HTML CHECK
+   La frase easy usa uno span dedicato nel markup. Questo evita
+   di animare direttamente il <p> e spegne il fallback ::after
+   della V66, cosi' non si creano doppioni leggibili.
+   ========================================================== */
+
+.shion-root .easy-screen .easy-text p::after{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline-block!important;
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+  background-image:linear-gradient(90deg,#b30007,#ff4f8b,#9b3cff,#d8adff,#ff4f8b,#b30007)!important;
+  background-size:320% 100%!important;
+  background-position:0% 50%!important;
+  background-repeat:no-repeat!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:shionEasyGradientSpanV67 4.8s linear infinite!important;
+  will-change:background-position!important;
+  text-shadow:
+    0 0 12px rgba(179,0,7,.28),
+    0 0 24px rgba(155,60,255,.24),
+    0 0 38px rgba(216,173,255,.16)!important;
+}
+
+/* Fallback visivo: una lama luminosa animata con transform,
+   piu' affidabile del solo background-position nella land. */
+.shion-root .easy-screen .easy-gradient-text::before{
+  content:""!important;
+  position:absolute!important;
+  top:-20%!important;
+  bottom:-20%!important;
+  left:-45%!important;
+  width:38%!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(179,0,7,.12) 14%,
+    rgba(255,79,139,.72) 34%,
+    rgba(255,255,255,.95) 50%,
+    rgba(216,173,255,.72) 66%,
+    rgba(155,60,255,.18) 82%,
+    transparent 100%)!important;
+  filter:blur(4px)!important;
+  transform:skewX(-18deg) translateX(-140%)!important;
+  mix-blend-mode:screen!important;
+  animation:shionEasySweepV67 2.9s ease-in-out infinite!important;
+}
+
+@keyframes shionEasyGradientSpanV67{
+  0%{background-position:0% 50%;}
+  100%{background-position:320% 50%;}
+}
+
+@keyframes shionEasySweepV67{
+  0%{transform:skewX(-18deg) translateX(-140%);opacity:0;}
+  12%{opacity:.9;}
+  48%{opacity:1;}
+  80%{opacity:.85;}
+  100%{transform:skewX(-18deg) translateX(420%);opacity:0;}
+}
