@@ -1,0 +1,65 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v80-clean-phrases-fix.css?v=1");
+
+/* V82: schermata 1. Medicina sopra, warning sotto. Non tocca easy screen. */
+
+.shion-root .intro-card{
+  position:relative!important;
+}
+
+.shion-root .intro-card .medicine-btn{
+  position:relative!important;
+  z-index:30!important;
+  margin:26px auto 0!important;
+  transform:none!important;
+}
+
+.shion-root .intro-card .medicine-btn:hover{
+  transform:translateY(-2px)!important;
+}
+
+.shion-root .intro-card .warning{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  width:min(650px,86%)!important;
+  max-width:min(650px,86%)!important;
+  margin:16px auto 0!important;
+  padding:0!important;
+  transform:none!important;
+  z-index:20!important;
+  pointer-events:none!important;
+  text-align:center!important;
+  font-family:"Spectral",Georgia,serif!important;
+  font-size:11px!important;
+  line-height:1.25!important;
+  letter-spacing:.12em!important;
+  text-transform:uppercase!important;
+  color:rgba(169,192,200,.62)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.62)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.28)!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+}
+
+.shion-root .intro-card .warning span:first-child{
+  display:inline!important;
+  visibility:visible!important;
+  color:rgba(230,170,255,.92)!important;
+  -webkit-text-fill-color:rgba(230,170,255,.92)!important;
+  text-shadow:0 0 8px rgba(214,142,255,.56),0 0 18px rgba(188,90,255,.32)!important;
+}
+
+.shion-root .intro-card .warning .pulse{
+  display:inline!important;
+  visibility:visible!important;
+  color:rgba(220,250,252,.88)!important;
+  -webkit-text-fill-color:rgba(220,250,252,.88)!important;
+  text-shadow:0 0 7px rgba(220,250,252,.48),0 0 16px rgba(169,192,200,.30)!important;
+}
