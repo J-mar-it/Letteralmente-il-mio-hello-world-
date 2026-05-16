@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Preview V52 728 - Shion Iburi</title>
+</head>
+<body>
+  <script>
+    fetch('./index.html', { cache: 'no-store' })
+      .then(function(response){ return response.text(); })
+      .then(function(html){
+        html = html.replace(
+          '<title>Scheda PBC - Shion Iburi</title>',
+          '<title>Preview V52 728 - Shion Iburi</title>'
+        );
+
+        html = html.replace(
+          '<link rel="stylesheet" href="shion.css">',
+          '<link rel="stylesheet" href="shion-land-v52-symbol-scale-translate.css?v=1">'
+        );
+
+        html = html.replace(
+          '</head>',
+          '<style>html,body{margin:0!important;width:728px!important;min-width:728px!important;height:823px!important;min-height:823px!important;overflow:hidden!important;background:#030607!important;} .shion-root{width:728px!important;max-width:728px!important;height:823px!important;min-height:823px!important;overflow:hidden!important;} .shion-root .app,.shion-root .screen{width:728px!important;max-width:728px!important;height:823px!important;min-height:823px!important;overflow:hidden!important;} .shion-root .intro-screen,.shion-root .stage-screen{width:728px!important;height:823px!important;min-height:823px!important;}</style></head>'
+        );
+
+        document.open();
+        document.write(html);
+        document.close();
+      })
+      .catch(function(error){
+        document.body.innerHTML = '<p style="font-family:Georgia,serif;color:#eef6f8;background:#030607;min-height:100vh;padding:32px;">Errore nel caricamento della preview V52 728.</p>';
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
