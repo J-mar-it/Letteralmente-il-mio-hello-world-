@@ -1,0 +1,53 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v64-easy-blackout-fixes.css?v=1");
+
+.shion-root .easy-screen .easy-text p{
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  opacity:1!important;
+}
+
+.shion-root .easy-screen .easy-text p::before,
+.shion-root .easy-screen .easy-text p::after,
+.shion-root .easy-screen .easy-gradient-text::before,
+.shion-root .easy-screen .easy-gradient-text::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline-block!important;
+  position:relative!important;
+  background:none!important;
+  background-image:none!important;
+  color:#ff4f8b!important;
+  -webkit-text-fill-color:#ff4f8b!important;
+  text-shadow:0 0 8px rgba(255,79,139,.72),0 0 18px rgba(155,60,255,.48),0 0 34px rgba(216,173,255,.30)!important;
+  filter:none!important;
+  box-shadow:none!important;
+  animation:shionEasySpanPulseV70 1.45s ease-in-out infinite!important;
+  will-change:opacity,transform!important;
+}
+
+@keyframes shionEasySpanPulseV70{
+  0%,100%{
+    opacity:.58;
+    transform:translateZ(0) scale(.99);
+  }
+  50%{
+    opacity:1;
+    transform:translateZ(0) scale(1.025);
+  }
+}
