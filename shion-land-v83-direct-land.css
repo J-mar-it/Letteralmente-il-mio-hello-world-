@@ -450,10 +450,10 @@
   display:none!important;
 }
 
-.shion-root .intro-card p.warning span:first-child,
-.shion-root .intro-card p.warning span[style]:first-child,
-.shion-root .intro-card .warning span:first-child,
-.shion-root .intro-card .warning span[style]:first-child{
+.shion-root .intro-card p.warning span:not(.pulse),
+.shion-root .intro-card p.warning span[style]:not(.pulse),
+.shion-root .intro-card .warning span:not(.pulse),
+.shion-root .intro-card .warning span[style]:not(.pulse){
   color:rgba(214,142,255,.90)!important;
   -webkit-text-fill-color:rgba(214,142,255,.90)!important;
   text-shadow:
