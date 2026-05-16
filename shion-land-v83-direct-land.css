@@ -235,14 +235,14 @@
   transform:translateX(-50%)!important;
   text-align:center!important;
   font-family:"Spectral",Georgia,serif!important;
-  font-size:12px!important;
-  line-height:1.3!important;
-  letter-spacing:.15em!important;
+  font-size:20px!important;
+  line-height:1.18!important;
+  letter-spacing:.07em!important;
   text-transform:uppercase!important;
   white-space:normal!important;
-  color:rgba(169,192,200,.48)!important;
-  -webkit-text-fill-color:rgba(169,192,200,.48)!important;
-  text-shadow:0 0 8px rgba(169,192,200,.20),0 0 16px rgba(59,85,94,.16)!important;
+  color:rgba(169,192,200,.82)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
   background:none!important;
   border:0!important;
   box-shadow:none!important;
@@ -322,6 +322,22 @@
   animation:none!important;
   transform:none!important;
   opacity:1!important;
+}
+
+/* Fallback per la land quando il markup non ha ancora gli span
+   .easy-glow-word: in quel caso anima tutta la frase reale. */
+.shion-root .easy-screen .easy-gradient-text{
+  color:#b30007!important;
+  -webkit-text-fill-color:#b30007!important;
+  text-shadow:
+    0 0 4px rgba(179,0,7,.30),
+    0 0 10px rgba(255,79,139,.16)!important;
+  animation:shionEasyWordGlowV80 2.65s ease-in-out infinite!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text:has(.easy-glow-word){
+  text-shadow:none!important;
+  animation:none!important;
 }
 
 .shion-root .easy-screen .easy-glow-word{
