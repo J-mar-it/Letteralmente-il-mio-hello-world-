@@ -663,8 +663,12 @@
 
 /* SCREEN 2 / SIDE TABS POSITION FIX */
 .shion-root .main-screen .tab-area{
-  top:42%!important;
-  transform:translateY(-50%)!important;
+  top:42px!important;
+  transform:none!important;
+  height:720px!important;
+  display:grid!important;
+  grid-template-rows:auto 1fr!important;
+  align-content:start!important;
 }
 
 .shion-root .main-screen .tab-area.left{
@@ -675,6 +679,14 @@
   right:8px!important;
 }
 
+.shion-root .main-screen .tab-buttons{
+  align-self:start!important;
+}
+
 .shion-root .main-screen .tab-panel{
-  top:142px!important;
+  top:260px!important;
+  bottom:auto!important;
+  height:330px!important;
+  max-height:330px!important;
+  overflow:auto!important;
 }
