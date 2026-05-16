@@ -451,9 +451,9 @@
 }
 
 .shion-root .intro-card p.warning span:first-child,
-.shion-root .intro-card p.warning span[style],
+.shion-root .intro-card p.warning span[style]:first-child,
 .shion-root .intro-card .warning span:first-child,
-.shion-root .intro-card .warning span[style]{
+.shion-root .intro-card .warning span[style]:first-child{
   color:rgba(214,142,255,.90)!important;
   -webkit-text-fill-color:rgba(214,142,255,.90)!important;
   text-shadow:
@@ -478,13 +478,13 @@
   background-image:none!important;
   -webkit-background-clip:border-box!important;
   background-clip:border-box!important;
-  animation:shionWarningPulseGlowV83 1.35s ease-in-out infinite!important;
+  animation:shionWarningPulseGlowV83 2.35s ease-in-out infinite!important;
   will-change:color,-webkit-text-fill-color,text-shadow,filter,opacity,transform;
 }
 
-.shion-root .intro-card p.warning span.pulse:nth-of-type(2){animation-delay:.18s!important;}
-.shion-root .intro-card p.warning span.pulse:nth-of-type(3){animation-delay:.36s!important;}
-.shion-root .intro-card p.warning span.pulse:nth-of-type(4){animation-delay:.54s!important;}
+.shion-root .intro-card p.warning span.pulse:nth-of-type(2){animation-delay:.25s!important;}
+.shion-root .intro-card p.warning span.pulse:nth-of-type(3){animation-delay:.50s!important;}
+.shion-root .intro-card p.warning span.pulse:nth-of-type(4){animation-delay:.75s!important;}
 
 @keyframes shionWarningPulseGlowV83{
   0%,100%{
