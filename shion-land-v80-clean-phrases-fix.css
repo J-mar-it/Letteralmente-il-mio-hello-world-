@@ -1,0 +1,217 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v61-yandere-fixes.css?v=1");
+
+/* ==========================================================
+   SHION LAND V80 CLEAN PHRASES FIX
+   Base pulita: riparte da V61 stabile e sistema solo:
+   - warning sotto Medicina nella schermata 1;
+   - frase easy con glow parola per parola.
+   Non importa la catena V70-V75.
+   ========================================================== */
+
+/* ==========================================================
+   SCHERMATA 1 / NO INTERNAL SCROLL
+   Mantiene la card ferma dentro il box land.
+   ========================================================== */
+
+.shion-root,
+.shion-root .app,
+.shion-root .intro-screen,
+.shion-root .intro-card{
+  overflow:hidden!important;
+  overscroll-behavior:none!important;
+}
+
+.shion-root .intro-card{
+  overflow-x:hidden!important;
+  overflow-y:hidden!important;
+  scrollbar-width:none!important;
+  -ms-overflow-style:none!important;
+}
+
+.shion-root .intro-card::-webkit-scrollbar{
+  width:0!important;
+  height:0!important;
+  display:none!important;
+}
+
+/* ==========================================================
+   SCHERMATA 1 / WARNING SOTTO MEDICINA
+   Il warning resta nel flusso della intro-card, non assoluto.
+   ========================================================== */
+
+.shion-root .intro-card .warning{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:relative!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  margin:22px auto 0!important;
+  padding:0!important;
+  width:min(720px,92%)!important;
+  max-width:min(720px,92%)!important;
+  text-align:center!important;
+  font-family:"Spectral",Georgia,serif!important;
+  font-size:12px!important;
+  line-height:1.3!important;
+  letter-spacing:.15em!important;
+  text-transform:uppercase!important;
+  color:rgba(169,192,200,.56)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.56)!important;
+  text-shadow:0 0 9px rgba(169,192,200,.25)!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+  z-index:20!important;
+  pointer-events:none!important;
+}
+
+.shion-root .intro-card .warning span:first-child{
+  display:inline!important;
+  color:rgba(230,170,255,.92);
+  -webkit-text-fill-color:rgba(230,170,255,.92);
+  text-shadow:0 0 8px rgba(214,142,255,.62),0 0 18px rgba(188,90,255,.38);
+  animation:shionWarningFirstGlowV80 2.4s ease-in-out infinite;
+}
+
+.shion-root .intro-card .warning .pulse{
+  display:inline!important;
+  color:rgba(210,244,248,.88);
+  -webkit-text-fill-color:rgba(210,244,248,.88);
+  text-shadow:0 0 7px rgba(169,192,200,.48),0 0 16px rgba(59,85,94,.30);
+  animation:shionWarningPulseGlowV80 2.8s ease-in-out infinite;
+}
+
+.shion-root .intro-card .warning span:nth-of-type(2){animation-delay:.18s;}
+.shion-root .intro-card .warning span:nth-of-type(3){animation-delay:.36s;}
+.shion-root .intro-card .warning span:nth-of-type(4){animation-delay:.54s;}
+
+/* ==========================================================
+   EASY SCREEN / CLEAN PHRASE BASE
+   Spegne gradient, clip e pseudo-elementi dei test precedenti.
+   ========================================================== */
+
+.shion-root .easy-screen .easy-text p{
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  opacity:1!important;
+}
+
+.shion-root .easy-screen .easy-text p::before,
+.shion-root .easy-screen .easy-text p::after,
+.shion-root .easy-screen .easy-gradient-text::before,
+.shion-root .easy-screen .easy-gradient-text::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:none!important;
+  background-image:none!important;
+  color:#b30007;
+  -webkit-text-fill-color:#b30007;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  animation:none!important;
+  transform:none!important;
+  opacity:1!important;
+}
+
+.shion-root .easy-screen .easy-glow-word{
+  display:inline!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  background-image:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  transform:none!important;
+  opacity:1!important;
+  color:#b30007;
+  -webkit-text-fill-color:#b30007;
+  text-shadow:0 0 4px rgba(179,0,7,.30),0 0 10px rgba(255,79,139,.16);
+  animation:shionEasyWordGlowV80 2.65s ease-in-out infinite!important;
+  will-change:color,text-shadow;
+}
+
+.shion-root .easy-screen .easy-glow-word:nth-child(1){animation-delay:0s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(2){animation-delay:.12s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(3){animation-delay:.24s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(4){animation-delay:.36s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(5){animation-delay:.48s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(6){animation-delay:.60s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(7){animation-delay:.72s!important;}
+
+@keyframes shionEasyWordGlowV80{
+  0%,100%{
+    color:#b30007;
+    -webkit-text-fill-color:#b30007;
+    text-shadow:
+      0 0 4px rgba(179,0,7,.30),
+      0 0 10px rgba(255,79,139,.16);
+  }
+  30%{
+    color:#fff4ff;
+    -webkit-text-fill-color:#fff4ff;
+    text-shadow:
+      0 0 10px rgba(255,255,255,.95),
+      0 0 22px rgba(255,79,139,.85),
+      0 0 42px rgba(155,60,255,.58),
+      0 0 62px rgba(216,173,255,.36);
+  }
+  55%{
+    color:#ff4f8b;
+    -webkit-text-fill-color:#ff4f8b;
+    text-shadow:
+      0 0 7px rgba(255,79,139,.66),
+      0 0 18px rgba(155,60,255,.38);
+  }
+}
+
+@keyframes shionWarningFirstGlowV80{
+  0%,100%{
+    color:rgba(214,142,255,.74);
+    -webkit-text-fill-color:rgba(214,142,255,.74);
+    text-shadow:0 0 6px rgba(214,142,255,.36),0 0 14px rgba(188,90,255,.22);
+  }
+  50%{
+    color:rgba(246,220,255,.98);
+    -webkit-text-fill-color:rgba(246,220,255,.98);
+    text-shadow:0 0 10px rgba(246,220,255,.82),0 0 24px rgba(214,142,255,.62),0 0 42px rgba(188,90,255,.34);
+  }
+}
+
+@keyframes shionWarningPulseGlowV80{
+  0%,100%{
+    color:rgba(169,192,200,.72);
+    -webkit-text-fill-color:rgba(169,192,200,.72);
+    text-shadow:0 0 5px rgba(169,192,200,.28),0 0 12px rgba(59,85,94,.18);
+  }
+  50%{
+    color:rgba(220,250,252,.96);
+    -webkit-text-fill-color:rgba(220,250,252,.96);
+    text-shadow:0 0 9px rgba(220,250,252,.78),0 0 22px rgba(169,192,200,.54),0 0 38px rgba(59,85,94,.34);
+  }
+}
