@@ -143,8 +143,8 @@
    ========================================================== */
 
 .shion-root .symbol{
-  width:184px!important;
-  height:184px!important;
+  width:172px!important;
+  height:172px!important;
   margin:0 auto 28px!important;
   display:grid!important;
   place-items:center!important;
@@ -157,16 +157,16 @@
     radial-gradient(circle,rgba(59,85,94,.28),transparent 58%),
     rgba(8,14,16,.72)!important;
   box-shadow:
-    0 0 26px rgba(169,192,200,.22),
-    0 0 52px rgba(59,85,94,.34),
-    inset 0 0 28px rgba(169,192,200,.14);
+    0 0 24px rgba(169,192,200,.20),
+    0 0 46px rgba(59,85,94,.30),
+    inset 0 0 26px rgba(169,192,200,.13);
   color:rgba(226,242,246,.94)!important;
-  font-size:92px!important;
+  font-size:86px!important;
   line-height:1!important;
   text-shadow:
-    0 0 11px rgba(226,242,246,.56),
-    0 0 25px rgba(169,192,200,.42),
-    0 0 52px rgba(59,85,94,.35);
+    0 0 10px rgba(226,242,246,.54),
+    0 0 22px rgba(169,192,200,.40),
+    0 0 46px rgba(59,85,94,.32);
   transform:none!important;
   transform-origin:center center!important;
   scale:1;
@@ -184,23 +184,23 @@
 }
 
 .shion-root .symbol::before{
-  inset:-20px!important;
+  inset:-16px!important;
   background:
-    radial-gradient(circle at 35% 35%,rgba(169,192,200,.20),transparent 28%),
-    radial-gradient(circle at 70% 60%,rgba(59,85,94,.30),transparent 42%)!important;
-  filter:blur(12px)!important;
-  opacity:.74;
+    radial-gradient(circle at 35% 35%,rgba(169,192,200,.18),transparent 28%),
+    radial-gradient(circle at 70% 60%,rgba(59,85,94,.27),transparent 42%)!important;
+  filter:blur(11px)!important;
+  opacity:.70;
   animation:shionSymbolSmokeV83 5.8s ease-in-out infinite alternate!important;
 }
 
 .shion-root .symbol::after{
-  inset:-15px!important;
-  border:1px solid rgba(169,192,200,.22)!important;
+  inset:-12px!important;
+  border:1px solid rgba(169,192,200,.20)!important;
   box-shadow:
-    0 0 18px rgba(169,192,200,.22),
-    0 0 42px rgba(59,85,94,.28),
-    inset 0 0 22px rgba(169,192,200,.07)!important;
-  opacity:.50;
+    0 0 16px rgba(169,192,200,.20),
+    0 0 36px rgba(59,85,94,.25),
+    inset 0 0 20px rgba(169,192,200,.06)!important;
+  opacity:.48;
   animation:shionSymbolRingV83 3.8s ease-in-out infinite!important;
 }
 
@@ -396,25 +396,25 @@
     scale:1;
     translate:0 0;
     box-shadow:
-      0 0 26px rgba(169,192,200,.22),
-      0 0 52px rgba(59,85,94,.34),
-      inset 0 0 28px rgba(169,192,200,.14);
+      0 0 24px rgba(169,192,200,.20),
+      0 0 46px rgba(59,85,94,.30),
+      inset 0 0 26px rgba(169,192,200,.13);
     text-shadow:
-      0 0 11px rgba(226,242,246,.56),
-      0 0 25px rgba(169,192,200,.42),
-      0 0 52px rgba(59,85,94,.35);
+      0 0 10px rgba(226,242,246,.54),
+      0 0 22px rgba(169,192,200,.40),
+      0 0 46px rgba(59,85,94,.32);
   }
   50%{
     scale:1.06;
     translate:0 -3px;
     box-shadow:
-      0 0 32px rgba(226,242,246,.30),
-      0 0 64px rgba(59,85,94,.44),
-      inset 0 0 32px rgba(169,192,200,.20);
+      0 0 29px rgba(226,242,246,.28),
+      0 0 56px rgba(59,85,94,.40),
+      inset 0 0 29px rgba(169,192,200,.18);
     text-shadow:
-      0 0 15px rgba(238,246,248,.78),
-      0 0 30px rgba(169,192,200,.54),
-      0 0 62px rgba(59,85,94,.42);
+      0 0 14px rgba(238,246,248,.72),
+      0 0 27px rgba(169,192,200,.50),
+      0 0 55px rgba(59,85,94,.38);
   }
 }
 
