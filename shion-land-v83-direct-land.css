@@ -135,6 +135,70 @@
   font-size:var(--intro-symbol-land-font)!important;
 }
 
+/* ==========================================================
+   SCHERMATA 1 / SIMBOLO
+   .symbol resta un contenitore statico: il transform sul nodo
+   principale e' bloccato dalla base V60. Pulse e micro-movimento
+   vengono quindi ricreati sui pseudo-elementi.
+   ========================================================== */
+
+.shion-root .symbol{
+  width:196px!important;
+  height:196px!important;
+  margin:0 auto 28px!important;
+  display:grid!important;
+  place-items:center!important;
+  position:relative!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+  border:1px solid rgba(169,192,200,.28)!important;
+  border-radius:50%!important;
+  background:
+    radial-gradient(circle,rgba(59,85,94,.28),transparent 58%),
+    rgba(8,14,16,.72)!important;
+  box-shadow:
+    0 0 28px rgba(169,192,200,.24),
+    0 0 58px rgba(59,85,94,.38),
+    inset 0 0 30px rgba(169,192,200,.15);
+  color:rgba(226,242,246,.94)!important;
+  font-size:98px!important;
+  line-height:1!important;
+  text-shadow:
+    0 0 12px rgba(226,242,246,.58),
+    0 0 28px rgba(169,192,200,.44),
+    0 0 58px rgba(59,85,94,.38);
+  animation:shionSymbolGlowV83 3.2s ease-in-out infinite!important;
+}
+
+.shion-root .symbol::before,
+.shion-root .symbol::after{
+  content:""!important;
+  position:absolute!important;
+  border-radius:50%!important;
+  pointer-events:none!important;
+}
+
+.shion-root .symbol::before{
+  inset:-24px!important;
+  background:
+    radial-gradient(circle at 35% 35%,rgba(169,192,200,.22),transparent 28%),
+    radial-gradient(circle at 70% 60%,rgba(59,85,94,.34),transparent 42%)!important;
+  filter:blur(13px)!important;
+  opacity:.78;
+  animation:shionSymbolSmokeV83 5.8s ease-in-out infinite alternate!important;
+}
+
+.shion-root .symbol::after{
+  inset:-18px!important;
+  border:1px solid rgba(169,192,200,.24)!important;
+  box-shadow:
+    0 0 20px rgba(169,192,200,.24),
+    0 0 48px rgba(59,85,94,.32),
+    inset 0 0 24px rgba(169,192,200,.08)!important;
+  opacity:.52;
+  animation:shionSymbolRingV83 3.8s ease-in-out infinite!important;
+}
+
 .shion-root .ost-player{
   margin-bottom:16px!important;
 }
@@ -171,14 +235,14 @@
   transform:translateX(-50%)!important;
   text-align:center!important;
   font-family:"Spectral",Georgia,serif!important;
-  font-size:20px!important;
-  line-height:1.18!important;
-  letter-spacing:.07em!important;
+  font-size:12px!important;
+  line-height:1.3!important;
+  letter-spacing:.15em!important;
   text-transform:uppercase!important;
   white-space:normal!important;
-  color:rgba(169,192,200,.82)!important;
-  -webkit-text-fill-color:rgba(169,192,200,.82)!important;
-  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
+  color:rgba(169,192,200,.48)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.48)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.20),0 0 16px rgba(59,85,94,.16)!important;
   background:none!important;
   border:0!important;
   box-shadow:none!important;
@@ -285,6 +349,40 @@
 .shion-root .easy-screen .easy-glow-word:nth-child(5){animation-delay:.48s!important;}
 .shion-root .easy-screen .easy-glow-word:nth-child(6){animation-delay:.60s!important;}
 .shion-root .easy-screen .easy-glow-word:nth-child(7){animation-delay:.72s!important;}
+
+@keyframes shionSymbolGlowV83{
+  0%,100%{
+    box-shadow:
+      0 0 24px rgba(169,192,200,.20),
+      0 0 46px rgba(59,85,94,.30),
+      inset 0 0 24px rgba(169,192,200,.12);
+    text-shadow:
+      0 0 10px rgba(226,242,246,.50),
+      0 0 24px rgba(169,192,200,.36),
+      0 0 46px rgba(59,85,94,.30);
+  }
+  50%{
+    box-shadow:
+      0 0 34px rgba(226,242,246,.32),
+      0 0 72px rgba(59,85,94,.48),
+      inset 0 0 34px rgba(169,192,200,.22);
+    text-shadow:
+      0 0 16px rgba(238,246,248,.84),
+      0 0 34px rgba(169,192,200,.58),
+      0 0 70px rgba(59,85,94,.46);
+  }
+}
+
+@keyframes shionSymbolSmokeV83{
+  0%{transform:translate(-4px,3px) scale(1);opacity:.50;}
+  48%{transform:translate(7px,-6px) scale(1.08);opacity:.86;}
+  100%{transform:translate(-2px,8px) scale(1.14);opacity:.58;}
+}
+
+@keyframes shionSymbolRingV83{
+  0%,100%{transform:scale(1);opacity:.38;}
+  50%{transform:scale(1.10);opacity:.82;}
+}
 
 @keyframes shionEasyWordGlowV80{
   0%,100%{
