@@ -1,0 +1,44 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v74-easy-inline-glow-wave.css?v=1");
+
+/* Restore intro warning under the Medicina button. */
+.shion-root .intro-screen .warning{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:34px!important;
+  width:min(650px,86%)!important;
+  margin:0!important;
+  padding:0!important;
+  transform:translateX(-50%)!important;
+  z-index:12!important;
+  pointer-events:none!important;
+  text-align:center!important;
+  font-family:'Spectral',Georgia,serif!important;
+  font-size:11px!important;
+  line-height:1.25!important;
+  letter-spacing:.09em!important;
+  text-transform:uppercase!important;
+  color:rgba(210,226,230,.82)!important;
+  -webkit-text-fill-color:rgba(210,226,230,.82)!important;
+  text-shadow:0 0 9px rgba(169,192,200,.34)!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+.shion-root .intro-screen .warning .pulse{
+  display:inline!important;
+  visibility:visible!important;
+  color:rgba(238,246,248,.92)!important;
+  -webkit-text-fill-color:rgba(238,246,248,.92)!important;
+  text-shadow:0 0 10px rgba(169,192,200,.56),0 0 18px rgba(214,142,255,.24)!important;
+}
+
+.shion-root .intro-screen .warning span[style]{
+  display:inline!important;
+  visibility:visible!important;
+}
