@@ -731,6 +731,51 @@
   white-space:nowrap!important;
 }
 
+/* Le coppie open/close restano nella griglia, ma solo una label e' visibile. */
+.shion-root .main-screen .tab-open-left-venom,
+.shion-root .main-screen .tab-open-left-pulse,
+.shion-root .main-screen .tab-open-left-mark,
+.shion-root .main-screen .tab-open-right-vapor,
+.shion-root .main-screen .tab-open-right-keepsake,
+.shion-root .main-screen .tab-open-right-need{
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+}
+
+.shion-root .main-screen .tab-close-left-venom,
+.shion-root .main-screen .tab-close-left-pulse,
+.shion-root .main-screen .tab-close-left-mark,
+.shion-root .main-screen .tab-close-right-vapor,
+.shion-root .main-screen .tab-close-right-keepsake,
+.shion-root .main-screen .tab-close-right-need{
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+#left-venom:checked~.app .tab-open-left-venom,
+#left-pulse:checked~.app .tab-open-left-pulse,
+#left-mark:checked~.app .tab-open-left-mark,
+#right-vapor:checked~.app .tab-open-right-vapor,
+#right-keepsake:checked~.app .tab-open-right-keepsake,
+#right-need:checked~.app .tab-open-right-need{
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+#left-venom:checked~.app .tab-close-left-venom,
+#left-pulse:checked~.app .tab-close-left-pulse,
+#left-mark:checked~.app .tab-close-left-mark,
+#right-vapor:checked~.app .tab-close-right-vapor,
+#right-keepsake:checked~.app .tab-close-right-keepsake,
+#right-need:checked~.app .tab-close-right-need{
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+}
+
 /* Nessun movimento su hover o attivo */
 .shion-root .main-screen .tab-btn:hover,
 #left-venom:checked~.app label[for="left-venom"],
