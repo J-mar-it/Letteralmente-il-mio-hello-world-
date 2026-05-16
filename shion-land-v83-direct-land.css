@@ -556,39 +556,59 @@
 .shion-root .main-screen .gate-player{
   width:min(var(--screen2-gate-box-width),72%)!important;
   max-width:min(var(--screen2-gate-box-width),72%)!important;
-  padding:var(--screen2-gate-box-padding-y) var(--screen2-gate-box-padding-x)!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  padding:4px 14px 5px!important;
   box-sizing:border-box!important;
+  overflow:visible!important;
+}
+
+.shion-root .main-screen .gate-line{
+  display:none!important;
+  height:0!important;
+  min-height:0!important;
+  max-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  line-height:0!important;
+  overflow:hidden!important;
 }
 
 .shion-root .main-screen .gate-ost-line{
   top:0!important;
-  margin:0 0 3px!important;
-  font-size:var(--screen2-gate-phrase-size)!important;
-  line-height:1.04!important;
+  margin:0 0 2px!important;
+  padding:0!important;
+  font-size:20px!important;
+  line-height:1.02!important;
 }
 
 .shion-root .main-screen .gate-player audio{
   display:block!important;
   width:100%!important;
-  height:34px!important;
+  height:32px!important;
   margin:0!important;
+  padding:0!important;
   pointer-events:auto!important;
 }
 
 .shion-root .main-screen .gate-choices{
-  margin-top:5px!important;
+  margin-top:4px!important;
+  margin-bottom:0!important;
+  padding:0!important;
   gap:6px!important;
 }
 
 .shion-root .main-screen .gate-choice{
-  padding:var(--screen2-choice-padding-y) var(--screen2-choice-padding-x)!important;
-  font-size:var(--screen2-choice-size)!important;
+  padding:5px 11px!important;
+  font-size:10px!important;
   line-height:1!important;
 }
 
 .shion-root .main-screen .gate-nudge{
-  margin-top:4px!important;
+  margin-top:3px!important;
   margin-bottom:0!important;
+  padding:0!important;
   font-size:10px!important;
   line-height:1!important;
 }
