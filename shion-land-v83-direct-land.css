@@ -551,6 +551,16 @@
 
 .shion-root .intro-card p.warning,
 .shion-root .intro-card .warning{
+  position:absolute!important;
+  left:50%!important;
+  bottom:86px!important;
+  width:900px!important;
+  max-width:900px!important;
+  font-size:19px!important;
+  line-height:1.15!important;
+  letter-spacing:.06em!important;
+  transform:translateX(-50%)!important;
+  z-index:9999!important;
   background:none!important;
   background-image:none!important;
   -webkit-background-clip:border-box!important;
@@ -576,13 +586,13 @@
 .shion-root .intro-card p.warning span[style],
 .shion-root .intro-card .warning span:first-child,
 .shion-root .intro-card .warning span[style]{
-  color:rgba(214,142,255,.82)!important;
-  -webkit-text-fill-color:rgba(214,142,255,.82)!important;
+  color:rgba(214,142,255,.90)!important;
+  -webkit-text-fill-color:rgba(214,142,255,.90)!important;
   text-shadow:
-    0 0 6px rgba(214,142,255,.65),
-    0 0 18px rgba(188,90,255,.50),
-    0 0 32px rgba(188,90,255,.25)!important;
-  filter:drop-shadow(0 0 6px rgba(188,90,255,.36))!important;
+    0 0 7px rgba(214,142,255,.70),
+    0 0 20px rgba(188,90,255,.58),
+    0 0 34px rgba(188,90,255,.30)!important;
+  filter:drop-shadow(0 0 6px rgba(188,90,255,.40))!important;
   animation:none!important;
   background:none!important;
   background-image:none!important;
@@ -595,19 +605,19 @@
 .shion-root .intro-card .warning span.pulse,
 .shion-root .intro-card p.warning .pulse,
 .shion-root .intro-card .warning .pulse{
-  color:rgba(169,192,200,.92)!important;
-  -webkit-text-fill-color:rgba(169,192,200,.92)!important;
+  color:rgba(169,192,200,.82)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.82)!important;
   text-shadow:
-    0 0 6px rgba(169,192,200,.52),
-    0 0 16px rgba(59,85,94,.36),
-    0 0 28px rgba(59,85,94,.22)!important;
-  filter:drop-shadow(0 0 5px rgba(59,85,94,.34))!important;
-  animation:shionWarningPulseGlowV83 2.8s ease-in-out infinite!important;
+    0 0 5px rgba(169,192,200,.38),
+    0 0 13px rgba(59,85,94,.26)!important;
+  filter:drop-shadow(0 0 4px rgba(59,85,94,.28))!important;
+  animation:shionWarningPulseGlowV83 1.85s ease-in-out infinite!important;
   background:none!important;
   background-image:none!important;
   -webkit-background-clip:border-box!important;
   background-clip:border-box!important;
   opacity:1!important;
+  will-change:color,text-shadow,filter,opacity;
 }
 
 .shion-root .intro-card p.warning span.pulse:nth-of-type(2){animation-delay:.18s!important;}
@@ -616,20 +626,22 @@
 
 @keyframes shionWarningPulseGlowV83{
   0%,100%{
-    color:rgba(169,192,200,.78);
-    -webkit-text-fill-color:rgba(169,192,200,.78);
+    color:rgba(135,160,168,.68);
+    -webkit-text-fill-color:rgba(135,160,168,.68);
     text-shadow:
-      0 0 5px rgba(169,192,200,.32),
-      0 0 13px rgba(59,85,94,.22);
-    filter:drop-shadow(0 0 4px rgba(59,85,94,.24));
+      0 0 3px rgba(169,192,200,.20),
+      0 0 8px rgba(59,85,94,.14);
+    filter:drop-shadow(0 0 2px rgba(59,85,94,.16));
+    opacity:.78;
   }
-  50%{
-    color:rgba(220,250,252,1);
-    -webkit-text-fill-color:rgba(220,250,252,1);
+  45%,55%{
+    color:rgba(232,255,255,1);
+    -webkit-text-fill-color:rgba(232,255,255,1);
     text-shadow:
-      0 0 9px rgba(220,250,252,.86),
-      0 0 22px rgba(169,192,200,.62),
-      0 0 40px rgba(59,85,94,.40);
-    filter:drop-shadow(0 0 8px rgba(169,192,200,.42));
+      0 0 10px rgba(232,255,255,.92),
+      0 0 24px rgba(169,192,200,.70),
+      0 0 44px rgba(59,85,94,.48);
+    filter:drop-shadow(0 0 9px rgba(169,192,200,.50));
+    opacity:1;
   }
 }
