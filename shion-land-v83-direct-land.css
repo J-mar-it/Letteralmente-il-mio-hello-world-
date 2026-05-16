@@ -238,65 +238,6 @@
 }
 
 /* ==========================================================
-   SCHERMATA 1 / WARNING SOTTO MEDICINA
-   Warning ancorato alla parte bassa della intro-card scalata:
-   cosi' resta sotto Medicina ma non dipende piu' dal flusso
-   verticale, che in land poteva tagliarlo fuori area.
-   ========================================================== */
-
-.shion-root .intro-card .warning{
-  display:block!important;
-  visibility:visible!important;
-  opacity:1!important;
-  position:absolute!important;
-  left:50%!important;
-  right:auto!important;
-  top:auto!important;
-  bottom:86px!important;
-  margin:0!important;
-  padding:0!important;
-  width:860px!important;
-  max-width:860px!important;
-  transform:translateX(-50%)!important;
-  text-align:center!important;
-  font-family:"Spectral",Georgia,serif!important;
-  font-size:17px!important;
-  line-height:1.12!important;
-  letter-spacing:.055em!important;
-  text-transform:uppercase!important;
-  white-space:normal!important;
-  color:rgba(169,192,200,.82)!important;
-  -webkit-text-fill-color:rgba(169,192,200,.82)!important;
-  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
-  background:none!important;
-  border:0!important;
-  box-shadow:none!important;
-  filter:none!important;
-  z-index:9999!important;
-  pointer-events:none!important;
-}
-
-.shion-root .intro-card .warning span:first-child{
-  display:inline!important;
-  color:rgba(214,142,255,.82)!important;
-  -webkit-text-fill-color:rgba(214,142,255,.82)!important;
-  text-shadow:0 0 18px rgba(188,90,255,.5)!important;
-  animation:none!important;
-}
-
-.shion-root .intro-card .warning .pulse{
-  display:inline!important;
-  color:rgba(169,192,200,.90)!important;
-  -webkit-text-fill-color:rgba(169,192,200,.90)!important;
-  text-shadow:0 0 7px rgba(169,192,200,.50),0 0 16px rgba(59,85,94,.32)!important;
-  animation:shionWarningPulseGlowV83 2.8s ease-in-out infinite!important;
-}
-
-.shion-root .intro-card .warning span:nth-of-type(2){animation-delay:.18s!important;}
-.shion-root .intro-card .warning span:nth-of-type(3){animation-delay:.36s!important;}
-.shion-root .intro-card .warning span:nth-of-type(4){animation-delay:.54s!important;}
-
-/* ==========================================================
    EASY SCREEN / CLEAN WORD GLOW
    V61 usa background-clip sul p; nella land quel metodo e i
    fallback successivi potevano creare blocchi/box. Qui il p
@@ -455,94 +396,6 @@
   }
 }
 
-@keyframes shionWarningPulseGlowV83{
-  0%,100%{
-    color:rgba(169,192,200,.78);
-    -webkit-text-fill-color:rgba(169,192,200,.78);
-    text-shadow:0 0 5px rgba(169,192,200,.30),0 0 12px rgba(59,85,94,.18);
-  }
-  50%{
-    color:rgba(220,250,252,.98);
-    -webkit-text-fill-color:rgba(220,250,252,.98);
-    text-shadow:0 0 9px rgba(220,250,252,.80),0 0 22px rgba(169,192,200,.56),0 0 38px rgba(59,85,94,.34);
-  }
-}
-
-/* ==========================================================
-   WARNING / GLOW FINALE SU SPAN REALI
-   V60/V83 hanno piu' regole storiche su .warning e span.
-   Questo blocco finale pulisce solo il contenitore e applica
-   i glow direttamente alle parole reali dell'HTML.
-   ========================================================== */
-
-.shion-root .intro-card .warning{
-  background:none!important;
-  background-image:none!important;
-  -webkit-background-clip:border-box!important;
-  background-clip:border-box!important;
-  filter:none!important;
-  box-shadow:none!important;
-  opacity:1!important;
-}
-
-.shion-root .intro-card .warning::before,
-.shion-root .intro-card .warning::after,
-.shion-root .intro-card .warning span::before,
-.shion-root .intro-card .warning span::after{
-  content:none!important;
-  display:none!important;
-}
-
-.shion-root .intro-card .warning > span:first-child,
-.shion-root .intro-card .warning > span[style]:first-child{
-  color:rgba(214,142,255,.82)!important;
-  -webkit-text-fill-color:rgba(214,142,255,.82)!important;
-  text-shadow:0 0 18px rgba(188,90,255,.5)!important;
-  animation:none!important;
-  filter:none!important;
-  background:none!important;
-  background-image:none!important;
-  -webkit-background-clip:border-box!important;
-  background-clip:border-box!important;
-}
-
-.shion-root .intro-card .warning > span.pulse{
-  color:rgba(169,192,200,.88)!important;
-  -webkit-text-fill-color:rgba(169,192,200,.88)!important;
-  text-shadow:
-    0 0 6px rgba(169,192,200,.42),
-    0 0 15px rgba(59,85,94,.28)!important;
-  animation:shionWarningPulseGlowV83 2.8s ease-in-out infinite!important;
-  filter:none!important;
-  background:none!important;
-  background-image:none!important;
-  -webkit-background-clip:border-box!important;
-  background-clip:border-box!important;
-  will-change:color,text-shadow;
-}
-
-.shion-root .intro-card .warning > span.pulse:nth-of-type(2){animation-delay:.18s!important;}
-.shion-root .intro-card .warning > span.pulse:nth-of-type(3){animation-delay:.36s!important;}
-.shion-root .intro-card .warning > span.pulse:nth-of-type(4){animation-delay:.54s!important;}
-
-@keyframes shionWarningPulseGlowV83{
-  0%,100%{
-    color:rgba(169,192,200,.76);
-    -webkit-text-fill-color:rgba(169,192,200,.76);
-    text-shadow:
-      0 0 5px rgba(169,192,200,.30),
-      0 0 12px rgba(59,85,94,.18);
-  }
-  50%{
-    color:rgba(220,250,252,.98);
-    -webkit-text-fill-color:rgba(220,250,252,.98);
-    text-shadow:
-      0 0 9px rgba(220,250,252,.80),
-      0 0 22px rgba(169,192,200,.56),
-      0 0 38px rgba(59,85,94,.34);
-  }
-}
-
 /* ==========================================================
    WARNING / FORCE GLOW ULTIMO OVERRIDE
    Versione non vincolata a figli diretti: nella land il DOM puo'
@@ -551,23 +404,38 @@
 
 .shion-root .intro-card p.warning,
 .shion-root .intro-card .warning{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
   position:absolute!important;
   left:50%!important;
+  right:auto!important;
+  top:auto!important;
   bottom:86px!important;
+  margin:0!important;
+  padding:0!important;
   width:940px!important;
   max-width:940px!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  font-family:"Spectral",Georgia,serif!important;
   font-size:21px!important;
   line-height:1.18!important;
   letter-spacing:.06em!important;
-  transform:translateX(-50%)!important;
-  z-index:9999!important;
+  text-transform:uppercase!important;
+  white-space:normal!important;
+  color:rgba(169,192,200,.82)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.82)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.36),0 0 18px rgba(59,85,94,.24)!important;
   background:none!important;
   background-image:none!important;
   -webkit-background-clip:border-box!important;
   background-clip:border-box!important;
+  border:0!important;
   filter:none!important;
   box-shadow:none!important;
-  opacity:1!important;
+  z-index:9999!important;
+  pointer-events:none!important;
 }
 
 .shion-root .intro-card p.warning::before,
@@ -606,20 +474,12 @@
 .shion-root .intro-card p.warning .pulse,
 .shion-root .intro-card .warning .pulse{
   display:inline-block!important;
-  color:rgba(180,235,240,.95)!important;
-  -webkit-text-fill-color:rgba(180,235,240,.95)!important;
-  text-shadow:
-    0 0 7px rgba(180,235,240,.70),
-    0 0 18px rgba(59,85,94,.58),
-    0 0 34px rgba(59,85,94,.36)!important;
-  filter:drop-shadow(0 0 7px rgba(59,85,94,.48))!important;
-  animation:shionWarningPulseGlowV83 1.45s ease-in-out infinite!important;
   background:none!important;
   background-image:none!important;
   -webkit-background-clip:border-box!important;
   background-clip:border-box!important;
-  opacity:1!important;
-  will-change:color,text-shadow,filter,opacity;
+  animation:shionWarningPulseGlowV83 1.35s ease-in-out infinite!important;
+  will-change:color,-webkit-text-fill-color,text-shadow,filter,opacity,transform;
 }
 
 .shion-root .intro-card p.warning span.pulse:nth-of-type(2){animation-delay:.18s!important;}
@@ -635,6 +495,7 @@
       0 0 9px rgba(59,85,94,.18);
     filter:drop-shadow(0 0 3px rgba(59,85,94,.18));
     opacity:.72;
+    transform:scale(1);
   }
   45%,55%{
     color:rgba(232,255,255,1);
@@ -645,5 +506,6 @@
       0 0 52px rgba(59,85,94,.62);
     filter:drop-shadow(0 0 11px rgba(169,192,200,.65));
     opacity:1;
+    transform:scale(1.06);
   }
 }
