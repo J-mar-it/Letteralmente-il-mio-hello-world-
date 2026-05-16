@@ -1,0 +1,286 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v61-yandere-fixes.css?v=1");
+
+/* ==========================================================
+   SHION LAND V83 DIRECT LAND
+   Layer diretto sopra V61: stabilizza la tela reale della land
+   e riprende solo le correzioni pulite della V80 per warning
+   ed easy phrase. Non importa V70-V75, V82 o altri test sporchi.
+   ========================================================== */
+
+/* ==========================================================
+   LAND CANVAS / 730 x 820
+   La land non usa il viewport del browser: il box reale e' circa
+   730 x 820. Queste regole neutralizzano i vecchi 100vh senza
+   cambiare immagini, testi, bottoni o schermate successive.
+   ========================================================== */
+
+.shion-root{
+  --land-width:730px;
+  --land-height:820px;
+  width:100%!important;
+  max-width:var(--land-width)!important;
+  height:var(--land-height)!important;
+  min-height:var(--land-height)!important;
+  max-height:var(--land-height)!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important;
+}
+
+.shion-root .app,
+.shion-root .screen,
+.shion-root .intro-screen,
+.shion-root .stage-screen{
+  width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+  max-height:100%!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important;
+}
+
+.shion-root .app,
+.shion-root .screen{
+  position:absolute!important;
+  inset:0!important;
+}
+
+/* La land inserisce <br> tra le righe del codice incollato.
+   Nascondiamo solo quelli strutturali: il <br> intenzionale
+   dentro .quote resta visibile piu' sotto. */
+.shion-root > br,
+.shion-root .state + br,
+.shion-root .app > br,
+.shion-root .screen > br,
+.shion-root .intro-screen > br,
+.shion-root .intro-card > br,
+.shion-root .stage-screen > br,
+.shion-root .stage > br,
+.shion-root .blackout-stage > br,
+.shion-root br.land-space,
+.shion-root br.extra-space{
+  display:none!important;
+}
+
+.shion-root .quote br{
+  display:block!important;
+}
+
+/* ==========================================================
+   SCHERMATA 1 / NO INTERNAL SCROLL
+   Il problema dopo V80/V82 non era il warning in se', ma la
+   tela che poteva comportarsi come viewport. La card resta
+   ferma e senza scroll interno.
+   ========================================================== */
+
+.shion-root,
+.shion-root .app,
+.shion-root .intro-screen,
+.shion-root .intro-card{
+  overscroll-behavior:none!important;
+}
+
+.shion-root .intro-card{
+  max-height:none!important;
+  overflow:hidden!important;
+  overflow-x:hidden!important;
+  overflow-y:hidden!important;
+  scrollbar-width:none!important;
+  -ms-overflow-style:none!important;
+}
+
+.shion-root .intro-card::-webkit-scrollbar{
+  width:0!important;
+  height:0!important;
+  display:none!important;
+}
+
+/* ==========================================================
+   SCHERMATA 1 / WARNING SOTTO MEDICINA
+   Warning nel flusso della intro-card: niente assoluti legati
+   alla schermata, niente bottom forzati. Il margine e' un filo
+   piu' compatto della V80 per restare dentro la land reale.
+   ========================================================== */
+
+.shion-root .intro-card .warning{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:relative!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  margin:16px auto 0!important;
+  padding:0!important;
+  width:min(700px,90%)!important;
+  max-width:min(700px,90%)!important;
+  text-align:center!important;
+  font-family:"Spectral",Georgia,serif!important;
+  font-size:12px!important;
+  line-height:1.25!important;
+  letter-spacing:.13em!important;
+  text-transform:uppercase!important;
+  white-space:normal!important;
+  color:rgba(169,192,200,.58)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.58)!important;
+  text-shadow:0 0 9px rgba(169,192,200,.25)!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+  transform:none!important;
+  z-index:20!important;
+  pointer-events:none!important;
+}
+
+.shion-root .intro-card .warning span:first-child{
+  display:inline!important;
+  color:rgba(230,170,255,.92);
+  -webkit-text-fill-color:rgba(230,170,255,.92);
+  text-shadow:0 0 8px rgba(214,142,255,.62),0 0 18px rgba(188,90,255,.38);
+  animation:shionWarningFirstGlowV83 2.4s ease-in-out infinite;
+}
+
+.shion-root .intro-card .warning .pulse{
+  display:inline!important;
+  color:rgba(210,244,248,.88);
+  -webkit-text-fill-color:rgba(210,244,248,.88);
+  text-shadow:0 0 7px rgba(169,192,200,.48),0 0 16px rgba(59,85,94,.30);
+  animation:shionWarningPulseGlowV83 2.8s ease-in-out infinite;
+}
+
+.shion-root .intro-card .warning span:nth-of-type(2){animation-delay:.18s;}
+.shion-root .intro-card .warning span:nth-of-type(3){animation-delay:.36s;}
+.shion-root .intro-card .warning span:nth-of-type(4){animation-delay:.54s;}
+
+/* ==========================================================
+   EASY SCREEN / CLEAN WORD GLOW
+   V61 usa background-clip sul p; nella land quel metodo e i
+   fallback successivi potevano creare blocchi/box. Qui il p
+   torna contenitore neutro e l'effetto resta sugli span reali.
+   Il nome animazione resta quello V80: e' la linea che in V82
+   risultava corretta.
+   ========================================================== */
+
+.shion-root .easy-screen .easy-text p{
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  opacity:1!important;
+}
+
+.shion-root .easy-screen .easy-text p::before,
+.shion-root .easy-screen .easy-text p::after,
+.shion-root .easy-screen .easy-gradient-text::before,
+.shion-root .easy-screen .easy-gradient-text::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:none!important;
+  background-image:none!important;
+  color:#b30007;
+  -webkit-text-fill-color:#b30007;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  animation:none!important;
+  transform:none!important;
+  opacity:1!important;
+}
+
+.shion-root .easy-screen .easy-glow-word{
+  display:inline!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  background-image:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  transform:none!important;
+  opacity:1!important;
+  color:#b30007;
+  -webkit-text-fill-color:#b30007;
+  text-shadow:0 0 4px rgba(179,0,7,.30),0 0 10px rgba(255,79,139,.16);
+  animation:shionEasyWordGlowV80 2.65s ease-in-out infinite!important;
+  will-change:color,text-shadow;
+}
+
+.shion-root .easy-screen .easy-glow-word:nth-child(1){animation-delay:0s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(2){animation-delay:.12s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(3){animation-delay:.24s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(4){animation-delay:.36s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(5){animation-delay:.48s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(6){animation-delay:.60s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(7){animation-delay:.72s!important;}
+
+@keyframes shionEasyWordGlowV80{
+  0%,100%{
+    color:#b30007;
+    -webkit-text-fill-color:#b30007;
+    text-shadow:
+      0 0 4px rgba(179,0,7,.30),
+      0 0 10px rgba(255,79,139,.16);
+  }
+  30%{
+    color:#fff4ff;
+    -webkit-text-fill-color:#fff4ff;
+    text-shadow:
+      0 0 10px rgba(255,255,255,.95),
+      0 0 22px rgba(255,79,139,.85),
+      0 0 42px rgba(155,60,255,.58),
+      0 0 62px rgba(216,173,255,.36);
+  }
+  55%{
+    color:#ff4f8b;
+    -webkit-text-fill-color:#ff4f8b;
+    text-shadow:
+      0 0 7px rgba(255,79,139,.66),
+      0 0 18px rgba(155,60,255,.38);
+  }
+}
+
+@keyframes shionWarningFirstGlowV83{
+  0%,100%{
+    color:rgba(214,142,255,.74);
+    -webkit-text-fill-color:rgba(214,142,255,.74);
+    text-shadow:0 0 6px rgba(214,142,255,.36),0 0 14px rgba(188,90,255,.22);
+  }
+  50%{
+    color:rgba(246,220,255,.98);
+    -webkit-text-fill-color:rgba(246,220,255,.98);
+    text-shadow:0 0 10px rgba(246,220,255,.82),0 0 24px rgba(214,142,255,.62),0 0 42px rgba(188,90,255,.34);
+  }
+}
+
+@keyframes shionWarningPulseGlowV83{
+  0%,100%{
+    color:rgba(169,192,200,.72);
+    -webkit-text-fill-color:rgba(169,192,200,.72);
+    text-shadow:0 0 5px rgba(169,192,200,.28),0 0 12px rgba(59,85,94,.18);
+  }
+  50%{
+    color:rgba(220,250,252,.96);
+    -webkit-text-fill-color:rgba(220,250,252,.96);
+    text-shadow:0 0 9px rgba(220,250,252,.78),0 0 22px rgba(169,192,200,.54),0 0 38px rgba(59,85,94,.34);
+  }
+}
