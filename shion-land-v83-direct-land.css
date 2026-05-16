@@ -543,43 +543,52 @@
 
 /* SCREEN 2 / GATE PLAYER COMPACT FIX */
 .shion-root{
-  --screen2-gate-box-width:300px;
-  --screen2-gate-box-padding-y:7px;
-  --screen2-gate-box-padding-x:10px;
-  --screen2-gate-phrase-size:18px;
+  --screen2-gate-box-width:420px;
+  --screen2-gate-box-padding-y:4px;
+  --screen2-gate-box-padding-x:14px;
+  --screen2-gate-phrase-size:20px;
   --screen2-gate-phrase-y:0px;
   --screen2-choice-size:10px;
-  --screen2-choice-padding-y:8px;
-  --screen2-choice-padding-x:12px;
+  --screen2-choice-padding-y:5px;
+  --screen2-choice-padding-x:11px;
 }
 
 .shion-root .main-screen .gate-player{
-  width:min(var(--screen2-gate-box-width),54%)!important;
-  max-width:min(var(--screen2-gate-box-width),54%)!important;
+  width:min(var(--screen2-gate-box-width),72%)!important;
+  max-width:min(var(--screen2-gate-box-width),72%)!important;
   padding:var(--screen2-gate-box-padding-y) var(--screen2-gate-box-padding-x)!important;
   box-sizing:border-box!important;
 }
 
 .shion-root .main-screen .gate-ost-line{
   top:0!important;
-  margin:0 0 6px!important;
+  margin:0 0 3px!important;
   font-size:var(--screen2-gate-phrase-size)!important;
-  line-height:1.08!important;
+  line-height:1.04!important;
 }
 
 .shion-root .main-screen .gate-player audio{
   display:block!important;
   width:100%!important;
+  height:34px!important;
   margin:0!important;
   pointer-events:auto!important;
 }
 
 .shion-root .main-screen .gate-choices{
-  margin-top:8px!important;
-  gap:7px!important;
+  margin-top:5px!important;
+  gap:6px!important;
 }
 
 .shion-root .main-screen .gate-choice{
   padding:var(--screen2-choice-padding-y) var(--screen2-choice-padding-x)!important;
   font-size:var(--screen2-choice-size)!important;
+  line-height:1!important;
+}
+
+.shion-root .main-screen .gate-nudge{
+  margin-top:4px!important;
+  margin-bottom:0!important;
+  font-size:10px!important;
+  line-height:1!important;
 }
