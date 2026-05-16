@@ -1,0 +1,85 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v70-easy-span-pulse.css?v=1");
+
+.shion-root .easy-screen .easy-text p{
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+.shion-root .easy-screen .easy-text p::before,
+.shion-root .easy-screen .easy-text p::after,
+.shion-root .easy-screen .easy-gradient-text::before,
+.shion-root .easy-screen .easy-gradient-text::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  animation:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline-block!important;
+  position:relative!important;
+  background:none!important;
+  background-image:none!important;
+  color:#ff4f8b!important;
+  -webkit-text-fill-color:#ff4f8b!important;
+  text-shadow:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  animation:none!important;
+  transform:none!important;
+  opacity:1!important;
+}
+
+.shion-root .easy-screen .easy-glow-word{
+  display:inline-block!important;
+  color:#b30007!important;
+  -webkit-text-fill-color:#b30007!important;
+  text-shadow:0 0 5px rgba(179,0,7,.36),0 0 12px rgba(255,79,139,.20)!important;
+  opacity:.72!important;
+  transform:translateZ(0) scale(.992)!important;
+  animation:shionEasyWordWaveV72 2.45s ease-in-out infinite!important;
+  will-change:color,text-shadow,opacity,transform!important;
+}
+
+.shion-root .easy-screen .easy-glow-word:nth-child(1){animation-delay:0s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(2){animation-delay:.14s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(3){animation-delay:.28s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(4){animation-delay:.42s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(5){animation-delay:.56s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(6){animation-delay:.70s!important;}
+.shion-root .easy-screen .easy-glow-word:nth-child(7){animation-delay:.84s!important;}
+
+@keyframes shionEasyWordWaveV72{
+  0%,100%{
+    opacity:.68;
+    color:#b30007;
+    -webkit-text-fill-color:#b30007;
+    text-shadow:0 0 5px rgba(179,0,7,.36),0 0 12px rgba(255,79,139,.20);
+    transform:translateZ(0) scale(.992);
+  }
+  28%{
+    opacity:1;
+    color:#fff4ff;
+    -webkit-text-fill-color:#fff4ff;
+    text-shadow:0 0 10px rgba(255,255,255,.96),0 0 22px rgba(255,79,139,.88),0 0 42px rgba(155,60,255,.62),0 0 64px rgba(216,173,255,.38);
+    transform:translateZ(0) scale(1.025);
+  }
+  52%{
+    opacity:.86;
+    color:#ff4f8b;
+    -webkit-text-fill-color:#ff4f8b;
+    text-shadow:0 0 8px rgba(255,79,139,.70),0 0 20px rgba(155,60,255,.42);
+    transform:translateZ(0) scale(1.006);
+  }
+}
