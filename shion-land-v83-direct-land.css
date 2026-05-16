@@ -660,3 +660,21 @@
     opacity:1;
   }
 }
+
+/* SCREEN 2 / SIDE TABS POSITION FIX */
+.shion-root .main-screen .tab-area{
+  top:42%!important;
+  transform:translateY(-50%)!important;
+}
+
+.shion-root .main-screen .tab-area.left{
+  left:8px!important;
+}
+
+.shion-root .main-screen .tab-area.right{
+  right:8px!important;
+}
+
+.shion-root .main-screen .tab-panel{
+  top:142px!important;
+}
