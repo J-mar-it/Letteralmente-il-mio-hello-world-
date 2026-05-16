@@ -1,0 +1,54 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-land-v80-clean-phrases-fix.css?v=1");
+
+/* V81: restore visible warning without touching the easy phrase. */
+
+.shion-root .intro-card{
+  position:absolute!important;
+}
+
+.shion-root .intro-card .warning{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:42px!important;
+  width:min(980px,82%)!important;
+  max-width:min(980px,82%)!important;
+  margin:0!important;
+  padding:0!important;
+  transform:translateX(-50%)!important;
+  z-index:80!important;
+  pointer-events:none!important;
+  text-align:center!important;
+  font-family:"Spectral",Georgia,serif!important;
+  font-size:22px!important;
+  line-height:1.28!important;
+  letter-spacing:.15em!important;
+  text-transform:uppercase!important;
+  color:rgba(169,192,200,.64)!important;
+  -webkit-text-fill-color:rgba(169,192,200,.64)!important;
+  text-shadow:0 0 10px rgba(169,192,200,.28)!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+}
+
+.shion-root .intro-card .warning span:first-child{
+  display:inline!important;
+  visibility:visible!important;
+  color:rgba(230,170,255,.95)!important;
+  -webkit-text-fill-color:rgba(230,170,255,.95)!important;
+  text-shadow:0 0 10px rgba(214,142,255,.72),0 0 22px rgba(188,90,255,.42)!important;
+}
+
+.shion-root .intro-card .warning .pulse{
+  display:inline!important;
+  visibility:visible!important;
+  color:rgba(220,250,252,.96)!important;
+  -webkit-text-fill-color:rgba(220,250,252,.96)!important;
+  text-shadow:0 0 9px rgba(220,250,252,.72),0 0 20px rgba(169,192,200,.48),0 0 34px rgba(59,85,94,.30)!important;
+}
