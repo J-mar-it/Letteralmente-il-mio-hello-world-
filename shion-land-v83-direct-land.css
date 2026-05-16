@@ -509,3 +509,23 @@
     transform:scale(1.06);
   }
 }
+
+/* PLAYER / CLICK FIX */
+.shion-root .title{
+  pointer-events:none!important;
+}
+
+.shion-root .ost-player{
+  position:relative!important;
+  z-index:900!important;
+  pointer-events:auto!important;
+}
+
+.shion-root .ost-player audio{
+  position:relative!important;
+  z-index:910!important;
+  pointer-events:auto!important;
+  display:block!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
