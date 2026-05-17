@@ -584,7 +584,7 @@
   align-items:center!important;
   justify-content:flex-start!important;
   row-gap:4px!important;
-  transform:translateX(-50%) translateY(16px)!important;
+  transform:translateX(-50%) translateY(44px)!important;
 }
 
 .shion-root .main-screen .gate-line{
@@ -848,11 +848,4 @@
   max-height:345px!important;
   padding:13px 10px!important;
   overflow:auto!important;
-}
-
-/* DEBUG TEMP / GATE PLAYER VISIBILITY CHECK */
-#gate-open:checked~.app .main-screen .gate-player,
-#gate-ready:checked~.app .main-screen .gate-player{
-  outline:2px solid rgba(255,0,0,.9)!important;
-  transform:translateX(-50%) translateY(60px)!important;
 }
