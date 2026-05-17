@@ -615,7 +615,7 @@
 }
 
 .shion-root .main-screen .gate-choices{
-  margin:34px 0 0!important;
+  margin:48px 0 0!important;
   padding:0!important;
   gap:5px!important;
 }
@@ -627,12 +627,22 @@
 }
 
 .shion-root .main-screen .gate-nudge{
+  display:block!important;
   position:relative!important;
-  top:24px!important;
+  top:38px!important;
   margin:5px auto 0!important;
   padding:0!important;
   font-size:17px!important;
   line-height:1.05!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+#gate-ready:checked~.app .main-screen .gate-nudge{
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:none!important;
 }
 
 .shion-root .main-screen .core-line .gate-line-break{
