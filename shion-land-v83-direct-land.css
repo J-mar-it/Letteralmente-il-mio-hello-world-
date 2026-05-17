@@ -606,6 +606,12 @@
   text-shadow:0 0 8px rgba(169,192,200,.48),0 0 18px rgba(59,85,94,.38),0 0 28px rgba(59,85,94,.22)!important;
 }
 
+.shion-root #gate-open:checked~.app .main-screen .gate-player .gate-ost-line,
+.shion-root #gate-ready:checked~.app .main-screen .gate-player .gate-ost-line{
+  text-shadow:0 0 8px rgba(169,192,200,.55),0 0 18px rgba(59,85,94,.45),0 0 30px rgba(59,85,94,.28)!important;
+  filter:drop-shadow(0 0 4px rgba(169,192,200,.35)) drop-shadow(0 0 10px rgba(59,85,94,.28))!important;
+}
+
 .shion-root .main-screen .gate-player audio{
   display:block!important;
   width:100%!important;
