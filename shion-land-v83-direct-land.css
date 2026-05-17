@@ -587,12 +587,10 @@
 }
 
 #gate-open:checked~.app .main-screen .gate-player{
-  height:200px!important;
   min-height:200px!important;
 }
 
 #gate-ready:checked~.app .main-screen .gate-player{
-  height:230px!important;
   min-height:230px!important;
 }
 
