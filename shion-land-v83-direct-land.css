@@ -559,7 +559,7 @@
   width:min(var(--screen2-gate-box-width),72%)!important;
   max-width:min(var(--screen2-gate-box-width),72%)!important;
   height:auto!important;
-  min-height:200px!important;
+  min-height:230px!important;
   max-height:none!important;
   padding:20px 14px 14px!important;
   box-sizing:border-box!important;
@@ -586,14 +586,6 @@
   row-gap:4px!important;
 }
 
-#gate-open:checked~.app .main-screen .gate-player{
-  min-height:200px!important;
-}
-
-#gate-ready:checked~.app .main-screen .gate-player{
-  min-height:230px!important;
-}
-
 .shion-root .main-screen .gate-line{
   display:none!important;
   height:0!important;
@@ -611,6 +603,7 @@
   padding:0!important;
   font-size:20px!important;
   line-height:1.16!important;
+  text-shadow:0 0 6px rgba(169,192,200,.35),0 0 14px rgba(59,85,94,.28)!important;
 }
 
 .shion-root .main-screen .gate-player audio{
