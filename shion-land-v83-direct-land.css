@@ -817,8 +817,10 @@
   bottom:auto!important;
   left:0!important;
   right:0!important;
-  height:265px!important;
-  max-height:265px!important;
+  width:190px!important;
+  max-width:190px!important;
+  height:315px!important;
+  max-height:315px!important;
   padding:13px 10px!important;
   overflow:auto!important;
 }
