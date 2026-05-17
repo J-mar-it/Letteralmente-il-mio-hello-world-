@@ -554,14 +554,14 @@
 }
 
 .shion-root .main-screen .gate-player{
-  bottom:190px!important;
+  bottom:180px!important;
   z-index:30!important;
   width:min(var(--screen2-gate-box-width),72%)!important;
   max-width:min(var(--screen2-gate-box-width),72%)!important;
   height:auto!important;
   min-height:0!important;
   max-height:none!important;
-  padding:5px 14px 7px!important;
+  padding:5px 14px 14px!important;
   box-sizing:border-box!important;
   overflow:hidden!important;
 }
@@ -577,7 +577,7 @@
 
 #gate-open:checked~.app .main-screen .gate-player,
 #gate-ready:checked~.app .main-screen .gate-player{
-  bottom:190px!important;
+  bottom:180px!important;
   z-index:30!important;
   display:flex!important;
   flex-direction:column!important;
@@ -621,9 +621,9 @@
 }
 
 .shion-root .main-screen .gate-choice{
-  padding:5px 10px!important;
-  font-size:9px!important;
-  line-height:1!important;
+  padding:6px 12px!important;
+  font-size:10px!important;
+  line-height:1.05!important;
 }
 
 .shion-root .main-screen .gate-nudge{
