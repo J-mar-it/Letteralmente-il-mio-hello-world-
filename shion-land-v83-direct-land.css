@@ -603,7 +603,7 @@
   padding:0!important;
   font-size:20px!important;
   line-height:1.16!important;
-  text-shadow:0 0 6px rgba(169,192,200,.35),0 0 14px rgba(59,85,94,.28)!important;
+  text-shadow:0 0 8px rgba(169,192,200,.48),0 0 18px rgba(59,85,94,.38),0 0 28px rgba(59,85,94,.22)!important;
 }
 
 .shion-root .main-screen .gate-player audio{
@@ -622,8 +622,8 @@
 }
 
 .shion-root .main-screen .gate-choice{
-  padding:6px 12px!important;
-  font-size:10px!important;
+  padding:7px 13px!important;
+  font-size:11px!important;
   line-height:1.05!important;
 }
 
@@ -633,7 +633,7 @@
   top:38px!important;
   margin:5px auto 0!important;
   padding:0!important;
-  font-size:17px!important;
+  font-size:18px!important;
   line-height:1.05!important;
   visibility:hidden!important;
   opacity:0!important;
