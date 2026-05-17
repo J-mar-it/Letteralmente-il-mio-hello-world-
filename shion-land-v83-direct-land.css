@@ -554,7 +554,7 @@
 }
 
 .shion-root .main-screen .gate-player{
-  bottom:96px!important;
+  bottom:112px!important;
   z-index:30!important;
   width:min(var(--screen2-gate-box-width),72%)!important;
   max-width:min(var(--screen2-gate-box-width),72%)!important;
@@ -577,13 +577,14 @@
 
 #gate-open:checked~.app .main-screen .gate-player,
 #gate-ready:checked~.app .main-screen .gate-player{
-  bottom:96px!important;
+  bottom:112px!important;
   z-index:30!important;
   display:flex!important;
   flex-direction:column!important;
   align-items:center!important;
   justify-content:flex-start!important;
   row-gap:4px!important;
+  transform:translateX(-50%) translateY(16px)!important;
 }
 
 .shion-root .main-screen .gate-line{
