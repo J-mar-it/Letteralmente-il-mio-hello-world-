@@ -559,9 +559,9 @@
   width:min(var(--screen2-gate-box-width),72%)!important;
   max-width:min(var(--screen2-gate-box-width),72%)!important;
   height:auto!important;
-  min-height:0!important;
+  min-height:230px!important;
   max-height:none!important;
-  padding:5px 14px 14px!important;
+  padding:20px 14px 14px!important;
   box-sizing:border-box!important;
   overflow:hidden!important;
 }
@@ -601,8 +601,8 @@
   top:0!important;
   margin:0!important;
   padding:0!important;
-  font-size:18px!important;
-  line-height:1.04!important;
+  font-size:20px!important;
+  line-height:1.16!important;
 }
 
 .shion-root .main-screen .gate-player audio{
