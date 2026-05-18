@@ -1,0 +1,6 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@ebc1b378da2883404ac4c94696596e61418577c2/shion-land-v83-blackout-three-tone-test.css?v=1");
+
+/* Test: aggiunge la tilde finale a "Mi appartieni" nella preview blackout. */
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text p::before{
+  content:"Mi appartieni ~\A Vivo o morto.."!important;
+}
