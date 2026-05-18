@@ -1,0 +1,35 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@5847e596b6a93cc046448948906f844e1ab2e84d/shion-land-v83-easy-blackout-breath-v2-test.css?v=1");
+
+/* Test ultima schermata: testo appena sopra il bottone e a capo prima di "Non mi importa." senza modificare HTML. */
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:92px!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text p{
+  display:block!important;
+  width:fit-content!important;
+  max-width:620px!important;
+  margin:0 auto!important;
+  font-size:clamp(30px,3.8vw,48px)!important;
+  line-height:1.08!important;
+  text-align:center!important;
+  white-space:normal!important;
+  transform-origin:center center!important;
+  will-change:opacity,transform,filter,text-shadow,letter-spacing!important;
+  animation:shionBlackoutBreathFadeV83 5.8s ease-in-out infinite!important;
+  color:rgba(244,223,255,.94)!important;
+  -webkit-text-fill-color:rgba(244,223,255,.94)!important;
+  text-shadow:
+    0 0 12px rgba(183,85,255,.42),
+    0 0 36px rgba(86,22,128,.58),
+    0 0 62px rgba(0,0,0,.72)!important;
+}
