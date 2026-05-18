@@ -1,0 +1,96 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@2d158b10be778a27531d0ecc3031c72f91dd8ca0/shion-land-v83-blackout-text-linebreak-test.css?v=1");
+
+/* DEAD SCREEN / OPTIONS STABLE FIX v5
+   Un solo layout: dead end sbarrato + easy way out nello stesso rigo.
+   Easy way out conserva delay 8s, ma senza spostamenti strani. */
+.shion-root .dead-screen .dead-options{
+  position:absolute!important;
+  z-index:7!important;
+  left:50%!important;
+  right:auto!important;
+  bottom:34px!important;
+  width:620px!important;
+  max-width:92%!important;
+  height:88px!important;
+  transform:translateX(-50%)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:34px!important;
+  pointer-events:auto!important;
+}
+
+.shion-root .dead-screen .fake-dead-btn{
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  flex:0 0 auto!important;
+  pointer-events:none!important;
+}
+
+.shion-root .dead-screen .easy-way-btn{
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  flex:0 0 auto!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  animation:none!important;
+}
+
+.shion-root #flow-dead:checked~.app .dead-screen .easy-way-btn{
+  animation:shionEasyWayRevealDelayV83 .45s ease forwards!important;
+  animation-delay:8s!important;
+}
+
+.shion-root .dead-screen .easy-way-btn:hover{
+  transform:translateY(-2px)!important;
+}
+
+@keyframes shionEasyWayRevealDelayV83{
+  0%{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+  1%{
+    visibility:visible;
+  }
+  100%{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+}
+
+/* Ultima schermata: testo appena sopra il bottone, con capo naturale prima di Non mi importa. */
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:92px!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text p{
+  display:block!important;
+  width:fit-content!important;
+  max-width:620px!important;
+  margin:0 auto!important;
+  font-size:clamp(30px,3.8vw,48px)!important;
+  line-height:1.08!important;
+  text-align:center!important;
+  white-space:normal!important;
+}
