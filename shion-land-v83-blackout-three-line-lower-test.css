@@ -1,0 +1,6 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@350a04ef4ba15ebb06ab9df4d8a1fcbe3d993359/shion-land-v83-blackout-three-line-static-possess-test.css?v=1");
+
+/* Test: abbassa leggermente le tre frasi finali, più vicine al pulsante Risvegliati. */
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text{
+  bottom:82px!important;
+}
