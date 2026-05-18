@@ -1,0 +1,9 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@8dc56e99fb42380f4d00defc3d8c73d5cf66ee7a/shion-land-v83-direct-land.css?v=2");
+
+/* Test: alza fisicamente solo il background della easy-screen di 44px.
+   Testo e bottone restano invariati. */
+.shion-root .easy-screen .room-bg,
+.shion-root #flow-easy:checked~.app .easy-screen .room-bg{
+  transform:translateY(-44px) scale(1.08)!important;
+  transform-origin:center center!important;
+}
