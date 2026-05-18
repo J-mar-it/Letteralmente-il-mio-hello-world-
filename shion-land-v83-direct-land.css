@@ -878,3 +878,426 @@
   right:24px!important;
   background-image:url("https://i.imgur.com/1LorPHp.png")!important;
 }
+
+/* ==========================================================
+   YANDERE / EASY / DEAD / BLACKOUT FINAL CONSOLIDATION
+   Integra la catena test fino a blackout-format-persist senza
+   dipendere da file CSS annidati. Schermate 1 e 2 restano intatte.
+   ========================================================== */
+
+/* Background yandere piu' leggibili, senza contain pieno. */
+.shion-root .trap-1-screen .room-bg,
+.shion-root .trap-2-screen .room-bg,
+.shion-root .trap-3-screen .room-bg,
+.shion-root .trap-4-screen .room-bg,
+.shion-root .trap-5-screen .room-bg,
+.shion-root .trap-6-screen .room-bg,
+.shion-root .dead-screen .room-bg{
+  background-size:125% auto!important;
+  background-position:center 48%!important;
+  background-repeat:no-repeat!important;
+  background-color:#030006!important;
+}
+
+.shion-root .trap-1-screen .veil,
+.shion-root .trap-2-screen .veil,
+.shion-root .trap-3-screen .veil,
+.shion-root .trap-4-screen .veil,
+.shion-root .trap-5-screen .veil,
+.shion-root .trap-6-screen .veil,
+.shion-root .dead-screen .veil{
+  background:radial-gradient(circle at 50% 45%,rgba(0,0,0,.05) 0%,rgba(0,0,0,.18) 42%,rgba(0,0,0,.54) 100%)!important;
+}
+
+/* Testi yandere 1-7 in alto al centro, grandi e su una riga. */
+.shion-root .trap-1-screen .trap-text,
+.shion-root .trap-2-screen .trap-text,
+.shion-root .trap-3-screen .trap-text,
+.shion-root .trap-4-screen .trap-text,
+.shion-root .trap-5-screen .trap-text,
+.shion-root .trap-6-screen .trap-text,
+.shion-root .dead-screen .dead-text{
+  left:50%!important;
+  top:42px!important;
+  bottom:auto!important;
+  width:96%!important;
+  max-width:96%!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .trap-1-screen .trap-text p,
+.shion-root .trap-2-screen .trap-text p,
+.shion-root .trap-3-screen .trap-text p,
+.shion-root .trap-4-screen .trap-text p,
+.shion-root .trap-5-screen .trap-text p,
+.shion-root .trap-6-screen .trap-text p,
+.shion-root .dead-screen .dead-text p{
+  margin:0!important;
+  font-size:clamp(34px,4.2vw,52px)!important;
+  line-height:1.02!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .trap-1-screen .heartbeat,
+.shion-root .trap-2-screen .heartbeat,
+.shion-root .trap-3-screen .heartbeat,
+.shion-root .trap-4-screen .heartbeat,
+.shion-root .trap-5-screen .heartbeat,
+.shion-root .trap-6-screen .heartbeat,
+.shion-root .dead-screen .heartbeat{
+  display:block!important;
+  font-size:14px!important;
+  margin:0 0 20px!important;
+  white-space:nowrap!important;
+  text-align:center!important;
+}
+
+/* Pulsanti yandere 1-6 centrati in basso. */
+.shion-root .trap-1-screen .action-btn,
+.shion-root .trap-2-screen .action-btn,
+.shion-root .trap-3-screen .action-btn,
+.shion-root .trap-4-screen .action-btn,
+.shion-root .trap-5-screen .action-btn,
+.shion-root .trap-6-screen .action-btn{
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:59px!important;
+  transform:translateX(-50%)!important;
+}
+
+.shion-root .trap-1-screen .action-btn:hover,
+.shion-root .trap-2-screen .action-btn:hover,
+.shion-root .trap-3-screen .action-btn:hover,
+.shion-root .trap-4-screen .action-btn:hover,
+.shion-root .trap-5-screen .action-btn:hover,
+.shion-root .trap-6-screen .action-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+/* Schermata 7: dead end centrato, easy way out a destra dopo 8s. */
+.shion-root .dead-screen .dead-options{
+  position:absolute!important;
+  z-index:7!important;
+  left:0!important;
+  right:0!important;
+  bottom:34px!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:88px!important;
+  transform:none!important;
+  display:block!important;
+  pointer-events:none!important;
+}
+
+.shion-root .dead-screen .fake-dead-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:25px!important;
+  bottom:auto!important;
+  transform:translateX(-50%)!important;
+  pointer-events:none!important;
+}
+
+.shion-root .dead-screen .easy-way-btn{
+  position:absolute!important;
+  left:auto!important;
+  right:12px!important;
+  top:0!important;
+  bottom:auto!important;
+  transform:none!important;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  animation:none!important;
+}
+
+.shion-root #flow-dead:checked~.app .dead-screen .easy-way-btn{
+  animation:shionEasyWayRevealDelayV83 .45s ease 8s forwards!important;
+}
+
+.shion-root .dead-screen .easy-way-btn:hover{
+  transform:translateY(-2px)!important;
+}
+
+@keyframes shionEasyWayRevealDelayV83{
+  0%{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+  1%{
+    visibility:visible;
+  }
+  100%{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:none;
+  }
+}
+
+/* Penultima schermata: background meno offuscato, frase piu' bassa e stabile. */
+.shion-root .easy-screen .room-bg{
+  filter:blur(4px) brightness(.66) saturate(1.02)!important;
+  transform:scale(1.04)!important;
+  transform-origin:center!important;
+}
+
+.shion-root #flow-easy:checked~.app .easy-screen .room-bg{
+  filter:blur(3px) brightness(.70) saturate(1.04)!important;
+  transform:scale(1.035)!important;
+  transform-origin:center!important;
+}
+
+.shion-root .easy-screen .veil{
+  background:radial-gradient(circle at 50% 44%,rgba(255,255,255,.06) 0%,rgba(255,255,255,.03) 20%,rgba(0,0,0,.08) 38%,rgba(0,0,0,.34) 72%,rgba(0,0,0,.56) 100%)!important;
+}
+
+.shion-root #flow-easy:checked~.app .easy-screen .veil{
+  background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.05) 0%,rgba(255,255,255,.025) 20%,rgba(0,0,0,.07) 38%,rgba(0,0,0,.30) 72%,rgba(0,0,0,.52) 100%)!important;
+}
+
+.shion-root #flow-easy:checked~.app .easy-screen .easy-text,
+.shion-root .easy-screen .easy-text{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:88px!important;
+  width:min(760px,88%)!important;
+  max-width:min(760px,88%)!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline-block!important;
+  transform-origin:center center!important;
+  will-change:transform,filter,text-shadow,letter-spacing!important;
+  animation:shionEasyBreathTrembleV83 3.6s ease-in-out infinite!important;
+  color:#ff4f8b!important;
+  -webkit-text-fill-color:#ff4f8b!important;
+  text-shadow:0 0 10px rgba(179,0,7,.46),0 0 22px rgba(255,79,139,.34),0 0 38px rgba(216,173,255,.18)!important;
+}
+
+@keyframes shionEasyBreathTrembleV83{
+  0%,100%{
+    transform:translateY(0) scaleX(1) scaleY(1) skewX(0deg);
+    filter:blur(0) drop-shadow(0 0 10px rgba(255,79,139,.24));
+    letter-spacing:0;
+    opacity:.92;
+    text-shadow:0 0 10px rgba(179,0,7,.42),0 0 22px rgba(255,79,139,.28),0 0 38px rgba(216,173,255,.16);
+  }
+  18%{
+    transform:translateY(-1px) scaleX(1.012) scaleY(.988) skewX(-.55deg);
+    filter:blur(.15px) drop-shadow(0 0 14px rgba(255,79,139,.32));
+    letter-spacing:.012em;
+    opacity:.98;
+  }
+  34%{
+    transform:translateY(1px) scaleX(.992) scaleY(1.012) skewX(.45deg);
+    filter:blur(.25px) drop-shadow(0 0 18px rgba(216,173,255,.24));
+    letter-spacing:.004em;
+    opacity:.90;
+  }
+  52%{
+    transform:translateY(-2px) scaleX(1.018) scaleY(.982) skewX(-.75deg);
+    filter:blur(.18px) drop-shadow(0 0 18px rgba(255,79,139,.38));
+    letter-spacing:.018em;
+    opacity:1;
+    text-shadow:0 0 14px rgba(255,79,139,.58),0 0 28px rgba(216,173,255,.34),0 0 48px rgba(155,60,255,.22);
+  }
+  70%{
+    transform:translateY(1px) scaleX(.986) scaleY(1.016) skewX(.65deg);
+    filter:blur(.28px) drop-shadow(0 0 14px rgba(179,0,7,.36));
+    letter-spacing:.006em;
+    opacity:.88;
+  }
+}
+
+/* Bottoni easy/blackout centrati e stabili durante click e cambio radio. */
+.shion-root #flow-easy:checked~.app .easy-screen .center-btn,
+.shion-root .easy-screen .center-btn,
+.shion-root #flow-blackout:checked~.app .blackout-screen .center-btn,
+.shion-root .blackout-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:24px!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  z-index:8!important;
+}
+
+.shion-root .easy-screen .center-btn:hover,
+.shion-root .blackout-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+.shion-root .easy-screen .center-btn:active,
+.shion-root .blackout-screen .center-btn:active{
+  transform:translateX(-50%) translateY(0)!important;
+}
+
+/* Ultima schermata: formato persistente anche quando si clicca Risvegliati. */
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text,
+.shion-root .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:82px!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root .blackout-screen .blackout-text p{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 auto!important;
+  padding:0!important;
+  font-size:0!important;
+  line-height:0!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:none!important;
+  animation:none!important;
+  filter:none!important;
+  white-space:normal!important;
+}
+
+.shion-root .blackout-screen .blackout-text::before{
+  content:"Mi appartieni ~"!important;
+  display:block!important;
+  margin:0 auto!important;
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  font-style:italic!important;
+  font-weight:500!important;
+  font-size:clamp(36px,4.4vw,56px)!important;
+  line-height:1.05!important;
+  letter-spacing:.035em!important;
+  color:rgba(255,232,250,.96)!important;
+  -webkit-text-fill-color:rgba(255,232,250,.96)!important;
+  text-shadow:0 0 10px rgba(244,223,255,.38),0 0 28px rgba(183,85,255,.32),0 0 54px rgba(86,22,128,.42)!important;
+  opacity:.96!important;
+  transform:none!important;
+  filter:none!important;
+  animation:none!important;
+}
+
+.shion-root .blackout-screen .blackout-text p::before{
+  content:"Vivo o morto.."!important;
+  display:block!important;
+  margin:2px auto 0!important;
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  font-style:italic!important;
+  font-weight:500!important;
+  font-size:clamp(34px,4.2vw,54px)!important;
+  line-height:1.05!important;
+  letter-spacing:.035em!important;
+  color:rgba(244,223,255,.92)!important;
+  -webkit-text-fill-color:rgba(244,223,255,.92)!important;
+  text-shadow:0 0 12px rgba(244,223,255,.36),0 0 34px rgba(183,85,255,.36),0 0 62px rgba(86,22,128,.46)!important;
+  transform-origin:center center!important;
+  text-align:center!important;
+  will-change:opacity,transform,filter,text-shadow,letter-spacing!important;
+  animation:shionBlackoutVivoSoftTrembleV83 5.8s ease-in-out infinite!important;
+}
+
+.shion-root .blackout-screen .blackout-text p::after{
+  content:"NON MI IMPORTA."!important;
+  display:block!important;
+  margin-top:18px!important;
+  font-family:"Cinzel",Georgia,serif!important;
+  font-style:normal!important;
+  font-weight:500!important;
+  font-size:clamp(18px,2.45vw,30px)!important;
+  line-height:1.1!important;
+  letter-spacing:.22em!important;
+  text-transform:uppercase!important;
+  color:rgba(232,255,255,.88)!important;
+  -webkit-text-fill-color:rgba(232,255,255,.88)!important;
+  text-shadow:0 0 10px rgba(232,255,255,.44),0 0 26px rgba(169,192,200,.32),0 0 50px rgba(59,85,94,.22)!important;
+  transform-origin:center center!important;
+  will-change:opacity,transform,filter,text-shadow,letter-spacing!important;
+  animation:shionBlackoutColdCalligraphyV83 5.8s ease-in-out infinite!important;
+  animation-delay:.32s!important;
+}
+
+@keyframes shionBlackoutVivoSoftTrembleV83{
+  0%,100%{
+    opacity:.74;
+    transform:translateY(0) scaleX(1) scaleY(1) skewX(0deg);
+    filter:blur(.08px) drop-shadow(0 0 8px rgba(183,85,255,.16));
+    letter-spacing:.033em;
+  }
+  20%{
+    opacity:.92;
+    transform:translateY(0) scaleX(1.006) scaleY(.996) skewX(-.12deg);
+    filter:blur(.08px) drop-shadow(0 0 11px rgba(183,85,255,.22));
+    letter-spacing:.038em;
+  }
+  38%{
+    opacity:1;
+    transform:translateY(0) scaleX(1.014) scaleY(.988) skewX(-.22deg);
+    filter:blur(.10px) drop-shadow(0 0 14px rgba(216,173,255,.26));
+    letter-spacing:.044em;
+  }
+  58%{
+    opacity:.78;
+    transform:translateY(0) scaleX(.994) scaleY(1.006) skewX(.16deg);
+    filter:blur(.18px) drop-shadow(0 0 9px rgba(183,85,255,.16));
+    letter-spacing:.033em;
+  }
+  78%{
+    opacity:.96;
+    transform:translateY(0) scaleX(1.01) scaleY(.992) skewX(-.18deg);
+    filter:blur(.08px) drop-shadow(0 0 13px rgba(216,173,255,.24));
+    letter-spacing:.042em;
+  }
+}
+
+@keyframes shionBlackoutColdCalligraphyV83{
+  0%,100%{
+    opacity:.06;
+    transform:scaleX(.96) scaleY(1.02);
+    filter:blur(.9px) drop-shadow(0 0 4px rgba(169,192,200,.12));
+    letter-spacing:.18em;
+  }
+  24%{
+    opacity:.34;
+    transform:scaleX(1.02) scaleY(.98);
+    filter:blur(.35px) drop-shadow(0 0 10px rgba(169,192,200,.24));
+    letter-spacing:.24em;
+  }
+  42%{
+    opacity:1;
+    transform:scaleX(1.045) scaleY(.965);
+    filter:blur(.05px) drop-shadow(0 0 18px rgba(232,255,255,.34));
+    letter-spacing:.28em;
+  }
+  60%{
+    opacity:.12;
+    transform:scaleX(.95) scaleY(1.035);
+    filter:blur(1px) drop-shadow(0 0 4px rgba(169,192,200,.12));
+    letter-spacing:.18em;
+  }
+  88%{
+    opacity:.78;
+    transform:scaleX(1.025) scaleY(.98);
+    filter:blur(.18px) drop-shadow(0 0 12px rgba(232,255,255,.26));
+    letter-spacing:.25em;
+  }
+}
