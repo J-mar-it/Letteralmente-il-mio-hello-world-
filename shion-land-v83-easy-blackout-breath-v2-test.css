@@ -1,0 +1,95 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@a0440871612e67ad54cebf5afbce837d245c3c2f/shion-land-v83-dead-easy-row-test.css?v=1");
+
+/* Test penultima schermata: background meno offuscato e frase più bassa vicino al bottone. */
+.shion-root #flow-easy:checked~.app .easy-screen .room-bg{
+  filter:blur(3px) brightness(.70) saturate(1.04)!important;
+  transform:scale(1.035)!important;
+  transform-origin:center!important;
+}
+
+.shion-root #flow-easy:checked~.app .easy-screen .veil{
+  background:
+    radial-gradient(
+      circle at 50% 48%,
+      rgba(255,255,255,.05) 0%,
+      rgba(255,255,255,.025) 20%,
+      rgba(0,0,0,.07) 38%,
+      rgba(0,0,0,.30) 72%,
+      rgba(0,0,0,.52) 100%
+    )!important;
+}
+
+.shion-root #flow-easy:checked~.app .easy-screen .easy-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:88px!important;
+  width:min(760px,88%)!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+/* Test ultima schermata: frase che sparisce/riappare tremando come un sospiro affannato. */
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text p{
+  display:inline-block!important;
+  transform-origin:center center!important;
+  will-change:opacity,transform,filter,text-shadow,letter-spacing!important;
+  animation:shionBlackoutBreathFadeV83 5.8s ease-in-out infinite!important;
+  color:rgba(244,223,255,.94)!important;
+  -webkit-text-fill-color:rgba(244,223,255,.94)!important;
+  text-shadow:
+    0 0 12px rgba(183,85,255,.42),
+    0 0 36px rgba(86,22,128,.58),
+    0 0 62px rgba(0,0,0,.72)!important;
+}
+
+@keyframes shionBlackoutBreathFadeV83{
+  0%,100%{
+    opacity:.12;
+    transform:translateY(1px) scaleX(.992) scaleY(1.006) skewX(.2deg);
+    filter:blur(.65px) drop-shadow(0 0 5px rgba(183,85,255,.18));
+    letter-spacing:0;
+  }
+  14%{
+    opacity:.72;
+    transform:translateY(-1px) scaleX(1.012) scaleY(.988) skewX(-.45deg);
+    filter:blur(.22px) drop-shadow(0 0 12px rgba(183,85,255,.34));
+    letter-spacing:.006em;
+  }
+  27%{
+    opacity:1;
+    transform:translateY(-2px) scaleX(1.018) scaleY(.982) skewX(-.75deg);
+    filter:blur(.10px) drop-shadow(0 0 18px rgba(216,173,255,.34));
+    letter-spacing:.014em;
+    text-shadow:
+      0 0 16px rgba(244,223,255,.68),
+      0 0 34px rgba(183,85,255,.46),
+      0 0 64px rgba(86,22,128,.72);
+  }
+  43%{
+    opacity:.48;
+    transform:translateY(1px) scaleX(.986) scaleY(1.016) skewX(.65deg);
+    filter:blur(.35px) drop-shadow(0 0 10px rgba(183,85,255,.24));
+    letter-spacing:.004em;
+  }
+  58%{
+    opacity:.08;
+    transform:translateY(2px) scaleX(.98) scaleY(1.02) skewX(.9deg);
+    filter:blur(.9px) drop-shadow(0 0 4px rgba(183,85,255,.12));
+    letter-spacing:0;
+  }
+  72%{
+    opacity:.34;
+    transform:translateY(-1px) scaleX(1.008) scaleY(.992) skewX(-.35deg);
+    filter:blur(.42px) drop-shadow(0 0 9px rgba(216,173,255,.22));
+    letter-spacing:.004em;
+  }
+  86%{
+    opacity:.86;
+    transform:translateY(-2px) scaleX(1.015) scaleY(.985) skewX(-.6deg);
+    filter:blur(.18px) drop-shadow(0 0 15px rgba(183,85,255,.32));
+    letter-spacing:.01em;
+  }
+}
