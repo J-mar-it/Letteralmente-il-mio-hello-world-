@@ -1082,14 +1082,14 @@
 /* Penultima schermata: background meno offuscato, frase piu' bassa e stabile. */
 .shion-root .easy-screen .room-bg{
   filter:blur(4px) brightness(.66) saturate(1.02)!important;
-  transform:scale(1.04)!important;
-  transform-origin:center!important;
+  transform:translateY(-44px) scale(1.08)!important;
+  transform-origin:center center!important;
 }
 
 .shion-root #flow-easy:checked~.app .easy-screen .room-bg{
   filter:blur(3px) brightness(.70) saturate(1.04)!important;
-  transform:scale(1.035)!important;
-  transform-origin:center!important;
+  transform:translateY(-44px) scale(1.08)!important;
+  transform-origin:center center!important;
 }
 
 .shion-root .easy-screen .veil{
