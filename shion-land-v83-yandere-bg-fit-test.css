@@ -1,0 +1,27 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@843eaa4f5c6a82529476bc60f74ee88b7198eabc/shion-land-v83-direct-land.css?v=1");
+
+/* Test yandere: stanza più leggibile senza usare l'immagine piena/contain puro. */
+.shion-root .trap-1-screen .room-bg,
+.shion-root .trap-2-screen .room-bg,
+.shion-root .trap-3-screen .room-bg,
+.shion-root .trap-4-screen .room-bg,
+.shion-root .trap-5-screen .room-bg,
+.shion-root .trap-6-screen .room-bg,
+.shion-root .dead-screen .room-bg{
+  background-size:125% auto!important;
+  background-position:center 48%!important;
+  background-repeat:no-repeat!important;
+  background-color:#030006!important;
+}
+
+/* Mantiene l'atmosfera scura sulle zone non coperte dal background più largo. */
+.shion-root .trap-1-screen .veil,
+.shion-root .trap-2-screen .veil,
+.shion-root .trap-3-screen .veil,
+.shion-root .trap-4-screen .veil,
+.shion-root .trap-5-screen .veil,
+.shion-root .trap-6-screen .veil,
+.shion-root .dead-screen .veil{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(0,0,0,.05) 0%,rgba(0,0,0,.18) 42%,rgba(0,0,0,.54) 100%)!important;
+}
