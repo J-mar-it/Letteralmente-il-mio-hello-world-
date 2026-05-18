@@ -1,0 +1,30 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@d54641b000fd233fedb784062dd5e6e751ed0bb4/shion-land-v83-direct-land-y8-panels-under-mark-need-short.css?v=1");
+
+/* Test: due immagini decorative in basso, con box trasparente e senza cornice visibile. */
+.shion-root .main-screen::before,
+.shion-root .main-screen::after{
+  content:""!important;
+  position:absolute!important;
+  bottom:18px!important;
+  width:86px!important;
+  height:132px!important;
+  background-color:transparent!important;
+  background-repeat:no-repeat!important;
+  background-size:contain!important;
+  background-position:center bottom!important;
+  border:0!important;
+  box-shadow:none!important;
+  pointer-events:none!important;
+  z-index:24!important;
+  opacity:.94!important;
+}
+
+.shion-root .main-screen::before{
+  left:24px!important;
+  background-image:url("https://i.imgur.com/uSNhsT5.png")!important;
+}
+
+.shion-root .main-screen::after{
+  right:24px!important;
+  background-image:url("https://i.imgur.com/1LorPHp.png")!important;
+}
