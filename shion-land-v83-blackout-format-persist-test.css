@@ -1,0 +1,99 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@53d149d900ef8897190afb5c708586bbc12e503e/shion-land-v83-easy-blackout-stable-click-test.css?v=1");
+
+/* Test: mantiene il formato speciale dell'ultima schermata anche durante il click su Risvegliati.
+   Il problema era che molte regole erano legate solo a #flow-blackout:checked: quando il radio cambia,
+   la schermata resta visibile per un attimo ma il testo tornava al formato base. */
+.shion-root .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:82px!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root .blackout-screen .blackout-text p{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 auto!important;
+  padding:0!important;
+  font-size:0!important;
+  line-height:0!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:none!important;
+  animation:none!important;
+  filter:none!important;
+  white-space:normal!important;
+}
+
+.shion-root .blackout-screen .blackout-text::before{
+  content:"Mi appartieni ~"!important;
+  display:block!important;
+  margin:0 auto!important;
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  font-style:italic!important;
+  font-weight:500!important;
+  font-size:clamp(36px,4.4vw,56px)!important;
+  line-height:1.05!important;
+  letter-spacing:.035em!important;
+  color:rgba(255,232,250,.96)!important;
+  -webkit-text-fill-color:rgba(255,232,250,.96)!important;
+  text-shadow:
+    0 0 10px rgba(244,223,255,.38),
+    0 0 28px rgba(183,85,255,.32),
+    0 0 54px rgba(86,22,128,.42)!important;
+  opacity:.96!important;
+  transform:none!important;
+  filter:none!important;
+  animation:none!important;
+}
+
+.shion-root .blackout-screen .blackout-text p::before{
+  content:"Vivo o morto.."!important;
+  display:block!important;
+  margin:2px auto 0!important;
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  font-style:italic!important;
+  font-weight:500!important;
+  font-size:clamp(34px,4.2vw,54px)!important;
+  line-height:1.05!important;
+  letter-spacing:.035em!important;
+  color:rgba(244,223,255,.92)!important;
+  -webkit-text-fill-color:rgba(244,223,255,.92)!important;
+  text-shadow:
+    0 0 12px rgba(244,223,255,.36),
+    0 0 34px rgba(183,85,255,.36),
+    0 0 62px rgba(86,22,128,.46)!important;
+  transform-origin:center center!important;
+  will-change:opacity,transform,filter,text-shadow,letter-spacing!important;
+  animation:shionBlackoutVivoSoftTrembleV83 5.8s ease-in-out infinite!important;
+}
+
+.shion-root .blackout-screen .blackout-text p::after{
+  content:"NON MI IMPORTA."!important;
+  display:block!important;
+  margin-top:18px!important;
+  font-family:"Cinzel",Georgia,serif!important;
+  font-style:normal!important;
+  font-weight:500!important;
+  font-size:clamp(18px,2.45vw,30px)!important;
+  line-height:1.1!important;
+  letter-spacing:.22em!important;
+  text-transform:uppercase!important;
+  color:rgba(232,255,255,.88)!important;
+  -webkit-text-fill-color:rgba(232,255,255,.88)!important;
+  text-shadow:
+    0 0 10px rgba(232,255,255,.44),
+    0 0 26px rgba(169,192,200,.32),
+    0 0 50px rgba(59,85,94,.22)!important;
+  transform-origin:center center!important;
+  will-change:opacity,transform,filter,text-shadow,letter-spacing!important;
+  animation:shionBlackoutColdCalligraphyV83 5.8s ease-in-out infinite!important;
+  animation-delay:.32s!important;
+}
