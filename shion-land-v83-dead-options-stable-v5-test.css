@@ -1,53 +1,47 @@
 @import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@2d158b10be778a27531d0ecc3031c72f91dd8ca0/shion-land-v83-blackout-text-linebreak-test.css?v=1");
 
 /* DEAD SCREEN / OPTIONS STABLE FIX v5
-   Un solo layout: dead end sbarrato + easy way out nello stesso rigo.
-   Easy way out conserva delay 8s, ma senza spostamenti strani. */
+   Layout prudente: dead end resta centrato, easy way out compare a destra
+   dopo 8s senza spostare il bottone sbarrato. */
 .shion-root .dead-screen .dead-options{
   position:absolute!important;
   z-index:7!important;
-  left:50%!important;
-  right:auto!important;
+  left:0!important;
+  right:0!important;
   bottom:34px!important;
-  width:620px!important;
-  max-width:92%!important;
+  width:100%!important;
+  max-width:100%!important;
   height:88px!important;
-  transform:translateX(-50%)!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  gap:34px!important;
-  pointer-events:auto!important;
+  transform:none!important;
+  display:block!important;
+  pointer-events:none!important;
 }
 
 .shion-root .dead-screen .fake-dead-btn{
-  position:relative!important;
-  left:auto!important;
+  position:absolute!important;
+  left:50%!important;
   right:auto!important;
-  top:auto!important;
+  top:25px!important;
   bottom:auto!important;
-  transform:none!important;
-  flex:0 0 auto!important;
+  transform:translateX(-50%)!important;
   pointer-events:none!important;
 }
 
 .shion-root .dead-screen .easy-way-btn{
-  position:relative!important;
+  position:absolute!important;
   left:auto!important;
-  right:auto!important;
-  top:auto!important;
+  right:12px!important;
+  top:25px!important;
   bottom:auto!important;
   transform:none!important;
-  flex:0 0 auto!important;
-  opacity:0!important;
-  visibility:hidden!important;
-  pointer-events:none!important;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
   animation:none!important;
 }
 
 .shion-root #flow-dead:checked~.app .dead-screen .easy-way-btn{
-  animation:shionEasyWayRevealDelayV83 .45s ease forwards!important;
-  animation-delay:8s!important;
+  animation:shionEasyWayRevealDelayV83 .45s ease 8s forwards!important;
 }
 
 .shion-root .dead-screen .easy-way-btn:hover{
@@ -67,6 +61,7 @@
     opacity:1;
     visibility:visible;
     pointer-events:auto;
+    transform:none;
   }
 }
 
