@@ -1,0 +1,6 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@83d5efb113de511ece0b681ab6cb4c3989b7f610/shion-land-v83-direct-land-y8.css?v=1");
+
+/* Test: porta i boxoverlay laterali appena sotto i pulsanti Mark / Need. */
+.shion-root .main-screen .tab-panel{
+  top:174px!important;
+}
