@@ -1,0 +1,40 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@c139978cd0c8f0e42582f5d0a95fc8805f7185df/shion-land-v83-blackout-three-line-lower-test.css?v=1");
+
+/* Test: la riga "Vivo o morto.." pulsa verso il centro, senza spinta verticale. */
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text p::before{
+  transform-origin:center center!important;
+  text-align:center!important;
+}
+
+@keyframes shionBlackoutVivoSoftTrembleV83{
+  0%,100%{
+    opacity:.74;
+    transform:translateY(0) scaleX(1) scaleY(1) skewX(0deg);
+    filter:blur(.08px) drop-shadow(0 0 8px rgba(183,85,255,.16));
+    letter-spacing:.033em;
+  }
+  20%{
+    opacity:.92;
+    transform:translateY(0) scaleX(1.006) scaleY(.996) skewX(-.12deg);
+    filter:blur(.08px) drop-shadow(0 0 11px rgba(183,85,255,.22));
+    letter-spacing:.038em;
+  }
+  38%{
+    opacity:1;
+    transform:translateY(0) scaleX(1.014) scaleY(.988) skewX(-.22deg);
+    filter:blur(.10px) drop-shadow(0 0 14px rgba(216,173,255,.26));
+    letter-spacing:.044em;
+  }
+  58%{
+    opacity:.78;
+    transform:translateY(0) scaleX(.994) scaleY(1.006) skewX(.16deg);
+    filter:blur(.18px) drop-shadow(0 0 9px rgba(183,85,255,.16));
+    letter-spacing:.033em;
+  }
+  78%{
+    opacity:.96;
+    transform:translateY(0) scaleX(1.01) scaleY(.992) skewX(-.18deg);
+    filter:blur(.08px) drop-shadow(0 0 13px rgba(216,173,255,.24));
+    letter-spacing:.042em;
+  }
+}
