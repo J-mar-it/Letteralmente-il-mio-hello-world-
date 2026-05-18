@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shion Compare - Ufficiale / Clean Build</title>
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      padding:24px;
+      min-width:1520px;
+      background:#111;
+      color:#e9eef0;
+      font-family:Arial,Helvetica,sans-serif;
+    }
+
+    .compare-page{
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    .compare-column{
+      width:730px;
+    }
+
+    .compare-title{
+      margin:0 0 10px;
+      text-align:center;
+      font-size:18px;
+      line-height:1.2;
+      font-weight:600;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#dce8eb;
+    }
+
+    .compare-frame{
+      width:730px;
+      height:820px;
+      padding:0;
+      border:1px solid #000;
+      overflow:hidden;
+      background:#000;
+    }
+
+    .compare-frame iframe{
+      display:block;
+      width:730px;
+      height:820px;
+      border:0;
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      background:#000;
+    }
+  </style>
+</head>
+<body>
+  <main class="compare-page" aria-label="Confronto Shion">
+    <section class="compare-column" aria-label="Versione ufficiale">
+      <h1 class="compare-title">Ufficiale</h1>
+      <div class="compare-frame">
+        <iframe title="Shion ufficiale" src="index.html"></iframe>
+      </div>
+    </section>
+
+    <section class="compare-column" aria-label="Clean build">
+      <h1 class="compare-title">Clean Build</h1>
+      <div class="compare-frame">
+        <iframe title="Shion clean build" src="shion-clean.html"></iframe>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
