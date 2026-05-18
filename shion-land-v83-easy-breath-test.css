@@ -1,0 +1,74 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@6e0caf0694446de6b3df2267429f696ec636b8c5/shion-land-v83-yandere-center-text-buttons-v4-test.css?v=1");
+
+/* Test penultima schermata: background meno offuscato e frase con tremore lento da sospiro affannato. */
+.shion-root .easy-screen .room-bg{
+  filter:blur(4px) brightness(.66) saturate(1.02)!important;
+  transform:scale(1.04)!important;
+  transform-origin:center!important;
+}
+
+.shion-root .easy-screen .veil{
+  background:
+    radial-gradient(
+      circle at 50% 44%,
+      rgba(255,255,255,.06) 0%,
+      rgba(255,255,255,.03) 20%,
+      rgba(0,0,0,.08) 38%,
+      rgba(0,0,0,.34) 72%,
+      rgba(0,0,0,.56) 100%
+    )!important;
+}
+
+.shion-root .easy-screen .easy-gradient-text{
+  display:inline-block!important;
+  transform-origin:center center!important;
+  will-change:transform,filter,text-shadow,letter-spacing!important;
+  animation:shionEasyBreathTrembleV83 3.6s ease-in-out infinite!important;
+  color:#ff4f8b!important;
+  -webkit-text-fill-color:#ff4f8b!important;
+  text-shadow:
+    0 0 10px rgba(179,0,7,.46),
+    0 0 22px rgba(255,79,139,.34),
+    0 0 38px rgba(216,173,255,.18)!important;
+}
+
+@keyframes shionEasyBreathTrembleV83{
+  0%,100%{
+    transform:translateY(0) scaleX(1) scaleY(1) skewX(0deg);
+    filter:blur(0) drop-shadow(0 0 10px rgba(255,79,139,.24));
+    letter-spacing:0;
+    opacity:.92;
+    text-shadow:
+      0 0 10px rgba(179,0,7,.42),
+      0 0 22px rgba(255,79,139,.28),
+      0 0 38px rgba(216,173,255,.16);
+  }
+  18%{
+    transform:translateY(-1px) scaleX(1.012) scaleY(.988) skewX(-.55deg);
+    filter:blur(.15px) drop-shadow(0 0 14px rgba(255,79,139,.32));
+    letter-spacing:.012em;
+    opacity:.98;
+  }
+  34%{
+    transform:translateY(1px) scaleX(.992) scaleY(1.012) skewX(.45deg);
+    filter:blur(.25px) drop-shadow(0 0 18px rgba(216,173,255,.24));
+    letter-spacing:.004em;
+    opacity:.90;
+  }
+  52%{
+    transform:translateY(-2px) scaleX(1.018) scaleY(.982) skewX(-.75deg);
+    filter:blur(.18px) drop-shadow(0 0 18px rgba(255,79,139,.38));
+    letter-spacing:.018em;
+    opacity:1;
+    text-shadow:
+      0 0 14px rgba(255,79,139,.58),
+      0 0 28px rgba(216,173,255,.34),
+      0 0 48px rgba(155,60,255,.22);
+  }
+  70%{
+    transform:translateY(1px) scaleX(.986) scaleY(1.016) skewX(.65deg);
+    filter:blur(.28px) drop-shadow(0 0 14px rgba(179,0,7,.36));
+    letter-spacing:.006em;
+    opacity:.88;
+  }
+}
