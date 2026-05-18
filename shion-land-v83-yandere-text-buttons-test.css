@@ -1,0 +1,61 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@e71e05f1b54e55d96d5d3a5f63eea8465b297d3a/shion-land-v83-yandere-bg-fit-test.css?v=1");
+
+/* Test yandere: testi in alto a sinistra, coerenti col preview originale. */
+.shion-root .trap-1-screen .trap-text,
+.shion-root .trap-2-screen .trap-text,
+.shion-root .trap-3-screen .trap-text,
+.shion-root .trap-4-screen .trap-text,
+.shion-root .trap-5-screen .trap-text,
+.shion-root .trap-6-screen .trap-text,
+.shion-root .dead-screen .dead-text{
+  left:7%!important;
+  top:42px!important;
+  bottom:auto!important;
+  width:360px!important;
+  max-width:32%!important;
+  transform:none!important;
+  text-align:left!important;
+}
+
+.shion-root .trap-1-screen .trap-text p,
+.shion-root .trap-2-screen .trap-text p,
+.shion-root .trap-3-screen .trap-text p,
+.shion-root .trap-4-screen .trap-text p,
+.shion-root .trap-5-screen .trap-text p,
+.shion-root .trap-6-screen .trap-text p,
+.shion-root .dead-screen .dead-text p{
+  font-size:clamp(30px,4.6vw,58px)!important;
+  line-height:1.05!important;
+  white-space:normal!important;
+}
+
+.shion-root .trap-1-screen .heartbeat,
+.shion-root .trap-2-screen .heartbeat,
+.shion-root .trap-3-screen .heartbeat,
+.shion-root .trap-4-screen .heartbeat,
+.shion-root .trap-5-screen .heartbeat,
+.shion-root .trap-6-screen .heartbeat,
+.shion-root .dead-screen .heartbeat{
+  margin-bottom:24px!important;
+}
+
+/* Test yandere: pulsanti trap 1-5 nella posizione della scelta del dead end. */
+.shion-root .trap-1-screen .action-btn,
+.shion-root .trap-2-screen .action-btn,
+.shion-root .trap-3-screen .action-btn,
+.shion-root .trap-4-screen .action-btn,
+.shion-root .trap-5-screen .action-btn{
+  left:auto!important;
+  right:6%!important;
+  top:auto!important;
+  bottom:34px!important;
+  transform:none!important;
+}
+
+.shion-root .trap-1-screen .action-btn:hover,
+.shion-root .trap-2-screen .action-btn:hover,
+.shion-root .trap-3-screen .action-btn:hover,
+.shion-root .trap-4-screen .action-btn:hover,
+.shion-root .trap-5-screen .action-btn:hover{
+  transform:translateY(-2px)!important;
+}
