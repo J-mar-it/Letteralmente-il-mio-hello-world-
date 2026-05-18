@@ -1,0 +1,42 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@977cd5bcfad0ee5bb227d523bc57c7e16ae9002e/shion-land-v83-yandere-center-text-buttons-v2-test.css?v=1");
+
+/* Test v3: allinea il dead end sbarrato ai pulsanti precedenti centrati in basso. */
+.shion-root .dead-screen .dead-options{
+  left:0!important;
+  right:0!important;
+  bottom:34px!important;
+  height:74px!important;
+}
+
+.shion-root .dead-screen .fake-dead-btn{
+  left:50%!important;
+  right:auto!important;
+  top:10px!important;
+  bottom:auto!important;
+  transform:translateX(-50%)!important;
+}
+
+/* Test v3: ingrandisce le scritte alte delle schermate yandere 1-7 senza andare a capo. */
+.shion-root .trap-1-screen .trap-text p,
+.shion-root .trap-2-screen .trap-text p,
+.shion-root .trap-3-screen .trap-text p,
+.shion-root .trap-4-screen .trap-text p,
+.shion-root .trap-5-screen .trap-text p,
+.shion-root .trap-6-screen .trap-text p,
+.shion-root .dead-screen .dead-text p{
+  font-size:clamp(32px,3.8vw,46px)!important;
+  line-height:1.03!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .trap-1-screen .heartbeat,
+.shion-root .trap-2-screen .heartbeat,
+.shion-root .trap-3-screen .heartbeat,
+.shion-root .trap-4-screen .heartbeat,
+.shion-root .trap-5-screen .heartbeat,
+.shion-root .trap-6-screen .heartbeat,
+.shion-root .dead-screen .heartbeat{
+  font-size:13px!important;
+  margin:0 0 20px!important;
+  white-space:nowrap!important;
+}
