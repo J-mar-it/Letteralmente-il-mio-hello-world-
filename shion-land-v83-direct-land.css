@@ -850,6 +850,45 @@
   overflow:auto!important;
 }
 
+/* Scope overlay per lato: ogni colonna apre solo i propri pannelli. */
+.shion-root .main-screen .tab-area.left .vapor-panel,
+.shion-root .main-screen .tab-area.left .keepsake-panel,
+.shion-root .main-screen .tab-area.left .need-panel,
+.shion-root .main-screen .tab-area.right .venom-panel,
+.shion-root .main-screen .tab-area.right .pulse-panel,
+.shion-root .main-screen .tab-area.right .mark-panel{
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transform:translateY(8px)!important;
+}
+
+.shion-root #left-venom:checked~.app .main-screen .tab-area.left .venom-panel,
+.shion-root #left-pulse:checked~.app .main-screen .tab-area.left .pulse-panel,
+.shion-root #left-mark:checked~.app .main-screen .tab-area.left .mark-panel,
+.shion-root #right-vapor:checked~.app .main-screen .tab-area.right .vapor-panel,
+.shion-root #right-keepsake:checked~.app .main-screen .tab-area.right .keepsake-panel,
+.shion-root #right-need:checked~.app .main-screen .tab-area.right .need-panel{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translateY(0)!important;
+  border-color:rgba(216,160,255,.36)!important;
+  background:linear-gradient(180deg,rgba(16,6,24,.7),rgba(5,2,9,.72)),radial-gradient(circle at top,rgba(185,120,255,.1),transparent 58%)!important;
+  box-shadow:0 0 34px rgba(140,58,210,.2),inset 0 0 26px rgba(255,255,255,.035)!important;
+  backdrop-filter:blur(3px)!important;
+}
+
+.shion-root .main-screen .tab-panel h3{
+  font-size:20px!important;
+  margin-bottom:12px!important;
+}
+
+.shion-root .main-screen .tab-panel p{
+  font-size:15.5px!important;
+  line-height:1.48!important;
+}
+
 /* Decorazioni basse della schermata 2: box trasparente, nessuna cornice. */
 .shion-root .main-screen::before,
 .shion-root .main-screen::after{
