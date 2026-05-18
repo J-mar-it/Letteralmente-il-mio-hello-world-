@@ -1,0 +1,12 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@5b14f119c5f3c57b107638f60bb9f2241a5fc071/shion-land-v83-side-panel-scope-test.css?v=1");
+
+/* Test: rende più leggibili le scritte interne dei riquadri laterali. */
+.shion-root .main-screen .tab-panel h3{
+  font-size:20px!important;
+  margin-bottom:12px!important;
+}
+
+.shion-root .main-screen .tab-panel p{
+  font-size:15.5px!important;
+  line-height:1.48!important;
+}
