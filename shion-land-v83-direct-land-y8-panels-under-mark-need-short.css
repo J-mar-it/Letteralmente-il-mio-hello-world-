@@ -1,0 +1,7 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@9d02a5ca4452597801f9d2479842e1ce41598193/shion-land-v83-direct-land-y8-panels-under-mark-need.css?v=1");
+
+/* Test: accorcia i boxoverlay laterali per farli finire sopra Diagnosis. */
+.shion-root .main-screen .tab-panel{
+  height:245px!important;
+  max-height:245px!important;
+}
