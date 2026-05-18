@@ -1,0 +1,73 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@e71e05f1b54e55d96d5d3a5f63eea8465b297d3a/shion-land-v83-yandere-bg-fit-test.css?v=1");
+
+/* Test yandere: schermate 1-7 con testi in alto al centro, senza andare a capo. */
+.shion-root .trap-1-screen .trap-text,
+.shion-root .trap-2-screen .trap-text,
+.shion-root .trap-3-screen .trap-text,
+.shion-root .trap-4-screen .trap-text,
+.shion-root .trap-5-screen .trap-text,
+.shion-root .trap-6-screen .trap-text,
+.shion-root .dead-screen .dead-text{
+  left:50%!important;
+  top:42px!important;
+  bottom:auto!important;
+  width:96%!important;
+  max-width:96%!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .trap-1-screen .trap-text p,
+.shion-root .trap-2-screen .trap-text p,
+.shion-root .trap-3-screen .trap-text p,
+.shion-root .trap-4-screen .trap-text p,
+.shion-root .trap-5-screen .trap-text p,
+.shion-root .trap-6-screen .trap-text p,
+.shion-root .dead-screen .dead-text p{
+  margin:0!important;
+  font-size:clamp(26px,3.1vw,38px)!important;
+  line-height:1.05!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .trap-1-screen .heartbeat,
+.shion-root .trap-2-screen .heartbeat,
+.shion-root .trap-3-screen .heartbeat,
+.shion-root .trap-4-screen .heartbeat,
+.shion-root .trap-5-screen .heartbeat,
+.shion-root .trap-6-screen .heartbeat,
+.shion-root .dead-screen .heartbeat{
+  display:block!important;
+  margin:0 0 18px!important;
+  white-space:nowrap!important;
+  text-align:center!important;
+}
+
+/* Test yandere: pulsanti trap 1-5 allineati al dead end sbarrato centrale. */
+.shion-root .trap-1-screen .action-btn,
+.shion-root .trap-2-screen .action-btn,
+.shion-root .trap-3-screen .action-btn,
+.shion-root .trap-4-screen .action-btn,
+.shion-root .trap-5-screen .action-btn{
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:59px!important;
+  transform:translateX(-50%)!important;
+}
+
+.shion-root .trap-1-screen .action-btn:hover,
+.shion-root .trap-2-screen .action-btn:hover,
+.shion-root .trap-3-screen .action-btn:hover,
+.shion-root .trap-4-screen .action-btn:hover,
+.shion-root .trap-5-screen .action-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+/* Easy way out resta nella sua posizione originale. */
+.shion-root .dead-screen .easy-way-btn{
+  left:auto!important;
+  right:6%!important;
+  top:0!important;
+}
