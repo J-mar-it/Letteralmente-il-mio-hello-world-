@@ -1,0 +1,32 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@16f7d006e5e251272a751d98eaa26f1a0d8f4925/shion-land-v83-easy-breath-test.css?v=1");
+
+/* Test schermata 7: dead end sbarrato ed easy way out sullo stesso rigo. */
+.shion-root .dead-screen .dead-options{
+  left:50%!important;
+  right:auto!important;
+  bottom:34px!important;
+  width:560px!important;
+  max-width:86%!important;
+  height:88px!important;
+  transform:translateX(-50%)!important;
+}
+
+.shion-root .dead-screen .fake-dead-btn{
+  left:0!important;
+  right:auto!important;
+  top:14px!important;
+  bottom:auto!important;
+  transform:none!important;
+}
+
+.shion-root .dead-screen .easy-way-btn{
+  left:auto!important;
+  right:0!important;
+  top:0!important;
+  bottom:auto!important;
+  transform:none!important;
+}
+
+.shion-root .dead-screen .easy-way-btn:hover{
+  transform:translateY(-2px)!important;
+}
