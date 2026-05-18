@@ -1,0 +1,43 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@008895e7c18c6e1b2791d67b343d62250ee191d8/shion-land-v83-yandere-center-text-buttons-test.css?v=1");
+
+/* Test v2: allinea anche il bottone dead end della trap-6 al centro basso. */
+.shion-root .trap-6-screen .action-btn{
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:59px!important;
+  transform:translateX(-50%)!important;
+}
+
+.shion-root .trap-6-screen .action-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+/* Test v2: forza il dead end sbarrato della schermata 7 al centro basso. */
+.shion-root .dead-screen .dead-options{
+  left:0!important;
+  right:0!important;
+  bottom:34px!important;
+  height:74px!important;
+}
+
+.shion-root .dead-screen .fake-dead-btn{
+  left:50%!important;
+  right:auto!important;
+  top:25px!important;
+  bottom:auto!important;
+  transform:translateX(-50%)!important;
+}
+
+/* Test v2: easy way out più a destra, quasi attaccato al bordo. */
+.shion-root .dead-screen .easy-way-btn{
+  left:auto!important;
+  right:12px!important;
+  top:0!important;
+  bottom:auto!important;
+  transform:none!important;
+}
+
+.shion-root .dead-screen .easy-way-btn:hover{
+  transform:translateY(-2px)!important;
+}
