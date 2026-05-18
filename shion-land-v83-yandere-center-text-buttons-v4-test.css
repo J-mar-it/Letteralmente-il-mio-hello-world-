@@ -1,0 +1,26 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@edc6f299d6b03b0c16eeb0d1009a51633b6e76f0/shion-land-v83-yandere-center-text-buttons-v3-test.css?v=1");
+
+/* Test v4: scritte alte yandere 1-7 leggermente più grandi, ancora su una sola riga. */
+.shion-root .trap-1-screen .trap-text p,
+.shion-root .trap-2-screen .trap-text p,
+.shion-root .trap-3-screen .trap-text p,
+.shion-root .trap-4-screen .trap-text p,
+.shion-root .trap-5-screen .trap-text p,
+.shion-root .trap-6-screen .trap-text p,
+.shion-root .dead-screen .dead-text p{
+  font-size:clamp(34px,4.2vw,52px)!important;
+  line-height:1.02!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .trap-1-screen .heartbeat,
+.shion-root .trap-2-screen .heartbeat,
+.shion-root .trap-3-screen .heartbeat,
+.shion-root .trap-4-screen .heartbeat,
+.shion-root .trap-5-screen .heartbeat,
+.shion-root .trap-6-screen .heartbeat,
+.shion-root .dead-screen .heartbeat{
+  font-size:14px!important;
+  margin:0 0 20px!important;
+  white-space:nowrap!important;
+}
