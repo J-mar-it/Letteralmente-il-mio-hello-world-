@@ -1,0 +1,59 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@add2f1dd015443b4c04bff2391fb0bdaef78da29/shion-land-v83-blackout-vivo-center-pulse-test.css?v=1");
+
+/* Test: stabilizza penultima e ultima schermata durante click/hover dei bottoni.
+   Blocca i contenitori testo in posizione assoluta, così non rientrano verso il centro
+   per effetto di regole base/relative durante il cambio radio. */
+.shion-root #flow-easy:checked~.app .easy-screen .easy-text,
+.shion-root .easy-screen .easy-text{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:88px!important;
+  width:min(760px,88%)!important;
+  max-width:min(760px,88%)!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text,
+.shion-root .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:82px!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+/* I bottoni restano centrati e non influenzano i contenitori testo. */
+.shion-root #flow-easy:checked~.app .easy-screen .center-btn,
+.shion-root .easy-screen .center-btn,
+.shion-root #flow-blackout:checked~.app .blackout-screen .center-btn,
+.shion-root .blackout-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:24px!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  z-index:8!important;
+}
+
+.shion-root .easy-screen .center-btn:hover,
+.shion-root .blackout-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+.shion-root .easy-screen .center-btn:active,
+.shion-root .blackout-screen .center-btn:active{
+  transform:translateX(-50%) translateY(0)!important;
+}
