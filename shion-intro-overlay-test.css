@@ -1,0 +1,147 @@
+/* ==========================================================
+   SHION INTRO OVERLAY TEST
+   Layer non distruttivo da caricare DOPO shion-land-v83-direct-land.css.
+   Obiettivo: riattivare il click su SHION IBURI e mostrare un overlay
+   assoluto sotto il titolo, senza spostare nessuna scritta della intro.
+   ========================================================== */
+
+.shion-root .intro-screen .title{
+  position:relative!important;
+  z-index:960!important;
+  pointer-events:auto!important;
+}
+
+.shion-root .intro-screen .title .intro-toggle,
+.shion-root .intro-screen .title .intro-link,
+.shion-root .intro-screen .title label{
+  pointer-events:auto!important;
+  cursor:pointer!important;
+}
+
+/* Per ora lasciamo cliccabile solo SHION IBURI: gli altri testi restano estetici. */
+.shion-root .intro-screen .subtitle,
+.shion-root .intro-screen .subtitle .intro-toggle,
+.shion-root .intro-screen .subtitle .intro-link,
+.shion-root .intro-screen .subtitle label{
+  pointer-events:none!important;
+  cursor:default!important;
+}
+
+/* Overlay assoluto: non entra nel flusso, quindi non sposta quote, bottone o warning. */
+.shion-root .intro-screen .intro-info{
+  display:block!important;
+  position:absolute!important;
+  left:50%!important;
+  top:690px!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:1320px!important;
+  max-width:1320px!important;
+  height:760px!important;
+  max-height:760px!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:50px 62px 48px!important;
+  box-sizing:border-box!important;
+  transform:translateX(-50%) translateY(12px)!important;
+  transform-origin:top center!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  overflow-x:hidden!important;
+  overflow-y:auto!important;
+  scrollbar-width:thin!important;
+  z-index:900!important;
+  border:1px solid rgba(216,160,255,.38)!important;
+  border-radius:28px!important;
+  background:
+    linear-gradient(180deg,rgba(8,14,16,.94),rgba(3,6,7,.965)),
+    radial-gradient(circle at 50% 0%,rgba(188,90,255,.16),transparent 58%),
+    radial-gradient(circle at 10% 88%,rgba(59,85,94,.18),transparent 48%)!important;
+  box-shadow:
+    0 0 42px rgba(140,58,210,.24),
+    0 0 90px rgba(0,0,0,.62),
+    inset 0 0 36px rgba(255,255,255,.035)!important;
+  backdrop-filter:blur(4px)!important;
+  transition:opacity .28s ease,visibility .28s ease,transform .28s ease!important;
+}
+
+.shion-root .intro-screen .intro-info::before{
+  content:""!important;
+  position:absolute!important;
+  inset:-30px!important;
+  background:
+    radial-gradient(circle at 24% 20%,rgba(214,142,255,.18),transparent 34%),
+    radial-gradient(circle at 78% 72%,rgba(59,85,94,.22),transparent 42%)!important;
+  filter:blur(18px)!important;
+  opacity:.58!important;
+  pointer-events:none!important;
+}
+
+.shion-root #intro-shion:checked~.app .intro-screen .intro-info{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translateX(-50%) translateY(0)!important;
+}
+
+.shion-root .intro-screen .intro-info .info{
+  display:none!important;
+  position:relative!important;
+  z-index:2!important;
+  text-align:left!important;
+}
+
+.shion-root #intro-shion:checked~.app .intro-screen .intro-info .info-shion{
+  display:block!important;
+}
+
+.shion-root .intro-screen .intro-info h3{
+  margin:0 0 26px!important;
+  font-family:"Marcellus SC",Georgia,serif!important;
+  font-size:38px!important;
+  line-height:1.08!important;
+  letter-spacing:.18em!important;
+  text-transform:uppercase!important;
+  color:rgba(238,246,248,.95)!important;
+  text-shadow:0 0 10px rgba(169,192,200,.45),0 0 24px rgba(59,85,94,.36)!important;
+}
+
+.shion-root .intro-screen .intro-info p{
+  margin:0!important;
+  font-family:"Spectral",Georgia,serif!important;
+  font-size:31px!important;
+  line-height:1.5!important;
+  letter-spacing:.025em!important;
+  color:rgba(238,246,248,.82)!important;
+  text-shadow:0 2px 12px rgba(0,0,0,.76)!important;
+}
+
+.shion-root .intro-screen .intro-close{
+  display:grid!important;
+  place-items:center!important;
+  position:absolute!important;
+  right:28px!important;
+  top:22px!important;
+  width:46px!important;
+  height:46px!important;
+  z-index:5!important;
+  margin:0!important;
+  padding:0!important;
+  border:1px solid rgba(216,160,255,.26)!important;
+  border-radius:50%!important;
+  background:rgba(3,6,7,.62)!important;
+  color:rgba(226,242,246,.82)!important;
+  font-size:30px!important;
+  line-height:1!important;
+  cursor:pointer!important;
+  pointer-events:auto!important;
+  text-shadow:0 0 10px rgba(169,192,200,.38)!important;
+  box-shadow:0 0 18px rgba(140,58,210,.16)!important;
+}
+
+.shion-root .intro-screen .intro-close:hover{
+  color:#fff!important;
+  border-color:rgba(216,160,255,.54)!important;
+  box-shadow:0 0 26px rgba(140,58,210,.28)!important;
+}
