@@ -18,6 +18,25 @@
   cursor:pointer!important;
 }
 
+/* Toggle sullo stesso testo: chiuso = apre, aperto = ripremi SHION IBURI e chiude. */
+.shion-root .intro-screen .title .intro-open-shion{
+  display:inline-block!important;
+}
+
+.shion-root .intro-screen .title .intro-close-shion{
+  display:none!important;
+}
+
+.shion-root #intro-shion:checked~.app .intro-screen .title .intro-open-shion{
+  display:none!important;
+}
+
+.shion-root #intro-shion:checked~.app .intro-screen .title .intro-close-shion{
+  display:inline-block!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+}
+
 /* Per ora lasciamo cliccabile solo SHION IBURI: gli altri testi restano estetici. */
 .shion-root .intro-screen .subtitle,
 .shion-root .intro-screen .subtitle .intro-toggle,
@@ -32,7 +51,7 @@
   display:block!important;
   position:absolute!important;
   left:50%!important;
-  top:690px!important;
+  top:800px!important;
   right:auto!important;
   bottom:auto!important;
   width:1320px!important;
