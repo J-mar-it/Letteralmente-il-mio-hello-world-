@@ -54,13 +54,15 @@
       border:0;
       background:#030607;
     }
-    .preview-note{
+    .preview-note,
+    .preview-error{
       width:min(920px,100%);
       color:rgba(233,238,242,.62);
       font-size:13px;
       text-align:center;
       line-height:1.45;
     }
+    .preview-error{display:none;color:#ff9aa8}
     code{color:#d8adff}
   </style>
 </head>
@@ -72,16 +74,39 @@
   </header>
 
   <main class="frame-shell">
-    <iframe
-      title="Shion clean preview"
-      src="https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@954810d80a81cf4bb51be18355594b355d65940c/shion-clean.html?v=land-test-1"
-      loading="eager"
-      referrerpolicy="no-referrer">
-    </iframe>
+    <iframe id="shion-frame" title="Shion clean preview" loading="eager" referrerpolicy="no-referrer"></iframe>
   </main>
 
   <p class="preview-note">
     Se questa preview funziona ma la land no, il problema è probabilmente causato dal contenitore/CSS della land.
   </p>
+  <p id="preview-error" class="preview-error">
+    Errore nel caricamento della preview. Ricarica la pagina o controlla la console del browser.
+  </p>
+
+  <script>
+    const commit = '954810d80a81cf4bb51be18355594b355d65940c';
+    const baseUrl = `https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@${commit}/`;
+    const htmlUrl = `${baseUrl}shion-clean.html?v=land-test-render-1`;
+    const cssUrl = `${baseUrl}shion-clean.css?v=land-test-render-1`;
+    const frame = document.getElementById('shion-frame');
+    const errorBox = document.getElementById('preview-error');
+
+    fetch(htmlUrl)
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.text();
+      })
+      .then(html => {
+        const renderedHtml = html
+          .replace('href="shion-clean.css"', `href="${cssUrl}"`)
+          .replace('</head>', `<base href="${baseUrl}"></head>`);
+        frame.srcdoc = renderedHtml;
+      })
+      .catch(error => {
+        console.error('Shion preview load failed:', error);
+        errorBox.style.display = 'block';
+      });
+  </script>
 </body>
 </html>
