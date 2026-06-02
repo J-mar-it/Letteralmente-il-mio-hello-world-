@@ -7,34 +7,77 @@
 
 .shion-root .intro-screen .title{
   position:relative!important;
-  z-index:960!important;
+  z-index:10060!important;
   pointer-events:auto!important;
+  transform:none!important;
+  translate:0 0!important;
 }
 
-.shion-root .intro-screen .title .intro-toggle,
-.shion-root .intro-screen .title .intro-link,
-.shion-root .intro-screen .title label{
+.shion-root .intro-screen .title .intro-toggle{
+  display:inline-grid!important;
+  grid-template-areas:"stack"!important;
+  align-items:baseline!important;
+  justify-items:center!important;
+  line-height:1!important;
+  vertical-align:baseline!important;
   pointer-events:auto!important;
   cursor:pointer!important;
 }
 
-/* Toggle sullo stesso testo: chiuso = apre, aperto = ripremi SHION IBURI e chiude. */
-.shion-root .intro-screen .title .intro-open-shion{
+.shion-root .intro-screen .title .intro-link,
+.shion-root .intro-screen .title label{
+  grid-area:stack!important;
   display:inline-block!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+  transform:none!important;
+  translate:0 0!important;
+  top:auto!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+  line-height:1!important;
+  vertical-align:baseline!important;
+}
+
+/* Toggle sullo stesso spazio visivo: il testo resta fermo, cambia solo quale label riceve il click. */
+.shion-root .intro-screen .title .intro-open-shion{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
 }
 
 .shion-root .intro-screen .title .intro-close-shion{
-  display:none!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
 }
 
 .shion-root #intro-shion:checked~.app .intro-screen .title .intro-open-shion{
-  display:none!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
 }
 
 .shion-root #intro-shion:checked~.app .intro-screen .title .intro-close-shion{
-  display:inline-block!important;
+  opacity:1!important;
+  visibility:visible!important;
   pointer-events:auto!important;
   cursor:pointer!important;
+  transform:none!important;
+  translate:0 0!important;
+  line-height:1!important;
+  vertical-align:baseline!important;
+}
+
+/* Blocca il micro-spostamento ereditato dalla base quando il radio intro-shion e' checked. */
+.shion-root #intro-shion:checked~.app .intro-screen .title label[for="intro-shion"],
+.shion-root #intro-shion:checked~.app .intro-screen .title label[for="intro-none"],
+.shion-root #intro-shion:checked~.app .intro-screen .title .intro-link{
+  transform:none!important;
+  translate:0 0!important;
+  top:auto!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
 }
 
 /* Per ora lasciamo cliccabile solo SHION IBURI: gli altri testi restano estetici. */
@@ -46,12 +89,21 @@
   cursor:default!important;
 }
 
+/* Quando l'overlay e' aperto, warning e contenuto sottostante restano sotto al pannello. */
+.shion-root #intro-shion:checked~.app .intro-screen .warning,
+.shion-root #intro-shion:checked~.app .intro-screen p.warning,
+.shion-root #intro-shion:checked~.app .intro-screen .quote,
+.shion-root #intro-shion:checked~.app .intro-screen .medicine-btn,
+.shion-root #intro-shion:checked~.app .intro-screen .divider{
+  z-index:120!important;
+}
+
 /* Overlay assoluto: non entra nel flusso, quindi non sposta quote, bottone o warning. */
 .shion-root .intro-screen .intro-info{
   display:block!important;
   position:absolute!important;
   left:50%!important;
-  top:800px!important;
+  top:890px!important;
   right:auto!important;
   bottom:auto!important;
   width:1320px!important;
@@ -70,7 +122,7 @@
   overflow-x:hidden!important;
   overflow-y:auto!important;
   scrollbar-width:thin!important;
-  z-index:900!important;
+  z-index:10020!important;
   border:1px solid rgba(216,160,255,.38)!important;
   border-radius:28px!important;
   background:
@@ -144,7 +196,7 @@
   top:22px!important;
   width:46px!important;
   height:46px!important;
-  z-index:5!important;
+  z-index:10040!important;
   margin:0!important;
   padding:0!important;
   border:1px solid rgba(216,160,255,.26)!important;
