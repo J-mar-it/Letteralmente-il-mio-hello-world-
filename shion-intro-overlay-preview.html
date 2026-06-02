@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shion Intro Overlay Preview</title>
+  <style>
+    html,body{margin:0;padding:0;min-height:100%;background:#050407;overflow-x:hidden;}
+  </style>
+</head>
+<body>
+  <div id="mount"></div>
+  <script>
+    const repo = 'J-mar-it/Letteralmente-il-mio-hello-world-';
+    const basePreview = `https://cdn.jsdelivr.net/gh/${repo}@main/shion-land-test-preview.html?v=base-for-overlay-1`;
+    const overlayCss = `https://cdn.jsdelivr.net/gh/${repo}@main/shion-intro-overlay-test.css?v=1`;
+    const mount = document.getElementById('mount');
+
+    fetch(basePreview)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.text();
+      })
+      .then(html => {
+        const body = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] || html;
+        mount.innerHTML = body + `<style>@import url("${overlayCss}");</style>`;
+      })
+      .catch(err => {
+        console.error(err);
+        mount.innerHTML = '<p style="color:#ffb0be;font-family:Georgia,serif;text-align:center;margin-top:40px;">Errore nel caricamento della preview overlay.</p>';
+      });
+  </script>
+</body>
+</html>
