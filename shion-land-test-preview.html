@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shion Land Test Preview</title>
+  <title>Shion Land-Ready Test Preview</title>
   <style>
     *{box-sizing:border-box}
     body{
@@ -68,13 +68,13 @@
 </head>
 <body>
   <header class="preview-header">
-    <h1>Shion Land Test Preview</h1>
+    <h1>Shion Land-Ready Test Preview</h1>
     <p>Preview pulita fuori dalla land, con viewport di confronto <code>730×820</code>.</p>
-    <p>Il contenuto carica <code>shion-clean.html</code> dal commit <code>954810d80a81cf4bb51be18355594b355d65940c</code>.</p>
+    <p>Usa la versione land-ready con <code>shion-land-v83-direct-land.css @aeb5b719...</code>.</p>
   </header>
 
   <main class="frame-shell">
-    <iframe id="shion-frame" title="Shion clean preview" loading="eager" referrerpolicy="no-referrer"></iframe>
+    <iframe id="shion-frame" title="Shion land-ready preview" loading="eager" referrerpolicy="no-referrer"></iframe>
   </main>
 
   <p class="preview-note">
@@ -85,12 +85,29 @@
   </p>
 
   <script>
-    const commit = '954810d80a81cf4bb51be18355594b355d65940c';
-    const baseUrl = `https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@${commit}/`;
-    const htmlUrl = `${baseUrl}shion-clean.html?v=land-test-render-1`;
-    const cssUrl = `${baseUrl}shion-clean.css?v=land-test-render-1`;
+    const htmlCommit = '954810d80a81cf4bb51be18355594b355d65940c';
+    const cssCommit = 'aeb5b7194c16c639591315529677325be6c5921e';
+    const repo = 'J-mar-it/Letteralmente-il-mio-hello-world-';
+    const htmlUrl = `https://cdn.jsdelivr.net/gh/${repo}@${htmlCommit}/shion-official-preview.html?v=land-ready-preview-2`;
+    const cssUrl = `https://cdn.jsdelivr.net/gh/${repo}@${cssCommit}/shion-land-v83-direct-land.css?v=1`;
     const frame = document.getElementById('shion-frame');
     const errorBox = document.getElementById('preview-error');
+
+    function toLandReadySource(html){
+      return html
+        .replace(/<link rel="stylesheet" href="[^"]*shion-land-v83-direct-land\.css[^"]*">/, `<style>@import url("${cssUrl}");</style>`)
+        .replace(/name="side-tabs" id="left-none" checked/g, 'name="left-tabs" id="left-none" checked')
+        .replace(/name="side-tabs" id="left-venom"/g, 'name="left-tabs" id="left-venom"')
+        .replace(/name="side-tabs" id="left-pulse"/g, 'name="left-tabs" id="left-pulse"')
+        .replace(/name="side-tabs" id="left-mark"/g, 'name="left-tabs" id="left-mark"')
+        .replace(/name="side-tabs" id="right-none" checked/g, 'name="right-tabs" id="right-none" checked')
+        .replace(/name="side-tabs" id="right-vapor"/g, 'name="right-tabs" id="right-vapor"')
+        .replace(/name="side-tabs" id="right-keepsake"/g, 'name="right-tabs" id="right-keepsake"')
+        .replace(/name="side-tabs" id="right-need"/g, 'name="right-tabs" id="right-need"')
+        .replace('<div class="tab-panel vapor-panel"><h3>Property</h3><p>Ciò che considera suo<br>non sempre porta un nome.<br><br>A volte è un oggetto.<br>A volte un luogo.<br>A volte una persona<br>che non lo sa ancora.</p></div>', '<div class="tab-panel vapor-panel"><h3>Property</h3><p>Ciò che considera suo non sempre<br> porta un nome.<br>A volte è un oggetto.<br>A volte un luogo.<br>A volte una persona<br>che non lo sa ancora.</p></div>')
+        .replace('<section class="screen stage-screen easy-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="easy-potion"></div><div class="easy-text"><p><span class="easy-gradient-text">Tornerai.. Non puoi farne a meno ♡</span></p></div><label for="flow-blackout" class="action-btn center-btn">bevi</label></div></section>', '<section class="screen stage-screen easy-screen"><div class="stage"><div class="room-bg"></div><div class="veil"></div><div class="easy-potion"></div><div class="easy-text"><p><span class="easy-gradient-text"><span class="easy-glow-word">Tornerai..&nbsp;</span><span class="easy-glow-word">Non&nbsp;</span><span class="easy-glow-word">puoi&nbsp;</span><span class="easy-glow-word">farne&nbsp;</span><span class="easy-glow-word">a&nbsp;</span><span class="easy-glow-word">meno&nbsp;</span><span class="easy-glow-word">♡</span></span></p></div><label for="flow-blackout" class="action-btn center-btn">bevi</label></div></section>')
+        .replace('<section class="screen stage-screen blackout-screen"><div class="stage blackout-stage"><div class="blackout-face"></div><div class="blackout-layer"></div><div class="blackout-vision"></div><div class="blackout-text"><p>Mi appartieni. Vivo o morto. Non mi importa.</p></div><label for="flow-intro" class="action-btn center-btn">risvegliati</label></div></section>', '<section class="screen stage-screen blackout-screen"><div class="stage blackout-stage"><div class="blackout-face"></div><div class="blackout-layer"></div><div class="blackout-vision"></div><div class="blackout-text"><p>\n  <span class="blackout-line line-possess">Mi appartieni~</span>\n  <span class="blackout-line line-dead">Vivo o morto..</span>\n  <span class="blackout-line line-cold">Non mi importa.</span>\n</p></div><label for="flow-intro" class="action-btn center-btn">risvegliati</label></div></section>');
+    }
 
     fetch(htmlUrl)
       .then(response => {
@@ -98,13 +115,10 @@
         return response.text();
       })
       .then(html => {
-        const renderedHtml = html
-          .replace('href="shion-clean.css"', `href="${cssUrl}"`)
-          .replace('</head>', `<base href="${baseUrl}"></head>`);
-        frame.srcdoc = renderedHtml;
+        frame.srcdoc = toLandReadySource(html);
       })
       .catch(error => {
-        console.error('Shion preview load failed:', error);
+        console.error('Shion land-ready preview load failed:', error);
         errorBox.style.display = 'block';
       });
   </script>
