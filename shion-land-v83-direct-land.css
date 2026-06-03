@@ -251,9 +251,9 @@
   margin:0!important;
   padding:0!important;
   border:0!important;
-  outline:0!important;
-  background:rgba(0,0,0,.001)!important;
-  opacity:.001!important;
+  outline:3px solid rgba(255,0,0,.92)!important;
+  background:rgba(255,0,0,.16)!important;
+  opacity:1!important;
   visibility:visible!important;
   pointer-events:auto!important;
   cursor:pointer!important;
