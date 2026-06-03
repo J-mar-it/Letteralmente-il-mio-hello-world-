@@ -219,9 +219,9 @@
 
 /* ==========================================================
    SCHERMATA 1 / OVERLAY SHION IBURI RIATTIVATO
-   Usa i radio gia' presenti nell'HTML: SHION IBURI apre il
-   pannello, la X interna torna a intro-none. L'overlay e'
-   assoluto e non sposta quote, bottone Medicina o warning.
+   SHION IBURI usa una checkbox dedicata per aprire/chiudere
+   senza doppio label radio. Gli altri pannelli intro restano
+   sui radio esistenti.
    ========================================================== */
 
 .shion-root .intro-screen .title,
@@ -248,60 +248,27 @@
   cursor:pointer!important;
 }
 
-.shion-root .intro-screen .title .intro-open-shion{
+.shion-root .intro-screen .title .intro-shion-toggle-label{
   position:relative!important;
   display:inline-block!important;
   opacity:1!important;
   visibility:visible!important;
   pointer-events:auto!important;
   cursor:pointer!important;
-  z-index:2!important;
+  transform:none!important;
+  translate:0 0!important;
   top:auto!important;
   margin:0!important;
   line-height:1!important;
   vertical-align:baseline!important;
-  transform:none!important;
-  translate:0 0!important;
 }
 
-.shion-root .intro-screen .title .intro-close-shion{
-  position:absolute!important;
-  inset:0!important;
-  display:block!important;
-  width:100%!important;
-  height:100%!important;
-  opacity:0!important;
-  visibility:hidden!important;
-  pointer-events:none!important;
-  z-index:5!important;
-  color:transparent!important;
-  -webkit-text-fill-color:transparent!important;
-  text-shadow:none!important;
-  top:auto!important;
-  margin:0!important;
-  line-height:1!important;
-  transform:none!important;
-  translate:0 0!important;
-  cursor:pointer!important;
-}
-
-.shion-root #intro-shion:checked~.app .intro-screen .title .intro-open-shion{
-  opacity:1!important;
-  visibility:visible!important;
-  pointer-events:none!important;
-  transform:none!important;
-  translate:0 0!important;
-}
-
-.shion-root #intro-shion:checked~.app .intro-screen .title .intro-close-shion{
+.shion-root #intro-shion-toggle:checked~.app .intro-screen .title .intro-shion-toggle-label{
   opacity:1!important;
   visibility:visible!important;
   pointer-events:auto!important;
-  cursor:pointer!important;
-  color:transparent!important;
-  -webkit-text-fill-color:transparent!important;
-  text-shadow:none!important;
-  background:rgba(0,0,0,.001)!important;
+  transform:none!important;
+  translate:0 0!important;
 }
 
 .shion-root .intro-screen .intro-info{
@@ -354,7 +321,7 @@
   pointer-events:none!important;
 }
 
-.shion-root #intro-shion:checked~.app .intro-screen .intro-info,
+.shion-root #intro-shion-toggle:checked~.app .intro-screen .intro-info,
 .shion-root #intro-rank:checked~.app .intro-screen .intro-info,
 .shion-root #intro-venenista:checked~.app .intro-screen .intro-info,
 .shion-root #intro-clan:checked~.app .intro-screen .intro-info{
@@ -371,7 +338,7 @@
   text-align:left!important;
 }
 
-.shion-root #intro-shion:checked~.app .intro-screen .intro-info .info-shion,
+.shion-root #intro-shion-toggle:checked~.app .intro-screen .intro-info .info-shion,
 .shion-root #intro-rank:checked~.app .intro-screen .intro-info .info-rank,
 .shion-root #intro-venenista:checked~.app .intro-screen .intro-info .info-venenista,
 .shion-root #intro-clan:checked~.app .intro-screen .intro-info .info-clan{
@@ -428,15 +395,15 @@
   box-shadow:0 0 30px rgba(140,58,210,.32)!important;
 }
 
-.shion-root #intro-shion:checked~.app .intro-screen .warning,
+.shion-root #intro-shion-toggle:checked~.app .intro-screen .warning,
 .shion-root #intro-rank:checked~.app .intro-screen .warning,
 .shion-root #intro-venenista:checked~.app .intro-screen .warning,
 .shion-root #intro-clan:checked~.app .intro-screen .warning,
-.shion-root #intro-shion:checked~.app .intro-screen .quote,
+.shion-root #intro-shion-toggle:checked~.app .intro-screen .quote,
 .shion-root #intro-rank:checked~.app .intro-screen .quote,
 .shion-root #intro-venenista:checked~.app .intro-screen .quote,
 .shion-root #intro-clan:checked~.app .intro-screen .quote,
-.shion-root #intro-shion:checked~.app .intro-screen .medicine-btn,
+.shion-root #intro-shion-toggle:checked~.app .intro-screen .medicine-btn,
 .shion-root #intro-rank:checked~.app .intro-screen .medicine-btn,
 .shion-root #intro-venenista:checked~.app .intro-screen .medicine-btn,
 .shion-root #intro-clan:checked~.app .intro-screen .medicine-btn{
