@@ -261,6 +261,22 @@
   z-index:13000!important;
 }
 
+.shion-root .intro-screen .title{
+  outline:4px solid rgba(0,128,255,.95)!important;
+  background:rgba(0,128,255,.14)!important;
+}
+
+.shion-root .intro-screen .title .intro-shion-toggle-label{
+  outline:3px solid rgba(0,255,90,.95)!important;
+  background:rgba(0,255,90,.14)!important;
+}
+
+.shion-root .intro-screen .title .intro-open-shion,
+.shion-root .intro-screen .title .intro-close-shion{
+  outline:3px solid rgba(255,170,0,.95)!important;
+  background:rgba(255,170,0,.16)!important;
+}
+
 .shion-root .intro-screen .title .intro-toggle{
   position:relative!important;
   display:inline-block!important;
