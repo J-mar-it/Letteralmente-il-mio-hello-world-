@@ -240,21 +240,22 @@
 }
 
 .shion-root .intro-screen .title .intro-toggle{
-  display:inline-grid!important;
-  grid-template-areas:"stack"!important;
-  align-items:baseline!important;
-  justify-items:center!important;
+  position:relative!important;
+  display:inline-block!important;
   line-height:1!important;
   vertical-align:baseline!important;
   pointer-events:auto!important;
   cursor:pointer!important;
 }
 
-.shion-root .intro-screen .title .intro-open-shion,
-.shion-root .intro-screen .title .intro-close-shion{
-  grid-area:stack!important;
-  display:inline-block!important;
+.shion-root .intro-screen .title .intro-open-shion{
   position:relative!important;
+  display:inline-block!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+  z-index:2!important;
   top:auto!important;
   margin:0!important;
   line-height:1!important;
@@ -263,30 +264,40 @@
   translate:0 0!important;
 }
 
-.shion-root .intro-screen .title .intro-open-shion{
-  opacity:1!important;
-  visibility:visible!important;
-  pointer-events:auto!important;
-  cursor:pointer!important;
-}
-
 .shion-root .intro-screen .title .intro-close-shion{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
   opacity:0!important;
   visibility:hidden!important;
   pointer-events:none!important;
+  z-index:5!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:none!important;
+  top:auto!important;
+  margin:0!important;
+  line-height:1!important;
+  transform:none!important;
+  translate:0 0!important;
   cursor:pointer!important;
 }
 
 .shion-root #intro-shion:checked~.app .intro-screen .title .intro-open-shion{
-  opacity:0!important;
-  visibility:hidden!important;
+  opacity:1!important;
+  visibility:visible!important;
   pointer-events:none!important;
+  transform:none!important;
+  translate:0 0!important;
 }
 
 .shion-root #intro-shion:checked~.app .intro-screen .title .intro-close-shion{
-  opacity:1!important;
+  opacity:0!important;
   visibility:visible!important;
   pointer-events:auto!important;
+  cursor:pointer!important;
 }
 
 .shion-root .intro-screen .intro-info{
