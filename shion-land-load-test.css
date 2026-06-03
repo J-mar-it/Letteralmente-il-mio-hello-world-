@@ -1,0 +1,5 @@
+/* Minimal external CSS load test for Shion land embedding. */
+.shion-root{
+  outline:8px solid red!important;
+  background:rgba(120,0,0,.20)!important;
+}
