@@ -240,25 +240,7 @@
 }
 
 .shion-root #intro-shion-toggle{
-  appearance:none!important;
-  -webkit-appearance:none!important;
-  display:block!important;
-  position:absolute!important;
-  left:50%!important;
-  top:195px!important;
-  width:430px!important;
-  height:78px!important;
-  margin:0!important;
-  padding:0!important;
-  border:0!important;
-  outline:0!important;
-  background:rgba(0,0,0,.001)!important;
-  opacity:.001!important;
-  visibility:visible!important;
-  pointer-events:auto!important;
-  cursor:pointer!important;
-  transform:translateX(-50%)!important;
-  z-index:13000!important;
+  display:none!important;
 }
 
 .shion-root .intro-screen .title .intro-toggle{
@@ -275,7 +257,7 @@
   display:inline-block!important;
   opacity:1!important;
   visibility:visible!important;
-  pointer-events:none!important;
+  pointer-events:auto!important;
   cursor:pointer!important;
   transform:none!important;
   translate:0 0!important;
@@ -288,7 +270,7 @@
 .shion-root #intro-shion-toggle:checked~.app .intro-screen .title .intro-shion-toggle-label{
   opacity:1!important;
   visibility:visible!important;
-  pointer-events:none!important;
+  pointer-events:auto!important;
   transform:none!important;
   translate:0 0!important;
 }
@@ -389,8 +371,8 @@
 }
 
 .shion-root .intro-screen .intro-close{
-  display:none!important;
-  visibility:hidden!important;
+  display:grid!important;
+  visibility:visible!important;
   place-items:center!important;
   position:absolute!important;
   right:24px!important;
@@ -407,7 +389,7 @@
   font-size:30px!important;
   line-height:1!important;
   cursor:pointer!important;
-  pointer-events:none!important;
+  pointer-events:auto!important;
   text-shadow:0 0 10px rgba(169,192,200,.42)!important;
   box-shadow:0 0 22px rgba(140,58,210,.22)!important;
 }
