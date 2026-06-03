@@ -286,18 +286,21 @@
 }
 
 .shion-root #intro-shion:checked~.app .intro-screen .title .intro-open-shion{
-  opacity:1!important;
-  visibility:visible!important;
+  opacity:0!important;
+  visibility:hidden!important;
   pointer-events:none!important;
   transform:none!important;
   translate:0 0!important;
 }
 
 .shion-root #intro-shion:checked~.app .intro-screen .title .intro-close-shion{
-  opacity:0!important;
+  opacity:1!important;
   visibility:visible!important;
   pointer-events:auto!important;
   cursor:pointer!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  text-shadow:inherit!important;
 }
 
 .shion-root .intro-screen .intro-info{
