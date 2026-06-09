@@ -694,12 +694,6 @@
    con intro-shion-toggle.
    ========================================================== */
 
-@property --shion-spoiler-frame-angle{
-  syntax:"<angle>";
-  inherits:false;
-  initial-value:0deg;
-}
-
 .shion-root .spoiler-state{
   display:none!important;
 }
@@ -757,14 +751,19 @@
   inset:0!important;
   border-radius:18px!important;
   padding:1px!important;
-  background:conic-gradient(
-    from var(--shion-spoiler-frame-angle),
-    rgba(214,142,255,.95),
-    rgba(59,185,190,.82),
-    rgba(216,173,255,.92),
-    rgba(59,185,190,.82),
-    rgba(214,142,255,.95)
+  background:linear-gradient(
+    90deg,
+    rgba(214,142,255,.95) 0%,
+    rgba(59,185,190,.82) 18%,
+    rgba(216,173,255,.92) 36%,
+    rgba(59,185,190,.82) 54%,
+    rgba(214,142,255,.95) 72%,
+    rgba(59,185,190,.82) 90%,
+    rgba(214,142,255,.95) 100%
   )!important;
+  background-size:260% 100%!important;
+  background-position:0% 50%!important;
+  background-repeat:repeat!important;
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0)!important;
@@ -773,7 +772,7 @@
   pointer-events:none!important;
   z-index:2!important;
   transform:none!important;
-  animation:shionSpoilerFrameColorFlow 6.5s linear infinite!important;
+  animation:shionSpoilerFrameColorFlow 7.2s linear infinite!important;
 }
 
 .shion-root .spoiler-box:hover{
@@ -794,14 +793,9 @@
   opacity:0!important;
 }
 
-@keyframes shionSpoilerBorderFlow{
-  0%{background-position:0 0,0% 50%;}
-  100%{background-position:0 0,300% 50%;}
-}
-
 @keyframes shionSpoilerFrameColorFlow{
-  0%{--shion-spoiler-frame-angle:0deg;}
-  100%{--shion-spoiler-frame-angle:360deg;}
+  0%{background-position:0% 50%;}
+  100%{background-position:100% 50%;}
 }
 
 /* PLAYER / CLICK FIX */
