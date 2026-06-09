@@ -750,25 +750,12 @@
   position:absolute!important;
   inset:0!important;
   border-radius:18px!important;
-  padding:1px!important;
-  background:linear-gradient(
-    90deg,
-    rgba(214,142,255,.95) 0%,
-    rgba(59,185,190,.82) 18%,
-    rgba(216,173,255,.92) 36%,
-    rgba(59,185,190,.82) 54%,
-    rgba(214,142,255,.95) 72%,
-    rgba(59,185,190,.82) 90%,
-    rgba(214,142,255,.95) 100%
-  )!important;
-  background-size:260% 100%!important;
-  background-position:0% 50%!important;
-  background-repeat:repeat!important;
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0)!important;
-  -webkit-mask-composite:xor!important;
-  mask-composite:exclude!important;
+  padding:0!important;
+  background:
+    linear-gradient(90deg,rgba(214,142,255,.95),rgba(59,185,190,.82),rgba(216,173,255,.92),rgba(59,185,190,.82),rgba(214,142,255,.95)) left top / 220px 1px repeat-x,
+    linear-gradient(90deg,rgba(214,142,255,.95),rgba(59,185,190,.82),rgba(216,173,255,.92),rgba(59,185,190,.82),rgba(214,142,255,.95)) left bottom / 220px 1px repeat-x,
+    linear-gradient(180deg,rgba(214,142,255,.95),rgba(59,185,190,.82),rgba(216,173,255,.92),rgba(59,185,190,.82),rgba(214,142,255,.95)) left top / 1px 220px repeat-y,
+    linear-gradient(180deg,rgba(214,142,255,.95),rgba(59,185,190,.82),rgba(216,173,255,.92),rgba(59,185,190,.82),rgba(214,142,255,.95)) right top / 1px 220px repeat-y!important;
   pointer-events:none!important;
   z-index:2!important;
   transform:none!important;
@@ -794,8 +781,8 @@
 }
 
 @keyframes shionSpoilerFrameColorFlow{
-  0%{background-position:0% 50%;}
-  100%{background-position:100% 50%;}
+  0%{background-position:0 0,0 100%,0 0,100% 0;}
+  100%{background-position:220px 0,220px 100%,0 220px,100% 220px;}
 }
 
 /* PLAYER / CLICK FIX */
