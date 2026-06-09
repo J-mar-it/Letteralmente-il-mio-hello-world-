@@ -694,6 +694,12 @@
    con intro-shion-toggle.
    ========================================================== */
 
+@property --shion-spoiler-frame-angle{
+  syntax:"<angle>";
+  inherits:false;
+  initial-value:0deg;
+}
+
 .shion-root .spoiler-state{
   display:none!important;
 }
@@ -752,7 +758,7 @@
   border-radius:18px!important;
   padding:1px!important;
   background:conic-gradient(
-    from 0deg,
+    from var(--shion-spoiler-frame-angle),
     rgba(214,142,255,.95),
     rgba(59,185,190,.82),
     rgba(216,173,255,.92),
@@ -766,7 +772,8 @@
   mask-composite:exclude!important;
   pointer-events:none!important;
   z-index:2!important;
-  animation:shionSpoilerFrameSpin 6.5s linear infinite!important;
+  transform:none!important;
+  animation:shionSpoilerFrameColorFlow 6.5s linear infinite!important;
 }
 
 .shion-root .spoiler-box:hover{
@@ -792,9 +799,9 @@
   100%{background-position:0 0,300% 50%;}
 }
 
-@keyframes shionSpoilerFrameSpin{
-  0%{transform:rotate(0deg);}
-  100%{transform:rotate(360deg);}
+@keyframes shionSpoilerFrameColorFlow{
+  0%{--shion-spoiler-frame-angle:0deg;}
+  100%{--shion-spoiler-frame-angle:360deg;}
 }
 
 /* PLAYER / CLICK FIX */
