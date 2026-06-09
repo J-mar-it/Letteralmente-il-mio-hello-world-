@@ -708,27 +708,20 @@
   position:relative!important;
   margin:14px 0 0!important;
   padding:24px 28px!important;
-  border:1px solid transparent!important;
+  border:0!important;
   border-radius:18px!important;
   cursor:pointer!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
   color:transparent!important;
   -webkit-text-fill-color:transparent!important;
   text-shadow:none!important;
   line-height:1.48!important;
-  background:
-    linear-gradient(180deg,rgba(3,6,7,.96),rgba(8,14,16,.98)) padding-box,
-    linear-gradient(120deg,
-      rgba(214,142,255,.90),
-      rgba(59,185,190,.78),
-      rgba(214,142,255,.90),
-      rgba(59,185,190,.78)
-    ) border-box!important;
-  background-size:100% 100%,300% 100%!important;
+  background:linear-gradient(180deg,rgba(3,6,7,.96),rgba(8,14,16,.98)) padding-box!important;
   box-shadow:
     0 0 20px rgba(188,90,255,.18),
     0 0 28px rgba(59,185,190,.10),
     inset 0 0 24px rgba(255,255,255,.025)!important;
-  animation:shionSpoilerBorderFlow 5.8s linear infinite!important;
   transition:
     color .25s ease,
     -webkit-text-fill-color .25s ease,
@@ -752,6 +745,30 @@
   transition:opacity .25s ease!important;
 }
 
+.shion-root .spoiler-box::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  border-radius:18px!important;
+  padding:1px!important;
+  background:conic-gradient(
+    from 0deg,
+    rgba(214,142,255,.95),
+    rgba(59,185,190,.82),
+    rgba(216,173,255,.92),
+    rgba(59,185,190,.82),
+    rgba(214,142,255,.95)
+  )!important;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0)!important;
+  -webkit-mask-composite:xor!important;
+  mask-composite:exclude!important;
+  pointer-events:none!important;
+  z-index:2!important;
+  animation:shionSpoilerFrameSpin 6.5s linear infinite!important;
+}
+
 .shion-root .spoiler-box:hover{
   box-shadow:
     0 0 26px rgba(188,90,255,.28),
@@ -763,14 +780,7 @@
   color:rgba(238,246,248,.84)!important;
   -webkit-text-fill-color:rgba(238,246,248,.84)!important;
   text-shadow:0 2px 12px rgba(0,0,0,.76)!important;
-  background:
-    linear-gradient(180deg,rgba(3,6,7,.72),rgba(8,14,16,.82)) padding-box,
-    linear-gradient(120deg,
-      rgba(214,142,255,.90),
-      rgba(59,185,190,.78),
-      rgba(214,142,255,.90),
-      rgba(59,185,190,.78)
-    ) border-box!important;
+  background:linear-gradient(180deg,rgba(3,6,7,.72),rgba(8,14,16,.82)) padding-box!important;
 }
 
 .shion-root .spoiler-state:checked + .spoiler-box::before{
@@ -780,6 +790,11 @@
 @keyframes shionSpoilerBorderFlow{
   0%{background-position:0 0,0% 50%;}
   100%{background-position:0 0,300% 50%;}
+}
+
+@keyframes shionSpoilerFrameSpin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
 }
 
 /* PLAYER / CLICK FIX */
