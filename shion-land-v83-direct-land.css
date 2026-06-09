@@ -707,16 +707,23 @@
   display:block!important;
   position:relative!important;
   margin:14px 0 0!important;
-  padding:24px 28px!important;
+  padding:30px 34px!important;
   border:0!important;
   border-radius:18px!important;
   cursor:pointer!important;
   overflow:hidden!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
   isolation:isolate!important;
+  min-height:360px!important;
+  max-height:560px!important;
+  font-family:"Spectral",Georgia,serif!important;
+  font-size:28px!important;
+  line-height:1.44!important;
+  letter-spacing:.025em!important;
   color:transparent!important;
   -webkit-text-fill-color:transparent!important;
   text-shadow:none!important;
-  line-height:1.48!important;
   background:linear-gradient(180deg,rgba(3,6,7,.96),rgba(8,14,16,.98)) padding-box!important;
   box-shadow:
     0 0 20px rgba(188,90,255,.18),
