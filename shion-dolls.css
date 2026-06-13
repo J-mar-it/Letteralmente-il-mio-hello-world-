@@ -34,15 +34,15 @@
 .dolls-audio-frame{
   position:absolute;
   z-index:5;
-  top:16px;
+  top:15px;
   left:50%;
-  width:252px;
-  height:34px;
-  padding:4px 7px;
+  width:210px;
+  height:28px;
+  padding:3px 6px;
   transform:translateX(-50%);
   background:linear-gradient(180deg,rgba(3,6,7,.48),rgba(1,3,4,.62));
   border:1px solid rgba(169,217,213,.20);
-  box-shadow:0 0 14px rgba(0,0,0,.34),inset 0 0 10px rgba(169,217,213,.025);
+  box-shadow:0 0 12px rgba(0,0,0,.32),inset 0 0 8px rgba(169,217,213,.025);
 }
 .dolls-audio-frame::before{
   content:"";
@@ -51,7 +51,7 @@
   right:14px;
   bottom:-5px;
   height:1px;
-  background:linear-gradient(90deg,transparent,rgba(169,217,213,.36),transparent);
+  background:linear-gradient(90deg,transparent,rgba(169,217,213,.32),transparent);
   pointer-events:none;
 }
 .dolls-audio{
@@ -59,7 +59,7 @@
   position:relative;
   z-index:2;
   width:100%;
-  height:25px;
+  height:21px;
   opacity:.82;
   filter:saturate(.72) brightness(.82) sepia(.14) hue-rotate(132deg);
 }
