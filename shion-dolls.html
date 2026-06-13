@@ -19,17 +19,6 @@
 <div class="shion-dolls-root">
   <div class="shion-dolls-bg"></div>
 
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-1">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-2">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-3">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-4">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-5">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-6">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-7">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-8">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-9">
-  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-10">
-
   <div class="dolls-audio-frame">
     <audio class="dolls-audio" controls preload="none" controlsList="nodownload">
       <source src="URL_MUSICA_SHION" type="audio/mpeg">
@@ -146,95 +135,115 @@
 
   <aside class="dolls-right-panel">
     <div class="dolls-list">
-      <label class="dolls-card dolls-apex" for="doll-detail-1">
-        <div class="dolls-portrait" style="background-image:url('URL_PG_1');"></div>
-        <div class="dolls-card-text">
-          <strong>Nome PG</strong>
-          <span class="dolls-status">bambola apice</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-1" name="shion-dolls-choice">
+        <summary class="dolls-card dolls-apex">
+          <div class="dolls-portrait" style="background-image:url('URL_PG_1');"></div>
+          <div class="dolls-card-text">
+            <strong>Nome PG</strong>
+            <span class="dolls-status">bambola apice</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card" for="doll-detail-2">
-        <div class="dolls-portrait" style="background-image:url('https://i.imgur.com/hgMwCNr.png');"></div>
-        <div class="dolls-card-text">
-          <strong>Nome PG</strong>
-          <span class="dolls-status">stato</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-2" name="shion-dolls-choice">
+        <summary class="dolls-card">
+          <div class="dolls-portrait" style="background-image:url('https://i.imgur.com/hgMwCNr.png');"></div>
+          <div class="dolls-card-text">
+            <strong>Nome PG</strong>
+            <span class="dolls-status">stato</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card" for="doll-detail-3">
-        <div class="dolls-portrait" style="background-image:url('URL_PG_3');"></div>
-        <div class="dolls-card-text">
-          <strong>Nome PG</strong>
-          <span class="dolls-status">stato</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-3" name="shion-dolls-choice">
+        <summary class="dolls-card">
+          <div class="dolls-portrait" style="background-image:url('URL_PG_3');"></div>
+          <div class="dolls-card-text">
+            <strong>Nome PG</strong>
+            <span class="dolls-status">stato</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card" for="doll-detail-4">
-        <div class="dolls-portrait" style="background-image:url('URL_PG_4');"></div>
-        <div class="dolls-card-text">
-          <strong>Nome PG</strong>
-          <span class="dolls-status">stato</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-4" name="shion-dolls-choice">
+        <summary class="dolls-card">
+          <div class="dolls-portrait" style="background-image:url('URL_PG_4');"></div>
+          <div class="dolls-card-text">
+            <strong>Nome PG</strong>
+            <span class="dolls-status">stato</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card" for="doll-detail-5">
-        <div class="dolls-portrait" style="background-image:url('URL_PG_5');"></div>
-        <div class="dolls-card-text">
-          <strong>Nome PG</strong>
-          <span class="dolls-status">stato</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-5" name="shion-dolls-choice">
+        <summary class="dolls-card">
+          <div class="dolls-portrait" style="background-image:url('URL_PG_5');"></div>
+          <div class="dolls-card-text">
+            <strong>Nome PG</strong>
+            <span class="dolls-status">stato</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card dolls-empty" for="doll-detail-6">
-        <div class="dolls-empty-mark">?</div>
-        <div class="dolls-card-text">
-          <strong>Slot vuoto</strong>
-          <span class="dolls-status">in attesa</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-6" name="shion-dolls-choice">
+        <summary class="dolls-card dolls-empty">
+          <div class="dolls-empty-mark">?</div>
+          <div class="dolls-card-text">
+            <strong>Slot vuoto</strong>
+            <span class="dolls-status">in attesa</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card dolls-empty" for="doll-detail-7">
-        <div class="dolls-empty-mark">?</div>
-        <div class="dolls-card-text">
-          <strong>Slot vuoto</strong>
-          <span class="dolls-status">in attesa</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-7" name="shion-dolls-choice">
+        <summary class="dolls-card dolls-empty">
+          <div class="dolls-empty-mark">?</div>
+          <div class="dolls-card-text">
+            <strong>Slot vuoto</strong>
+            <span class="dolls-status">in attesa</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card dolls-empty" for="doll-detail-8">
-        <div class="dolls-empty-mark">?</div>
-        <div class="dolls-card-text">
-          <strong>Slot vuoto</strong>
-          <span class="dolls-status">in attesa</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-8" name="shion-dolls-choice">
+        <summary class="dolls-card dolls-empty">
+          <div class="dolls-empty-mark">?</div>
+          <div class="dolls-card-text">
+            <strong>Slot vuoto</strong>
+            <span class="dolls-status">in attesa</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card dolls-empty" for="doll-detail-9">
-        <div class="dolls-empty-mark">?</div>
-        <div class="dolls-card-text">
-          <strong>Slot vuoto</strong>
-          <span class="dolls-status">in attesa</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-9" name="shion-dolls-choice">
+        <summary class="dolls-card dolls-empty">
+          <div class="dolls-empty-mark">?</div>
+          <div class="dolls-card-text">
+            <strong>Slot vuoto</strong>
+            <span class="dolls-status">in attesa</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
 
-      <label class="dolls-card dolls-empty" for="doll-detail-10">
-        <div class="dolls-empty-mark">?</div>
-        <div class="dolls-card-text">
-          <strong>Slot vuoto</strong>
-          <span class="dolls-status">in attesa</span>
-          <p>“Frase minima.”</p>
-        </div>
-      </label>
+      <details class="dolls-entry dolls-entry-10" name="shion-dolls-choice">
+        <summary class="dolls-card dolls-empty">
+          <div class="dolls-empty-mark">?</div>
+          <div class="dolls-card-text">
+            <strong>Slot vuoto</strong>
+            <span class="dolls-status">in attesa</span>
+            <p>“Frase minima.”</p>
+          </div>
+        </summary>
+      </details>
     </div>
   </aside>
 </div>
