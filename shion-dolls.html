@@ -19,10 +19,113 @@
 <div class="shion-dolls-root">
   <div class="shion-dolls-bg"></div>
 
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-1">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-2">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-3">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-4">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-5">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-6">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-7">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-8">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-9">
+  <input class="dolls-toggle" type="radio" name="dolls-detail" id="doll-detail-10">
+
   <div class="dolls-audio-frame">
     <audio class="dolls-audio" controls preload="none" controlsList="nodownload">
       <source src="URL_MUSICA_SHION" type="audio/mpeg">
     </audio>
+  </div>
+
+  <div class="dolls-detail-layer">
+    <section class="dolls-detail dolls-detail-1">
+      <div class="dolls-detail-img dolls-detail-apex-img" style="background-image:url('URL_PG_1');"></div>
+      <div class="dolls-detail-text">
+        <span>Bambola apice</span>
+        <strong>Nome PG</strong>
+        <p>“Frase minima più leggibile. Qui può stare il dettaglio del legame, della cucitura o del ricordo.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-2">
+      <div class="dolls-detail-img" style="background-image:url('https://i.imgur.com/hgMwCNr.png');"></div>
+      <div class="dolls-detail-text">
+        <span>Stato</span>
+        <strong>Nome PG</strong>
+        <p>“Frase minima più leggibile. Una piccola nota lasciata tra stoffa, filo e silenzio.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-3">
+      <div class="dolls-detail-img" style="background-image:url('URL_PG_3');"></div>
+      <div class="dolls-detail-text">
+        <span>Stato</span>
+        <strong>Nome PG</strong>
+        <p>“Frase minima più leggibile.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-4">
+      <div class="dolls-detail-img" style="background-image:url('URL_PG_4');"></div>
+      <div class="dolls-detail-text">
+        <span>Stato</span>
+        <strong>Nome PG</strong>
+        <p>“Frase minima più leggibile.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-5">
+      <div class="dolls-detail-img" style="background-image:url('URL_PG_5');"></div>
+      <div class="dolls-detail-text">
+        <span>Stato</span>
+        <strong>Nome PG</strong>
+        <p>“Frase minima più leggibile.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-empty dolls-detail-6">
+      <div class="dolls-detail-empty-mark">?</div>
+      <div class="dolls-detail-text">
+        <span>In attesa</span>
+        <strong>Slot vuoto</strong>
+        <p>“Nessun filo ha ancora trovato questo volto.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-empty dolls-detail-7">
+      <div class="dolls-detail-empty-mark">?</div>
+      <div class="dolls-detail-text">
+        <span>In attesa</span>
+        <strong>Slot vuoto</strong>
+        <p>“Nessun filo ha ancora trovato questo volto.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-empty dolls-detail-8">
+      <div class="dolls-detail-empty-mark">?</div>
+      <div class="dolls-detail-text">
+        <span>In attesa</span>
+        <strong>Slot vuoto</strong>
+        <p>“Nessun filo ha ancora trovato questo volto.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-empty dolls-detail-9">
+      <div class="dolls-detail-empty-mark">?</div>
+      <div class="dolls-detail-text">
+        <span>In attesa</span>
+        <strong>Slot vuoto</strong>
+        <p>“Nessun filo ha ancora trovato questo volto.”</p>
+      </div>
+    </section>
+
+    <section class="dolls-detail dolls-detail-empty dolls-detail-10">
+      <div class="dolls-detail-empty-mark">?</div>
+      <div class="dolls-detail-text">
+        <span>In attesa</span>
+        <strong>Slot vuoto</strong>
+        <p>“Nessun filo ha ancora trovato questo volto.”</p>
+      </div>
+    </section>
   </div>
 
   <section class="dolls-left-panel">
@@ -43,95 +146,95 @@
 
   <aside class="dolls-right-panel">
     <div class="dolls-list">
-      <article class="dolls-card dolls-apex">
+      <label class="dolls-card dolls-apex" for="doll-detail-1">
         <div class="dolls-portrait" style="background-image:url('URL_PG_1');"></div>
         <div class="dolls-card-text">
           <strong>Nome PG</strong>
           <span class="dolls-status">bambola apice</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card">
+      <label class="dolls-card" for="doll-detail-2">
         <div class="dolls-portrait" style="background-image:url('https://i.imgur.com/hgMwCNr.png');"></div>
         <div class="dolls-card-text">
           <strong>Nome PG</strong>
           <span class="dolls-status">stato</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card">
+      <label class="dolls-card" for="doll-detail-3">
         <div class="dolls-portrait" style="background-image:url('URL_PG_3');"></div>
         <div class="dolls-card-text">
           <strong>Nome PG</strong>
           <span class="dolls-status">stato</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card">
+      <label class="dolls-card" for="doll-detail-4">
         <div class="dolls-portrait" style="background-image:url('URL_PG_4');"></div>
         <div class="dolls-card-text">
           <strong>Nome PG</strong>
           <span class="dolls-status">stato</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card">
+      <label class="dolls-card" for="doll-detail-5">
         <div class="dolls-portrait" style="background-image:url('URL_PG_5');"></div>
         <div class="dolls-card-text">
           <strong>Nome PG</strong>
           <span class="dolls-status">stato</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card dolls-empty">
+      <label class="dolls-card dolls-empty" for="doll-detail-6">
         <div class="dolls-empty-mark">?</div>
         <div class="dolls-card-text">
           <strong>Slot vuoto</strong>
           <span class="dolls-status">in attesa</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card dolls-empty">
+      <label class="dolls-card dolls-empty" for="doll-detail-7">
         <div class="dolls-empty-mark">?</div>
         <div class="dolls-card-text">
           <strong>Slot vuoto</strong>
           <span class="dolls-status">in attesa</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card dolls-empty">
+      <label class="dolls-card dolls-empty" for="doll-detail-8">
         <div class="dolls-empty-mark">?</div>
         <div class="dolls-card-text">
           <strong>Slot vuoto</strong>
           <span class="dolls-status">in attesa</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card dolls-empty">
+      <label class="dolls-card dolls-empty" for="doll-detail-9">
         <div class="dolls-empty-mark">?</div>
         <div class="dolls-card-text">
           <strong>Slot vuoto</strong>
           <span class="dolls-status">in attesa</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
 
-      <article class="dolls-card dolls-empty">
+      <label class="dolls-card dolls-empty" for="doll-detail-10">
         <div class="dolls-empty-mark">?</div>
         <div class="dolls-card-text">
           <strong>Slot vuoto</strong>
           <span class="dolls-status">in attesa</span>
           <p>“Frase minima.”</p>
         </div>
-      </article>
+      </label>
     </div>
   </aside>
 </div>
