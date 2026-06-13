@@ -13,10 +13,17 @@
      Il CSS è in shion-dolls.css.
      La versione land deve importare il CSS esterno con:
      <style>@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-dolls.css");</style>
+     Sostituisci URL_MUSICA_SHION con un link diretto al file audio.
 -->
 
 <div class="shion-dolls-root">
   <div class="shion-dolls-bg"></div>
+
+  <div class="dolls-audio-frame">
+    <audio class="dolls-audio" controls preload="none" controlsList="nodownload">
+      <source src="URL_MUSICA_SHION" type="audio/mpeg">
+    </audio>
+  </div>
 
   <section class="dolls-left-panel">
     <span class="dolls-kicker">Archivio Iburi</span>
@@ -35,8 +42,6 @@
   </section>
 
   <aside class="dolls-right-panel">
-    <div class="dolls-archive-title">Coloro che restano</div>
-
     <div class="dolls-list">
       <article class="dolls-card dolls-apex">
         <div class="dolls-portrait" style="background-image:url('URL_PG_1');"></div>
