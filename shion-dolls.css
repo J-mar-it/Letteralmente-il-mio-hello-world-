@@ -24,9 +24,9 @@
 .shion-dolls-bg{
   position:absolute;
   inset:0;
-  background-image:url("https://i.imgur.com/SjFl2we.png");
+  background-image:url("https://i.imgur.com/XVu4bi2.png");
   background-size:cover;
-  background-position:center center;
+  background-position:center 72%;
   background-repeat:no-repeat;
   filter:none;
   transform:none;
@@ -69,7 +69,7 @@
 .dolls-detail-layer{
   position:absolute;
   z-index:5;
-  left:50%;
+  left:59%;
   top:70px;
   width:250px;
   min-height:232px;
@@ -192,24 +192,25 @@
 }
 .dolls-left-panel{
   left:12px;
-  top:18px;
-  width:198px;
-  height:248px;
-  padding:16px 15px 14px;
+  top:16px;
+  width:190px;
+  height:172px;
+  padding:13px 13px 12px;
 }
 .dolls-right-panel{
-  right:12px;
-  top:18px;
-  width:198px;
-  height:248px;
-  padding:12px 11px;
+  left:12px;
+  right:auto;
+  top:204px;
+  width:190px;
+  height:184px;
+  padding:10px 10px;
 }
 .dolls-kicker{
   display:block;
-  margin-bottom:6px;
+  margin-bottom:5px;
   color:var(--dolls-teal-light);
-  font-size:7.4px;
-  letter-spacing:2.5px;
+  font-size:7px;
+  letter-spacing:2.2px;
   text-transform:uppercase;
   opacity:.74;
 }
@@ -217,7 +218,7 @@
   margin:0;
   color:rgba(238,246,248,.94);
   font-weight:400;
-  font-size:20px;
+  font-size:18px;
   line-height:1.05;
   letter-spacing:1.2px;
   text-shadow:0 0 12px rgba(169,217,213,.14);
@@ -225,7 +226,7 @@
 .dolls-rule{
   width:54px;
   height:1px;
-  margin:10px 0 12px;
+  margin:8px 0 10px;
   background:linear-gradient(90deg,var(--dolls-teal-light),transparent);
   opacity:.62;
 }
@@ -234,19 +235,19 @@
   z-index:2;
   margin:0;
   color:rgba(238,246,248,.72);
-  font-size:10.6px;
-  line-height:1.44;
+  font-size:10px;
+  line-height:1.38;
 }
 .dolls-shion-quote{
   position:relative;
   z-index:2;
-  margin-top:12px;
-  padding:10px 11px;
+  margin-top:10px;
+  padding:8px 9px;
   border-left:1px solid rgba(169,0,34,.46);
   background:rgba(169,0,34,.048);
   color:rgba(238,246,248,.84);
-  font-size:10.5px;
-  line-height:1.4;
+  font-size:9.8px;
+  line-height:1.34;
 }
 .dolls-shion-quote span{
   display:block;
@@ -264,7 +265,7 @@
 }
 .dolls-entry{
   display:block;
-  margin:0 0 8px;
+  margin:0 0 7px;
 }
 .dolls-entry summary{
   list-style:none;
@@ -274,11 +275,11 @@
 }
 .dolls-card{
   display:grid;
-  grid-template-columns:42px 1fr;
-  gap:8px;
-  min-height:58px;
+  grid-template-columns:39px 1fr;
+  gap:7px;
+  min-height:52px;
   margin:0;
-  padding:7px;
+  padding:6px;
   background:rgba(0,0,0,.26);
   border:1px solid rgba(169,217,213,.10);
   box-shadow:inset 0 0 10px rgba(0,0,0,.25);
@@ -291,16 +292,16 @@
   box-shadow:0 0 12px rgba(169,217,213,.08),inset 0 0 10px rgba(0,0,0,.25);
 }
 .dolls-apex{
-  grid-template-columns:58px 1fr;
-  min-height:82px;
-  padding:8px;
+  grid-template-columns:52px 1fr;
+  min-height:72px;
+  padding:7px;
   background:linear-gradient(135deg,rgba(90,31,61,.38),rgba(0,0,0,.25));
   border:1px solid rgba(255,210,235,.28);
   box-shadow:0 0 13px rgba(190,90,150,.20),inset 0 0 16px rgba(0,0,0,.32);
 }
 .dolls-portrait,.dolls-empty-mark{
-  width:42px;
-  height:42px;
+  width:39px;
+  height:39px;
   border-radius:5px;
   border:1px solid rgba(169,217,213,.20);
   background-color:rgba(59,85,94,.38);
@@ -309,8 +310,8 @@
   box-shadow:0 0 9px rgba(59,85,94,.18);
 }
 .dolls-apex .dolls-portrait{
-  width:58px;
-  height:58px;
+  width:52px;
+  height:52px;
   border-color:rgba(255,210,235,.34);
   box-shadow:0 0 15px rgba(190,90,150,.24);
 }
@@ -328,16 +329,16 @@
 .dolls-card-text strong{
   display:block;
   color:rgba(238,246,248,.92);
-  font-size:10.8px;
+  font-size:10.2px;
   font-weight:400;
   line-height:1.14;
   letter-spacing:.55px;
 }
 .dolls-status{
   display:block;
-  margin:2px 0 4px;
+  margin:2px 0 3px;
   color:rgba(169,217,213,.62);
-  font-size:7.4px;
+  font-size:7px;
   line-height:1.2;
   letter-spacing:1.35px;
   text-transform:uppercase;
@@ -345,6 +346,6 @@
 .dolls-card-text p{
   margin:0;
   color:rgba(238,246,248,.62);
-  font-size:9px;
-  line-height:1.24;
+  font-size:8.6px;
+  line-height:1.18;
 }
