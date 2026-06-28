@@ -852,3 +852,18 @@
     0 0 30px rgba(188,90,255,.20)!important;
   animation:none!important;
 }
+
+/* PENDING AWARDS / TEMPORARY */
+.shion-root .pending-award{
+  text-decoration:line-through!important;
+  text-decoration-thickness:1px!important;
+  text-decoration-color:rgba(214,142,255,.72)!important;
+  opacity:.48!important;
+  filter:saturate(.65)!important;
+}
+
+.shion-root .pending-award *{
+  text-decoration:line-through!important;
+  text-decoration-thickness:1px!important;
+  text-decoration-color:rgba(214,142,255,.62)!important;
+}
