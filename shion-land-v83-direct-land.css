@@ -236,9 +236,9 @@
   display:block!important;
   position:relative!important;
   z-index:12050!important;
-  margin:0 0 30px!important;
-  padding:0!important;
-  line-height:1.22!important;
+  margin:0!important;
+  padding:0 0 82px!important;
+  line-height:1!important;
   text-align:center!important;
   transform:none!important;
   translate:0 0!important;
@@ -251,7 +251,7 @@
 .shion-root .intro-screen .title .intro-toggle{
   position:relative!important;
   display:inline-block!important;
-  line-height:1.22!important;
+  line-height:1!important;
   vertical-align:top!important;
   pointer-events:auto!important;
   cursor:pointer!important;
@@ -268,7 +268,7 @@
   translate:0 0!important;
   top:auto!important;
   margin:0!important;
-  line-height:1.22!important;
+  line-height:1!important;
   vertical-align:top!important;
 }
 
