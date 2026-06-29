@@ -233,8 +233,13 @@
 }
 
 .shion-root .intro-screen .title{
+  display:block!important;
   position:relative!important;
   z-index:12050!important;
+  margin:0 0 30px!important;
+  padding:0!important;
+  line-height:1.22!important;
+  text-align:center!important;
   transform:none!important;
   translate:0 0!important;
 }
@@ -246,8 +251,8 @@
 .shion-root .intro-screen .title .intro-toggle{
   position:relative!important;
   display:inline-block!important;
-  line-height:1!important;
-  vertical-align:baseline!important;
+  line-height:1.22!important;
+  vertical-align:top!important;
   pointer-events:auto!important;
   cursor:pointer!important;
 }
@@ -263,8 +268,8 @@
   translate:0 0!important;
   top:auto!important;
   margin:0!important;
-  line-height:1!important;
-  vertical-align:baseline!important;
+  line-height:1.22!important;
+  vertical-align:top!important;
 }
 
 .shion-root #intro-shion-toggle:checked~.app .intro-screen .title .intro-shion-toggle-label{
@@ -273,6 +278,19 @@
   pointer-events:auto!important;
   transform:none!important;
   translate:0 0!important;
+}
+
+.shion-root .intro-screen .subtitle{
+  display:block!important;
+  position:relative!important;
+  z-index:12040!important;
+  margin:0 auto 0!important;
+  padding:0!important;
+  line-height:1.28!important;
+  text-align:center!important;
+  transform:none!important;
+  translate:0 0!important;
+  clear:both!important;
 }
 
 .shion-root .intro-screen .intro-info{
