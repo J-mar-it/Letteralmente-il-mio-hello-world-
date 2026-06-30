@@ -1755,3 +1755,161 @@
   text-decoration-color:rgba(214,142,255,.62)!important;
   text-decoration-skip-ink:auto!important;
 }
+
+/* YANDERE / EASY BLACKOUT FINAL POSITION RESTORE */
+.shion-root .trap-1-screen .trap-text,
+.shion-root .trap-2-screen .trap-text,
+.shion-root .trap-3-screen .trap-text,
+.shion-root .trap-4-screen .trap-text,
+.shion-root .trap-5-screen .trap-text,
+.shion-root .trap-6-screen .trap-text,
+.shion-root .dead-screen .dead-text{
+  left:50%!important;
+  top:42px!important;
+  bottom:auto!important;
+  width:96%!important;
+  max-width:96%!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .trap-1-screen .trap-text p,
+.shion-root .trap-2-screen .trap-text p,
+.shion-root .trap-3-screen .trap-text p,
+.shion-root .trap-4-screen .trap-text p,
+.shion-root .trap-5-screen .trap-text p,
+.shion-root .trap-6-screen .trap-text p,
+.shion-root .dead-screen .dead-text p{
+  margin:0!important;
+  font-size:clamp(34px,4.2vw,52px)!important;
+  line-height:1.02!important;
+  white-space:nowrap!important;
+}
+
+.shion-root .trap-1-screen .heartbeat,
+.shion-root .trap-2-screen .heartbeat,
+.shion-root .trap-3-screen .heartbeat,
+.shion-root .trap-4-screen .heartbeat,
+.shion-root .trap-5-screen .heartbeat,
+.shion-root .trap-6-screen .heartbeat,
+.shion-root .dead-screen .heartbeat{
+  display:block!important;
+  margin:0 0 20px!important;
+  font-size:14px!important;
+  white-space:nowrap!important;
+  text-align:center!important;
+}
+
+.shion-root .trap-1-screen .action-btn,
+.shion-root .trap-2-screen .action-btn,
+.shion-root .trap-3-screen .action-btn,
+.shion-root .trap-4-screen .action-btn,
+.shion-root .trap-5-screen .action-btn,
+.shion-root .trap-6-screen .action-btn{
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:59px!important;
+  transform:translateX(-50%)!important;
+}
+
+.shion-root .trap-1-screen .action-btn:hover,
+.shion-root .trap-2-screen .action-btn:hover,
+.shion-root .trap-3-screen .action-btn:hover,
+.shion-root .trap-4-screen .action-btn:hover,
+.shion-root .trap-5-screen .action-btn:hover,
+.shion-root .trap-6-screen .action-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+.shion-root .dead-screen .dead-options{
+  position:absolute!important;
+  z-index:7!important;
+  left:0!important;
+  right:0!important;
+  bottom:34px!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:88px!important;
+  transform:none!important;
+  display:block!important;
+  pointer-events:none!important;
+}
+
+.shion-root .dead-screen .fake-dead-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:25px!important;
+  bottom:auto!important;
+  transform:translateX(-50%)!important;
+  pointer-events:none!important;
+}
+
+.shion-root .dead-screen .easy-way-btn{
+  position:absolute!important;
+  left:auto!important;
+  right:12px!important;
+  top:0!important;
+  bottom:auto!important;
+  transform:none!important;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  animation:none!important;
+}
+
+.shion-root #flow-dead:checked~.app .dead-screen .easy-way-btn{
+  animation:shionEasyWayRevealDelayV83 .45s ease 8s forwards!important;
+}
+
+.shion-root .dead-screen .easy-way-btn:hover{
+  transform:translateY(-2px)!important;
+}
+
+.shion-root #flow-easy:checked~.app .easy-screen .easy-text,
+.shion-root .easy-screen .easy-text{
+  bottom:88px!important;
+}
+
+.shion-root #flow-blackout:checked~.app .blackout-screen .blackout-text,
+.shion-root .blackout-screen .blackout-text{
+  bottom:82px!important;
+}
+
+.shion-root #flow-easy:checked~.app .easy-screen .center-btn,
+.shion-root .easy-screen .center-btn,
+.shion-root #flow-blackout:checked~.app .blackout-screen .center-btn,
+.shion-root .blackout-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:24px!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  z-index:8!important;
+}
+
+.shion-root .easy-screen .center-btn:hover,
+.shion-root .blackout-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+@keyframes shionEasyWayRevealDelayV83{
+  0%{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+  1%{
+    visibility:visible;
+  }
+  100%{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:none;
+  }
+}
