@@ -1858,14 +1858,14 @@
 .shion-root .trap-6-screen .trap-text,
 .shion-root .dead-screen .dead-text{
   position:absolute!important;
-  left:7%!important;
+  left:50%!important;
   right:auto!important;
   top:42px!important;
   bottom:auto!important;
-  width:360px!important;
-  max-width:32%!important;
-  transform:none!important;
-  text-align:left!important;
+  width:min(720px,88%)!important;
+  max-width:88%!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
   z-index:6!important;
 }
 
