@@ -1264,3 +1264,100 @@
   text-decoration-thickness:1px!important;
   text-decoration-color:rgba(214,142,255,.62)!important;
 }
+
+/* TRAP / DEAD / EASY / BLACKOUT LAND RESTORE */
+.shion-root .trap-1-screen .trap-text,
+.shion-root .trap-2-screen .trap-text,
+.shion-root .trap-3-screen .trap-text,
+.shion-root .trap-4-screen .trap-text,
+.shion-root .trap-5-screen .trap-text,
+.shion-root .trap-6-screen .trap-text,
+.shion-root .dead-screen .dead-text{
+  left:7%!important;
+  top:42px!important;
+  bottom:auto!important;
+  width:360px!important;
+  max-width:32%!important;
+  transform:none!important;
+  text-align:left!important;
+}
+
+.shion-root .dead-screen .dead-text p{
+  font-size:clamp(30px,4.6vw,58px)!important;
+  white-space:normal!important;
+}
+
+.shion-root .trap-6-screen .no-break{
+  white-space:nowrap!important;
+}
+
+.shion-root .dead-screen .dead-options{
+  bottom:34px!important;
+  height:74px!important;
+}
+
+.shion-root .dead-screen .easy-way-btn{
+  left:auto!important;
+  right:6%!important;
+  top:0!important;
+}
+
+.shion-root #flow-dead:checked~.app .dead-screen .easy-way-btn{
+  animation-delay:8s!important;
+}
+
+.shion-root .easy-screen .center-btn{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:24px!important;
+  transform:translateX(-50%)!important;
+  margin:0!important;
+}
+
+.shion-root .easy-screen .center-btn:hover{
+  transform:translateX(-50%) translateY(-2px)!important;
+}
+
+.shion-root .easy-screen .easy-text,
+.shion-root .blackout-screen .blackout-text{
+  position:absolute!important;
+  left:50%!important;
+  top:auto!important;
+  bottom:145px!important;
+  width:min(760px,88%)!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:6!important;
+}
+
+.shion-root .blackout-vision{
+  position:absolute!important;
+  inset:0!important;
+  z-index:2!important;
+  background:url("https://i.imgur.com/FenZ0Ar.png") center/contain no-repeat!important;
+  opacity:.16!important;
+  filter:grayscale(.15) brightness(.9) contrast(1.08) blur(.35px)!important;
+  mix-blend-mode:screen!important;
+  pointer-events:none!important;
+  transform:scale(.92)!important;
+}
+
+.shion-root .easy-screen .easy-text p{
+  background:linear-gradient(90deg,#b30007,#ff4f8b,#9b3cff,#d8adff,#ff4f8b,#b30007)!important;
+  background-size:320% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:easyPhraseGradient 4.8s ease-in-out infinite!important;
+  text-shadow:0 0 12px rgba(179,0,7,.28),0 0 24px rgba(155,60,255,.24),0 0 38px rgba(216,173,255,.16)!important;
+}
+
+@keyframes easyPhraseGradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
