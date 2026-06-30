@@ -1731,3 +1731,27 @@
   filter:blur(3.2px) saturate(.25) brightness(.62)!important;
   pointer-events:none!important;
 }
+
+/* SMOKE MARK PENDING CLEAN RESTORE */
+.shion-root .main-screen .tab-open-left-pulse,
+.shion-root .main-screen .tab-close-left-pulse,
+.shion-root .main-screen .tab-open-left-mark,
+.shion-root .main-screen .tab-close-left-mark,
+.shion-root .main-screen .tab-area.left .pulse-panel,
+.shion-root .main-screen .tab-area.left .mark-panel{
+  opacity:.62!important;
+  filter:none!important;
+  text-decoration-line:line-through!important;
+  text-decoration-thickness:1px!important;
+  text-decoration-color:rgba(214,142,255,.72)!important;
+  text-decoration-skip-ink:auto!important;
+}
+
+.shion-root .main-screen .tab-area.left .pulse-panel *,
+.shion-root .main-screen .tab-area.left .mark-panel *{
+  filter:none!important;
+  text-decoration-line:line-through!important;
+  text-decoration-thickness:1px!important;
+  text-decoration-color:rgba(214,142,255,.62)!important;
+  text-decoration-skip-ink:auto!important;
+}
