@@ -2030,10 +2030,10 @@
 .shion-root .intro-screen .intro-close-clan,
 .shion-root .intro-screen .award-censored,
 .shion-root .intro-screen .intro-link.award-censored{
-  filter:blur(.45px)!important;
-  opacity:.78!important;
-  color:rgba(238,246,248,.84)!important;
-  -webkit-text-fill-color:rgba(238,246,248,.84)!important;
+  filter:blur(1.35px)!important;
+  opacity:.34!important;
+  color:rgba(238,246,248,.72)!important;
+  -webkit-text-fill-color:rgba(238,246,248,.72)!important;
   text-decoration:none!important;
   text-decoration-line:none!important;
   text-decoration-thickness:0!important;
