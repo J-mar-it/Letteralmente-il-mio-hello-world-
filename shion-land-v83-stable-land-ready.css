@@ -2049,11 +2049,11 @@
 
 .shion-root .intro-screen .title-iburi-censored{
   display:inline-block!important;
-  filter:blur(1.35px)!important;
-  opacity:.34!important;
-  color:rgba(238,246,248,.72)!important;
-  -webkit-text-fill-color:rgba(238,246,248,.72)!important;
+  filter:blur(3.8px)!important;
+  opacity:.22!important;
+  color:rgba(238,246,248,.64)!important;
+  -webkit-text-fill-color:rgba(238,246,248,.64)!important;
   text-shadow:
-    0 0 8px rgba(169,192,200,.30),
-    0 0 16px rgba(59,85,94,.20)!important;
+    0 0 7px rgba(169,192,200,.18),
+    0 0 14px rgba(59,85,94,.12)!important;
 }
