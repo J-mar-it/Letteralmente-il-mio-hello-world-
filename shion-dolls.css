@@ -35,12 +35,13 @@
 .dolls-audio-frame{
   position:absolute;
   z-index:7;
-  top:14px;
+  top:10px;
   right:10px;
   width:350px;
-  height:36px;
-  padding:4px 8px;
-  background:linear-gradient(180deg,rgba(3,6,7,.48),rgba(1,3,4,.62));
+  height:48px;
+  padding:8px 8px;
+  overflow:visible;
+  background:linear-gradient(180deg,rgba(3,6,7,.50),rgba(1,3,4,.68));
   border:1px solid rgba(169,217,213,.20);
   box-shadow:0 0 12px rgba(0,0,0,.32),inset 0 0 8px rgba(169,217,213,.025);
 }
@@ -59,8 +60,8 @@
   position:relative;
   z-index:2;
   width:100%;
-  height:28px;
-  opacity:.82;
+  height:32px;
+  opacity:.84;
   filter:saturate(.72) brightness(.82) sepia(.14) hue-rotate(132deg);
 }
 .dolls-audio::-webkit-media-controls-panel{
@@ -69,7 +70,7 @@
 .dolls-detail-layer{
   position:absolute;
   z-index:5;
-  top:58px;
+  top:66px;
   right:10px;
   width:350px;
   min-height:356px;
@@ -94,7 +95,8 @@
   border:1px solid rgba(169,217,213,.055);
   pointer-events:none;
 }
-.dolls-detail-img,.dolls-detail-empty-mark{
+.dolls-detail-img,
+.dolls-detail > .dolls-detail-empty-mark{
   position:relative;
   z-index:2;
   width:136px;
@@ -113,7 +115,7 @@
   border-color:rgba(255,210,235,.34);
   box-shadow:0 0 18px rgba(190,90,150,.25);
 }
-.dolls-detail-empty-mark{
+.dolls-detail > .dolls-detail-empty-mark{
   display:flex;
   align-items:center;
   justify-content:center;
@@ -197,23 +199,23 @@
 .dolls-left-panel{
   left:12px;
   top:16px;
-  width:202px;
-  height:206px;
-  padding:13px 13px 12px;
+  width:220px;
+  height:232px;
+  padding:14px 14px 13px;
 }
 .dolls-right-panel{
   left:12px;
   right:auto;
-  top:238px;
-  width:202px;
-  height:210px;
-  padding:10px 10px;
+  top:264px;
+  width:220px;
+  height:184px;
+  padding:11px 11px;
 }
 .dolls-kicker{
   display:block;
   margin-bottom:5px;
   color:var(--dolls-purple);
-  font-size:8px;
+  font-size:8.2px;
   font-weight:600;
   letter-spacing:2.2px;
   text-transform:uppercase;
@@ -224,14 +226,14 @@
   margin:0;
   color:rgba(255,255,255,.96);
   font-weight:400;
-  font-size:20.5px;
+  font-size:21.5px;
   line-height:1.05;
   letter-spacing:1.35px;
 }
 .dolls-rule{
-  width:54px;
+  width:60px;
   height:1px;
-  margin:8px 0 10px;
+  margin:9px 0 11px;
   background:linear-gradient(90deg,var(--dolls-teal-light),transparent);
   opacity:.62;
 }
@@ -239,26 +241,26 @@
   position:relative;
   z-index:2;
   margin:0;
-  color:rgba(248,252,253,.88);
-  font-size:10.8px;
-  line-height:1.38;
+  color:rgba(248,252,253,.90);
+  font-size:12.1px;
+  line-height:1.34;
 }
 .dolls-shion-quote{
   position:relative;
   z-index:2;
-  margin-top:10px;
-  padding:8px 9px;
+  margin-top:11px;
+  padding:9px 10px;
   border-left:1px solid rgba(169,0,34,.46);
   background:rgba(169,0,34,.048);
-  color:rgba(248,252,253,.88);
-  font-size:10.8px;
-  line-height:1.36;
+  color:rgba(248,252,253,.90);
+  font-size:11.6px;
+  line-height:1.35;
 }
 .dolls-shion-quote .dolls-heart-mark{
   display:block;
   margin-top:7px;
   color:var(--dolls-purple);
-  font-size:14px;
+  font-size:15px;
   line-height:1;
   letter-spacing:0;
   text-transform:none;
@@ -272,7 +274,7 @@
 }
 .dolls-entry{
   display:block;
-  margin:0 0 7px;
+  margin:0 0 8px;
 }
 .dolls-entry summary{
   list-style:none;
@@ -281,13 +283,15 @@
   display:none;
 }
 .dolls-card{
-  display:grid;
-  grid-template-columns:46px 1fr;
-  gap:9px;
-  min-height:62px;
-  margin:0;
-  padding:7px;
+  display:flex;
+  flex-direction:column;
   align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:128px;
+  margin:0;
+  padding:11px 10px;
+  text-align:center;
   background:rgba(0,0,0,.26);
   border:1px solid rgba(169,217,213,.10);
   box-shadow:inset 0 0 10px rgba(0,0,0,.25);
@@ -300,20 +304,22 @@
   box-shadow:0 0 12px rgba(169,217,213,.08),inset 0 0 10px rgba(0,0,0,.25);
 }
 .dolls-apex{
-  grid-template-columns:58px 1fr;
-  min-height:78px;
-  padding:7px;
-  align-items:center;
+  min-height:148px;
+  padding:12px 10px;
   background:linear-gradient(135deg,rgba(90,31,61,.38),rgba(0,0,0,.25));
   border:1px solid rgba(255,210,235,.28);
   box-shadow:0 0 13px rgba(190,90,150,.20),inset 0 0 16px rgba(0,0,0,.32);
 }
-.dolls-portrait,.dolls-empty-mark{
-  width:46px;
-  height:46px;
-  justify-self:center;
-  align-self:center;
-  border-radius:5px;
+.dolls-portrait,
+.dolls-card .dolls-empty-mark{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  width:58px;
+  height:58px;
+  margin:0 auto;
+  border-radius:6px;
   border:1px solid rgba(169,217,213,.20);
   background-color:rgba(59,85,94,.38);
   background-size:cover;
@@ -321,38 +327,39 @@
   box-shadow:0 0 9px rgba(59,85,94,.18);
 }
 .dolls-apex .dolls-portrait{
-  width:58px;
-  height:58px;
+  width:68px;
+  height:68px;
   border-color:rgba(255,210,235,.34);
   box-shadow:0 0 15px rgba(190,90,150,.24);
 }
 .dolls-empty{opacity:.56}
-.dolls-empty-mark{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.dolls-card .dolls-empty-mark{
   border-style:dashed;
   color:rgba(248,252,253,.66);
-  font-size:17px;
+  font-size:18px;
   line-height:1;
 }
 .dolls-card-text{
-  align-self:center;
-  text-align:left;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 .dolls-card-text strong{
   display:block;
   color:rgba(255,255,255,.96);
-  font-size:11.6px;
+  font-size:12.2px;
   font-weight:400;
-  line-height:1.14;
+  line-height:1.18;
   letter-spacing:.02em;
 }
 .dolls-status{
   display:block;
-  margin:2px 0 3px;
+  margin:5px 0 6px;
   color:rgba(214,241,239,.88);
-  font-size:7.8px;
+  font-size:8.2px;
   line-height:1.2;
   letter-spacing:.02em;
   text-transform:uppercase;
@@ -360,7 +367,7 @@
 .dolls-card-text p{
   margin:0;
   color:rgba(248,252,253,.88);
-  font-size:9.6px;
+  font-size:10px;
   line-height:1.22;
   letter-spacing:.02em;
 }
