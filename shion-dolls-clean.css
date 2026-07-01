@@ -1,0 +1,59 @@
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-dolls.css?v=9c03613");
+
+/* Fix land: mantiene nascosti i br automatici, ma lascia respirare il titolo */
+.dolls-left-panel h1{
+  line-height:1.16!important;
+}
+.dolls-left-panel h1 br{
+  display:block!important;
+}
+.dolls-left-panel h1 span{
+  display:block!important;
+  white-space:nowrap!important;
+}
+.dolls-left-panel h1 span+span{
+  margin-top:2px!important;
+}
+
+/* Overlay: solo il dettaglio aperto diventa flex. Gli altri restano nascosti. */
+.shion-dolls-root:has(.dolls-entry-1[open]) .dolls-detail-1,
+.shion-dolls-root:has(.dolls-entry-2[open]) .dolls-detail-2,
+.shion-dolls-root:has(.dolls-entry-3[open]) .dolls-detail-3,
+.shion-dolls-root:has(.dolls-entry-4[open]) .dolls-detail-4,
+.shion-dolls-root:has(.dolls-entry-5[open]) .dolls-detail-5,
+.shion-dolls-root:has(.dolls-entry-6[open]) .dolls-detail-6,
+.shion-dolls-root:has(.dolls-entry-7[open]) .dolls-detail-7,
+.shion-dolls-root:has(.dolls-entry-8[open]) .dolls-detail-8,
+.shion-dolls-root:has(.dolls-entry-9[open]) .dolls-detail-9,
+.shion-dolls-root:has(.dolls-entry-10[open]) .dolls-detail-10{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+}
+
+.dolls-detail-img,
+.dolls-detail > .dolls-detail-empty-mark{
+  display:block!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  flex:0 0 auto!important;
+}
+
+.dolls-detail > .dolls-detail-empty-mark{
+  display:flex!important;
+}
+
+.dolls-detail-text{
+  width:100%!important;
+  margin:0 auto!important;
+  text-align:center!important;
+}
+.dolls-detail-text span,
+.dolls-detail-text strong,
+.dolls-detail-text p{
+  display:block!important;
+  text-align:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
