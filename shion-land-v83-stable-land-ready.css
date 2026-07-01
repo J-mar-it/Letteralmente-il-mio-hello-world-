@@ -2024,3 +2024,14 @@
   height:0!important;
   display:none!important;
 }
+
+/* LAND READY / CLAN IBURI SOFT CENSOR */
+.shion-root .intro-screen .intro-link.award-censored{
+  filter:blur(1.15px)!important;
+  opacity:.62!important;
+  color:rgba(214,142,255,.54)!important;
+  -webkit-text-fill-color:rgba(214,142,255,.54)!important;
+  text-shadow:
+    0 0 8px rgba(214,142,255,.22),
+    0 0 16px rgba(188,90,255,.18)!important;
+}
