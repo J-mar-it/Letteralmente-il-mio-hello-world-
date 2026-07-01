@@ -1303,7 +1303,7 @@
 }
 
 .shion-root #flow-dead:checked~.app .dead-screen .easy-way-btn{
-  animation-delay:8s!important;
+  animation-delay:5s!important;
 }
 
 .shion-root .easy-screen .center-btn{
@@ -2060,21 +2060,23 @@
 
 /* LAND READY / BLACKOUT LINE SPACING FIX */
 .shion-root .blackout-screen .blackout-line{
+  display:block!important;
+  position:relative!important;
   margin:0!important;
   line-height:1.02!important;
 }
 
 .shion-root .blackout-screen .blackout-line.line-possess{
+  top:34px!important;
   margin-bottom:18px!important;
-  translate:0 34px!important;
 }
 
 .shion-root .blackout-screen .blackout-line.line-dead{
+  top:22px!important;
   margin-bottom:28px!important;
-  translate:0 22px!important;
 }
 
 .shion-root .blackout-screen .blackout-line.line-cold{
+  top:0!important;
   margin-top:0!important;
-  translate:0 0!important;
 }
