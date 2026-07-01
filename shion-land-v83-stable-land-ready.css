@@ -2057,3 +2057,24 @@
     0 0 7px rgba(169,192,200,.18),
     0 0 14px rgba(59,85,94,.12)!important;
 }
+
+/* LAND READY / BLACKOUT LINE SPACING FIX */
+.shion-root .blackout-screen .blackout-line{
+  margin:0!important;
+  line-height:1.02!important;
+}
+
+.shion-root .blackout-screen .blackout-line.line-possess{
+  margin-bottom:18px!important;
+  translate:0 34px!important;
+}
+
+.shion-root .blackout-screen .blackout-line.line-dead{
+  margin-bottom:28px!important;
+  translate:0 22px!important;
+}
+
+.shion-root .blackout-screen .blackout-line.line-cold{
+  margin-top:0!important;
+  translate:0 0!important;
+}
