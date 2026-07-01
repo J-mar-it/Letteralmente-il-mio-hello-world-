@@ -211,8 +211,8 @@
   right:auto;
   top:264px;
   width:220px;
-  height:184px;
-  padding:11px 11px;
+  height:172px;
+  padding:10px 11px;
 }
 .dolls-kicker{
   display:block;
@@ -277,7 +277,7 @@
 }
 .dolls-entry{
   display:block;
-  margin:0 0 10px;
+  margin:0 0 8px;
 }
 .dolls-entry summary{
   list-style:none;
@@ -290,10 +290,10 @@
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:12px;
-  min-height:236px;
+  gap:8px;
+  min-height:142px;
   margin:0;
-  padding:18px 12px;
+  padding:12px 10px;
   text-align:center;
   background:rgba(0,0,0,.26);
   border:1px solid rgba(169,217,213,.10);
@@ -307,8 +307,8 @@
   box-shadow:0 0 12px rgba(169,217,213,.08),inset 0 0 10px rgba(0,0,0,.25);
 }
 .dolls-apex{
-  min-height:260px;
-  padding:20px 12px;
+  min-height:154px;
+  padding:13px 10px;
   background:linear-gradient(135deg,rgba(90,31,61,.38),rgba(0,0,0,.25));
   border:1px solid rgba(255,210,235,.28);
   box-shadow:0 0 13px rgba(190,90,150,.20),inset 0 0 16px rgba(0,0,0,.32);
@@ -319,19 +319,19 @@
   align-items:center;
   justify-content:center;
   flex:0 0 auto;
-  width:112px;
-  height:112px;
+  width:74px;
+  height:74px;
   margin:0 auto;
-  border-radius:8px;
+  border-radius:7px;
   border:1px solid rgba(169,217,213,.20);
   background-color:rgba(59,85,94,.38);
   background-size:cover;
   background-position:center center;
-  box-shadow:0 0 12px rgba(59,85,94,.22);
+  box-shadow:0 0 11px rgba(59,85,94,.20);
 }
 .dolls-apex .dolls-portrait{
-  width:126px;
-  height:126px;
+  width:84px;
+  height:84px;
   border-color:rgba(255,210,235,.34);
   box-shadow:0 0 15px rgba(190,90,150,.24);
 }
@@ -339,7 +339,7 @@
 .dolls-card .dolls-empty-mark{
   border-style:dashed;
   color:rgba(248,252,253,.66);
-  font-size:24px;
+  font-size:21px;
   line-height:1;
 }
 .dolls-card-text{
@@ -353,16 +353,16 @@
 .dolls-card-text strong{
   display:block;
   color:rgba(255,255,255,.96);
-  font-size:13px;
+  font-size:12.3px;
   font-weight:400;
-  line-height:1.18;
+  line-height:1.16;
   letter-spacing:.02em;
 }
 .dolls-status{
   display:block;
-  margin:6px 0 7px;
+  margin:4px 0 5px;
   color:rgba(214,241,239,.88);
-  font-size:8.6px;
+  font-size:8.3px;
   line-height:1.2;
   letter-spacing:.02em;
   text-transform:uppercase;
@@ -370,8 +370,8 @@
 .dolls-card-text p{
   margin:0;
   color:rgba(248,252,253,.88);
-  font-size:10.4px;
-  line-height:1.22;
+  font-size:10.2px;
+  line-height:1.2;
   letter-spacing:.02em;
 }
 .dolls-empty .dolls-card-text strong,
