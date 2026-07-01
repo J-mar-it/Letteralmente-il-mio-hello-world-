@@ -2030,17 +2030,16 @@
 .shion-root .intro-screen .intro-close-clan,
 .shion-root .intro-screen .award-censored,
 .shion-root .intro-screen .intro-link.award-censored{
-  filter:none!important;
-  opacity:.72!important;
-  color:rgba(214,142,255,.62)!important;
-  -webkit-text-fill-color:rgba(214,142,255,.62)!important;
-  text-decoration-line:line-through!important;
-  text-decoration-thickness:1px!important;
-  text-decoration-color:rgba(214,142,255,.70)!important;
-  text-decoration-skip-ink:auto!important;
+  filter:blur(.45px)!important;
+  opacity:.78!important;
+  color:rgba(238,246,248,.84)!important;
+  -webkit-text-fill-color:rgba(238,246,248,.84)!important;
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+  text-decoration-thickness:0!important;
   text-shadow:
-    0 0 6px rgba(214,142,255,.16),
-    0 0 12px rgba(188,90,255,.12)!important;
+    0 0 8px rgba(169,192,200,.30),
+    0 0 16px rgba(59,85,94,.20)!important;
 }
 
 .shion-root .intro-screen .info-clan{
