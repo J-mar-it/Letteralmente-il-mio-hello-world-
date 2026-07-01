@@ -2011,3 +2011,16 @@
   0%{background-position:0% 50%;}
   100%{background-position:320% 50%;}
 }
+
+.shion-root,
+.shion-root *{
+  scrollbar-width:none!important;
+  -ms-overflow-style:none!important;
+}
+
+.shion-root::-webkit-scrollbar,
+.shion-root *::-webkit-scrollbar{
+  width:0!important;
+  height:0!important;
+  display:none!important;
+}
