@@ -1,0 +1,49 @@
+@import url("https://cdn.jsdelivr.net/gh/J-mar-it/Letteralmente-il-mio-hello-world-@f5e2ca11cf27b031c800a57093ceccb6fbc0c6fe/shion-land-v83-stable-land-ready.css");
+
+/* ==========================================================
+   SHION LAND V83 / OFFICIAL BLACKOUT P FIX
+   Versione ufficiale wrapper: importa la stabile f5e2ca1
+   e applica il fix reale sul <p> della schermata blackout.
+   ========================================================== */
+
+.shion-root .blackout-screen .blackout-text{
+  bottom:58px!important;
+}
+
+.shion-root .blackout-screen .blackout-text p{
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:150px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  line-height:1!important;
+}
+
+.shion-root .blackout-screen .blackout-line{
+  display:block!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  margin:0!important;
+  line-height:1.02!important;
+  text-align:center!important;
+}
+
+.shion-root .blackout-screen .blackout-line.line-possess{
+  top:18px!important;
+}
+
+.shion-root .blackout-screen .blackout-line.line-dead{
+  top:62px!important;
+}
+
+.shion-root .blackout-screen .blackout-line.line-cold{
+  top:108px!important;
+  margin-top:0!important;
+}
+
+.shion-root #flow-dead:checked~.app .dead-screen .easy-way-btn{
+  animation-delay:5s!important;
+}
