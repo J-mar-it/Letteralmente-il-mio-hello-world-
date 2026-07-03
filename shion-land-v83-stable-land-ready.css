@@ -47,3 +47,29 @@
 .shion-root #flow-dead:checked~.app .dead-screen .easy-way-btn{
   animation-delay:5s!important;
 }
+
+/* LAND READY / IBURI + SMOKE REVEAL */
+.shion-root .intro-screen .intro-open-clan,
+.shion-root .intro-screen .intro-close-clan,
+.shion-root .intro-screen .title-iburi-censored{
+  filter:none!important;
+  opacity:1!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+}
+
+.shion-root .intro-screen .title-iburi-censored{
+  display:inline!important;
+  text-shadow:inherit!important;
+}
+
+.shion-root .tab-open-left-pulse,
+.shion-root .tab-close-left-pulse,
+.shion-root .pulse-panel,
+.shion-root .pulse-panel *{
+  filter:none!important;
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+}
