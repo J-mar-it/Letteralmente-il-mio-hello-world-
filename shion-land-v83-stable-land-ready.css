@@ -73,3 +73,19 @@
   text-decoration:none!important;
   text-decoration-line:none!important;
 }
+
+/* LAND READY / SMOKE REVEAL SPECIFICITY GUARD */
+.shion-root .main-screen .tab-open-left-pulse,
+.shion-root .main-screen .tab-close-left-pulse{
+  opacity:1!important;
+  filter:none!important;
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+}
+
+.shion-root .main-screen .tab-area.left .pulse-panel,
+.shion-root .main-screen .tab-area.left .pulse-panel *{
+  filter:none!important;
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+}
