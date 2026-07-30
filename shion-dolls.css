@@ -573,7 +573,7 @@
   overflow-y:auto;
   pointer-events:auto;
   scrollbar-width:thin;
-  scrollbar-color:rgba(169,217,213,.36) rgba(2,4,5,.25);
+  scrollbar-color:auto;
   background:
     radial-gradient(circle at 50% 0%,rgba(132,65,157,.13),transparent 35%) padding-box,
     linear-gradient(180deg,rgba(3,6,8,.96),rgba(1,2,3,.985)) padding-box,
