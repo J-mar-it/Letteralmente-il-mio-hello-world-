@@ -585,6 +585,20 @@
   animation:dolls-lyrics-border-flow 12s linear infinite;
 }
 
+.dolls-lyrics-overlay::-webkit-scrollbar{
+  width:6px;
+}
+.dolls-lyrics-overlay::-webkit-scrollbar-track{
+  background:rgba(2,4,5,.32);
+  border-radius:20px;
+}
+.dolls-lyrics-overlay::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#75a9df,#76b991,#b987d1,#d45f6b,#7182c9,#dc9355,#e7c84f);
+  border:1px solid rgba(2,4,5,.48);
+  border-radius:20px;
+  box-shadow:0 0 5px rgba(185,135,209,.22);
+}
+
 .dolls-lyrics-overlay::before{
   display:none;
 }
