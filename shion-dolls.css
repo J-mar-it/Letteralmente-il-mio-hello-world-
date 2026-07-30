@@ -600,10 +600,13 @@
   text-shadow:0 1px 4px rgba(0,0,0,.95);
 }
 
-/* Il foglio originale nasconde i br della scheda: nel testo musicale
-   devono invece conservare la scansione dei versi. */
+/* La land aggiunge br automatici tra le righe del codice: li teniamo
+   nascosti e affidiamo la scansione dei versi direttamente agli span. */
 .shion-dolls-root .dolls-lyrics br{
-  display:block!important;
+  display:none!important;
+}
+.dolls-lyrics p > span{
+  display:block;
 }
 
 .dolls-lyrics p{margin:0 0 15px}
