@@ -582,11 +582,7 @@
 }
 
 .dolls-lyrics-overlay::before{
-  content:"";
-  position:absolute;
-  inset:8px;
-  border:1px solid rgba(169,217,213,.055);
-  pointer-events:none;
+  display:none;
 }
 
 .dolls-lyrics{
