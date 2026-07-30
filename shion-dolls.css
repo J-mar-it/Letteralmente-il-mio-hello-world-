@@ -572,8 +572,6 @@
   padding:22px 24px 25px;
   overflow-y:auto;
   pointer-events:auto;
-  scrollbar-width:thin;
-  scrollbar-color:auto;
   background:
     radial-gradient(circle at 50% 0%,rgba(132,65,157,.13),transparent 35%) padding-box,
     linear-gradient(180deg,rgba(3,6,8,.96),rgba(1,2,3,.985)) padding-box,
