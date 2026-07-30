@@ -575,14 +575,26 @@
   scrollbar-width:thin;
   scrollbar-color:rgba(169,217,213,.36) rgba(2,4,5,.25);
   background:
-    radial-gradient(circle at 50% 0%,rgba(132,65,157,.13),transparent 35%),
-    linear-gradient(180deg,rgba(3,6,8,.96),rgba(1,2,3,.985));
-  border:1px solid rgba(169,217,213,.22);
+    radial-gradient(circle at 50% 0%,rgba(132,65,157,.13),transparent 35%) padding-box,
+    linear-gradient(180deg,rgba(3,6,8,.96),rgba(1,2,3,.985)) padding-box,
+    linear-gradient(90deg,#75a9df,#76b991,#b987d1,#d45f6b,#7182c9,#dc9355,#e7c84f,#75a9df) border-box;
+  background-size:100% 100%,100% 100%,300% 100%;
+  background-position:0 0,0 0,0% 50%;
+  border:1px solid transparent;
   box-shadow:0 9px 25px rgba(0,0,0,.72),inset 0 0 18px rgba(169,217,213,.025);
+  animation:dolls-lyrics-border-flow 12s linear infinite;
 }
 
 .dolls-lyrics-overlay::before{
   display:none;
+}
+
+@keyframes dolls-lyrics-border-flow{
+  to{background-position:0 0,0 0,300% 50%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .dolls-lyrics-overlay{animation:none}
 }
 
 .dolls-lyrics{
