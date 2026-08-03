@@ -682,6 +682,62 @@
   text-shadow:none;
 }
 
+/* Nitidezza coordinata: archivio, player e testo OST. */
+.dolls-left-panel h1{
+  -webkit-text-stroke:0;
+  text-shadow:0 1px 2px rgba(0,0,0,.98);
+}
+
+.dolls-context,
+.dolls-shion-quote{
+  color:rgba(248,252,253,.96);
+  text-shadow:0 1px 2px rgba(0,0,0,.98);
+}
+
+.dolls-kicker{
+  text-shadow:0 1px 1px rgba(28,6,36,.98),0 0 5px rgba(210,140,255,.62);
+}
+
+.dolls-shion-quote .dolls-heart-mark{
+  text-shadow:0 1px 1px rgba(28,6,36,.98),0 0 6px rgba(210,140,255,.68);
+}
+
+.dolls-track-title,
+.dolls-track-subtitle,
+.dolls-lyrics-entry > summary{
+  -webkit-text-stroke:0;
+  text-shadow:0 1px 2px rgba(0,0,0,.98);
+}
+
+.dolls-track-title{color:#fafcfd}
+.dolls-track-subtitle{color:#fff}
+
+.dolls-lyrics{
+  text-shadow:0 1px 2px rgba(0,0,0,.98);
+}
+
+.voice-cupitan{
+  text-shadow:0 1px 2px #000,0 0 3px rgba(72,192,207,.08);
+}
+
+.voice-tristette{
+  text-shadow:0 1px 2px #000,0 0 3px rgba(197,65,101,.08);
+}
+
+.voice-both{
+  text-shadow:-1px 0 2px rgba(72,192,207,.08),1px 0 2px rgba(197,65,101,.08),0 1px 2px #000;
+}
+
+.lyric-blue,
+.lyric-green,
+.lyric-purple,
+.lyric-red,
+.lyric-indigo,
+.lyric-orange,
+.lyric-yellow{
+  text-shadow:0 1px 2px rgba(0,0,0,.98);
+}
+
 .dolls-lyrics .lyric-black{
   color:#000;
   -webkit-text-stroke:0;
