@@ -1,4 +1,4 @@
-@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-dolls.css?v=lyrics-button-restored");
+@import url("https://j-mar-it.github.io/Letteralmente-il-mio-hello-world-/shion-dolls.css?v=larger-doll-text-1");
 
 /* Fix land: mantiene nascosti i br automatici, ma lascia respirare il titolo */
 .dolls-left-panel h1{
@@ -72,6 +72,6 @@
   overflow-wrap:break-word!important;
   word-break:normal!important;
   color:rgba(248,252,253,.88)!important;
-  font-size:13px!important;
-  line-height:1.5!important;
+  font-size:14px!important;
+  line-height:1.46!important;
 }
