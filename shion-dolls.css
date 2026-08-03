@@ -668,6 +668,15 @@
 .lyric-indigo{color:#7182c9}
 .lyric-orange{color:#dc9355}
 .lyric-yellow{color:#e7c84f}
+/* Testi delle bambole: ombre leggere per una resa più nitida. */
+.dolls-card-text strong,
+.dolls-status,
+.dolls-card-text p,
+.dolls-detail-phrase{
+  -webkit-text-stroke:0;
+  text-shadow:0 1px 2px rgba(0,0,0,.98);
+}
+
 .dolls-lyrics .lyric-black{
   color:#000;
   -webkit-text-stroke:0;
